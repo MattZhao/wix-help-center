@@ -1,0 +1,97 @@
+---
+title: "Accessibility: Troubleshooting the Accessibility Wizard"
+---
+
+[The Accessibility Wizard](https://support.wix.com/en/article/accessibility-about-the-accessibility-wizard-7284021) is a helpful tool that can assist you in making your site more accessible for your visitors.
+
+Depending on the type of visual or backend content you have on your site, you may come across some issues when using the Wizard. Use the options in the article to learn more about these issues and their potential resolutions.
+
+**In this article, learn more about troubleshooting:**
+
+[Color contrast on images](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#color-contrast-on-images)  [Color contrast in containers](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#color-contrast-in-containers)  [Heading tags](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#heading-tags-on-your-pages)  [Linked text](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#linked-text)  [Alt text and CMS](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#alt-text-and-cms)  [Aria attributes](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#aria-attributes-in-images)  [Repeated issues](https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard#repeated-issues)
+
+---
+
+### Color contrast on images
+
+In order to make your site text clearly visible, the Wizard flags any areas that do not have a color contrast level of 3.0 and above for large text, and 4.5 for regular text. You may see one of these notifications when you have sufficient color contrast, but have placed text on an image.
+
+The Wizard calculates the contrast based on the lightness of the text, and the** section** or **strip background** that the image is on. Therefore, in order to resolve this issue, you need to change the lightness of the text or background.
+
+---
+
+### Color contrast in containers
+
+If you place text on top of a container box without attaching it to the container, the color contrast calculation is not correct. As a result, you may see a card flagging an issue with the contrast.
+
+This is because the Wizard does not recognize the container as the background, and instead calculates the contrast based on the background that the container is on (e.g. a strip or section).
+
+In order to resolve this issue, you need to attach the text to the container box.
+
+### Show me how to attach text to a container
+
+1. Select the relevant text box in your editor.
+2. Drag it outside of the box and drop it on the section / strip.
+3. Click the text box again and drag it to your desired position into the container box.
+4. Drop the text when you see the **Attach to Box** message.
+
+[image: A screenshot of a box in the Editor. The cursor has dragged text over it. It says 'Attach to Box'.]
+
+---
+
+### Heading tags on your pages
+
+[Heading tags](https://support.wix.com/en/article/managing-your-pages-heading-tags) define your page content's hierarchy, and allow visitors to navigate through it. If you do not define the text on your page, the Wizard may display cards prompting you to set the page's main heading, and the heading tags of other text.
+
+### Troubleshooting heading tags
+
+You may see duplicate tags in a heading. This occurs when the heading text contains a line break. We recommend removing the break where possible, or removing the duplicate tags.
+If you have pasted your text from an external source, there may be different heading tags in a single text box. We suggest using separate text boxes for each HTML tag to improve accessibility, and ensure your site is scanned accurately.
+
+### Troubleshooting page headings
+
+Your page's main heading (H1) should be the title of the page, and describe what the page is about (e.g. Home, Projects, etc.). As each page title should be unique, they should not: 
+
+- Be attached to a section that appears on all pages (the site header).
+- Be set to [appear on all pages](https://support.wix.com/en/article/wix-editor-showing-an-element-on-all-pages).
+
+If you are prompted to define your page heading again, check that it is not in the header or set to appear on all pages.
+
+> **See both Main Heading and Heading Definition cards in the Wizard?**
+>
+> We recommend resolving the Main Heading card first. This automatically resolves one of the Heading Definition cards, so you won't need to define the text again.
+
+---
+
+### Linked text
+
+You may see a card in the Wizard flagging linked text across your site, or encouraging you to check it manually. This is because generic linked text (such as 'Read more') does not clearly describe what happens when visitors click it.
+
+We recommend ensuring that any linked text you add to your site is descriptive, and advises visitors of its function (e.g. 'Read the reviews for our show').
+
+---
+
+### Alt text and CMS
+
+If you connect an image to a dataset and add alt text to it through the connection, you may be prompted to add alt text again in the Accessibility Wizard. This is because the Wizard does not read your site's datasets, and takes the information from the image's settings.
+
+In order to resolve / prevent the alt text card, we recommend adding good alt text to the image in the Wix Editor. Once you've connected the image to the dataset, you can check that the alt text field is connected to the alternative text you added in your editor.
+
+---
+
+### ARIA attributes in images
+
+[ARIA attributes](https://support.wix.com/en/article/accessibility-adding-aria-attributes-to-custom-web-applications) provide additional information about the semantics of elements to assistive technologies. We only recommend adding ARIA attributes to custom web applications on your site, since most other elements have pre-coded attributes.
+
+As alternative text provides information about your site media to assistive technologies, it is not necessary to also add ARIA attributes.
+
+---
+
+### Repeated issues
+
+The Wizard may highlight issues that you have already resolved [in step 3](https://support.wix.com/en/article/accessibility-using-the-accessibility-wizard#step-3-find-and-fix-issues). For example, if you have added an accessibility statement (and marked it as complete in the Wizard), the card may reappear when you scan the site again.
+
+The changes / settings you saved should still be applied to the site - just click the button to mark it as done.
+
+---
+Source: https://support.wix.com/en/article/accessibility-troubleshooting-the-accessibility-wizard

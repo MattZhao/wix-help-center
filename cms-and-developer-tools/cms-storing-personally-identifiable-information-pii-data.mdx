@@ -1,0 +1,66 @@
+---
+title: "CMS: Storing Personally Identifiable Information (PII) Data"
+---
+
+PII (Personally Identifiable Information) includes items such as full name, address, email address, social security numbers, phone number, etc. Learn more about PII from [gdpr.eu](https://gdpr.eu/eu-gdpr-personal-data/).
+
+PII is considered personal information by different legislators and regulators, and because of this, Wix handles it differently than other content or data.
+
+While all Wix records are stored encrypted on the disk of our DB machines, for sensitive data such as PII, our policy is to add another layer of protection to the data at the application level.
+
+> **Note:**
+>
+> PII encryption does not change data access permissions. Appropriate permissions must be set to maintain the confidentiality of the data. Read more about [changing your collection permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+
+#### In this article, learn about:
+
+[Best practice in PII data handling](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data#best-practice-in-pii-data-handling)  [Encryption and storage of PII](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data#encryption-and-storage-of-pii)  [PII that can be considered public](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data#pii-that-can-be-considered-public)  [PII in relation to GDPR](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data#pii-in-relation-to-gdpr)
+
+---
+
+### Best practice in PII data handling
+
+As part of efforts to protect data and specifically sensitive data like PII records, Wix guidelines require all PII data to be stored encrypted by the application that handles the data.
+
+First, you should make sure that the [permissions of your collection](https://support.wix.com/en/article/cms-collection-permissions-overview) are set properly, not allowing anyone that does not have the relevant permission to read, update, or delete data.
+
+For Wix sites, this means that any collection field that includes PII data (e.g. marketing sites that collect and store site visitors' sensitive data, etc.) should be encrypted. To allow a field to be encrypted, you need to enable the** PII **toggle in the CMS:
+
+Notice the green PII indicator next to the field name when the PII toggle is enabled.
+
+After you mark all relevant fields as PII, publish your site to make sure the new changes take effect.
+
+---
+
+### Encryption and storage of PII
+
+This section includes more details about how PII data is encrypted, how it is stored differently to other data, and what its limitations are.
+
+#### How encryption is applied to the data:
+
+All fields marked as PII are automatically migrated to be stored encrypted in the collection with a unique encryption key.  Data in the field is stored encrypted using AES with a 256bit site encryption key.  Encryption is applied immediately (and affects both Live and Sandbox).
+
+**Note:** While the encryption process begins immediately, it may still take some time to complete depending on the size of data being encrypted. However, while encryption takes place behind the scenes - you can continue to work with your site's data as normal.  Access to data automatically returns the decrypted data in the same manner as for other fields.  [Export data](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) can be used to work with the collection data locally or to import it to a designated system. Regardless of the method, it is not advised that you retain large lists of PII locally on your workstation.  All data backups are encrypted in full using the same site key, regardless of any PII data.
+
+#### Limitations of PII encrypted data:
+
+PII encryption does not protect data in a collection if that data is exposed via permission misconfiguration - be sure to [set collection permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions) properly.  PII encrypted fields have limited capabilities for searching via code or via CMS.  Once a field is marked as a PII encrypted field, it disables some functionalities from that field, such as sorting and querying operations other than "eq", i.e. query by exact-match only, for that field.
+
+---
+
+### PII that can be considered public
+
+PII data is not necessarily private information. For example, a site’s owner can display their employees' private home telephone numbers, which are available in the phone book; however, those numbers should be considered as PII.
+
+---
+
+### PII in relation to GDPR
+
+Among other rights, customers have the right to access or delete their data at any time under [GDPR](https://support.wix.com/en/article/preparing-your-wix-site-for-the-gdpr) (and similar privacy laws such as the [LGPD](https://support.wix.com/en/article/preparing-your-wix-site-for-the-lgpd) and [CCPA](https://support.wix.com/en/article/preparing-your-wix-site-for-ccpa)). With Wix, you can provide your site visitors with [access to their data](https://support.wix.com/en/article/gdpr-about-your-customers-data#getting-a-copy-of-your-customers-data) or the right to [delete their data](https://support.wix.com/en/article/gdpr-about-your-customers-data#permanently-deleting-your-customers-data) from your database entirely.
+
+> **Important:**
+>
+> Marking your data as PII and using the encryption tool may not guarantee compliance with other legislations, such as The U.S. Health Insurance Portability and Accountability Act ([HIPAA](https://support.wix.com/en/article/wix-services-and-hipaa)).
+
+---
+Source: https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data

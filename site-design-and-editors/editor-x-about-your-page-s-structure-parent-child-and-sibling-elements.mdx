@@ -1,0 +1,74 @@
+---
+title: "Editor X: About Your Page's Structure (Parent, Child and Sibling Elements)"
+---
+
+When structuring pages on your site, you are essentially nesting elements inside containers. For example, placing [text](https://support.wix.com/en/article/editor-x-adding-and-customizing-text) inside a [container box](https://support.wix.com/en/article/editor-x-using-containers). This creates a relationship between the elements and their parent container, derived from Modern HTML and CSS concepts.
+
+In this article, we'll learn about this relationship and how to harness it to create a responsive site:
+
+[Parent-child relationships between elements](https://support.wix.com/en/article/editor-x-about-your-pages-structure-parent-child-and-sibling-elements#parent-child-relationships-between-elements)  [Creating your page's structure](https://support.wix.com/en/article/editor-x-about-your-pages-structure-parent-child-and-sibling-elements#creating-your-pages-structure)  [Structuring sibling elements](https://support.wix.com/en/article/editor-x-about-your-pages-structure-parent-child-and-sibling-elements#structuring-sibling-elements)  [Structural changes across breakpoints](https://support.wix.com/en/article/editor-x-about-your-pages-structure-parent-child-and-sibling-elements#structural-changes-across-breakpoints)
+
+---
+
+### Parent-Child Relationships Between Elements
+
+When an element is placed inside a container (e.g., section, container box, layouter, etc.), it attaches the element and creates a parent-child relationship. For example, if you attach your logo to the header, it automatically docks to the nearest edges and becomes the "child" of the header.
+
+Similarly to CSS, the design (i.e., size, position, padding, etc.) of a parent container influences its children elements. Adding padding to a container, for example, makes the elements within smaller in order to accomodate the change.
+
+> **Note:**
+>
+> When you [stack elements](https://support.wix.com/en/article/editor-x-adding-and-customizing-a-stack) to control their vertical order, they're placed inside a flex container which acts as the parent.
+
+> **Tip:**
+>
+> Click [here](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element) to read more about element sizing.
+
+---
+
+### Creating Your Page's Structure
+
+When planning the design of your site, it's important to begin by creating a layered structure. We recommend creating the parent containers first, then adding children elements by dragging and dropping them in the right place.
+
+#### The Layers of Your Page
+
+In Editor X, the structure you create is reflected the [Layers panel](https://support.wix.com/en/article/editor-x-using-the-layers-panel). The following layers make up the structure of your site:
+
+**Page: **From the Layers panel, you can edit the page's background color and add padding. Click the **Show More **icon  next to **Page **to control these settings.   **Sections: **Every page is made up of at least one section. You can create as many vertical and horizontal sections as you need. You can also create [Master sections](https://support.wix.com/en/article/editor-x-using-global-sections) that appear on multiple pages.   **Containers:** Nest elements within containers to easily create a responsive structure and ensure they stay in place. Add a basic [container box](https://support.wix.com/en/article/editor-x-using-containers) or smart layout tools like [Stack](https://support.wix.com/en/article/editor-x-adding-and-customizing-a-stack), [Layouters](https://support.wix.com/en/article/editor-x-using-layouters) and [Repeaters](https://support.wix.com/en/article/editor-x-using-repeaters).   **Elements: **These are the elements you add from the **Add** panel (e.g., Text, Button, Forms). You can [dock](https://support.wix.com/en/article/editor-x-working-with-docking-and-margins) single elements or [stack](https://support.wix.com/en/article/editor-x-adding-and-customizing-a-stack) multiple elements to ensure that they stay in the same order and spacing in every screen size.
+
+> **Important:**
+>
+> While grids are not part of the hierarchical model, they may still affect the sizing and positioning of your elements. [Learn More](https://support.wix.com/en/article/editor-x-using-grids)
+
+#### Re-Parenting of Elements
+
+When moving a child element into a new parent container, this is referred to as "re-parenting". To re-parent an element, simply drag and drop it inside the new parent.
+
+#### Finding an Element's Place in the Hierarchy
+
+Every section, container and element in your page has breadcrumbs which indicate its place in the hierarchy. You can easily navigate between the layers of your page by clicking the breadcrumbs.
+
+---
+
+### Structuring Sibling Elements
+
+Siblings are elements sharing the same direct parent. For example, the text and button inside this container are siblings as the container is their parent:
+
+If your sibling elements are in flexbox containers (e.g., [Stack](https://support.wix.com/en/article/editor-x-adding-and-customizing-a-stack), [Layouters](https://support.wix.com/en/article/editor-x-using-layouters), [Repeaters](https://support.wix.com/en/article/editor-x-using-repeaters)), they may affect each other's size and position. Designing this relationship could be useful towards creating a responsive site, as you can prevent elements from overlapping in smaller screen sizes.
+
+In the example below, you can see the margins that are automatically created between sibling elements:
+
+---
+
+### Structural Changes Across Breakpoints
+
+The Layers panel lets you see the relationship (i.e. hierarchy) between elements, containers and sections in your page and move them around, as necessary.
+
+The page hierarchy is part of the HTML structure of your site, which means changes you make to it are reflected across all breakpoints. For example, when you separate a parent and a child (e.g., text and its container), that separation applies to all breakpoints.
+
+> **Tip:**
+>
+> To learn more about designing across breakpoints, click [here](https://support.wix.com/en/article/editor-x-designing-across-breakpoints-with-the-cascading-rule).
+
+---
+Source: https://support.wix.com/en/article/editor-x-about-your-pages-structure-parent-child-and-sibling-elements

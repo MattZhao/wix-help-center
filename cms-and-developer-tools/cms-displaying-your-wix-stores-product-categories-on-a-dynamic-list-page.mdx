@@ -1,0 +1,183 @@
+---
+title: "CMS: Displaying Your Wix Stores Product Categories on a Dynamic List Page"
+---
+
+Create a dynamic list page to showcase all your Wix Stores product categories in one place. When visitors click a category, they are directed to the relevant Category Page where they can view its products. You can also [display your Stores categories on non-dynamic pages](https://support.wix.com/en/article/cms-displaying-your-wix-stores-categories-on-any-page), like the Home or Cart page.
+
+> **Important:**
+>
+> You must have [the new version of Wix Stores product categories](https://support.wix.com/en/article/wix-stores-about-the-category-page) to follow this tutorial. If you don't have it, learn how to [manually create a gallery of categories](https://support.wix.com/en/article/wix-stores-creating-an-index-of-product-categories) with the original version of product categories.
+
+> **Before you begin:**
+>
+> - Create multiple [product categories](https://support.wix.com/en/article/wix-stores-creating-product-categories) in Wix Stores.
+> - Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Stores with the CMS.
+
+---
+
+### Step 1 | Add a dynamic list page for your categories
+
+Go to Wix App Collections in your Editor's CMS and create a dynamic list page from the Stores collection. This page includes a repeater that is already partially connected to your Stores categories. If you prefer, you can delete the repeater and add a Pro Gallery or table instead to showcase your categories.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left of the Editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to **Stores**, hover over **Collections** and click the More Actions icon .
+5. Click **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+3. (Optional) Use a gallery or table to display your categories instead of a repeater: 
+
+1. Click the repeater and press **Delete** on your keyboard to remove it.
+2. [Add the Wix Pro Gallery](https://support.wix.com/en/article/wix-pro-gallery-adding-and-setting-up-your-gallery#step-1-add-the-wix-pro-gallery-to-your-site) or a [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table) to the page.
+3. (Gallery only) Click the gallery and select **Manage Media**.
+4. (Gallery only) Click **Select All** then click **Delete** to remove all the default images from the gallery. Then click **Done**.
+
+**Tip: **If you want to use a different style repeater, you can delete the default repeater and add a new one. You'll connect the repeater elements in the next step. 
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  at the top of Editor X.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to **Stores**, hover over **Collections** and click the More Actions icon .
+5. Click **Add dynamic page**.
+6. Click **List page**.
+7. Click **Add to Site**.
+8. (Optional) Use a gallery to display your categories instead of a repeater: 
+
+1. Click the repeater and press **Delete** on your keyboard to remove it.
+2. [Add the Wix Pro Gallery](https://support.wix.com/en/article/wix-pro-gallery-adding-and-setting-up-your-gallery#step-1-add-the-wix-pro-gallery-to-your-site) to the page.
+3. Click the gallery and select **Manage Media**.
+4. Click **Select All** then click **Delete** to remove all the default images from the gallery.
+5. Click **Done**.
+
+**Tip: **If you want to use a different style repeater, you can delete the default repeater and add a new one. You'll connect the repeater elements in the next step. 
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the Editor.
+3. Click **Wix App Collections**.
+4. Scroll down to **Stores**, hover over **Collections** and click the More Actions icon .
+5. Select **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+3. (Optional) Use a gallery or table to display your categories instead of a repeater: 
+
+1. Click the repeater and press **Delete** on your keyboard to remove it.
+2. [Add the Wix Pro Gallery](https://support.wix.com/en/article/wix-pro-gallery-adding-and-setting-up-your-gallery#step-1-add-the-wix-pro-gallery-to-your-site) or a [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table) to the page.
+3. (Gallery only) Click the gallery and select **Manage Media**.
+4. (Gallery only) Click **Select All** then click **Delete** to remove all the default images from the gallery. Then click **Done**.
+**Tip: **If you want to use a different style repeater, you can delete the default repeater and add a new one. You'll connect the repeater elements in the next step.
+
+---
+
+### Step 2 | Connect your repeater, gallery or table to the CMS
+
+Connect the dynamic collection fields to your repeater, gallery or table. The values from these dynamic fields change on your live site depending on the category shown. Make sure to link the buttons or images to the **Page URL**. This link allows visitors to click to go to the relevant Stores Category Page.
+
+Wix EditorEditor XStudio Editor
+1. In your Editor, click the repeater, Pro Gallery or table.
+2. Click the **Connect to CMS** icon  .
+3. Click the **Choose a dataset **drop-down and select **Collections**.
+4. (Repeaters only) Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete the extra text element or disconnect and replace it with static text.
+5. Click the relevant drop-downs and select the dynamic collection fields you want to connect: 
+
+- **Name (Text): **The category name set in Wix Stores.
+- **Main Media (Image): **The category image set in Wix Stores.
+- **Slug (Text): **The unique part of the URL at the end of your Category Page web address. You can set these by [editing the SEO settings of each Stores category](https://support.wix.com/en/article/wix-stores-seo-for-category-pages).
+- **ID (Text): **The unique identifier code in the backend of each category.
+- **Navigate to Page URL: **The web address of the relevant Category Page. For buttons, click the **Click action connects to **drop-down to select **Navigate to** **Page URL**. For images or the Pro Gallery, click the **Links connect to **drop-down to select **Navigate Page URL**.
+
+1. (Repeaters only) Click **Repeater connections** and repeat steps 4-5 above to connect additional elements in the repeater.
+2. Click to adjust your repeater elements, Pro Gallery or table as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+3. Click **Preview** to test your dynamic Stores categories page.
+4. Click **Publish** if you are ready to make the changes go live.
+
+1. In your Editor, click the repeater or Pro Gallery you want to connect.
+2. Click the Connect to CMS icon  .
+3. Click the **Choose a dataset **drop-down and select **Collections**.
+4. (Repeaters only) Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete the extra text element or disconnect and replace it with static text.
+5. Under **Connection options**, click the relevant drop-downs and select the dynamic collection fields you want to connect: 
+
+- **Name (Text): **The category name set in Wix Stores.
+- **Main Media (Image): **The category image set in Wix Stores.
+- **Slug (Text): **The unique part of the URL at the end of your Category Page web address. You can set these by [editing the SEO settings of each Stores category](https://support.wix.com/en/article/wix-stores-seo-for-category-pages).
+- **ID (Text): **The unique identifier code in the backend of each category.
+- **Page URL: **The web address of the relevant Category Page. For buttons, click the **Click action connects to **drop-down to select the **Page URL**. For images or the Pro Gallery, click the **Links connect to **drop-down to select the **Page URL**.
+6. (Repeaters only) Click **Repeater connections** and repeat steps 4-5 above to connect additional elements in the repeater.
+7. Click to adjust your repeater elements or Pro Gallery as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+8. Click **Preview** to test your dynamic Stores categories page.
+9. Click **Publish** if you are ready to make the changes go live.
+
+1. In your Editor, click the repeater, Pro Gallery, or table you want to connect.
+2. Click the **Connect to CMS** icon  .
+3. Click the **Choose a dataset **drop-down and select **Collections**.
+4. (Repeaters only) Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete the extra text element or disconnect and replace it with static text.
+5. In the Inspector panel, under **Connections**, click the relevant drop-downs and select the dynamic collection fields you want to connect: 
+
+- **Name (Text): **The category name set in Wix Stores.
+- **Main Media (Image): **The category image set in Wix Stores.
+- **Slug (Text): **The unique part of the URL at the end of your Category Page web address. You can set these by [editing the SEO settings of each Stores category](https://support.wix.com/en/article/wix-stores-seo-for-category-pages).
+- **ID (Text): **The unique identifier code in the backend of each category.
+- **Page URL: **The web address of the relevant Category Page. For buttons, click the **Click action connects to **drop-down to select **Page URL**. For images or the Pro Gallery, click the **Links connect to **drop-down to select the **Page URL**.
+
+1. (Repeaters only) Click **Repeater connections** in the Inspector panel and repeat steps 4-5 above to connect additional elements in the repeater.
+2. Click to adjust your repeater elements or Pro Gallery as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+3. Click the Preview icon  at the top right to test your dynamic Stores categories page.
+4. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### (Optional) Step 3 | Manage the dataset settings
+
+In your dataset settings, you can choose the maximum categories that can display at a time. You can also add filters to include only certain categories, or add sorts to control the order in which the categories display.
+
+Wix EditorEditor XStudio Editor
+1. In your Editor, click the repeater, Pro Gallery or table.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings**.
+4. Edit the **Maximum items displayed **field to set the maximum number of categories that can load at a time on the page. This is also the maximum categories that can load per page in a connected [pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) or per click in a ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+5. (Optional) Click **+ Add Filter **to [only show specific categories](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater or gallery.
+6. (Optional) Click **+ Add Sort **to [choose the order in which the categories appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater or gallery.
+
+1. Click **Preview** to test your dynamic Stores categories page.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. In your Editor, click the **Collections **dataset and select **Settings**.
+2. Edit the **Maximum items displayed **field to set the maximum number of categories that can load at a time on the page. This is also the maximum categories that can load per click in a ["Load More" button](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater?tabs=Editor-X-10#step-5-optional-create-a-load-more-button).
+3. (Optional) Click **+ Add Filter **to [only show specific categories](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater or gallery.
+4. (Optional) Click **+ Add Sort **to [choose the order in which the categories appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater or gallery.
+5. Click **Preview** to test your dynamic Stores categories page.
+6. Click **Publish** if you are ready to make the changes go live.
+
+1. Go to the connected dataset settings:
+
+1. Click the repeater or Pro Gallery.
+2. Click the Connect to CMS icon  .
+3. Click **Dataset Settings** in the Inspector panel.
+
+1. Edit the **Maximum items displayed **field to set the maximum number of categories that can load at a time on the page. This is also the maximum categories that can load per click in ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+2. (Optional) Click **+ Add Filter **to [only show specific categories](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater or gallery.
+3. (Optional) Click **+ Add Sort **to [choose the order in which the categories appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater or gallery.
+
+1. Click **Preview** to test your dynamic Stores categories page.
+2. Click **Publish** if you are ready to make the changes go live.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-your-wix-stores-product-categories-on-a-dynamic-list-page

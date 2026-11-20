@@ -1,0 +1,98 @@
+---
+title: "Wix Stores: Product Import Error Messages"
+---
+
+When [importing products from another store](https://support.wix.com/en/article/wix-stores-importing-products-to-wix-stores) to your Wix store, you may encounter some error messages.
+
+---
+
+### Error message example
+
+Error messages generally have two parts. Let's look at this example:
+
+The text before the colon shows which column the error occurs in - in this case, the **fieldType** column.  The text after the column explains what the problem is - here the error is that the text must be either "Product" or "Variant" and some other text was entered.
+
+---
+
+### Error messages and solutions
+
+Below is a list of possible error messages and how to correct them.
+
+Error messageUnderstanding and correcting the errorEach variant must be uniqueIn variant rows of the same product, in the productOptionDescription columns, you cannot repeat the same option combination (e.g. small;blue).Must be TRUE or FALSE onlyFor each product or variant, enter either "TRUE" or "FALSE" in caps.Discount value is not validYou must enter a digit (e.g. 3, not three). 
+
+If an item's discountMode is "percent", the discount value must be between 1 - 99.
+
+The discountValue cannot be more than 9 digits long.Max chars for each option choice is\{ X \}You have entered too many characters in this field. Do not exceed the number of characters specified in the error message.Must be a numberYou must enter a digit (e.g. 3, not three). Must be either "Amount" or "Percent"For each product or variant, enter either "AMOUNT" or "PERCENT" in caps.Each option choice must be uniqueIn product rows, when entering available options in the productOptionDescription columns, you cannot repeat an option, e.g. small; medium; medium; large. Delete the repeated option.Surcharge (charge +/- for product variants) number is not validLeave this field blank for products. 
+
+**
+
+**Leave this field blank for variants with no surcharge. 
+
+Enter a positive number if the variant costs more than the product.
+
+Enter a negative number if the variant costs less than the product.
+
+The surcharge can have no more than 9 digits. 
+
+The surcharge can have no more than 2 digits after the decimal point. Price is not validLeave this field blank for variables.
+
+**
+
+**The price can be a positive number or zero; it cannot be a negative number.
+
+The price can have no more than 9 digits. 
+
+The price can have no more than 2 digits after the decimal point.Max 1000 variants per product 
+
+supportedYou entered more than the maximum 1000 variants allowed per product. You must delete some of the variants.HandleId must be unique for each 
+
+productEach product must have a different handleId. Edit the handleId field so that no two IDs are the same.
+
+**Note: **Variants of a product must have the same handleId as the product. Must be either "COLOR" or 
+
+"DROP_DOWN"For each option, enter either "COLOR" or "DROP_DOWN" in caps in the product option type column. 
+
+Enter "COLOR" for color options and "DROP_DOWN for everything else.SKU must be uniqueEach SKU must be different.
+
+You do not need to enter SKU values for variants.Must be either "Product" or "Variant"For each product, enter "Product".
+
+For each variant, enter "Variant".
+
+If you do not use SKUs, leave blank.Only \{ X \} choices per 
+
+product optionYou entered more than the maximum amount of product choices per option (e.g. too many sizes). Delete some of the choices.Max 15 images onlyYou entered more than the maximum 15 images allowed per product or variant.  Required fieldYou left a mandatory field blank. Enter the required value.
+
+**Tip:** Row 3 in the Template file indicates which columns are required.Variant must have same "handleid" 
+
+as its productEdit the handleID so that each of a product's variants has the same handleId as the product. Must be either "in_stock", "out_of_stock", 
+
+or a numberIf you track inventory, enter the number of the product or variant you have in stock (e.g. 100).
+
+If you do not track inventory, enter whether the item is InStock or OutOfStock.Incorrect option choice**For product rows:
+
+**If a product has options, list all options choices. For example, "small; medium; large".
+
+The choices must be separated by semi-colons and can be maximum 20 characters.
+
+**For variant rows:**
+
+For each variant row, you must enter the variant. This must correspond to the information entered in the product row. So for example, if you entered "small; large"  and "blue; green" in the product row, enter "small;blue", "small;green" "large;blue" and "large;green" in each of the variant rows.
+
+**For both products and variants:**
+
+If you chose "COLOR" for the productOptionType, then in the productOptionDescription column, you must enter one of the following:
+
+1. RGB + an RGB value + text description (e.g. RGB(94,162,38):green
+
+2. A hexadecimal value + text description (e.g. #ffffff:white)
+
+If you chose "DROP_DOWN" for the productOptionType, then in the productOptionDescription column, you must enter a text description per option.**
+
+**The text description can be no more than 20 characters per option.
+
+### What's next?
+
+After correcting all the errors, click **Upload New CSV **to upload the corrected file.
+
+---
+Source: https://support.wix.com/en/article/wix-stores-product-import-error-messages

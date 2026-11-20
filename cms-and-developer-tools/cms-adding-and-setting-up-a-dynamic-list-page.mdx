@@ -1,0 +1,313 @@
+---
+title: "CMS: Adding and Setting Up a Dynamic List Page"
+---
+
+Dynamic list pages allow you to showcase various items from your CMS collection in an organized index. Each item, displayed in a repeater, gallery, or table, links to the collections' dynamic item page where visitors read more about the specific item.
+
+> **Before you begin:**
+>
+> - [Create a CMS collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) that includes the items you want to display on your dynamic list page.
+> - [Create a dynamic item page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page) for your collection. You will link items on your dynamic list page to your collection's dynamic item page. Alternatively, you can add the dynamic item page at the same time as your dynamic list page. See step 1 below for directions.
+
+---
+
+### Step 1 | Add a dynamic list page
+
+From your editor's CMS panel, create a dynamic list page for your collection. This adds a new page that displays different items from your collection in a repeater that you will customize later.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Your Collections**.
+4. Click the collection that you want to create your dynamic list page from.
+5. Click **More Actions **and select **Add dynamic page**.
+6. Select **List page** and click **Add to Site**.
+
+**Tip: **Select **Item page** as well to [add a dynamic item page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page) for the collection at the same time.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the editor.
+3. Click **Your Collections**.
+4. Click the collection that you want to create your dynamic list page from.
+5. Click **More Actions **and select **Add dynamic page**.
+6. Select **List page** and click **Add to Site**.
+
+**Tip: **Select **Item page** as well to [add a dynamic item page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page) for the collection at the same time.
+
+---
+
+### Step 2 | (Optional) Modify the URL slug structure
+
+You may want to edit the URL slug structure of your dynamic list page to keep the web addresses of your dynamic pages organized.
+
+### Show me an example of conflicting URL slug structures that cannot be used
+
+In the example image below, the URL slug structures conflict with each other because they share the same prefix and have the same number of variables: 
+- **felines/\{origin\}**
+- **felines/\{category\}**
+[image: A screenshot of the error message that appears if you try to create conflicting URL slug structures.]Even though technically, the web addresses generated could be unique for each page, the total number of variables after the shared prefix causes the slug structures to conflict.  
+When editing the URL slug structure, make sure it does not have the same prefix and number of variables as another slug structure used on your site.
+
+> **Important:**
+>
+> If you change the URL slug structure of your dynamic pages, all the existing links to these pages will no longer work. This affects links within your site, any links you've shared externally, and SEO links in search engines. We're releasing [a feature that will let you add an automatic redirect](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls#editing-url-slugs-for-specific-dynamic-item-pages), taking visitors and search engines from the old URL to the new one.
+
+#### To edit the URL slug structure of your dynamic list page:
+
+Wix EditorStudio Editor
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu**on the left side of the editor.
+3. Click **Dynamic Pages**.
+4. Hover over the dynamic list page you just created and click the **More Actions** icon  on the right. 
+
+**Tip: **By default, the dynamic list page you created is titled: **\{Collection Name\} (List) **
+5. Click **SEO**.
+6. Edit the **URL slug structure **field: 
+
+- Click **Add Variable** and choose a text or number field to use its values in the URL slug structure.
+- Enter text or number values to use static values in the URL slug structure.
+- Press **Enter **on your keyboard to save the changes to the URL slug structure.
+[image: A screenshot of editing the URL slug structure for a dynamic list page.]
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Hover over the dynamic list page you just created and click the **More Actions** icon  on the right. 
+
+**Tip: **By default, the dynamic list page you created is titled: **\{Collection Name\} (List) **
+4. Click **SEO**.
+5. Edit the **URL slug structure **field: 
+
+- Click **Add Variable** and choose a text or number field to use its values in the URL slug structure.
+- Enter text or number values to use static values in the URL slug structure.
+- Press **Enter **on your keyboard to save the changes to the URL slug structure.
+[image: A screenshot of editing the URL slug structure in the Studio Editor.]
+
+---
+
+### Step 3 | Connect the repeater to the CMS
+
+You now have a dynamic list page with a repeater that includes 2 text elements, an image, and a button in each container. Each of your repeater's containers displays a different item from your collection.
+
+> **Want to use a gallery or table instead of a repeater?**
+>
+> If you'd rather display your collection items in a [gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery) or [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), you can. Delete the default repeater then add a Pro Gallery or table. Then connect each part of your gallery or table to the CMS collection through the dataset, in the same way you would connect the repeater.
+
+Wix EditorStudio Editor
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the **Connect to CMS** icon  .
+3. In the **Connect Repeater** panel on the right, click the element you want to connect.
+4. Under **Connections**, click the relevant drop-downs to connect the element to the relevant collection field or dataset action. The options vary depending on the element type.
+Tips:
+- To link the button element to the dynamic item page, click the **Click action connects to **field and select the collection's dynamic item page that ends with **(Item)**.
+- To link an image element to the dynamic item page, click the **Link connects to **drop-down and select the collection's dynamic item page that ends with **(Item)**.
+[image: A screenshot of linking a button to the collection's dynamic item page.]
+1. Click **Repeater connections** at the top of the panel on the right.
+2. Repeat steps 3-5 above to connect the elements to collection fields or dataset actions.
+
+1. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change.
+2. Click **Preview** to test your dynamic list page.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the **Connect to CMS** icon  .
+3. In the **Connect Repeater** panel on the right, click the element you want to connect.
+4. Under **Connections**, click the relevant drop-downs to connect the element to the relevant collection field or dataset action. The options vary depending on the element type.
+Tips:
+- To link the button element to the dynamic item page, click the **Click action connects to **field and select the collection's dynamic item page that ends with **(Item)**.
+- To link an image element to the dynamic item page, click the **Link connects to **drop-down and select the collection's dynamic item page that ends with **(Item)**.
+[image: A screenshot of connecting a button to the dynamic item page.]
+1. Click **Repeater connections** at the top of the panel on the right.
+2. Repeat steps 3-5 above to connect the elements to collection fields or dataset actions.
+[image: A screenshot showing the connected elements in a repeater.]
+1. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements in which you want to use static content that doesn't change.
+2. Click the **Preview** icon  at the top right to test your dynamic list page.
+3. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 4 | (Optional) Manage the dataset settings
+
+By default, your dynamic page dataset allows up to 12 items to initially display in your repeater or gallery. You can adjust the maximum items that can display at a time from the dataset settings. You can also add filters to include only certain items, or add sorts to control the order in which the items display.
+
+Wix EditorStudio Editor
+1. Go to the repeater's connected dataset settings:
+
+1. Click the repeater.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Repeate**r panel on the right.
+2. (Optional) Click the permissions type next to **Permissions** to [change the collection permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions) that determine who can access the content and what they can do with it.
+3. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the repeater.
+- **Read & Write: **Allow the dataset to display your collection content in the repeater and allow visitors to add or edit collection content with input elements.
+4. Edit the **Maximum items displayed **field to set the maximum items that initially load in the repeater. This is also the maximum additional items that can load when a visitor clicks a "Load More" button. If you connect a [pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) or connect buttons to "[Next/Previous page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page)" dataset actions, this field also determines the maximum items displayed per 'page' in the repeater. See the next section for steps on setting up 'Load More' and navigational elements.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+5. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+6. (Optional) Click **+ Add new sort **to [choose the order in which the items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset) in the repeater.
+[image: A screenshot of the dataset settings in the Wix Editor.]
+1. Click **Preview** to test your dynamic list page.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. Go to the connected dataset settings:
+
+1. Click the repeater element.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Repeate**r panel.
+[image: A screenshot of clicking the dataset settings in the Inspector panel.]
+1. (Optional) Click the permissions type next to **Permissions** to [change the collection permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions) that determine who can access the content and what they can do with it.
+2. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the repeater.
+- **Read & Write: **Allow the dataset to display your collection content in the repeater and allow visitors to add or edit collection content with input elements.
+3. Edit the **Maximum items displayed **field to set the maximum items that initially load in the repeater. This is also the maximum additional items that can load when a visitor clicks a "Load More" button. If you connect buttons to "[Next/Previous page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page)" dataset actions, this field also determines the maximum items displayed per 'page' in the repeater. See the next section for steps on setting up 'Load More' and navigational elements.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+4. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content?tabs=Studio-Editor#adding-filters-to-your-dataset) in the repeater.
+5. (Optional) Click **+ Add new sort **to [choose the order in which the items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content?tabs=Studio-Editor,Studio-Editor-2#adding-sort-conditions-to-your-dataset) in the repeater.
+[image: A screenshot of the dataset settings in the Studio Editor.]
+1. Click the** Preview** icon  at the top right to test your dynamic list page.
+2. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 5 | (Optional) Create 'Load More' or navigational buttons
+
+If you plan on displaying many items on this page, consider adding a ['Load More' button](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#load-more) to improve the page's loading performance. The dataset's **Maximum items displayed **field determines how many items can initially load on the page and how many additional items can load when visitors click your 'Load More' button.
+
+Wix EditorStudio EditorChoose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Load More' button.
+7. Click **Preview** to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Next Page' button.
+7. Duplicate your 'Next Page' button: 
+
+1. Right-click the button (**control **+ click on Mac).
+2. Select **Duplicate** (or press **Ctrl **+ **D **or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not attach it to your repeater.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click **Preview** to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+Choose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Click the** Preview** icon  at the top right to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Duplicate your 'Next Page' button: 
+
+1. Select the button.
+2. Press **Ctrl **+ **D **on your keyboard** **(or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not attach it to your repeater.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click the** Preview** icon  at the top right to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+
+> **Tip:**
+>
+> In the Wix Editor, you can also [connect a pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) that allows visitors to cycle through 'pages' of items. The **Maximum items displayed **field determines how many items can appear in each 'page' of the pagination bar. If you would like to see pagination bars in the Studio Editor, [vote for this feature here](https://support.wix.com/en/article/cms-request-adding-a-pagination-bar-in-the-studio-editor).
+
+---
+
+### Step 6 | (Optional) Let visitors filter items
+
+Give visitors ways to filter the items that appear on your dynamic list page with [input elements](https://support.wix.com/en/article/cms-about-user-input-elements). Choose from any of the following input elements that allow filtering: **Radio Buttons**, **Checkboxes**, **Dropdown**, **Selection Tags**, or **Slider** (Range Sliders only).
+
+> Learn how to set up [input elements that allow visitors to filter collection content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+---
+
+### FAQs
+
+Click the questions below for answers to common questions about setting up dynamic list pages.
+
+### How do visitors get to my dynamic list page?
+
+To ensure visitors can access your dynamic list page, we recommend adding a link to it in your site's menu. You could also link other elements such as text, buttons, or images to your dynamic list page. 
+Learn how to [add a link to your dynamic list page that appears in your site's menu](https://support.wix.com/en/article/cms-linking-to-dynamic-pages#linking-your-site-menu-to-dynamic-pages).
+
+### Can I create dynamic pages that list items by category?
+
+Yes. You can create a dynamic 'category' page with a different version for each category. In each version, visitors view a list of the items within the category and can click to view the specific items. 
+For example, let's say you're a book blogger with reviews for many different genres like mystery, romance, and fantasy. By setting up dynamic pages for each genre, your book-loving visitors can easily navigate to the reviews they are interested in, improving their experience.
+This allows you to establish dynamic pages for each category, adjust URL structures, personalize your pages, and, if desired, create an overarching dynamic page that displays all your categories. 
+Learn how to [create dynamic pages that list items by category](https://support.wix.com/en/article/cms-creating-dynamic-pages-that-list-items-by-category%EF%BB%BF).
+
+### Why doesn't my page show the items I connected?
+
+There are several setup factors that can cause your repeater, gallery or table to not load the connected items. The most common reasons involve the dataset settings, collection permissions, and sandbox syncing. 
+**Check the following to troubleshoot your connections: **
+- Make sure all the elements in your repeater are properly connected to the same dynamic page dataset.
+- Check in the dataset settings that your **Maximum items displayed **field and your filters and sort conditions are set correctly.
+- Check that you're using the correct [collection permissions](https://support.wix.com/en/article/cms-collection-permissions-overview).
+- If sandbox is enabled, ensure the [sandbox and live collections are synced](https://support.wix.com/en/article/cms-accessing-and-syncing-your-sandbox-and-live-collections#accessing-and-syncing-sandbox-and-live-collections).
+- If the URL slug was recently updated, we recommend [setting up a 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site).
+
+Learn more ways to [troubleshoot CMS collection issues](https://support.wix.com/en/article/cms-formerly-content-manager-troubleshooting-collection-issues).
+
+### How do I link the items to their dynamic item page?
+
+You can set up your repeater so that clicking an image or button takes you to the item's dynamic item page. Make sure your repeater already has an image or button attached to it. When connecting the button (see step 3 above), click the **Click action connects to** drop-down and select the relevant dynamic item page. 
+ Learn more about:
+- [Displaying collection content on your page](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-on-your-page).
+- [Dataset actions for images and buttons](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images).
+
+### Why can't I attach some elements to the repeater?
+
+Currently, there are limitations to the types of elements you can add to repeaters. Learn more about [which elements cannot be attached to repeaters](https://support.wix.com/en/article/wix-editor-elements-that-cant-be-added-to-repeaters).
+
+### Can I see how a pre-connected repeater works before setting up my own?
+
+Yes. You can [add a preset collection](https://support.wix.com/en/article/cms-formerly-content-manager-adding-collection-presets), built with sample items and fields, that adds dynamic pages to your site. Most presets add a dynamic list page with a repeater already connected to the collection so you can see how it works. The Portfolio preset adds a connected gallery instead of a repeater so choose a different preset to test a connected repeater.
+
+---
+Source: https://support.wix.com/en/article/cms-setting-up-a-dynamic-list-page

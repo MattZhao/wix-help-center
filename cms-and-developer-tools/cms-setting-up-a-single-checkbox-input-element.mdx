@@ -1,0 +1,211 @@
+---
+title: "CMS: Setting Up a Single Checkbox Input Element"
+---
+
+> **Tip:**
+>
+> This article is about setting up the single Checkbox input element. Alternatively, you can use a [Multi-Checkbox input element](https://support.wix.com/en/article/cms-setting-up-a-multi-checkbox-input-element) to let visitors filter or submit multiple choices.
+
+**In this article, learn more about: **
+
+---
+
+### Using the Checkbox input element to filter content on your live site
+
+Connect your Checkbox input element to the same dataset as your repeater or gallery to filter content. Choose the boolean field (true or false) that the checkbox will filter and set the condition (checked or unchecked). When visitors click the checkbox, the repeater or gallery will show items based on the boolean field value as per the selected condition.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Add the Checkbox input element: 
+
+1. Go to the page or section where you want visitors to filter content by a boolean value.
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **Input**.
+4. Click **Checkboxes**.
+5. Scroll down to the single **Checkbox** input elements.
+6. Click and drag the relevant single Checkbox input element onto the page.
+[image: Screenshot of adding a single Checkbox input element in the Wix Editor.]
+1. Connect the Checkbox element to the CMS:
+
+1. Click the **Connect to CMS** icon  on the Checkbox element.
+2. Select **Filter content **in the **Connect Checkbox **panel on the right. 
+
+**Tip: **If you haven't added a dataset to the page yet, add a dataset first (see the next step) then select **Filter content**.
+3. Click the **Choose a dataset** drop-down and select the same dataset that connects to the elements (e.g. repeater, gallery, table) that you want visitors to filter.
+4. Click the **Filter content by** drop-down and choose the boolean field that visitors will use to filter the content.
+
+**Tip: **To add a new field to your collection and use it for filtering content, select **Add new field**, then enter the field name and click **Add**. You can add values to the field in your CMS collection later.
+5. Click the **Condition **drop-down and choose an operator:
+
+- **Selected: **Show items that have their boolean field marked as checked (set to True).
+- **Is not selected: **Show items that do not have their boolean field marked as checked (set to False).
+[image: Screenshot of the CMS connection options for the Checkbox element.]
+1. Customize the Checkbox input element: 
+
+- Click the **Settings **icon  to edit the following: 
+
+- **Checkbox text: **Edit the text that displays next to the checkbox and lets visitors know what the checkbox does.
+- **Value: **(Velo only) Enter the component's value property used in JavaScript code.
+- **Field type: **Disregard the **Required **and **Checked by default** settings, which are only relevant if you set the Checkbox to collect content.
+- **Link Settings: **Enable the toggle to add linked text next to the Checkbox text. Enter the **Link text **and set the link destination.
+- Click the **Layout** icon  to set the checkbox size, spacing and alignment.
+- Click the **Design **icon  to choose a preset design and customize it further.
+- Click the **Animation **icon  to choose and customize an animation effect.
+[image: Screenshot of the Checkbox input element settings.]
+1. Click **Preview** to test your Checkbox element.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Add the Checkbox input element: 
+
+1. Go to the page or section where you want visitors to filter content by a boolean value.
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **Input**.
+4. Click **Checkboxes**.
+5. Click and drag the relevant single Checkbox input element onto the page.
+[image: Screenshot of adding a single Checkbox input element in the Studio Editor.]
+1. Connect the Checkbox element to the CMS:
+
+1. Click the **Connect to CMS** icon  on the Checkbox element.
+2. Select **Filter content **in the **Connect Checkbox **panel on the right. 
+
+**Tip: **If you haven't added a dataset to the page yet, add a dataset first (see the next step) then select **Filter content**.
+3. Click the **Choose a dataset** drop-down and select the same dataset that connects to the elements (e.g. repeater, gallery, table) that you want visitors to filter.
+4. Click the **Filter content by** drop-down and choose the boolean field that visitors will use to filter the content.
+
+**Tip: **To add a new field to your collection and use it for filtering content, select **Add new field**, then enter the field name and click **Add**. You can add values to the field in your CMS collection later.
+5. Click the **Condition **drop-down and choose an operator:
+
+- **Selected: **Show items that have their boolean field marked as checked (set to True).
+- **Is not selected: **Show items that do not have their boolean field marked as checked (set to False).
+[image: Screenshot of the CMS connection options for the Checkbox element.]
+1. Customize the Checkbox input element: 
+
+- Click the **Settings **icon  to edit the following: 
+
+- **Checkbox text: **Edit the text that displays next to the checkbox and lets visitors know what the checkbox does.
+- **Value: **(Velo only) Enter the component's value property used in JavaScript code.
+- **Field type: **Disregard the **Required **and **Checked by default** settings, which are only relevant if you set the Checkbox to collect content.
+- **Link Settings: **Enable the toggle to add linked text next to the Checkbox text. Enter the **Link text **and set the link destination.
+- Click the **Layout** icon  to set the checkbox size, spacing and alignment.
+- Click the **Design **icon  in the Inspector panel on the right to edit the design.
+[image: Screenshot of the Checkbox element settings, layout, and design options.]
+1. Click the **Preview** icon  at the top right to test your Checkbox element.
+2. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Using the Checkbox input element to collect responses from site visitors
+
+Set the Checkbox input element to collect content and connect it to a dataset that binds to a collection where you will store the responses. When visitors click your submit button, their response is saved to a boolean (true or false) field in your collection.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Add the single Checkbox input element: 
+
+1. Go to the page or section where you want visitors to use the Checkbox element.
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **Input**.
+4. Click **Checkboxes**.
+5. Scroll down to the single **Checkbox** input elements.
+6. Click and drag the relevant single Checkbox input element onto the page.
+[image: Screenshot of adding a single Checkbox input element in the Wix Editor.]
+1. Connect the Checkbox element to the CMS collection where you will store the submissions:
+
+1. Click the **Connect to CMS** icon  on the Checkbox element.
+2. Select **Collect content **in the **Connect Checkbox **panel on the right. 
+
+ **Tip: **If you haven't added a dataset to the page yet, add a dataset first (see the next step) then select **Collect content**.
+3. Click the **Choose a dataset** drop-down and select a dataset that connects to the collection where you will store the submissions.
+4. Click the **Checked state connects to** drop-down and choose the boolean field in which you will store the submissions.
+
+**Tip: **To add a new field for storing submissions, select **Add new field**, then enter the field name and click **Add**.
+5. Set the dataset mode and collection permissions:
+
+1. Click **Dataset Settings**.
+2. Click the **Dataset mode **drop-down and select **Write**.
+3. (If necessary) Click the permissions type next to **Collection Permissions **and select **Form submissions** in the 1st drop-down. You can click the additional drop-downs to refine the permissions. Click **Save** once you're done setting the permissions.
+4. Click **Back to Checkbox element **at the top of the **Dataset Settings **panel.
+[image: Screenshot of setting the collection permissions and dataset mode in the Wix Editor.]
+1. Customize the Checkbox input element: 
+
+- Click the **Settings **icon  to edit the following: 
+
+- **Checkbox text: **Edit the text that displays next to the checkbox and lets visitors know what the checkbox does.
+- **Value: **(Velo only) Enter the component's value property used in JavaScript code.
+- **Field type: **Select the relevant options:
+
+- **Required: **Make it mandatory that visitors check the box before they can send their submissions.
+- **Checked by default: **Automatically have the checkbox selected when the page loads.
+- **Link Settings: **Enable the toggle to add linked text next to the Checkbox text. Enter the **Link text  **(e.g. "Terms and conditions") and set the link destination.
+- Click the **Layout** icon  to set the checkbox size, spacing and alignment.
+- Click the **Design **icon  to choose a preset design and customize it further.
+- Click the **Animation **icon  to choose and customize an animation effect.
+[image: Screenshot of the settings used for a Checkbox input element.]
+1. [Add a 'Submit' button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-5-create-a-submit-button) for visitors to click to send their submissions.
+[image: Screenshot of adding a Submit button.]
+1. Click **Preview** to test your connections.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Add the single Checkbox input element: 
+
+1. Go to the page or section where you want visitors to use the Checkbox element.
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **Input**.
+4. Click **Checkboxes**.
+5. Click and drag the relevant single Checkbox input element onto the page.
+[image: Screenshot of adding a single Checkbox input element in the Studio Editor.]
+1. Connect the Checkbox element to the CMS collection where you will store input:
+
+1. Click the **Connect to CMS** icon  on the Checkbox element.
+2. Select **Collect content **in the **Connect Checkbox **panel on the right. 
+
+**Tip: **If you haven't added a dataset to the page yet, add a dataset first (see the next step) then select **Collect content**.
+3. Click the **Choose a dataset** drop-down and select a dataset that connects to the collection where you will store the inputs.
+4. Click the **Checked state connects to** drop-down and choose the boolean field that will store the submissions.
+
+**Tip: **To add a new field for storing submissions, select **Add new field**, then enter the field name and click **Add**.
+5. Set the dataset mode and collection permissions:
+
+1. Click **Dataset Settings**.
+2. Click the **Dataset mode **drop-down and select **Write**.
+3. (If necessary) Click the permissions type next to **Collection Permissions **and select **Form submissions** in the 1st drop-down. You can click the additional drop-downs to refine the permissions. Click **Save** once you're done setting the permissions.
+4. Click **Back to Checkbox element **at the top of the **Dataset Settings **panel.
+[image: Screenshot of setting the dataset mode to Write.]
+1. Customize the Checkbox input element: 
+
+- Click the **Settings **icon  to edit the following: 
+
+- **Checkbox text: **Edit the text that displays next to the checkbox and lets visitors know what the checkbox does.
+- **Value: **(Velo only) Enter the component's value property used in JavaScript code.
+- **Field type: **Select the relevant options:
+
+- **Required: **Make it mandatory that visitors check the box before they can send their submissions.
+- **Checked by default: **Automatically have the checkbox selected when the page loads.
+- **Link Settings: **Enable the toggle to add linked text next to the Checkbox text. Enter the **Link text  **(e.g. "Terms and conditions") and set the link destination.
+- Click the **Layout** icon  to set the checkbox size, spacing and alignment.
+- Click the **Design **icon  in the Inspector panel on the right to edit the design.
+[image: Screenshot of the Checkbox input element settings.]
+1. [Add a 'Submit' button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection?tabs=Studio-Editor-8#step-5-create-a-submit-button) for visitors to click to send their submissions.
+[image: Screenshot of the dataset settings for a Submit button.]
+1. Click the **Preview** icon  at the top right to test your connections.
+2. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click a question below to learn more about the Checkbox input element.
+
+### Is it possible to pre-check the checkbox for visitors?
+
+Yes, you can set the default state of the checkbox to be checked or unchecked in the element's settings. Currently this applies to checkboxes set to collect content only. The **Field type **settings (**Required**, and **Checked by default**) do not apply to the element when it is set to filter content.
+
+### Can I collect multiple checkbox responses in one form?
+
+Yes, you can add multiple Single Checkbox input elements to a form and connect each one to a different field in your dataset to collect various responses. 
+Alternatively, you can use the Multi-Checkbox input element to collect multiple choice responses in a single collection field.
+
+---
+Source: https://support.wix.com/en/article/cms-adding-and-setting-up-a-checkbox

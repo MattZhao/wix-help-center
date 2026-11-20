@@ -1,0 +1,53 @@
+---
+title: "CMS: Deleting Fields from a Collection"
+---
+
+You can delete a field from your CMS (Content Management System) collection if you no longer need the field or its stored values. Make sure the field is not used in any datasets, SEO settings, or connected page elements before you delete it to avoid breaking connections. To prevent broken URLs for dynamic pages, you cannot delete a field if it's used in the dynamic page's [URL slug structure](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+> **Tips:**
+>
+> - If you're unsure if a field is in use, rather than deleting the field, you can [hide it from your collection view](https://support.wix.com/en/article/cms-formerly-content-manager-hiding-sorting-and-filtering-fields-in-your-collection-view).
+> - If you accidentally delete a field, you can [use backups to restore the collection](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections).
+
+---
+
+### Consequences of deleting collection fields
+
+Review the table below to learn what happens when you delete fields that are connected to datasets, SEO settings, and specific page elements.
+
+**If the deleted field was: **On your published site:Used as a sort condition in a datasetThe content displays without applying the sort condition.Used as a filter condition in a dataset The dataset filter works as if the deleted field was an empty field. Used as a field in a dynamic page URL*You cannot delete a field if it is used in a dynamic page URL.Used in the site's SEO settingsThe SEO settings show the name of the field as static text. For example, if the field name was "category", the SEO settings will show the word "category" instead of a dynamic value.Connected to a text elementThe text element no longer displays any content.Connected to an input element set to collect contentThe input element continues to display. However, submissions from the element are not saved in your collection because the field to store them in was deleted. 
+If you connected the list of choices in a dropdown or selection tags element, nothing displays in the list of choices so nothing can be submitted. Connected to an input element set to filter contentThe input element continues to display. However, it does not show any options visitors can use to filter content because the field used to filter was deleted. Connected to a column in a tableThe column continues to display the header of the deleted field, but no content displays in the column's fields. 
+You can manually remove the column in the **Manage Table **settings. Connected to an image elementIf the image field is deleted, the element does not display any content.
+If the image field is not deleted, but other fields connected to the element are deleted (e.g. alt text, tooltip, link) the image displays, but the other fields are not in use since they no longer exist. Connected to a Pro GalleryIf the image field or media gallery field is deleted, nothing displays. 
+If the image or media gallery field is not deleted, but other connected fields are deleted, the images display, but the other fields are not in use since they no longer exist.Connected to a button elementIf the field connected to the button label is deleted, no text displays in the button but the click action still works. 
+If a field connected to the button's click action is deleted, nothing happens when the button is clicked. Connected to a video elementIf the video field is deleted, the video player's default video plays instead.
+
+---
+
+### Deleting a collection field
+
+Go to CMS in your dashboard or from your editor to delete collection fields.
+
+#### To delete a field from your collection:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **  Click the relevant collection.  Click **Manage Fields**.   Hover over the relevant field and click the **More Actions** icon .  Click **Delete**.
+
+Click the **Yes, delete field** checkbox then click **Delete**.
+
+---
+
+### FAQs
+
+Click below for answers to the most frequently asked questions about deleting collection fields.
+
+### How do backups work?
+
+Whenever you edit a collection, an automatic backup stores an archived copy of all your collections on a weekly basis. You can also create manual backups whenever you want to instantly save a copy of all your collections. Each backup includes all your collections' content, structure fields, settings, and named views. 
+When you restore a backup, you choose whether to restore all your collections or specific ones. Restoring a collection permanently deletes any changes made to the collection after the backup was created. This includes site visitor submissions saved after the backup date.
+
+### What happens to my CMS collection if I restore my site from site history?
+
+[Restoring your site from site history](https://support.wix.com/en/article/viewing-and-managing-your-site-history) reverts your site to a previous version but does not affect CMS collections. Wix apps, including the CMS, store their data in the apps themselves instead of in your site history. Your collections remain intact, even if you restore your site to a version that didn't have the CMS installed.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-deleting-fields-from-a-collection

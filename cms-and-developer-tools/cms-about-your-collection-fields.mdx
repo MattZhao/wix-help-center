@@ -1,0 +1,100 @@
+---
+title: "CMS: About Your Collection Fields"
+---
+
+Your CMS (Content Management System) collection fields store content about each item in your collection. The field type determines the kind of content you can store in the field as well as which elements on your site can connect to the field.
+
+---
+
+### Primary fields
+
+Every collection must have a Primary field, indicated by a **Flag** icon  next to the field name. By default, each collection includes a Primary field named "Title". If needed, you can change the name of this field or choose another to be your Primary field. We recommend making sure each item has a unique value in the primary field.
+
+Primary fields are also important for [reference fields](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections). When you create a reference field, you select from the values in the Primary field of the referenced collection. If you change the Primary field in the referenced collection, the values displayed in the reference field change to match the values in the new Primary field.
+
+---
+
+### Regular fields
+
+You can choose from a variety of field types when adding fields to your collections. Each field consists of a field type, field name, field ID, optional help text, and the ability to encrypt the field content as Personally Identifiable Information (PII).
+
+#### Field type
+
+The field type determines [what kind of content you can save](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types) in the field and [which site elements can connect to the field](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to). For example, the multi document field type can only save document files and connects to the Upload Button [input element](https://support.wix.com/en/article/cms-about-user-input-elements) that allows visitors to upload files to your collection.
+
+### Click to view the types of content you can store in each field type
+
+The field type determines what kind of content you can store in it. Choose from the following supported field types:
+- **Text: **Store plain text for use with titles, descriptions, and other text-based content.
+- **Image: **Store image files such as JPG, PNG, and GIF file types.
+
+**Tip: **You can add images to fields by pasting their image URLs in the fields.
+- **Media Gallery: **Store multiple images or videos in each field.
+- **Boolean: **Store binary "true" or "false" values that appear as checkboxes in the collection fields.
+- **Number: **Store numerical data for various purposes (e.g. quantity, price, dimensions).
+- **Date: **Store date and optional time values associated with content items.
+- **Time: **Store time information for associated items independently of the date.
+- **Rich Content: **Create and manage content with rich text formatting, media embeds, and other advanced features directly in your CMS.
+- **Rich Text: **Create and manage text using formatting options, directly in your CMS.
+- **Reference: **Create a relationship between content items by referencing another content item.
+- **Multi-Reference: **Create many relationships between content items by referencing multiple other content items. Those references can also be linked to multiple sources.
+- **URL: **Store web addresses for use with creating hyperlinks and navigational links.
+- **Document: **Store single document files for each item such as PDFs, CSVs, and more.
+
+**Tip: **You can add documents to fields by pasting their document URLs in the fields.
+- **Multi Document: **Store multiple document files for each item. You can also add multiple documents to fields by pasting their URLs in the fields.
+- **Video: **Store single video files for each item using file types such as AVI, MPEG, MOV and more.
+- **Audio: **Store single audio files for each item using file types such as MP3, WAV, FLAC, and more.
+- **Address: **Store structured data for physical addresses such as street names, city, state/province, postal code, and country.
+- **Tags: **Manage and categorize content items using keywords or descriptive labels.
+- **Array: **Input and manage multiple values within a single field. You can use the array field type to handle a collection of related data, such as a list of options, tags, or other sets of related values.
+- **Object: **Manage complex and structured data using custom objects or data structures. You can use the object field type to store and organize multiple related pieces of data as a single unit.
+
+Learn more about [supported field types and their limitations](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+
+#### Field name
+
+The field name appears at the top of each column in your collection's Table layout. You also see the field name when you connect elements to datasets that bind to your collection fields. Changing a field name changes it across your entire CMS and in your Editor without any effects on your live site.
+
+#### Field ID (Velo by Wix only)
+
+The field ID is used when referring to the field in code using the [Data API](https://support.wix.com/en/article/velo-working-with-the-data-api) or [Dataset API](http://wix.to/94BuAAs/wix-dataset.html). For example, if you want to insert an item using the Data API, use the field ID.
+
+`wixData.insert("CollectionName", {"fieldKey": "value"});`
+
+When you create a new field, the field ID is automatically created based on the field name. You can edit the field ID while adding a new field, but you cannot change it once the field has been created.
+
+#### Help text (optional)
+
+Add help text to a field if you want a tooltip in your collection that explains what the field is for. If you save help text to a field, an icon appears next to the field name in your collection. You can hover over the icon to view the help text tooltip. This text only appears in your collection for you and collaborators with [CMS roles](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) that allow them to view the collection.
+
+#### Encrypt as Personally Identifiable Information (PII)
+
+Enable this toggle for additional backend encryption of sensitive data, like social security and passport numbers. Learn more about [storing PII data](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data).
+
+---
+
+### System Fields
+
+The CMS automatically creates system fields for each collection that are used in the backend code. When you add dynamic pages for your collection, Page Link fields for your dynamic list and dynamic item pages are also automatically created as system fields. The default system fields are hidden from your collection, but you can view them when you click **Manage Fields** from your collection.
+
+Field NameField IDField TypeDescriptionID_idTextA unique identifier for the item. You can assign the ID a value when you import new content from a CSV file. Otherwise the ID is a random UUID. 
+Using Velo by Wix you can also assign the ID a value when adding items with the Data API. 
+Once defined the ID cannot be edited. Created date_createdDateDate and TimeThe date and time the item was added to the collection.Updated date_updatedDateDate and TimeThe date and time the item was last modified in the collection.Owner_ownerTextA unique identifier for the creator of the item. Used in [collection permissions](https://support.wix.com/en/article/cms-collection-permissions-overview) to determine who created each item.
+
+> **Note:**
+>
+> Time fields in an [exported CSV file](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) are in UTC+0. They are NOT in local time.
+
+---
+
+### Page Link fields
+
+When you create dynamic pages, Page Link fields are automatically created in your collection as system fields. These fields create links for your dynamic list pages and for each item's unique URL on dynamic item pages.
+
+> **Tip:**
+>
+> Go to your Editor's page settings to [customize the variables used in your dynamic pages](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls). Editing the URL values in your Editor automatically updates the Page Link fields in your collection.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields

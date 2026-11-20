@@ -1,0 +1,130 @@
+---
+title: "CMS: Adding Filters and Sorts to Datasets to Control Live Site Content"
+---
+
+Add filters to CMS (Content Management System) [datasets](https://support.wix.com/en/article/cms-about-datasets) to only show certain items in their connected page elements. To choose the order in which the items appear, add sort conditions to the datasets. In both cases, you choose which collection fields to use for filtering or sorting the collection items.
+
+**In this article, learn more about: **
+
+---
+
+### Adding filters to your dataset
+
+Add filters to datasets to choose which collection items appear in the connected elements (e.g. repeaters, galleries, input elements). Dataset filters do not affect the items that appear in your collection views. You can [add filters to your collection views](https://support.wix.com/en/article/cms-formerly-content-manager-hiding-sorting-and-filtering-fields-in-your-collection-view#adding-filters-to-fields-to-show-only-certain-items) if you want to only see certain items in the collections, without affecting live site content.
+
+> For an overview of this process, check out our [Ultimate CMS Guide video](https://youtu.be/S2AgB6wGnk4?t=1629&si=ANoGXJevlUpXcMpz).
+
+Wix EditorStudio Editor
+1. [Go to the relevant page in your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the relevant dataset settings:
+
+1. Click **CMS **** **on the left.
+2. Click **Manage Page Connections**.
+3. Click the **More Actions **icon  next to the relevant dataset and select **Dataset settings**.
+3. Click **+ Add Filter **under **Filter**.
+4. Click the **Field **drop-down and select the field you want to apply the filter to.
+5. Click the **Condition **drop-down and choose the condition you want to use in the filter. The options vary based on the field type that is being filtered.
+6. (If necessary) Select the **Value source: **
+
+- **Manual entry: **Enter the value you want to filter by in the **Value **field.
+- **Another dataset: **Select the dataset and field you want to filter from the relevant drop-downs.
+7. Click **Add Filter**.
+[image: A screenshot of adding a filter to a dataset in the Wix Editor.]
+1. Publish your site when you are ready to make the changes go live.
+
+1. [Go to the relevant page in your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the relevant dataset settings:
+
+1. Click an element that connects to the dataset you want to filter.
+2. Click the **Connect to CMS** icon .
+3. Click **Dataset** **Settings **below the **Choose a dataset **drop-down.
+
+1. Click **+ Add Filter **in the **Filter **section.
+2. Click the **Field **drop-down and select the field you want to apply the filter to.
+3. Click the **Condition **drop-down and choose the condition you want to use in the filter.
+4. (If necessary) Select the **Value source: **
+
+- **Manual entry: **Enter the value you want to filter in the **Value **field.
+- **Another dataset: **Select the dataset and field you want to filter from the relevant drop-downs.
+- **URL Slug: **(Datasets connected to Wix app collections only) You must select the **Slug (Text) **field to use this filter. Learn how to use the URL slug filter to display collection content on your [Stores Product Page](https://support.wix.com/en/article/cms-displaying-collection-content-on-your-wix-stores-product-page) or [Bookings Pages](https://support.wix.com/en/article/cms-displaying-collection-content-on-bookings-pages).
+5. Click **Add Filter**.
+
+1. Publish your site when you are ready to make the changes go live.
+
+---
+
+### Adding sort conditions to your dataset
+
+By default, datasets sort items by creation date with the newest items appearing first in the connected page elements (e.g. repeaters, galleries, input elements). You can add sort conditions to datasets to control the order in which the items appear on your site. Dataset sorts override the order in any collections in which you've enabled the "[Mirror on Site](https://support.wix.com/en/article/cms-mirroring-the-order-of-items-in-your-collection-to-your-sites-connected-elements)" feature. However, dataset sorts do not affect the order in which items appear in your collection views.
+
+Wix EditorStudio Editor
+1. [Go to the relevant page in your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the relevant dataset settings:
+
+1. Click **CMS **** **on the left.
+2. Click **Manage Page Connections**.
+3. Click the **More Actions **icon  next to the relevant dataset and select **Dataset settings**.
+3. Click **Add new sort **in the **Sort **section. 
+
+**Tip:** To edit an existing sort condition, hover over it, click the **More Actions** icon  and select **Edit**.
+4. Click the **Field **drop-down and select the field you want to sort.
+5. Click the **Order** drop-down and choose the order in which you want the content to appear.
+6. Click **Add Sort**.
+[image: A screenshot of adding a sort to a dataset in the Wix Editor.]
+1. Publish your site when you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click an element that connects to the dataset you want to sort.
+3. Click the **Connect to CMS **icon .
+4. Click **Dataset** **Settings **below the **Choose a dataset **drop-down.
+
+1. Click **+ Add new sort **in the **Sort **section.
+
+**Tip:** To edit an existing sort condition, hover over it, click the **More Actions** icon  and select **Edit**.
+2. Click the **Field **drop-down and select the field you want to sort.
+3. Click the **Order** drop-down and choose the order in which you want the content to appear.
+4. Click **Add Sort**.
+
+1. Publish your site when you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about filtering and sorting items.
+
+### Can I hide fields in my collection to prevent them from appearing on the page?
+
+Yes. In your collection settings, you can toggle on **Control item visibility**. This adds a new field in your collection where you can set individual items as "Hidden". These items do not get read by the dataset, so they cannot appear on your live site. With this feature, you can also set schedules that automatically show or hide collection items at specific dates and times.
+Learn more about [controlling item visibility from your collection itself](https://support.wix.com/en/article/cms-controlling-live-site-item-visibility-from-your-collection).  
+Keep in mind that [hiding, showing, or reordering fields in your collection view](https://support.wix.com/en/article/cms-creating-custom-collection-views), does not affect whether they can be connected to your page elements.
+
+### Can I control the order in which the items display on my live site from my collection?
+
+Yes. You can enable the "[Mirror on Site](https://support.wix.com/en/article/cms-mirroring-the-order-of-items-in-your-collection-to-your-sites-connected-elements)" feature to apply the order of your collection view to connected site elements. Keep in mind that any sorts added to datasets override the order set in the mirrored collection view.
+
+### How can I sort my items in a more logical way when using a mixture of letters and numbers in a Text field type?
+
+When you're using a Text field type that contains both letters and numbers, the system applies an alphabetic sorting order. This means that Text field values are sorted in an alphabetic sequence. For example: 
+- P101
+- P120
+- P1200
+- P123
+
+While this is an expected behavior for an alphabetic sorting logic, you might prefer to sort these values in a numerical sequence.
+To achieve this, you can use a Number field type without any letters. By using a Number field type, the system will sort the same set of numbers as follows: 
+- 101
+- 120
+- 123
+- 1200
+
+This order aligns with a numerical sequence, offering a more intuitive understanding of your sorted data.
+Learn how to add [sorts to your collection view](https://support.wix.com/en/article/cms-formerly-content-manager-hiding-sorting-and-filtering-fields-in-your-collection-view#sorting-items-in-your-collection) to control the order of items in your collection.
+
+### What happens if no collection items match my dataset filter criteria?
+
+If you add a filter to the dataset that returns no matching results from your collection, then the connected elements will not appear on the live site. 
+After applying a dataset filter, the total number of items that can appear on the page displays next to **Filter** in the dataset settings. A zero appears if no items match the filter criteria.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content

@@ -1,0 +1,124 @@
+---
+title: "Wix Hotels by HotelRunner: Connecting Booking.com to Your Site"
+---
+
+Booking.com integrates with Wix Hotels by HotelRunner to streamline your booking management. Before connecting, ensure all room rates and availability are set on the Wix Hotels by HotelRunner dashboard, as this integration overwrites your Booking.com calendar.
+
+---
+
+### Step 1 | Important information before you connect Booking.com
+
+Before you connect Booking.com as a channel, make sure to [set and update the rates and availability of all rooms on the Inventory Calendar](https://support.wix.com/en/article/wix-hotels-by-hotelrunner-managing-prices-and-availability-with-the-inventory-calendar). After connecting, Wix Hotels by HotelRunner will transfer your entire inventory to Booking.com, replacing the existing calendar there. All updates must be made through the Wix dashboard, as your Booking.com extranet calendar will be locked.  All the future reservations will be fetched into your Wix dashboard. Reservations with an expired check-in date will not be fetched into your Wix dashboard.  You can connect only one Hotel ID from each channel to each Wix Hotels by HotelRunner account. Group hotels or different Hotel IDs cannot connect to the same Wix Hotels by HotelRunner account.  Before the integration, to open your slots on Booking.com, please update your rooms with 2 weeks of rates and availability for the channel manager to fully register your rooms.  If you have blocked certain dates on your calendar before the integration, once the integration is completed, we cannot overwrite your blocked dates. To manage your calendar, please unblock your calendar from the Booking.com extranet.
+
+---
+
+### Step 2 | Approve Wix Hotels by HotelRunner for connection on Booking.com
+
+To approve Wix Hotels by HotelRunner on the Booking.com website, log in to your Booking.com extranet, go to **Account**, and select **Connectivity** **Provider**. Search for "HotelRunner" and click **Connect**. Ensure you check all relevant checkboxes for reservations, rates and availability, guest reviews, and reporting, etc.
+
+> **Note:**
+>
+> For further assistance, [visit the Booking.com help center](https://partner.booking.com/en-us/help/channel-manager/setup/setting-and-working-connectivity-provider).
+
+#### To approve Wix Hotels by HotelRunner for connection on Booking.com:
+
+[Log in to the Booking.com extranet](http://admin.booking.com).  Click **Account** in the menu at the top.  Select **Connectivity Provider** from the drop-down.
+
+**Note:** If the Connectivity Provider option is not available on the page, contact Booking.com to make this option visible.   Click **Search**.   Enter "HotelRunner" in the **Search Provider** field.  Click **Connect** on the page that opens.  Select the relevant permissions you want to give Booking.com.
+
+**Note:** Reservations, rates and availability, guest reviews, and reporting boxes are mandatory to complete the connection.
+
+---
+
+### Step 3 | Map your room types on Booking.com
+
+To map room types, find your room IDs on the Booking.com extranet **Room Details** under **Property**, and then input these IDs in the Room type mapping section of the Wix Hotels by HotelRunner dashboard.
+
+Make sure to match room availability and prices. You can then use the "Advanced Settings" feature to further adjust prices, then click "Complete mapping" once all room types and rates are set.
+
+> **Important:**
+>
+> In the channels where you see the HR standard rate, it should always be selected as “Main Rate” and “Don't Send”.
+
+#### To map your room types:
+
+Collect your room IDs on the Booking.com extranet in **Room Details** under **Property**.  In another tab on your browser, go to [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.   Click **View channel details** next to **Booking.com**.  Click **Fetch room types**.   Hover over each room type and click **Expand**.   Match your Booking.com room types with your room types on Wix Hotels by HotelRunner using the drop-downs.
+
+**Note: **Make sure to double-check you are matching the correct room types across both platforms, as there may be differences in room type names.   Click **Save** at the bottom.
+
+---
+
+### Step 4 | Adjust your advanced settings
+
+With the advanced settings for the Booking.com integration, you can ensure your room availability doesn't fall below a set number using the Base availability. You can also adjust room rates by specifying a different price to send to Booking.com. Additionally, you can choose to stop sales for certain rate types or mark rates as read-only to prevent updates.
+
+#### To adjust your advanced settings:
+
+[Go to Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.  Click **View channel details** next to **Booking.com**.  Hover over the relevant room type and click **Expand**.  Click **Advanced Settings** at the top right.   Select the relevant option from the **Room type of your property** drop-down.   Choose the relevant option from the **Allocation type** drop-down:
+
+- **No changes:** Keeps the current availability settings without making any adjustments. Choose this option when you’re confident that your existing inventory data is accurate and up-to-date.
+- **Number of available beds in available rooms: **Sets the availability based on the number of beds in the rooms that are available. For example, if you manage a hostel where each room has multiple beds, and you want to track and sell each bed individually within the available rooms.
+- **Number of available beds:** Sets the availability based on the total number of beds available. For example, a dormitory, where beds can be booked individually, regardless of which specific room they are in.
+- **Number of available rooms: **Sets the availability based on the total number of rooms available. Use this option for traditional hotels where you want to set availability based on entire rooms being booked, without focusing on the number of beds in each room.
+    Enter the relevant number in the **Base availability** field. Base** **availability is the minimum number of rooms you always want to keep available, no matter how many you sell. For example, if you set it to 5, your system will always show at least 5 rooms available, even if others are booked. We recommend you **do not** make any changes here, as it can cause **overbooking**.   Select **Yes** under **Commission included**.
+
+Enter the relevant **Adjustment** amount.   Choose either a percentage adjustment  or a monetary  adjustment, and choose whether the adjustment is an increase **+** or a decrease **-**.   Enable the **Main rate** toggle to set this rate type as the main rate.  Enable the **Read-only** toggle to update reservations and availability of the room.
+
+**Note: **Other updates such as rate, minimum stay, stop sell etc, are not affected.  Enable the **Send price** toggle to update only availability for the room type. The price for this rate type won’t be sent to Booking.com.   Repeat steps 9-13 for all room types.   Click **Save**.
+
+### Show me how to use advanced settings to increase my room rates on Booking.com
+
+For example, if you want to send your rate for a room type to Booking.com at a 25% higher rate than on your Wix Hotels by HotelRunner calendar:
+
+**Note:** In the channels where you see the HR standard rate, it should always be selected as “Main Rate” and “Don't Send”. 
+
+1. In the drop-down next to the room type, select your room on Wix that corresponds to the room in the target channel. For example, select "Junior 2 guests" as in the screenshot below.
+2. Select **Don't send**.
+3. Enter **25** in the **Adjustment** field.
+4. Click the **percentage adjustment** icon .
+5. Click the **Increase** icon **+**.
+6. Enable the **Main rate** toggle.
+7. Enable the **Send price** toggle.
+8. Repeat steps 1-7 above for all relevant room types.
+9. Click **Save** at the bottom.
+[image: A screenshot showing how to send a room type to Booking.com at a 25 percent increased rate.]
+
+---
+
+### Step 5 | Activate the Booking.com connection
+
+After completing your room mapping, click **Activate**. Once the Booking.com connection is complete, all your inventory (rates, availability, and restrictions) on your Wix Hotels by HotelRunner calendar will be transferred to your Booking.com account. You can review and update your room mapping from the [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the dashboard at any time.
+
+---
+
+### Frequently Asked Questions (FAQs)
+
+Click a question below to learn more.
+
+### What should I do before connecting Wix Hotels by HotelRunner with Booking.com?
+
+Make sure all your room rates and availability are set on the Inventory Calendar in the Wix Hotels by HotelRunner dashboard. This setup will be transferred to Booking.com, and any updates must be managed from Wix after the connection. 
+Update your rooms with 2 weeks of rates and availability in Wix Hotels by HotelRunner. This allows the channel manager to fetch your rooms into the system.
+
+### How are reservations handled after the connection?
+
+All future reservations will be fetched into your Wix dashboard. Reservations with an expired check-in date will not be fetched into your Wix dashboard.
+
+### Can I connect multiple Hotel IDs or group hotels to one Wix Hotels by HotelRunner account?
+
+No, you can only connect one Hotel ID from each channel to a single Wix Hotels by HotelRunner account. Group hotels or different Hotel IDs require separate accounts.
+
+### What happens to blocked dates on my Booking.com calendar after integration?
+
+Blocked dates on your Booking.com calendar will remain unchanged. To manage these dates, you’ll need to unblock them from the Booking.com extranet.
+
+### What options should I select during the HotelRunner integration on Booking.com?
+
+You should select reservations, rates and availability, guest reviews, and reporting. Online check-in, content, and photo options are optional but recommended.
+
+### How do I map room types between Wix Hotels by HotelRunner and Booking.com?
+
+Use room IDs to match your rooms between the two platforms. Ensure that room types and prices align, such as mapping both “Junior Suite for 1 person” and “Junior Suite for 2 people.”
+
+---
+Source: https://support.wix.com/en/article/wix-hotels-by-hotelrunner-connecting-bookingcom-to-your-site

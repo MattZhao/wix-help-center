@@ -1,0 +1,411 @@
+---
+title: "CMS: Displaying Collection Content in a Repeater"
+---
+
+Connect repeaters to the CMS (Content Management System) to display dynamic content from your collections.
+
+> **Before you begin:**
+>
+> Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+
+---
+
+### Step 1 | Create a CMS collection
+
+Create a multiple item collection for storing the content you want to use in your repeater. Add collection fields that will connect to the elements in your repeater. Then add the items that will appear in your repeater and fill in the fields for each item. Set your collection permissions to determine the type of content you want to store and who has access to manage it.
+
+Wix EditorStudio EditorDashboard
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Create Collection**.
+4. Enter a name for your collection.
+5. Leave **Multiple items (Default) **selected and click **Create**.
+6. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+7. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the editor.
+3. Click **Create Collection**.
+4. Enter a name for your collection.
+5. Leave **Multiple items (Default) **selected and click **Create**.
+6. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+7. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+1. [Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.
+2. Click **Create Collection**.
+3. Enter a name for your collection.
+4. Leave **Multiple items (Default) **selected and click **Create**.
+5. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+6. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+---
+
+### Step 2 | Add and customize your repeater
+
+Add a repeater then drag elements such as text, images, or buttons onto its items/containers. You can adjust the size of the repeater or remove elements to make sure everything you need in the repeater can fit. When you add an element to a repeater, the element is automatically added to each repeater item.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page or section where you want to add your repeater.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **List**.
+5. Click and drag the repeater you want to use onto the page.
+
+1. Add or remove elements from your repeater. You can resize the repeater so it can fit all the necessary elements inside it. Later, you will connect the elements to collection fields to replace the content. Each repeater item will show a different item from your collection.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page or section where you want to add your repeater.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Layout Tools**
+5. Click **Repeaters**.
+6. Click and drag the repeater you want to use onto the page.
+[image: A screenshot of adding a repeater in the Studio Editor.]
+1. [Add elements](https://support.wix.com/en/article/studio-editor-adding-elements-4240855) to your repeater such as text, images and buttons. You can also delete elements from the repeater if you don't need them. Later, you will connect the elements to the relevant collection fields. Each repeater item will show a different item from your collection.
+Tip: Select a repeater item and click **Add Media **to add an image as the background. In the next step, you can select the image and click the **Connect to CMS **icon  to connect it to images in your collection.
+
+> **Important:**
+>
+> Make sure your repeater contains a button or image element, so you can link to the [dynamic item page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page). This lets visitors click the image or button to navigate to the relevant item in the dynamic item page.
+
+---
+
+### Step 3 | Connect the repeater items to your collection
+
+[Datasets](https://support.wix.com/en/article/cms-about-datasets) are the tool you use to connect your repeater elements to your collection fields. Once you connect an element to a dataset, you can choose which collection fields to use with each part of the element. Connect each element that you want to display collection content in. Then resize, move, or adjust the elements to your liking.
+
+Wix EditorStudio Editor
+1. In your editor, click the repeater you added.
+2. Click the **Connect to CMS** icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click** Add a Dataset**, then choose the collection you want to connect, give it a name and click **Create**.
+[image: A screenshot of selecting the relevant collection when connecting a dataset.]
+1. Under **Connections**, click the element you want to connect first.
+2. (Optional) If you want to connect the element to a different dataset, click the **Choose a dataset **drop-down and select another dataset. Otherwise, leave it connected to the same dataset.
+3. Under **Connections**, click the relevant drop-downs to connect each part of the element to the relevant collection field. The options vary depending on the element type.
+Tips:
+- To link the button element to the collection's dynamic item page, click the **Click action connects to **field and select the dynamic item page that ends with **(Item)**.
+- To link an image element to the collection's dynamic item page, click the **Link connects to **drop-down and select the dynamic item page that ends with **(Item)**.
+[image: A screenshot of connecting a button to the dynamic item page.]
+1. Click **Repeater connections** at the top of the panel on the right.
+2. Repeat steps 4-7 above to connect each element you want to display collection content in.
+[image: A screenshot showing all the elements you can connect in a repeater's dataset.]
+1. (Optional) Click to resize, move, or adjust any of the elements in your repeater. You can add, remove, connect or disconnect elements at any time.
+
+1. In your editor, click the repeater you added.
+2. Click the **Connect to CMS** icon  .
+3. Connect a dataset by clicking an option from the Inspector panel on the right:
+
+**Note: **The options vary, based on your total collections and datasets on the page. 
+
+- **Add a Dataset: **Choose the collection you want to connect, give the dataset a name and click **Create**.
+- **Choose a dataset: **Select the dataset you want to connect.
+[image: A screenshot of a repeater that is connected to a dataset.]
+1. Under **Connections**, click the element you want to connect first.
+2. (Optional) If you want to connect the element to a different dataset, click the **Choose a dataset **drop-down and select another dataset. Otherwise, leave it connected to the same dataset.
+3. Under **Connections**, click the relevant drop-downs to connect each part of the element to the relevant collection field. The options vary depending on the element type.
+Tips:
+- To link the button element to the collection's dynamic item page, click the **Click action connects to **field and select the dynamic item page that ends with **(Item)**.
+- To link an image element to the collection's dynamic item page, click the **Link connects to **drop-down and select the dynamic item page that ends with **(Item)**.
+
+1. Click **Repeater Connections** at the top of the panel.
+[image: A screenshot of selecting Repeater connections.]
+1. Repeat steps 4-7 above to connect each element you want to display collection content in.
+[image: A screenshot showing all the elements in a repeater are connected to a dataset.]
+1. (Optional) Click to resize, move, or adjust any of the elements in your repeater. You can add, remove, connect or disconnect elements at any time.
+
+---
+
+### Step 4 | Manage the dataset settings
+
+Adjust the dataset settings to control the dataset mode, the total items that can load at a time, the items that display, and the order in which they appear.
+
+Wix EditorStudio Editor
+1. Go to the repeater's connected dataset settings:
+
+1. Click the repeater.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Repeater** panel on the right.
+2. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the repeater.
+- **Read & Write: **Allow the dataset to display your collection content in the repeater and allow visitors to add or edit collection content with input elements.
+3. Edit the **Maximum items displayed **field to adjust the maximum items that can initially load in the repeater. This is also the maximum items that can load when visitors click 'Load More' buttons, 'Next/Previous page' buttons, or pagination bars.  See the next section for steps.
+[image: A screenshot of the 'Maximum items displayed' dataset setting.]
+1. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+2. (Optional) Click **+ Add new sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater.
+
+1. Go to the repeater's connected dataset settings:
+
+1. Click the repeater.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the Inspector panel.
+[image: A screenshot of going to the Dataset Settings in the Studio Editor.]
+1. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the repeater.
+- **Read & Write: **Allow the dataset to display your collection content in the repeater and allow visitors to add or edit collection content with input elements.
+2. Edit the **Maximum items displayed **field to adjust the maximum items that can initially load in the repeater. This is also the maximum items that can load when visitors click 'Load More' or 'Next/Previous page' buttons. See the next section for steps.
+3. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+4. (Optional) Click **+ Add Sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater.
+
+---
+
+### Step 5 | (Optional) Create 'Load More' or navigational buttons
+
+You can display up to 1000 items at a time in your repeater. However, if you want to display a lot of items, consider adding a 'Load More' button to improve loading performance. Adjust the ['Maximum items displayed' field](https://support.wix.com/en/article/cms-changing-the-maximum-items-displayed-in-your-dataset-settings) to control the number of items that can load at a time in the dataset's connected repeater.
+
+Wix EditorStudio EditorChoose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Load More' button.
+7. Click **Preview** to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Next Page' button.
+7. Duplicate your 'Next Page' button: 
+
+1. Right-click the button (**control **+ click on Mac).
+2. Select **Duplicate** (or press **Ctrl **+ **D **or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not attach it to your repeater.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click **Preview** to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+Connect a pagination bar**Note:** Pagination bars are not relevant for static pages or dynamic item pages that can only display 1 item at a time. 
+
+1. Add a pagination bar: 
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Interactive**.
+3. Click **Pagination Bar**.
+4. Click and drag the pagination bar you want to use onto the page.
+2. Click **Change Layout **to adjust the layout.
+3. Click the **Design** icon  on the pagination bar to edit the design.
+4. Click the **Connect to CMS** icon** **.
+5. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+6. Click and drag the edges of your pagination bar to resize it.
+7. Click **Preview** to test your pagination bar.
+8. Click **Publish** if you are ready to make the changes go live.
+
+View a full tutorial on [adding and setting up a pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar). Choose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Click the** Preview** icon  at the top right to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the repeater). Do not attach the button to your repeater.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your repeater.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Duplicate your 'Next Page' button: 
+
+1. Select the button.
+2. Press **Ctrl **+ **D **on your keyboard** **(or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not attach it to your repeater.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click the** Preview** icon  at the top right to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+Note: Pagination bars are not yet available in the Studio Editor. [Vote for this feature](https://support.wix.com/en/article/cms-request-adding-a-pagination-bar-in-the-studio-editor) if you would like to see it in the future.
+
+---
+
+### FAQs
+
+Click below for answers to the most frequently asked questions about connecting repeaters to the CMS.
+
+### How can site visitors filter the content that appears in the repeater?
+
+To let site visitors filter the repeater content, connect input elements to the same dataset that connects to your repeater. View a step-by-step tutorial for [allowing visitors to filter content with input elements](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+### Why doesn't my repeater show the items I connected?
+
+There are several setup factors that can cause your repeater to not load the connected items. The most common reasons involve the dataset settings, collection permissions, and sandbox syncing. Learn how to [troubleshoot CMS collection issues](https://support.wix.com/en/article/cms-formerly-content-manager-troubleshooting-collection-issues).
+
+### How do I link a repeater item to a dynamic item page?
+
+You can set up your repeater so that clicking an image or button takes you to the item's dynamic item page. Make sure your repeater already has an image or button attached to it. When connecting the button or image (see step 3 above), click the **Click action connects to** drop-down and select the relevant dynamic item page. 
+ Learn more about:
+- [Displaying collection content on your page](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-on-your-page).
+- [Dataset actions for images and buttons](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images).
+
+### Why can't I attach some elements to the repeater?
+
+Currently, there are limitations to the types of elements you can add to repeaters. Learn more about [which elements cannot be attached to repeaters](https://support.wix.com/en/article/wix-editor-elements-that-cant-be-added-to-repeaters).
+
+### Can I see how a pre-connected repeater works before setting up my own?
+
+Yes. You can [add a preset collection](https://support.wix.com/en/article/cms-formerly-content-manager-adding-collection-presets), built with sample items and fields, that adds dynamic pages to your site. Most presets add a [dynamic list page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-list-page) with a repeater already connected to the collection so you can see how it works. The Portfolio preset adds a connected gallery instead of a repeater so choose a different preset to test a connected repeater.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater

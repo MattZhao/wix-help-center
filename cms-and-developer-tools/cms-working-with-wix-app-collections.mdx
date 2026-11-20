@@ -1,0 +1,88 @@
+---
+title: "CMS: Working with Wix App Collections"
+---
+
+Wix app collections in the CMS (Content Management System) are databases that get added to your site when you add some Wix apps. One example is Wix Stores, which comes with a Products collection. Another example is Wix Bookings, which comes with a Schedule and Services collection.
+
+These collections are read-only. Any changes you want to make must take place in the relevant app manager.
+
+---
+
+### Viewing Wix app collections in your CMS
+
+By default, your Wix app collections are hidden from your list of collections. To view Wix app collections, enable them from your CMS advanced settings.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left of the Editor.
+3. Click **Your Collections**.
+4. Click **Manage**.
+5. Click **More Actions **at the top.
+6. Select **Advanced Settings**.
+7. Enable the **Wix App Collections **toggle.
+[image: A screenshot of the Wix App Collections toggle.]
+1. Click the **X **at the top right to close the CMS window.
+2. Click **Wix App Collections **on the left to view all your collections created by other Wix products.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  at the top of Editor X.
+3. Click **Your Collections**.
+4. Click **Manage**.
+5. Click **More Actions **at the top.
+6. Select **Advanced Settings**.
+7. Enable the **Wix App Collections **toggle.
+[image: A screenshot of the Wix App Collections toggle.]
+1. Click the **X **at the top right to close the CMS window.
+2. Click **Wix App Collections **on the left to view all your collections created by other Wix products.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the Editor.
+3. Click **Your Collections**.
+4. Click **Manage**.
+5. Click **More Actions **at the top.
+6. Select **Advanced Settings**.
+7. Enable the **Wix App Collections **toggle.
+[image: A screenshot of the Wix App Collections toggle.]
+1. Click the **X **at the top right to close the CMS window.
+2. Click **Wix App Collections **on the left to view all your collections created by other Wix products.
+
+---
+
+### How do Wix app collections work?
+
+Wix app collections contain information about the items in your Wix app. For example, if you have Wix Stores on your site, your Products collection will contain information about the products you sell in your store. The fields (columns) in the collection provide information about each item (row), such as the item's name, stock number, price, and image.
+
+Every time you add a new app item or make changes to an existing item in your dashboard, the changes are automatically reflected in your collection.
+
+**Velo by Wix Users: **You can also write code that references these collections to add customized features to your apps. Learn how [here](https://support.wix.com/en/article/velo-working-with-cms#working-with-wix-app-collections-in-your-code). See the app examples in the [Velo by Wix Examples site](https://www.wix.com/code/home/examples).
+
+---
+
+### Wix app collection fields
+
+Your Wix app collection fields get their data from the relevant apps (e.g. Stores, Bookings, Events). In these collections, you can view the [field names](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#field-name), [types](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#field-type), [IDs](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#field-id-velo-by-wix-only) and content. Each app has its own unique capabilities. For example, some apps like [Pricing Plans](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-pricing-plans/wix-pricing-plans-paid-plans-plans-collection-fields#velo-wix-pricing-plans-paidplansplans-collection-fields) do not allow you to use their fields in user input elements that are set to filter content.
+
+> **What does each Wix app collection field represent?**
+>
+> Go to our [Wix Developers documentation](https://dev.wix.com/docs/develop-websites/articles/wix-apps/about-apps-made-by-wix#about-apps-made-by-wix) to view more info about specific Wix app collections. You can click the relevant app in the side bar to view details about each of its fields.
+
+---
+
+### Wix app collection permissions
+
+Wix app collections have limited permissions that cannot be changed. Each collection permission (read, create, update, delete) is assigned a role. Permissions affect what your visitors can do with the collection content.
+
+You can see the collection's permission settings by clicking the **Permissions** tab at the top right of your collection.
+
+### Examples
+
+**Stores or Products Database Collection:** Anyone can read the collection content, however no one can create, update, or delete content. 
+- You can display all of your Products collection content that can connect to elements on your page.
+- You cannot have visitors update the content of your collection using user input elements.
+
+**Members/PrivateMembersData Collection:** Only [site member authors](https://support.wix.com/en/article/cms-collection-permissions-overview#roles) can read the collection content, and no one can create, update, or delete collection content. 
+- You can display PrivateMembersData content that can connect to elements on your page, but each member will only see the content from their own member item.
+- You cannot have visitors update the content of your collection using user input elements.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections

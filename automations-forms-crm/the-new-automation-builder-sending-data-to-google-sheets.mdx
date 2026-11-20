@@ -1,0 +1,129 @@
+---
+title: "The New Automation Builder: Sending Data to Google Sheets"
+---
+
+> This article refers to the new automation builder that is currently being released. If you're not seeing this version, then see our article about the [previous version of the automation builder](https://support.wix.com/en/article/wix-automations-sending-data-to-google-sheets).
+
+Create an automation that sends data to Google Sheets, such as form submissions or invoice details. This allows you to collaborate with people using Google Sheets without giving them access to your site's dashboard.
+
+---
+
+### Step 1 | Create a new automation and connect your Google account
+
+To begin, create a new automation and add the action **Update Google Sheets**. Then connect your Google account so the automation can access the spreadsheet.
+
+#### To create a new automation and connect your Google account:
+
+Go to [Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.  Click **+ New Automation** at the top right.  Click **+ Start from Scratch**.  Give your automation a title and choose a trigger.  Click the **Add Step** icon   and add an **Action**.  Select **Update Google Sheets** under **Integrations **on the left.
+
+Click **Connect Google Account**.  Select the relevant Google account.  Click **Allow**.
+
+> **Important:**
+>
+> When connecting your Google account, you are providing permissions for Wix to access your spreadsheet data. You can [remove permissions](https://myaccount.google.com/permissions?pli=1) at any time from your Google account.
+> If you remove Wix permissions, any automations that use Google Sheets will become disconnected and stop working. You can [reset your Google permissions in an automation](https://support.wix.com/en/article/wix-automations-sending-data-to-google-sheets#faqs), but note that the trigger can't work retroactively or add any information that was "skipped" while the automation was disconnected.
+
+---
+
+### Step 2 | Connect a spreadsheet to your automation
+
+Next, connect the relevant spreadsheet to your automation. All spreadsheets in your connected Google account can be used in your automations. You can create new spreadsheets within Google Sheets and use these too.
+
+Choose what you want to do:
+
+### Connect an existing spreadsheet to the automation
+
+1. Click **Select Spreadsheet**.
+2. Choose a spreadsheet from the available files.
+3. (Spreadsheet with multiple tabs) Click the **Choose sheet **drop-down to select which tab the automation should send data to.
+
+**Tip:** You can see how many tabs your spreadsheet has at the bottom of the Google Sheet.
+[image: Screenshot of]
+
+**Note:** You can only sync spreadsheets that you created, not spreadsheets that were shared with you. If the spreadsheet you want to connect isn't owned by you, first make a copy of it in your Google account.
+
+### Create a new spreadsheet in Google Sheets and connect it
+
+1. Go to Google Sheets in the connected Google account and create a new spreadsheet.
+2. Add a spreadsheet title.
+3. Add titles to the spreadsheet columns in order to organize the data that will be sent via the automation. For example, if you're sending data from invoices, add column titles for "Customer", "Invoice Total", etc.
+
+**Note: **Be detailed with the column titles as in the next step you will match the data to a specific column on the spreadsheet.
+
+[image: Screenshot of example Google Sheet with column titles added.]
+4. Go back to the draft automation in your dashboard and click **Select Spreadsheet**.
+5. Select the new spreadsheet you just created.
+
+**Tip: **New spreadsheets appear at the top.
+6. (Spreadsheet with multiple tabs) Click the **Choose sheet** drop-down to select which tab the automation should send data to.
+
+**Tip:** You can see how many tabs your spreadsheet has at the bottom of the Google Sheet.
+
+[image: Screenshot of]
+
+---
+
+### Step 3 | Match trigger data to the spreadsheet
+
+Next, match the data from your chosen trigger to the correct columns in your spreadsheet. For example, if your trigger data includes customer and invoice total fields, you need to match that data to the "Customer" and "Invoice Total" spreadsheet columns.
+
+#### To match your trigger data:
+
+Click **Match Data to Sheet**.
+
+Click the drop-downs under **Data from trigger **to match them to the Google sheet columns.
+
+**Note:** If you need to make edits to column titles, do so within your Google spreadsheet and click **Refresh Data** at the bottom left to see these changes reflected.  Click **Save**.
+
+> **Tip:**
+>
+> The data you send to a spreadsheet is different depending on the app. For example, Wix Forms sends form submission data like Name and Email fields, and Wix Stores sends data like recent store orders.
+
+---
+
+### FAQs
+
+Here are some common questions about Google Sheets automations:
+
+### I've edited the columns in my Google Sheet - how do I rematch the data?
+
+If you edit the row with the columns, you need to reconfigure your automation. In the Action section of your automation, you can rematch the data to its appropriate Google Sheet column.
+
+1. Go to [Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.
+2. Hover over the relevant automation and click the **More Actions** icon .
+3. Click **Edit**.
+4. Click the **Action** section to expand it.
+5. Click **Match Data to Sheet**.
+6. Select the data you want to match next to each Google sheet column.
+
+[image: Screenshot of]
+7. Click **Save**.
+
+### What happens if I edit my Google Sheets permissions?
+
+When setting up your automation, you need to provide permissions for Wix to access your spreadsheet data. If you remove or edit the permissions, the automation is disconnected and data is no longer sent to your spreadsheet.
+
+1. Go to [Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.
+2. Hover over the relevant automation and click the **More Actions** icon .
+3. Click **Edit**.
+4. Click the **Action** section to expand it.
+5. Click **Disconnect Account**.
+6. Click **Connect Google Account**.
+
+[image: Screenshot of Google permissions pop-up.]
+7. Make sure both checkboxes are selected to allow Wix to:
+
+- See and download all your Google Drive files.
+- See, edit, create, and delete all your Google Sheets spreadsheets.
+8. Click **Continue**.
+9. Click **Save**.
+
+**Note:** You can [remove 3rd party app access to your Google account](https://myaccount.google.com/permissions?pli=1) at any time.
+
+> **Tip:**
+>
+> To quickly view the Google spreadsheet, click the **More Actions** icon  next to an existing automation in the Automations dashboard and click **Open Google Sheet**.
+> [image: Screenshot of]
+
+---
+Source: https://support.wix.com/en/article/the-new-automation-builder-sending-data-to-google-sheets

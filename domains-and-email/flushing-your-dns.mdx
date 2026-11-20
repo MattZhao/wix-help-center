@@ -1,0 +1,43 @@
+---
+title: "Flushing Your DNS"
+---
+
+Your computer's operating system regularly caches the DNS lookup of domain names, saving their IP addresses. When the IP address of your domain changes (e.g., when you connect your domain to Wix), your operating system may look up the cached data it has stored instead of the new DNS settings resulting in your site failing to load.
+
+If it's been at least 48 hours since you updated [your domain's DNS settings](https://support.wix.com/en/article/dns-records-needed-to-connect-your-domain-to-wix) correctly, and you can't see your site live on your domain, try [clearing your browser's cache](https://support.wix.com/en/article/clearing-your-browsers-cache). If you're still unable to view your site on your domain, follow the directions below to flush your DNS.
+
+> **Tip:**
+>
+> You can [perform a DNS lookup](https://support.wix.com/en/article/checking-your-domains-dns-records-using-whatsmydnsnet) to make sure the correct DNS records for your domain are resolving to servers around the world.
+
+Windows Mac Windows XP, 2000, and Vista
+1. Click **Start**.
+2. Click **Run**.
+
+**Note**: If you do not see the Run command in Vista, type **Run** in the Search bar.
+3. Type the following command in the **Run** field: **ipconfig /flushdns**
+4. Press **Enter**.
+If the command succeeds, the system returns the following message: 'Successfully flushed the DNS Resolver Cache.' Windows 7, 8, and 10
+1. Click **Start**.
+2. Type **cmd** in the search field.
+3. Right-click **Command Prompt** and select **Run as Administrator**.
+4. Type the following command: **ipconfig /flushdns**
+5. Press **Enter**.
+If the command succeeds, the system returns the following message: 'Windows IP configuration successfully flushed the DNS Resolver Cache.'MacOS 10.10.4 and above
+1. Launch the Terminal App:
+
+1. Press **Cmd** + **Space **on your keyboard.
+2. Type **Terminal **and press **Return**.
+2. Type the following into the terminal: **sudo killall -HUP mDNSResponder**
+3. Press **Return**.
+4. Type your administrator password and press **Return**.
+5. Quit Terminal by pressing **Cmd **+ **Q** on your keyboard.
+
+---
+
+> **Still not able to view your live site on your domain?**
+>
+> Review the [Wix Domain Assistant](https://support.wix.com/en/article/wix-domain-assistant-3777632) to make sure your domain is properly connected.
+
+---
+Source: https://support.wix.com/en/article/flushing-your-dns-3875391

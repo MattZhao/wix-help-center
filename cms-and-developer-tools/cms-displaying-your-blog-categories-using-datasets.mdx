@@ -1,0 +1,90 @@
+---
+title: "CMS: Displaying Your Blog Categories Using Datasets"
+---
+
+With the Wix Blog, you get a ready-made blog feed. However, if you want to show blog posts from a specific category, enjoy more customization, and display your blog posts in chronological order, you can do so using a repeater or table.
+
+> **Important:**
+>
+> When you display blog categories with repeaters or tables, your site visitors cannot comment or 'like' blog categories.
+
+> **Before you begin, make sure you have:**
+>
+> - [Installed the Wix Blog](https://support.wix.com/en/article/wix-blog-adding-and-setting-up-your-blog#step-1-add-wix-blog-to-your-site)
+> - [Enabled Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections#how-to-show-or-hide-wix-app-collections)
+> - [Created a few posts and categories](https://support.wix.com/en/article/wix-blog-creating-and-managing-blog-categories)
+
+---
+
+### Step 1 | Add a dataset and connect it to your blog's categories
+
+In this step, we add a dataset that will host information about categories from your blog collection. This can be referenced in another step to filter only posts in specific categories.
+
+> **New datasets experience:**
+>
+> In [Wix Studio](https://support.wix.com/en/article/about-wix-studio), we've moved datasets to the Inspector panel on the right to make them easier for you to use. Learn more [about the new datasets experience in Wix Studio](https://support.wix.com/en/article/cms-new-datasets-experience).
+
+#### To add a dataset to the page (and connect it to the blog's categories):
+
+Click **CMS**  on the left side of the Editor.  Click **Add Content Elements** then click the Add icon  next to **Dataset**.  
+
+  Click the newly added dataset.  Click **Settings**.  Select **Categories** from the **Connect a collection** drop-down.
+
+---
+
+### Step 2 | Add a repeater or table to your page
+
+A repeater displays content using a layout that you can change. For example, you can add another text box, image, or button. A table also displays your content, but it uses layouts that you cannot change.
+
+#### To add a repeater or table to your page:
+
+Click **Add ** on the left side of the Editor.  Click **List**.  Drag a repeater or table onto your page.
+
+---
+
+### Step 3 | Add another dataset and connect it to your blog posts
+
+Repeaters and tables can show items from collections when they are linked via a dataset. In this step, we add a dataset to associate a repeater or table with blog posts.
+
+#### To add another dataset to the page (and connect it to your blog posts):
+
+Click **CMS**  on the left side of the Editor.  Click **Add Content Elements** then click the Add icon  next to **Dataset**.
+
+    Click the newly added dataset.  Click **Settings**.  Select **Posts** from the **Connect a collection** drop-down.
+
+---
+
+### Step 4 | Connect your repeater or table to the Posts dataset
+
+In order for your repeater or table to show your blog categories, we connect it to one of the datasets already on the page.
+
+#### To connect your repeater or table to the Posts dataset:
+
+Click your repeater or table in your Editor.  Click the **Connect to Data** icon .  From the **Connect a dataset **drop-down, select the **Posts dataset**.  Link each of the components of your repeater or table to the appropriate fields in the collection. Click the arrow next to each of the components in the repeater or table (text, image etc.) and connect each one to the desired fields in the collection.
+
+**Note: **You can also link an image or button to **Post Page URL (URL)**. This brings the visitor to that blog post when clicked.
+
+---
+
+### Step 5 | Set up your filters
+
+To display only the blog posts from a specific category, set up a filter in each of the datasets on yout page.
+
+#### To set up your filters:
+
+Click the **Posts dataset**.  Click **Settings**.  Click **+ Add Filter**.  Click the **Field **drop-down and select **Categories (Categories)**.  Select **Another dataset** under **Value source**.  Select **Categories dataset** under **Dataset**.  Click **Add Filter**.
+
+  Click the **Categories dataset**.  Click **Settings**.  Click **+ Add Filter**.  Click the **Field **drop-down and select **Label (Text)**.  Type the name of the category you want to show in the **Value **field.  Click **Add Filter**.
+
+  Click **Save**.  Click **Preview**.
+
+---
+
+> **What’s next?**
+>
+> - You can control the number of posts being shown using the repeater’s Dataset Settings or the Table Layout.
+> - Add a [pagination](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) or a [load more button](https://support.wix.com/en/article/cms-formerly-content-manager-about-displaying-collection-content-in-a-repeater#navigating-through-a-repeater) to display more blog posts.
+> - Adjust the [order](https://support.wix.com/en/article/cms-formerly-content-manager-about-filtering-and-sorting-live-site-content-with-datasets#sorting-your-dataset-connector) of your post to show a specific sequence.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-your-blog-categories-using-datasets

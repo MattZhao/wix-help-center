@@ -1,0 +1,82 @@
+---
+title: "Increasing Email Deliverability of Emails Sent from Your Business Email"
+---
+
+> **Important:**
+>
+> From February 2024, to comply with Google and Yahoo's new spam regulations, if you are a business email user you must set up SPF email authentication. In addition, if you send more than 5000 messages per day to Google or Yahoo personal email accounts, you must also set up DKIM and DMARC authentication. For high-volume senders, email delivery may be affected if all 3 records are not added.
+
+Email deliverability is a way to measure the success at which emails from [your business email](https://support.wix.com/en/article/business-email-an-overview) arrive into your customers' inboxes. You can track the number of people who come to your site after clicking a link in an email they received from you (also known as email traffic).
+
+If the emails you send don't get a good deliverability rate, there are a few considerations and updates you can make to ensure that you reach more people.
+
+**In this article, learn about:**
+
+[Factors that affect your email deliverability](https://support.wix.com/en/article/increasing-your-mail-deliverability#factors-that-affect-your-email-deliverability)  [Adding SPF / DKIM records](https://support.wix.com/en/article/increasing-your-mail-deliverability#adding-spf-or-dkim-records-to-your-account)  [Frequently asked questions (FAQs)](https://support.wix.com/en/article/increasing-your-mail-deliverability#faqs)
+
+---
+
+### Factors that affect your email deliverability
+
+There are many factors that affect your email deliverability, such as your message's design, content and relevance, your IP address reputation, and how often you send emails.
+
+There are a number of reasons why an email might not reach the intended inbox:
+
+**Hard bounce: **The email address is invalid or does not exist  **Soft bounce:** There was a technical issue when sending to the address  **Spam folder:** Email filtered as spam  **Blocked:** Blocked by an ISP or internet protocol
+
+A low deliverability rate likely means that your emails are not delivered, or arrive to your users' spam folders. To ensure your emails don't get blocked or marked as spam, try adding SPF and DKIM records to your account. If you send a lot of emails per day (over 5000), you should also add DMARC records.
+
+---
+
+### Adding SPF or DKIM records to your account
+
+SPF and DKIM records are used to authenticate your email account.
+
+From February 2024, to comply with Google and Yahoo’s new spam regulations, senders who send emails to personal Gmail and Yahoo email accounts [must set up either SPF or DKIM](https://support.google.com/a/answer/33786). Google, Yahoo, and other providers perform random checks on new sender messages to personal email accounts to verify they’re authenticated. Messages without at least one of these authentication methods will be rejected or marked as spam.
+
+SPF / DKIM record values can be sourced from your email provider. Whether your email provider is Gmail, Outlook, Yahoo or other, you'll need to add at least one of these records to be sure of authentication when sending mail to a Google or Yahoo mailbox.
+
+---
+
+#### Adding an SPF record
+
+An SPF (Sender Policy Framework) record permits your mail server to send emails on behalf of your domain. This helps to prevent spammers from sending messages with a forged email address whilst claiming to be from your domain.
+
+Using an SPF record demonstrates that you're conscientious about protecting against online threats, which is good for your sender reputation.
+
+For business emails purchased from Wix, learn how to [add an SPF record to your Google Workspace account](https://support.google.com/a/answer/33786?hl=en&visit_id=638200983347236968-2492511047&rd=1). For mailboxes purchased elsewhere, contact your provider for instructions on how to add an SPF record.
+
+---
+
+#### Adding a DKIM record
+
+A DKIM (Domain Keys Identified Mail) record is an email authentication method. It verifies that your email was sent from a reliable, trustworthy source, and was not modified in transit.
+
+Learn more [about DKIM records](https://support.wix.com/en/article/adding-a-dkim-txt-record) and [how to add a DKIM record to your Google Workspace account](https://support.google.com/a/answer/174126?hl=en). For mailboxes purchased elsewhere, contact your provider for instructions on how to add a DKIM record.
+
+---
+
+### FAQs
+
+Click a question below to learn more about email deliverability.
+
+### Can I use DMARC for email authentication?
+
+In most cases we recommend a combination of SPF and DKIM records for email authentication. This should prove more effective for email authentication at Wix than only using DMARC (another email authentication method).
+If your organization sends more than 5000 emails per day, however, you must use DMARC in addition to SPF and DKIM.
+Learn more about [adding DMARC records with Google](https://support.google.com/a/answer/2466563?hl=en).
+
+### I have a Google account. Can I track data on the emails I send?
+
+[Postmaster Tools](https://support.google.com/mail/answer/9981691?hl=en#) by Google is a helpful way to track the data on the emails you send and understand metrics like your spam reports, feedback loop, and deliverability.
+
+### I'm using Wix Email Marketing. How can I improve the deliverability of my campaigns?
+
+Wix Email Marketing deliverability can be improved by following our [best practices for creating email campaigns](https://support.wix.com/en/article/improving-the-deliverability-of-your-campaign#tips-to-improve-your-email-deliverability).
+
+### Are there other factors that can affect my emails?
+
+Yes. Your [domain must be active and properly connected](https://support.wix.com/en/article/resolving-email-issues) to avoid further email issues.
+
+---
+Source: https://support.wix.com/en/article/increasing-your-mail-deliverability

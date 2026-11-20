@@ -1,0 +1,120 @@
+---
+title: "CMS: Importing Content into a Collection"
+---
+
+Save time and effort by importing content to your CMS (Content Management System) collection from a CSV (comma-separated value) file.
+
+**In this article, learn how to:**
+
+---
+
+### Preparing your CSV file for upload
+
+When importing to an existing collection, make sure to include every field and value that you want your collection to have after the import. If you do not map an existing collection field to a column in your file, every value in the existing field is erased. This does not apply to system fields such as the ID, Created Date, Updated Date, Owner, or dynamic page links.
+
+#### Prepare your CSV file according to the following guidelines:
+
+The first row of your file represents the header. Each column of the first row is imported as a field in your collection.   The remaining rows are imported as items in your collection. Each cell value is imported as content within your collection fields.   The file must use commas as the delimiter between fields.  The file size cannot be larger than 1 GB.   The file cannot have more than 50,000 items. If you need to import more items, save them in separate CSV files and import them one by one.   The file cannot have more than 1,000 total fields.
+
+#### Other factors to consider when preparing your file:
+
+Your CSV file's name doesn't necessarily need to match your collection's name.  If your collection includes non-Latin characters, ensure that your CSV file is [encoded in UTF-8](https://www.fileformat.info/info/unicode/utf8.htm).   If Sandbox mode is enabled, syncing your Sandbox collection with Live will copy the content to your Live collection. Learn more about [syncing Sandbox and Live collections](https://support.wix.com/en/article/cms-about-sandbox-and-live-collections-and-syncing).
+
+#### Rules and limitations of different field types:
+
+Your CMS collection can store different types of content in each field type. The content is not validated when you import, so make sure to match the content to the correct field types.
+
+### ID
+
+You can update existing items in your collection by importing content from a CSV file that includes the item IDs. The simplest approach to ensure accuracy is to include the ID field when [exporting the content from your existing collection](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection). 
+
+When importing your file: 
+- If the existing collection already has items with the same IDs, you can choose to replace the IDs or skip importing items that have matching IDs.
+- If the existing collection does not have items with the same IDs, the rows are added as new items that use the IDs listed in your CSV file.
+
+### Boolean fields
+
+If you are importing content into a field type set to Boolean, you need to define how the true and false values are formatted in your CSV file.
+
+In the example below, the values in the CSV file are **Yes** and **No**. The **Examples after Import** column shows how they will be imported.
+
+### Date and Time fields
+
+If you are importing content into a field type set to Date and Time, you need to define how the dates are formatted in your CSV file. 
+**Notes:** 
+- This does not affect how the dates appear in your collection.
+- Learn how to [format dates and times displayed on your live site](https://support.wix.com/en/article/cms-formatting-live-site-date-and-time-content-from-your-collection).
+         
+
+- Exported CSV file time fields will be displayed as UTC+0. The times you see in the time fields of your collections are converted into the timezone you are currently in.
+
+### Reference fields
+
+When importing reference fields, the values stored in the fields are the [ID System Fields](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#system-fields) of the referenced items. Learn more about working with [reference fields](https://support.wix.com/en/article/adding-a-reference-field-to-a-cms-collection).
+
+### Exceptions
+
+You can import any supported field type into your collection, except for the following:
+- Fields that link to dynamic pages.
+- [System fields](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#system-fields) other than the ID field.
+- Document fields, unless they link to documents that already exist in your media manager.
+- Image fields, unless they link to images that already exist in your media manager.
+
+---
+
+### Importing collection content from your CSV file
+
+Now that your CSV file is prepared, go to the relevant collection to import it. For each column, you can choose whether to import it as a new field or to replace an existing field. By default, columns that have the same names or keys as existing fields in your collection are mapped together.
+
+> **Importing a CSV file overrides the values in your existing collection:**
+>
+> - If you do not map a column to an existing field, all the values in the field will be erased when the import is complete. This does not apply to system fields such as the ID, Created Date, Updated Date, Owner, or dynamic page links.
+> - If you uncheck a column to prevent it from being imported, and your collection has a field with the same name, the values in the existing field will be erased unless you map another column to the existing field. This behavior does not apply to system fields.
+
+#### To upload your CSV file:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.   Click the **More Actions **icon  on the relevant collection and select **Import items to collection**.
+
+**Note: **If you haven't created a CMS collection yet, click **Create Collection**, select **Import from CSV**, then click **Next**.
+
+Click **Choose a File**.  Select the CSV file from your computer and click **Open**.   Map each imported column on the left to new or existing fields in your collection. For each column, choose what you want to do: 
+
+1. Select the checkbox if you want to import the column to a new or existing field. Uncheck the checkbox if you do not want to import the column.
+2. Click the **Configure Column **drop-down and choose an option:
+
+### Existing field
+
+The column and its values replace an existing field in your collection. 
+1. Click the **Map to Collection Field **drop-down and choose the existing field that you want to replace. You can view examples of what the content will look like on the right.
+
+**Note: **If you choose a field type that does not support the type of data from the column, the **Examples after Import **on the right display in red to let you know you should choose another [field type](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+2. (If necessary) Set the additional mapping options that vary depending on the field type.
+3. Repeat these steps for each column that you want to replace an existing field.
+4. Click **Next**.
+5. Review the table to make sure the field columns from the CSV file are mapped correctly to your collection fields. Click **Back **if you need to adjust any of the connections.
+6. Click **Import** when you're ready to import the file to your collection.
+
+### New field
+
+The column and its values are added as a new field in your collection. 
+1. Enter the **Field Name**.
+2. Select the **Field Type** for this new collection field. You can view examples of what the content will look like on the right.
+
+**Note: **If you choose a field type that does not support the type of data from the column, the **Examples after Import **on the right display in red to let you know you should choose another [field type](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+3. Repeat these steps for each column that you want to import as a new collection field.
+4. Click **Next**.
+5. Review the table to make sure the field columns from the CSV file are mapped correctly to your collection fields. Click **Back **if you need to adjust any of the connections.
+6. Click **Import** when you're ready to import the file to your collection.
+
+> **Make a mistake?**
+>
+> When importing a file to your collection, a backup is created in the background. This process does not overwrite the automatic backup of your collections. Instead, it creates a manual backup you can use to [restore your collection](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections) to its pre-import version.
+
+---
+
+### Using sandbox collections when updating existing items
+
+If you're using the Sandbox feature, remember to [sync the content from your Sandbox to your Live collection](https://support.wix.com/en/article/cms-accessing-and-syncing-your-sandbox-and-live-collections#accessing-and-syncing-sandbox-and-live-collections) after importing your CSV file.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection

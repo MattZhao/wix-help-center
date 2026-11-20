@@ -1,0 +1,94 @@
+---
+title: "Editor X: Adding an HTML iFrame Element"
+---
+
+Display visual content from external servers and other sources on your site in an HTML iFrame. Create a weather widget, a stock widget, a calendar or any other custom element that comes to mind. You can either embed a code snippet or a URL into the HTML element.
+
+In this article, we'll review the information you need in order to add an HTML iFrame to your site:
+
+[Adding an HTML iFrame](https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element#adding-an-html-iframe)  [Setting the iFrame's size and position](https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element#setting-the-iframes-size-and-position)  [Adjusting the sizing of the displayed content](https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element#adjusting-the-sizing-of-the-displayed-content)  [Our guidelines and limitations](https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element#guidelines-and-limitations)
+
+---
+
+### Adding an HTML iFrame
+
+Add an iFrame to your site directly from the Add panel. You can choose between an **HTML iFrame** where you enter a code snippet, or **Embed a Site** if you want to embed a website address into the iFrame.
+
+> **Important:**
+>
+> Make sure to read our [guidelines and limitations](https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element#guidelines-and-limitations) before embedding your code.
+
+#### To add an HTML iFrame:
+
+Click **Add **** **at the top left of the Editor.  Click **Embed & Social**.  Select an element to add it to the page, then follow the relevant steps below:
+
+### Embed Widget
+
+1. Click **Enter Code**.
+2. Paste your custom HTML code in the text box.
+3. Click **Apply**.
+
+**Note: **We cannot provide support for external codes that were not created or tested with Editor X. If you are experiencing an issue with your code snippet, please contact the provider directly.
+
+### Embed Site
+
+1. Click **Enter Website Address**.
+2. Paste the website address in the text box.
+3. Click **Apply**.
+
+**Note: **Make sure the address starts with HTTPS. HTTP sites will not be displayed.
+
+---
+
+### Setting the iFrame's size and position
+
+Using the Inspector panel  at the top right, you can control the iFrame's [size](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element) and position on your page. For example, you can set fluid measurements for your iFrame so it adapts to different screen sizes.
+
+You can customize these settings separately for each of your [breakpoints](https://support.wix.com/en/article/editor-x-designing-across-breakpoints-with-the-cascading-rule), if the behavior should be different.
+
+> **Note:**
+>
+> The Inspector panel controls the sizing of the iFrame container, not the content that it displays.
+
+---
+
+### Adjusting the sizing of the displayed content
+
+Embedded elements often include pre-defined width and height in pixels, defined by the service they were acquired from, as in the example below:
+
+`\<iframe width="560" height="315"
+       src="https://www.youtube.com/embed/mdWHYvQoY8g"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+\</iframe>`
+
+These settings could potentially crop the content if the iFrame container is smaller than 560 px * 315 px. To prevent this from happening, replace the px values with percentage units and set them to 100% as shown below:
+
+`\<iframe width="100%" height="100%"
+        src="https://www.youtube.com/embed/mdWHYvQoY8g"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+\</iframe>`
+
+---
+
+### Guidelines and limitations
+
+Read the following guidelines and limitations to learn how to properly embed code into the HTML iFrame, whether it's a website address or custom code.
+
+#### Guidelines
+
+Make sure that your code contains **HTTPS**, not **HTTP**, or it will not be displayed on your live site.  HTML documents are described by HTML tags. HTML tags normally come in pairs like \<p> and \</p>. The first tag in a pair is the start tag; the second tag is the end tag. This format of the tags is crucial for maintaining the structure of the page you are trying to embed.  HTML code contains the core elements of the page, but the design settings and other complex functionalities are usually stored separately. Therefore, some elements may not function or look the same if the relevant elements aren’t included as a reference within the HTML code, for example the CSS and JS files.  Always make sure the code you are embedding is up to date and HTML5 compatible. Most browsers don't display pages and scripts properly if they were written using older versions of HTML.  Some sites have security policies that forbid them from being embedded on external platforms. These sites might not appear in the Editor or live site after you have pasted the link or code into the HTML element.  If you are not sure how to use the the target attribute you can read about it [here](http://www.w3schools.com/tags/att_a_target.asp) or contact the code creator.  There is no character limit of the HTML and Embed a Site elements.  You cannot edit the code inside your HTML element in the Mobile Editor.
+
+#### Limitations
+
+Code within the HTML element is displayed on your live site within a sandboxed iFrame. Using a sandbox protects visitors to Editor X sites from potential side-effects of custom HTML/JS/CSS code.
+
+**Usually, a sandboxed iFrame blocks the following:**
+
+Using Browser APIs Content using plugins (via \<embed>, \<object>, \<applet>, or other) Automatically triggered features (such as automatically playing a video or automatically focusing a form control)
+
+**However, we have re-enabled the following abilities for your custom code according to the **[**W3C specifications**](https://www.w3.org/TR/html5/browsers.html#sandboxing)**: **
+
+SandboxDescriptionallow-same-originRe-enables third-party site scripts/contentallow-formsRe-enables form submissionallow-popupsRe-enables popupsallow-scripts Re-enables custom JavaScript codeallow-pointer-lockRe-enables grabbing the cursor
+
+---
+Source: https://support.wix.com/en/article/editor-x-adding-an-html-iframe-element

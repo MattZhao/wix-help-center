@@ -1,0 +1,89 @@
+---
+title: "Wix Video: Troubleshooting Live Streaming Issues"
+---
+
+If you are experiencing issues with your live stream, check out this troubleshooting checklist to help resolve the issue.
+
+### Troubleshooting Live Streaming Issues
+
+We recommend that you try the following solutions:
+
+### Check that you have the correct channel connected to your stream
+
+1. [Go to Video Library](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Videos&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/video-library/videos) in your site's dashboard.
+2. Click **Live Stream**.
+3. Click **I Have an Encoder** (If you don't have the encoder yet, learn how to get it [here](https://support.wix.com/en/article/wix-video-downloading-a-live-stream-encoder)).
+4. Choose a Wix Video channel for your live stream.  [image: A screenshot of the Choose a Channel drop-down setting for setting up a live stream within the Wix Video library.]
+
+### Ensure that the Server URL and Stream Key are entered correctly to the OBS encoder
+
+**Note**: The Server URLs and the Stream Keys are updated every hour or whenever a new stream is created.
+1. Open the OBS Studio Encoder on your computer.
+2. Click **Stream** on the left.
+3. Check that the Server URL and Stream Key match the information in your dashboard.
+4. Go to your dashboard.
+5. Click **Live Stream** on the left.
+6. Click **Connect Stream**.       [image: A screenshot of the Connect Stream settings in the Wix Video library.]
+7. Check the information to ensure it matches in OBS.  [image: A screenshot of the server and stream key details of a live stream video in an OBS encoder.]
+8. Click **OK**.
+**Note**: If the information does not match, copy the information in your dashboard and paste it into OBS.
+
+### Ensure that your OBS settings are set to the recommended settings
+
+1. Open the OBS Studio Encoder on your computer.
+2. Click **Settings** on the bottom right.
+3. Select the **Output** tab to change the codec, audio and video bitrates.
+4. Select the **Video** tab to change the video resolution.
+5. Click **OK**.
+**Note**: To get the best results, make sure you don't exceed the following settings:
+- Video Resolution: 720p (1280x720)
+- Codec: x264
+- Video bitrate: ~2500 kbps
+- Audio bitrate: AAC 44.1kHz ~128kbps
+
+### Check that your encoder is shown as software and not as hardware
+
+In order to work correctly, your encoder needs to be set to software. 
+1. Open the OBS Studio Encoder on your computer.
+2. Click **Settings** on the bottom right.
+3. Click **Output** on the left.
+4. Check that the **Encoder** setting is set to **Software**.  [image: A screenshot of the Output settings in an OBS encoder.]
+5. Click **OK**.
+
+### Check your internet speed
+
+We recommend that you check your internet speed as your stream depends on a strong internet bandwidth in order to perform correctly.
+
+**Note**: Some ISPs might cap bandwidth please check with your ISP to make sure that this is not your case.
+
+**Tip**: A good tool to check your speed is [https://www.speedtest.net/](https://www.speedtest.net/)
+If you find that you are getting a connection error, we recommend checking the internet speed section as this often relates to connection failure. [image: A screenshot of the Failed to connect to server error message in speedtest.net]
+
+### Lower the bitrate and resolution
+
+As internet bandwidth is a big part of streaming, we recommend that you try to lower your bit-rate and resolution to help resolve live stream problems.
+1. Open the OBS Studio Encoder on your computer.
+2. Click **Settings** on the bottom right.
+3. Click **Output**.
+4. Change the bitrate to 2000 Kbps in the **Video Bitrate **field. [image: A screenshot of the OBS Studio Encoder showing the Video Bitrate settings.]
+5. Click **OK**.
+6. Click **Video**.
+7. Click the drop-down arrows to change the resolution to the supported resolution of 1280x720.
+
+[image: A screenshot of the OBS Studio Encoder showing the video resolution settings.]
+8. Click **OK**.
+
+### Ensure the output is set correctly
+
+The output needs to be set to 'Simple'. If it set to 'Advanced' it can cause issues with the live stream.[image: A screenshot of the OBS Studio Encoder showing the Output settings.]
+
+### Check your stream key
+
+If you're experiencing a connection issue, check the stream key to ensure that it's correct. If it's the correct key, check the internet speed section.[image: A screenshot of an error message that will be shown if the specified channel or stream key can not be accessed.]
+
+> **Streaming to multiple sources:**
+>
+> If you are experiencing issues with streaming to multiple sources, you will need to contact OBS as multiple source streaming is not supported by Wix.
+
+---
+Source: https://support.wix.com/en/article/troubleshooting-live-streaming-issues

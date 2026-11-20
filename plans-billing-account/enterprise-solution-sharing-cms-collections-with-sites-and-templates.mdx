@@ -1,0 +1,104 @@
+---
+title: "Enterprise Solution: Sharing CMS Collections with Sites and Templates"
+---
+
+Coordinate content across multiple sites and templates and manage data effortlessly with shared [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) collections. With shared collections, your enterprise gains a cohesive experience, streamlined data handling, and an elevated digital presence.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-cms-collections-en).
+
+**In this article, learn more about: **
+
+---
+
+### Sharing CMS collections with other sites or templates
+
+CMS collections in the Wix Studio enterprise solution are account-based and not tied to any particular sites. Account owners, Co-owners, and teammates with [enterprise dashboard permissions](https://support.wix.com/en/article/wix-enterprise-about-team-management) for "Manage Organization CMS" can share collections to make them available across multiple sites or templates.
+
+#### To share a CMS collection with another site or template:
+
+[Go to CMS](https://manage.wix.com/enterprise-dashboard/account-cms) in your enterprise dashboard.  Click the collection you want to share.   Click **Share With Sites** at the top.   Click **Sites **or **Templates **at the top to choose which type to share the collection with.   Enable the **Share collection **toggle next to the relevant site or template.  (If necessary) Click **Share** in the popup message.   (Optional) Click the **All items shared **drop-down next to the toggle to deselect any items you do not want to share, then click **Close**.   (Optional) Repeat steps 5-8 to share with more sites or templates.   Click **Done**.
+
+---
+
+### Working with Wix App Collections in Your Code
+
+You reference the collections that Wix Apps add to your site similar to how you reference collections you create yourself, with one difference.
+
+`wixData.get("myCollection", "00001");`
+
+To reference a collection that a Wix App added to your site you need to also include the App name in the path of the collection name. For example, let's say you also want to retrieve an item with an ID of 00001, but this time from the PrivateMembersData collection inside the Members database.
+
+In this case, you need to include Members in the path for the collection name, like this:
+
+`wixData.get("Members/PrivateMembersData", "00001");`
+
+You can also use Wix Data to add and update information in some Wix App collections. For example:
+
+`let collectionToInsert = \{
+  title: "New Collection",
+\};
+
+wixData.insert("Portfolio/Collections", collectionToInsert).then((item) => \{
+  console.log(item);
+\});`
+
+---
+
+### FAQs
+
+Click below for answers to frequently asked questions about shared collections.
+
+### How do I set collection permissions?
+
+In your Wix Studio for enterprise account, the Organization CMS Manager role replaces the Admin role used in other account types. Only the Organization CMS Manager can manage permissions for each collection in the Enterprise dashboard. 
+**To set permissions and privacy for a collection:**
+1. [Go to CMS](https://manage.wix.com/enterprise-dashboard/account-cms) in your enterprise dashboard.
+2. Click the **More Actions** icon  on the relevant collection.
+3. Select **Collection settings**.
+4. Click the **Permissions & privacy **tab at the top.
+5. Click the **What type of content will you store in this collection?** drop-down and select an option: 
+
+- **Public:** Anyone can view content from this collection. Use this option for collections that will have your own content you want to display.
+- **Form submissions:** Anyone can submit content to this collection. Use this selection for collections that will store user input.
+- **Custom: **Create custom permissions for this collection. This option allows you to set specific permissions if you find that none of the other permission types work for you.
+- **Private: **None of the content in a Private Data collection will appear on your site. Only the admin can access the content in this collection. Use this selection for collections that will hold content only the site admin can view.
+- **Member-generated:** Only members can submit or modify content in this collection. Use this selection for collections that will store user input that the user will be able to edit.
+- **Members only:** Only members can view content from this collection. Use this selection for collections that will store content available only to your site's members.
+- **Members submissions:** Only members can submit content to this collection. Use this selection for collections that will store user input only from your site's members.
+6. (Optional) Click the drop-down next to the relevant permission and select an option to customize the permission.
+
+Learn more about [CMS collection permissions](https://support.wix.com/en/article/cms-collection-permissions-overview).
+
+### Can I share collections with multiple sites simultaneously?
+
+Yes, you can conveniently bulk share with multiple sites. When choosing sites or templates to share with, you can either filter by folder or use the search tool. Click the checkmarks to select the relevant sites, then click **Set share status **and select **Share with sites**.
+[image: A screenshot of sharing with multiple sites in bulk.]
+**Note:** If you share a collection that contains a reference field, the referenced collection is also shared.
+
+### Can I exclude specific items from sharing with certain sites?
+
+Absolutely. By default, when you share a collection with a site or template, all items are shared. However, after enabling the **Share collection **toggle, you can click **All items shared **to deselect the items you do not want to share. If you share a collection that contains a reference field, the referenced collection is also shared.
+
+### Are newly added items shared automatically?
+
+Yes, by default new items added to a shared collection are automatically shared. If you wish to exclude an item from sharing, you need to actively exclude it. If you're editing an item but don't want it to appear on sites yet, you can set it to "draft" mode. This allows the item to be seen in the collection but not displayed on the sites.
+
+### What happens if I delete a shared collection?
+
+Deleting a collection results in its removal from all sites and templates. Any page elements that were connected to the collection are disconnected.
+
+### What happens if I stop sharing a collection with sites and templates?
+
+If you stop sharing a collection with sites or templates, any page elements that were connected to the collection are disconnected.
+
+### How will shared collections impact site owners and CMS collaborators?
+
+Site owners and CMS collaborators will notice an indicator labeling the collection as a shared collection. They won't be able to edit content or data structure (schema) from the collection directly. However, they retain the ability to read, delete, and update the collection through the API/live site if the collection permission allows.
+
+### What does it mean to share a collection with a template?
+
+Shared collections apply similarly to custom templates as they do to regular sites. Sharing a collection with a template allows the template designer to connect elements within the template to the shared collection. When sites are generated from this template, they also receive the shared collection, with elements connected to it.
+**Note: **If you share a collection that contains a reference field, the referenced collection is also shared.
+
+---
+Source: https://support.wix.com/en/article/wix-enterprise-sharing-cms-collections-with-sites-and-templates

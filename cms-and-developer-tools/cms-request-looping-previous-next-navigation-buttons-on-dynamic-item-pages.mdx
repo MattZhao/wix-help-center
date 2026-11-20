@@ -1,0 +1,85 @@
+---
+title: "CMS Request: Looping Previous/Next Navigation Buttons on Dynamic Item Pages"
+---
+
+Currently, [Previous/Next navigational buttons](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-dynamic-page-previous-dynamic-page) on dynamic item pages do not loop. When a visitor gets to the last item page returned by the dataset, the Next button is inactive. Similarly, when a visitor is on the first item page, the Previous button is inactive. It is not possible, without using Velo code, to have these buttons continue to navigate visitors through all the items.
+
+We are always working to update and improve our products, and your feedback is hugely appreciated.
+
+---
+
+### Workaround
+
+Using Velo, you can create Previous/Next buttons that loop to continuously navigate through your dynamic pages.
+
+Wix EditorStudio Editor
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the dynamic item page that has Previous/Next buttons.
+3. Make sure your Previous/Next buttons' click actions are not connected to the dataset:
+
+1. Click your Previous button and click the **Connect to CMS **icon.
+2. Click the **Click action connects to** drop-down and select **Not connected**.
+3. Repeat steps 3a-3b with your Next button.
+4. Enable Velo Dev Mode: 
+
+1. Click **Dev Mode** at the top of the Editor.
+2. Click **Turn on Dev Mode**.
+5. Copy the code snippet below and paste it at the top of your page code:
+`import wixLocationFrontend from 'wix-location-frontend';`
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{ **
+`$w('#prevBtn').onClick(async () => \{
+       const previousPage = await $w('#dynamicDataset').getPreviousDynamicPage();
+       if (previousPage) \{ wixLocationFrontend.to(previousPage) \}
+       else \{ wixLocationFrontend.to('/last-page-url') \}
+   \})
+   $w('#nextBtn').onClick(async () => \{
+       const nextPage = await $w('#dynamicDataset').getNextDynamicPage();
+       if (nextPage) \{ wixLocationFrontend.to(nextPage) \}
+       else \{ wixLocationFrontend.to('/first-page-url') \}
+   \})`
+1. In the sample code you pasted, replace the IDs and URLs listed below with those used by your site: 
+
+- **prevBtn **Replace with the ID of your Previous button.
+- **nextBtn **Replace with the ID of your Next button.
+- **dynamic Dataset **Replace with the ID of your dynamic page dataset.
+- **/last-page-url **Replace with the URL slug of the last dynamic item page read by the dataset.
+- **/first-page-url **Replace with the URL slug of the first dynamic item page read by the dataset.
+Tips:
+- Click the relevant button or dataset to find its ID in the [Properties and Events panel](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/properties-events-panel/working-with-the-properties-events-panel). Do not remove the hashtags (**#**) or apostrophes (**'**) in the code.
+- To get the correct first and last dynamic item page URLs, create a [custom collection view](https://support.wix.com/en/article/cms-creating-custom-collection-views) with the same sorting and filtering as in the dataset settings. You can copy the URL slug from the **[Collection] (Item)** page link field in your collection.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the dynamic item page that has Previous/Next buttons.
+3. Make sure your Previous/Next buttons' click actions are not connected to the dataset:
+
+1. Click your Previous button and click the **Connect to CMS** icon.
+2. Click the **Click action connects to** drop-down and select **Not connected**.
+3. Repeat steps 3a-3b with your Next button.
+4. Click the **Code** icon  on the left.
+5. (If necessary) Click **Start** **Coding**.
+6. Copy the code snippet below and paste it at the top of your page code:
+`import wixLocationFrontend from 'wix-location-frontend';`
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{ **
+`$w('#prevBtn').onClick(async () => \{
+       const previousPage = await $w('#dynamicDataset').getPreviousDynamicPage();
+       if (previousPage) \{ wixLocationFrontend.to(previousPage) \}
+       else \{ wixLocationFrontend.to('/last-page-url') \}
+   \})
+   $w('#nextBtn').onClick(async () => \{
+       const nextPage = await $w('#dynamicDataset').getNextDynamicPage();
+       if (nextPage) \{ wixLocationFrontend.to(nextPage) \}
+       else \{ wixLocationFrontend.to('/first-page-url') \}
+   \})`
+1. In the sample code you pasted, replace the IDs and URLs listed below with those used by your site: 
+
+- **prevBtn **Replace with the ID of your Previous button.
+- **nextBtn **Replace with the ID of your Next button.
+- **dynamic Dataset **Replace with the ID of your dynamic page dataset.
+- **/last-page-url **Replace with the URL slug of the last dynamic item page read by the dataset.
+- **/first-page-url **Replace with the URL slug of the first dynamic item page read by the dataset.
+Tips:
+- Click the relevant button or dataset to find its ID in the [Properties and Events panel](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/properties-events-panel/working-with-the-properties-events-panel). Do not remove the hashtags (**#**) or apostrophes (**'**) in the code.
+- To get the correct first and last dynamic item page URLs, create a [custom collection view](https://support.wix.com/en/article/cms-creating-custom-collection-views) with the same sorting and filtering as in the dataset settings. You can copy the URL slug from the **[Collection] (Item)** page link field in your collection.
+
+---
+Source: https://support.wix.com/en/article/cms-request-looping-previousnext-navigation-buttons-on-dynamic-item-pages

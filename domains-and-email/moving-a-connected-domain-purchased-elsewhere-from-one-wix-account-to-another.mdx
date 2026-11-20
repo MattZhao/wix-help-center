@@ -1,0 +1,65 @@
+---
+title: "Moving a Connected Domain (Purchased Elsewhere) from One Wix Account to Another"
+---
+
+It is not possible to add the same domain name to more than one Wix account at a time. If you're trying to connect a domain that was purchased outside of Wix and is currently in another Wix account, you must first remove the domain from its current account, then add it to the new account.
+
+> **Moving a Wix domain to another account?**
+>
+> The directions in this article apply to domains purchased outside of Wix. If you have a Wix domain and need to move it to another account, [transfer your domain to the other Wix account](https://support.wix.com/en/article/transferring-your-wix-domain-to-a-different-wix-account).
+
+> **Can't access your account?**
+>
+> You can fill out the [account recovery form](https://users.wix.com/account-recovery) if you are unable to access the account your domain is currently connected to.
+
+---
+
+### Video tutorial
+
+---
+
+### Step 1 | Remove the domain from your Wix account
+
+Log in to the Wix account where your domain is currently located, copy the DNS records, and remove the domain from the account. This will allow you to add the domain in the other Wix account where you want it connected.
+
+#### To remove a domain from your account:
+
+Sign in to the Wix account where your domain is currently added.   [Go to Domains](https://users.wix.com/login/select-workspace?redirect_to=https://manage.wix.com/studio/domains) in the account.
+
+**Note**: If you have more than one domain in your account, scroll to the relevant domain.  Copy your domain's DNS records.
+
+**Note**: If your domain is [connected by pointing](https://support.wix.com/en/article/pointing-vs-name-servers-domain-connection-methods), skip ahead to step 4.
+
+### Show me how
+
+1. Click the **Domain Actions **icon  on the right and select** Manage DNS records**.
+2. Copy the details of your DNS records and paste them into a separate document.
+
+**Note**: You **do not need to copy the following DNS records** because you may be replacing them when you add your domain to the other Wix account:
+
+- The **A (Host)** record displaying your domain name in the **Host Name** field (e.g. mystunningwebsite.com).
+- The **CNAME (Aliases)** record displaying **www.** in front of your domain in the **Host Name **field (e.g. www.mystunningwebsite.com).
+- The **NS (Name Servers)** records (e.g. ns5.wixdns.net and ns6.wixdns.net).
+3. Click the **Back** icon  next to **Manage DNS Records**.
+
+4.  Click the **Domain Actions **icon** ** next to the relevant domain and select **Remove from Wix**.
+
+5.  Click **Remove Domain **to confirm.
+
+---
+
+### Step 2 | Add the domain to another Wix account
+
+Sign in to the Wix account where you want the domain to be connected. You can use an incognito window to sign in if you want to remain signed in to both accounts at the same time. Then add the domain, choose an upgraded site to connect and set up the connection.
+
+#### To add the domain to a different Wix account:
+
+Sign in to the Wix account you're adding the domain within.  [Go to Domains](https://users.wix.com/login/select-workspace?redirect_to=https://manage.wix.com/studio/domains) in the account.  Click **Add an Existing Domain **and select **Connect a domain you already own**.
+
+Select the site you want to connect your domain to and click **Continue**.  Enter your domain name and click **Let's Go**.  Click **Yes, I own this domain **under the search field.   Finish connecting your domain via name servers or pointing: 
+
+- **Name servers: **(Recommended) This connection method keeps the domain's DNS records managed in your Wix account. Continue at [step 1.7 here](https://support.wix.com/en/article/connecting-a-domain-to-the-wix-name-servers#step-1-add-the-domain-to-your-wix-account) to finish connecting your domain via name servers.
+- **Pointing: **This connection method requires the domain's DNS records to be hosted outside of Wix. Learn how to [finish connecting your domain via pointing](https://support.wix.com/en/article/connecting-a-domain-to-wix-using-the-pointing-method#step-1-add-the-domain-to-your-wix-account).
+
+---
+Source: https://support.wix.com/en/article/moving-a-connected-domain-purchased-elsewhere-from-one-wix-account-to-another

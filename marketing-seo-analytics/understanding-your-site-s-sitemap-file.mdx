@@ -1,0 +1,92 @@
+---
+title: "Understanding Your Site's Sitemap File"
+---
+
+> **Important:**
+>
+> If you [change the default canonical tag](https://support.wix.com/en/article/changing-the-canonical-tags-for-your-sites-pages) for a page, the page's URL may disappear from your site's sitemap. To restore the page URL to your sitemap, [remove the canonical tag](https://support.wix.com/en/article/changing-the-canonical-tags-for-your-sites-pages#removing-a-canonical-tag).
+
+A sitemap is an XML file that contains a list of the URLs of the pages on your site. It also contains useful information such as the relationships between pages and when each page was last updated.
+
+Sitemaps can help search engines prioritize pages of large sites, find pages that haven't been linked to, and [crawl and index](https://developers.google.com/search/docs/advanced/guidelines/how-search-works?hl=en#introducing-the-three-stages-of-google-search) sites in greater detail. Without a sitemap, it can take search engines time to find your site's pages from its source code. A sitemap gives this information directly to search engines to increase indexing time and accuracy.
+
+Wix automatically updates your site's sitemap whenever you make changes to your site.
+
+**In this article, learn more about:**
+
+[The structure of your site's sitemap](https://support.wix.com/en/article/understanding-your-sites-sitemap-file#the-structure-of-your-sites-sitemap)  [Viewing your site's sitemap](https://support.wix.com/en/article/understanding-your-sites-sitemap-file#viewing-your-sitemaps)  [The types of sitemaps that Wix supports](https://support.wix.com/en/article/understanding-your-sites-sitemap-file#types-of-sitemaps-that-wix-supports)  [Submitting a sitemap directly to Google](https://support.wix.com/en/article/understanding-your-sites-sitemap-file#manually-submitting-your-sitemap-directly-to-search-engines)
+
+---
+
+### The structure of your site's sitemap
+
+Every Wix site comes with a sitemap index, which is a list of all your site's individual sitemaps. The individual sitemaps are made up of items which contain information about a group of pages on your site. These items contain info such as page URLs and the last time each page was updated.
+
+#### Sitemap index
+
+The sitemap index is a list of all your individual sitemaps. Submitting this file to search engines helps them to detect and crawl each individual sitemap so that the pages can be appear in search results.
+
+Here's an example of what a sitemap index looks like:
+
+#### Individual sitemaps
+
+Depending on what features you have on your site, your index may contain multiple individual sitemaps. For example, if you add Wix Stores on your site, Wix automatically creates an additional sitemap for it and adds it to your index.
+
+Here's an example of a Wix Stores sitemap:
+
+#### Sitemap items
+
+Sitemap items contain page URLs and other relevant info like when a page was last updated. For example, each item in a Wix Stores sitemap represents a product page and has the following information:
+
+**\<loc>: **The URL of the page.  **\<lastmod>: **The date that the page was last updated. This helps search engines understand if a page has changed since they last crawled it. Wix keeps your \<lastmod> date updated automatically so search engines can always get the most updated info about your site.   **\<image:loc>: **Information about the product page's images such as their URLs.
+
+Below is an example of an item in a Wix Stores sitemap:
+
+#### Multilingual sitemaps
+
+Sitemaps for Multilingual sites include the language and geolocation for each language it's available in. The structure of sitemap items for a Multilingual site has the following information:
+
+Static pages: \{Site domain\}/xx_xx-pages-sitemap.xml  Multilingual integrated verticals: \{Site domain\}/xx-xx-\{page type\}-sitemap.xml
+
+Here's an example of a German sitemap on a Wix Stores site:
+
+> **Important:**
+>
+> Currently, Wix includes image information in the sitemaps for main pages, Wix Stores, Wix Events, Wix Blog, Wix Forum, Online Programs, Wix Restaurants and Portfolio. Don't worry - we'll be adding image information for more sitemaps in the future.
+
+> **Tip:**
+>
+> To learn more about sitemaps, check out the [Google help page](https://support.google.com/webmasters/answer/156184), [Bing help page](https://www.bing.com/webmasters/help/Sitemaps-3b5cf6ed), or [sitemap.org's FAQ](https://www.sitemaps.org/faq.html#faq_http_vs_https).
+
+---
+
+### Viewing your sitemaps
+
+You can view your sitemap index by adding sitemap.xml to the end of your domain name in your browser's address bar. For example: https://mystunningwebsite.com/**sitemap.xml**
+
+To see your other sitemaps, add the relevant URL path from the table in the [types of sitemaps](https://support.wix.com/en/article/understanding-your-sites-sitemap-file#types-of-sitemaps-wix-supports-1) section above to the end of your domain name.
+
+For example, to see your site's Wix Stores product pages sitemap, enter the following in the address bar: https://mystunningwebsite.com/**store-products-sitemap.xml**
+
+---
+
+### Types of sitemaps that Wix supports
+
+Each individual sitemap represents a single type of page on your site, such as your Wix Stores product pages or Wix Blog post pages.
+
+Wix currently supports the following sitemap types:
+
+Sitemap nameSitemap typeURL pathIndexMain/sitemap.xmlPagesSecondary/pages-sitemap.xmlWix Blog postsSecondary/blog-posts-sitemap.xmlWix Blog categoriesSecondary/blog-categories-sitemap.xmlWix BookingsSecondary/booking-services-sitemap.xmlWix Data & router pagesSecondary/dynamic-\{prefix-name\}-sitemap.xmlWix EventsSecondary/event-pages-sitemap.xmlWix Forum postsSecondary/forum-posts-sitemap.xmlWix Forum categoriesSecondary/forum-categories-sitemap.xmlWix Groups postsSecondary/groups-posts-sitemap.xmlWix HotelsSecondary/hotels-rooms-sitemap.xmlMembers profilesSecondary/member-profile-sitemap.xmlOnline ProgramsSecondary/online-programs-sitemap.xmlWix Portfolio projectsSecondary/portfolio-projects-sitemap.xmlWix Portfolio collectionsSecondary/portfolio-collections-sitemap.xmlWix Stores product pagesSecondary/store-products-sitemap.xmlWix MultilingualIndex/xx-xx_sitemap.xmlWix MultilingualPage type/\{page-type\}-sitemap.xmlOthers (This sitemap is used for all pages that don't belong to any other type)Fallback/other-pages-sitemap.xml
+
+---
+
+### Manually submitting your sitemap directly to search engines
+
+When you complete your [SEO Setup Checklist](https://support.wix.com/en/article/improving-your-online-presence-with-the-wix-seo-setup-checklist), Wix automatically submits your sitemap index to Google for you. When you make changes to your site, your sitemap will be automatically updated with the changes. There's no need to submit your sitemap to Google again.
+
+If you want to submit your sitemap yourself, or submit it to other search engines, you can [submit your sitemap directly](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines).
+
+You can also submit individual page URLs directly to search engines. For example, if you make changes to one of your blog posts, you should only re-submit that page's URL as it will be more accurate. [Learn how to submit an individual URL](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines#submitting-individual-urls-to-search-engines)
+
+---
+Source: https://support.wix.com/en/article/understanding-your-sites-sitemap-file

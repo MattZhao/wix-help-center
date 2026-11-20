@@ -1,0 +1,105 @@
+---
+title: "Wix Hotels by HotelRunner: Connecting Pitchup.com to Your Site"
+---
+
+Pitchup.com integrates with Wix Hotels by HotelRunner to streamline your booking management. Before connecting, ensure all room rates and availability are set on the Wix Hotels by HotelRunner dashboard, as this integration overwrites your Pitchup.com calendar.
+
+---
+
+### Step 1 | Important information before you connect Pitchup.com
+
+Before connecting, make sure to [set the rates and availability of all rooms on the Inventory Calendar](https://support.wix.com/en/article/wix-hotels-by-hotelrunner-managing-prices-and-availability-with-the-inventory-calendar). After connecting, HotelRunner will transfer all of your inventory to Pitchup.com, replacing the existing calendar there. All updates must be made through Wix, as your extranet calendar will be locked.  Only reservations that you receive after the connection is complete will transfer to your Wix Hotels by HotelRunner dashboard. You can manually [add future reservations](https://support.wix.com/en/article/wix-hotels-by-hotelrunner-managing-your-reservations) that you received before connecting with Pitchup.com to ensure your availability is correct.  You can connect only one Hotel ID from each channel to each Wix Hotels by HotelRunner account. Group Hotels or different Hotel IDs cannot be connected to the same Wix Hotels by HotelRunner account.  Before the integration, to open your slots on Pitchup.com, update your rooms with 2 weeks of rates and availability for the channel manager to fully register your rooms.  Ensure your account on Pitchup.com is active and the room types are created and updated for at least three months.
+
+---
+
+### Step 2 | Approve Wix Hotels by HotelRunner for connection on Pitchup.com
+
+To approve Wix Hotels by HotelRunner on Pitchup.com, log in to your Pitchup.com extranet, go to **Bookings**. Then go to the **Integration** section, and click **Get API**. Ensure you check all the relevant checkboxes for reservations, rates and availability, guest reviews, and reporting, etc.
+
+> **Note:**
+>
+> For further assistance, [visit the Pitchup.com help center](https://www.pitchup.com/about/faq/).
+
+#### To approve Wix Hotels by HotelRunner for connection on Pitchup.com:
+
+Log in to the Pitchup.com extranet with your username and password.   Click **Bookings** in the menu at the top.  In the Integration section on the right, click **Get API key**.   Copy and paste the **API key (other booking systems)**.   [Go to the Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in your Wix Hotels by HotelRunner dashboard.   Click **Connect** next to Pitchup.com.   Enter your **Pitchup.com API Key** in the **Hotel ID **field.  Click **Save and Continue**.
+
+---
+
+### Step 3 | Map your room types
+
+After completing the authorization, Wix Hotels by HotelRunner will fetch your active room types from Pitchup.com.
+
+#### To map your room types:
+
+Collect your room IDs on the Pitchup.com extranet in **Room Details** under **Property**.  In another tab on your browser, go to [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.   Click **View channel details** next to Pitchup.com.  Click **Fetch room types**.   Hover over each room type and click **Expand**.   Match your Pitchup.com room types with your room types on Wix Hotels by HotelRunner using the drop-downs.
+
+**Note: **Make sure to double-check you are matching the correct room types across both platforms, as there may be differences in room type names. We recommend you check the Room IDs on both platforms to ensure they match.  Click **Save** at the bottom.
+
+---
+
+### Step 4 | Adjust your advanced settings
+
+With the advanced settings for the Pitchup.com integration, you can ensure your room availability doesn't fall below a set number using the Base availability. You can also adjust room rates by specifying a different price to send to Pitchup.com. Additionally, you can choose to stop sales for certain rate types or mark rates as read-only to prevent updates.
+
+#### To adjust your advanced settings:
+
+[Go to Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.  Click **View channel details** next to Pitchup.com.  Hover over the relevant room type and click **Expand**.  Click **Advanced Settings** at the top right.   Select the relevant option from the **Room type of your property** drop-down.   Choose the relevant option from the **Allocation type** drop-down:
+
+- **No changes:** Keeps the current availability settings without making any adjustments. Choose this option when you’re confident that your existing inventory data is accurate and up-to-date.
+- **Number of available beds in available rooms: **Sets the availability based on the number of beds in the rooms that are available. For example, if you manage a hostel where each room has multiple beds, and you want to track and sell each bed individually within the available rooms.
+- **Number of available beds:** Sets the availability based on the total number of beds available. For example, a dormitory, where beds can be booked individually, regardless of which specific room they are in.
+- **Number of available rooms: **Sets the availability based on the total number of rooms available. Use this option for traditional hotels where you want to set availability based on entire rooms being booked, without focusing on the number of beds in each room.
+    Enter the relevant number in the **Base availability** field. Base** **availability is the minimum number of rooms you always want to keep available, no matter how many you sell. For example, if you set it to 5, your system will always show at least 5 rooms available, even if others are booked. We recommend you **do not** make any changes here, as it can cause **overbooking**.  Select **Yes** on the **Commission included** toggle.   Enter the relevant **Adjustment** amount.   Choose either a percentage adjustment  or a monetary  adjustment, and choose whether the adjustment is an increase **+** or a decrease **-**.   Enable the **Main rate** toggle to set this rate type as the main rate.  Enable the **Read-only** toggle to update reservations and availability of the room.
+
+**Note: **Other updates such as rate, minimum stay, stop sell etc, are not affected.  Enable the **Send price** toggle to update only availability for the room type. The price for this rate type won’t be sent to Pitchup.com.   Repeat steps 9-14 for all room types.   Click **Save**.
+
+### Show me how to use advanced settings to increase my room rates on Pitchup.com
+
+For example, if you want to send your rate for a room type to Pitchup.com at a 25% higher rate than on your Wix Hotels by HotelRunner calendar:
+
+1. In the drop-down next to the room type, select **Don't send**.
+2. Enter **25** in the **Adjustment** field.
+3. Click the **percentage adjustment** icon .
+4. Click the **Increase** icon **+**.
+5. Enable the **Main rate** toggle.
+6. Enable the **Send price** toggle.
+7. Repeat steps 1-6 above for all relevant room types.
+8. Click **Save** at the bottom.
+[image: A screenshot showing how to send a room type to Booking.com at a 25 percent increased rate.]
+
+---
+
+### Step 5 | Activate the Pitchup.com connection
+
+After completing your room mapping, click **Activate**. Once the Pitchup.com connection is complete, all your inventory (rates, availability, and restrictions) on your Wix Hotels by HotelRunner calendar will be transferred to your Pitchup.com account. You can review and update your room mapping from the [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the dashboard at any time.
+
+---
+
+### Frequently Asked Questions (FAQs)
+
+Click a question below to learn more.
+
+### What should I do before connecting Wix Hotels by HotelRunner with Pitchup.com?
+
+Make sure all your room rates and availability are set on the Inventory Calendar in the Wix Hotels by HotelRunner dashboard. This setup will be transferred to Pitchup.com, and any updates must be managed from Wix after the connection. 
+Update your rooms with 2 weeks of rates and availability in Wix Hotels by HotelRunner. This allows the channel manager to fetch your rooms into the system.
+
+### How are reservations handled after the connection?
+
+All future reservations will be fetched into your Wix Hotels by HotelRunner dashboard. Reservations with an expired check-in date will not be fetched into your Wix Hotels by HotelRunner dashboard.
+
+### Can I connect multiple Hotel IDs or group hotels to one Wix Hotels by HotelRunner account?
+
+No, you can only connect one Hotel ID from each channel to a single Wix Hotels by HotelRunner account. Group hotels or different Hotel IDs require separate accounts.
+
+### What happens to blocked dates on my Pitchup.com calendar after integration?
+
+Blocked dates on your Pitchup.com calendar will remain unchanged. To manage these dates, you’ll need to unblock them from the Pitchup.com extranet.
+
+### How do I map room types between Wix Hotels by HotelRunner and Pitchup.com?
+
+Use room IDs to match your rooms between the two platforms. Ensure that room types and prices align, such as mapping both “Junior Suite for 1 person” and “Junior Suite for 2 people.”
+
+---
+Source: https://support.wix.com/en/article/wix-hotels-by-hotelrunner-connecting-pitchupcom-to-your-site

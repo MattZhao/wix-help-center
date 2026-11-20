@@ -1,0 +1,79 @@
+---
+title: "Checklist for Migrating from Universal Analytics to Google Analytics 4"
+---
+
+From July 1, 2023, Universal Analytics (UA) properties will stop collecting data. If you previously connected a UA property to your site, you must [switch to a Google Analytics 4 (GA4) property](https://support.google.com/analytics/answer/10759417?hl=en).
+
+Follow the steps below to make sure that your migration is as smooth as possible.
+
+---
+
+### Step 1 | Check which version of Google Analytics your Wix site uses
+
+First, you should check if your site is currently connected to Google Analytics using a Universal Analytics or a Google Analytics 4 property. You do this in the Marketing Integrations section of your site's dashboard.
+
+#### To check your version:
+
+Go to [Marketing Integrations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Marketing%20Integrations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/marketing-integration/) in your site’s dashboard.   Click **Connect **under **Google Analytics**.
+
+Click **Add Google Analytics ID**.   Check the ID that you see under **Add Your Google Analytics Code**.
+
+- If it starts with G-, you are connected using GA4 and don't need to migrate. You can stop following these steps.
+- If it starts with UA-, you need to migrate.
+
+---
+
+### Step 2 | Create a new GA4 property
+
+You can create a new GA4 property by using Googles migration wizard or manually creating the GA4 property. Wix recommends manually creating the property yourself.
+
+#### To manually create a new property:
+
+Sign in to [your Google Analytics account](https://analytics.google.com/analytics/web/).   Click the Admin icon  at the bottom left of the page.
+
+Select **GA4 Setup Assistant**.
+
+Click** Get Started** under **I want to create a new Google Analytics 4 property**.  Click** Create property**.  Click **See your GA4 property** under **Explore and set up your GA4 property**.  Select **Tag installation**.
+
+Select your stream under **Data Streams**.  Click the Settings icon .  Click **Show advanced settings** under** Page views**.  Deselect the **Page changes based on browser history events **checkbox.
+
+Disable the **Site search** toggle.  Click **Save**.
+
+---
+
+### Step 3 | Replace your old UA property in your site's dashboard
+
+After you've created your GA4 property, you need to replace your old UA property in the Marketing Integrations section of your site's dashboard.
+
+#### To replace your UA property:
+
+In Google Analytics, copy your measurement ID under **Web stream details**.
+
+Go to [Marketing Integrations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Marketing%20Integrations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/marketing-integration/) in your site's dashboard.   Click **View **under **Google Analytics**.   Click the More Actions icon  in the top right corner.  Click **Edit**.
+
+Paste your Google Analytics 4 measurement ID in the pop-up.
+
+**Note:** Make sure that there are no extra spaces before the code.
+
+(Optional) Select the **IP Anonymization** checkbox if you want to hide your site visitors’ IP addresses from Google.   Click **Save**.
+
+---
+
+### Step 4 | Verify your GA4 connection
+
+Now that you've connected your new GA4 property to your site, you can verify that you're sending data to Google Analytics.
+
+There are two ways that you can check the connection:
+
+**Google Tag Assistant:** This tool lets you enter your domain and check what data your GA4 property is sending to Google. [Learn more about Google Tag Assistant](https://support.google.com/tagassistant/answer/10039345#zippy=%2Cin-this-article)  **Google Analytics Debug View: **The DebugView tool lets you see any events and user properties that Google Analytics is collecting from your site visitors users in real time. [Learn more about Debug View](https://support.google.com/analytics/answer/7201382?hl=en)
+
+---
+
+### Important information about migrating to GA4
+
+After you've migrated to GA4, you may still need to do some other work to complete your setup. Check the list below for any actions that might be relevant to your site.
+
+Goals are not supported when you use a GA4 property. If you previously set up goals for your UA property, you'll need to [create corresponding conversions](https://support.google.com/analytics/answer/12966437?hl=en) for GA4.   If you used your old UA property with other Google tools such as Google Ads or Google Merchant Center, you'll need to replace it with your new GA4 property. Learn more about linking GA4 in [Google Ads](https://support.google.com/analytics/answer/9379420?hl=en#zippy=%2Cin-this-article) and [Google Merchant Center](https://support.google.com/merchants/answer/12046446?hl=en).  If you have collaborators in Google Analytics, you'll need to [add them to your new GA4 property](https://support.google.com/analytics/answer/9305788?hl=en#zippy=%2Cin-this-article).  If you use Google Tag Manager, you'll need to [create a new tag that supports GA4](https://support.google.com/tagmanager/answer/9442095?hl=en).  If you use Google Analytics through Google Tag Manager, you'll also need to replace your old tags with your new ones. This won't cause any changes to your the triggers setup.
+
+---
+Source: https://support.wix.com/en/article/checklist-for-migrating-from-universal-analytics-to-google-analytics-4

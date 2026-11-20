@@ -1,0 +1,248 @@
+---
+title: "Setting Up Business Events with Google Tag Manager"
+---
+
+With Google Tag Manager, you can implement a tag management system so you can keep your tags and third-party code snippets updated and organized in one convenient location.
+
+Wix by default pushes business events into the datalayer. The events names and the payload are based on EEC (Enhanced eCom ) structure  It is a user’s responsibility to EEC to GA4. There are several conversion templates that can be added to your container from the GTM Templates gallery (Variables).
+
+**In this article, learn more about: **
+
+[Business events sent by Wix](https://support.wix.com/en/article/setting-up-business-events-with-google-tag-manager#business-events-sent-by-wix)  [Adding a new event ](https://support.wix.com/en/article/setting-up-business-events-with-google-tag-manager#adding-a-new-event)
+
+> **Before you begin:**
+>
+> [Connect your site to Google Tag Manager](https://support.wix.com/en/article/connecting-your-google-tag-manager-account-to-your-wix-site) in Marketing Integrations to start tracking visitor events on your site.
+
+---
+
+### Business events sent by Wix
+
+By default, Wix will automatically send some business events to Google Tag Manager. Click an event below to see the script.
+
+### view_item_list
+
+Wix EEC eventproductImpressionWix EEC Payloadecommerce: \{
+
+    impressions: [
+
+      \{
+
+        id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+        name: "Product 1",
+
+        list: "Grid Gallery",
+
+        category: "All Products",
+
+        position: 0,
+
+        price: 85,
+
+        currency: "USD",
+
+        dimension3: "in stock"
+
+      \},
+
+      \{
+
+        id: "cd59cd36-b6d2-2cf3-9d48-81793a7bdbbd",
+
+        name: "Product 2",
+
+        list: "Grid Gallery",
+
+        category: "All Products",
+
+        position: 1,
+
+        price: 20,
+
+        currency: "USD",
+
+        dimension3: "in stock"
+
+      \},
+
+### select_content
+
+Wix EEC eventproductClickWix EEC Payloadecommerce: \{
+
+    click: \{
+
+      actionField: \{list: "Grid Gallery"\},
+
+      products: [
+
+        \{
+
+          id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+          name: "Product 1",
+
+          category: "All Products",
+
+          position: 0,
+
+          price: 85,
+
+          currency: "USD",
+
+          type: "physical",
+
+          sku: "364215376135191"
+
+        \}
+
+      ]
+
+### view_item
+
+Wix EEC eventviewContentWix EEC Payloadecommerce: \{
+
+  detail: \{
+
+      actionField: \{list: "(not set)"\},
+
+      products: [
+
+        \{
+
+          category: "All Products",
+
+          id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+          name: "Product 1",
+
+          price: 85,
+
+          currency: "USD",
+
+          sku: "364215376135191",
+
+          type: "physical"
+
+        \}
+
+      ]
+
+    \}
+
+### add_to_cart
+
+Wix EEC eventaddToCartWix EEC Payloadecommerce: \{
+
+  add: \{
+
+      products: [
+
+        \{
+
+          category: "All Products",
+
+          currency: "USD",
+
+          id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+          quantity: 1,
+
+          name: "Product 1",
+
+          sku: "123",
+
+          price: 85,
+
+          type: "physical"
+
+        \}
+
+      ]
+
+    \}
+
+### begin_checkout
+
+Wix EEC eventcheckoutWix EEC Payloadecommerce: \{
+
+  checkout: \{
+
+      actionField: \{\},
+
+      products: [
+
+        \{
+
+          id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+          name: "Product 1",
+
+          category: "All Products",
+
+          price: 85,
+
+          currency: "USD",
+
+          quantity: 1
+
+        \}
+
+      ]
+
+    \}
+
+### add_payment_info
+
+Wix EEC eventcheckoutOptionWix EEC Payloadecommerce: \{
+
+  checkout_option: \{actionField: \{step: 2, option: "offline"\}\}    \}
+
+### purchase
+
+Wix EEC eventpurchaseWix EEC Payloadecommerce: \{
+
+  purchase: \{
+
+      actionField: \{
+
+        id: 10016,
+
+        revenue: 85,
+
+        buyer_email: "47b761afc173e3a8c4acc75879dbbfda"
+
+      \},
+
+      products: [
+
+        \{
+
+          id: "df19c1f7-07d8-a265-42f8-e8dfa824cc6e",
+
+          sku: "123",
+
+          name: "Product 1",
+
+          price: 85,
+
+          quantity: 1,
+
+          currency: "USD",
+
+          category: "All Products"
+
+        \}
+
+      ]
+
+    \}
+
+---
+
+### Adding a new event
+
+Click **Tags **from the left hand side menu.  Click **New.**  Enter a name for the tag (e.g. Wix Pageviews).  Click **Choose a tag type to begin setup **under **Tag Configuration**.   Select **Google Analytics**.  Select **Google Analytics: GA4 event**.  Enter the **Google Measurement ID**. This should be the same as in the previous step. We recommend creating a [constant](https://support.google.com/tagmanager/answer/7683362?hl=en&ref_topic=9125128&sjid=17855247187236799596-EU#constant) variable in Google Tag Manager.  Add **Event Name **as** add_to_cart**.
+
+---
+Source: https://support.wix.com/en/article/setting-up-business-events-with-google-tag-manager

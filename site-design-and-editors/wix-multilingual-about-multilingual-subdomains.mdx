@@ -1,0 +1,36 @@
+---
+title: "Wix Multilingual: About Multilingual Subdomains"
+---
+
+In Wix Multilingual, you can choose to [set your URL structure](https://support.wix.com/en/article/wix-multilingual-editing-your-multilingual-sites-url-structure) to be a subdomain. A subdomain uses your site's main URL and adds a language code before the domain name. An example of a subdomain URL is: https://**fr**.mystunningwebsite.com
+
+Search engines consider each subdomain site as unique and distinct from your main site. This means that any search engine optimization on your main site may not benefit your subdomains and vice versa. For example, if your EN language site has a high ranking, your FR language site's ranking may not benefit from this.
+
+> **Tip:**
+>
+> Learn how to [switch your multilingual site's URL structure](https://support.wix.com/en/article/wix-multilingual-editing-your-multilingual-sites-url-structure) from subdomains to subdirectories or language parameters.
+
+**In this article, learn more about:**
+
+[Subdomains example](https://support.wix.com/en/article/wix-multilingual-about-multilingual-subdomains#subdomains-example)  [Important information about multilingual subdomains](https://support.wix.com/en/article/wix-multilingual-about-multilingual-subdomains#important-information-about-multilingual-subdomains)
+
+---
+
+### Subdomains example
+
+If your website's primary language is English, and has French as a secondary language, the URL's will look like this:
+
+> **Important:**
+>
+> You can see the subdomain URLs with the relevant CNAME records in the DNS settings in your site's dashboard. **Do not make changes to these records**.
+
+---
+
+### Important information about multilingual subdomains
+
+You must have a domain connected to your multilingual site to get the language subdomains. You can [purchase the domain from Wix](https://support.wix.com/en/article/purchasing-a-domain-from-wix-3133977), or purchase elsewhere and [connect to Wix's name servers](https://support.wix.com/en/article/connecting-a-domain-to-the-wix-name-servers).
+
+**Note:** Wix cannot create multilingual subdomains if you [connect your domain to Wix through pointing](https://support.wix.com/en/article/connecting-a-domain-to-wix-using-the-pointing-method).  If you have more than one domain connected to your site, the subdomain is connected to your primary domain.  It can take up to 48 hours for a subdomain to propagate.  Page URL's using a query parameter (e.g. www.mystunningwebsite.com/about?lang=fr) are still accessible, they simply redirect to the subdomain.  There is a separate sitemap for each subdomain.  There is a separate robots.txt file for each subdomain which includes a reference to the corresponding sitemap.xml file (e.g. sitemap.xml of the relevant language).  If you don't want people to reach a specific subdomain, delete the language in the multilingual dashboard.
+
+---
+Source: https://support.wix.com/en/article/wix-multilingual-about-multilingual-subdomains

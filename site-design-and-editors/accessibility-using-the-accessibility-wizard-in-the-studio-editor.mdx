@@ -1,0 +1,163 @@
+---
+title: "Accessibility: Using the Accessibility Wizard in the Studio Editor"
+---
+
+Improve accessibility on your client's site with the Accessibility Wizard. This tool scans the site, and displays 2 tabs that you are prompted to complete:
+
+**Detected issues: **Issues that the wizard has detected on the site.  **Manual tasks: **Additional site settings / content that the wizard may not be able to detect.
+
+We recommend following and completing all of the tasks to ensure your client's site is more accessible to everyone.
+
+> **Important:**
+>
+> While Wix is always striving to improve our products and services, we cannot guarantee that your site will be compliant with your region's accessibility laws and regulations. We recommend consulting an accessibility expert to ensure that your site is meeting the standards for your region.
+
+---
+
+### Scanning a site with the Accessibility Wizard
+
+Open the wizard in your editor to begin making the site more accessible for visitors.
+
+Before you scan a site, you can select whether you want the wizard to check and reorganize the Document Object Model (DOM) order. We recommend enabling this option, as it ensures that the wizard's scan and resulting tasks are accurate.
+
+> **Good to know:**
+>
+> The option to organize the site's DOM does not populate if: 
+> - The site was created after the beginning of November 2024.
+> - You have previously organized the site's DOM with the Accessibility Wizard.
+> - You have [disabled auto DOM on the site](https://support.wix.com/en/article/studio-editor-reorganizing-elements-by-dom-order#disabling-auto-dom).
+
+#### To scan a site:
+
+Click **Site Checker** ** **on the left side of your editor.  Select **Fix** **Accessibility Issues.**  Select / de-select the option for the wizard to reorganize the site's DOM order:
+
+- **Selected:** The Accessibility Wizard scans the site's DOM order, and automatically reorganizes it as needed.
+- **De-selected:** The Accessibility Wizard does not scan the site's DOM order or make any changes.
+    Click **Scan Site** in the panel.
+
+---
+
+### Fixing detected issues
+
+The **Detected issues** tab displays settings that impact the entire site (e.g. the site's language and focus indicators). Each site page also has its own drop-down, ensuring a thorough scan of the site.
+
+The Wizard provides you with solutions for each detected issue, so you don't have to leave the panel to make changes.
+
+Select an option to learn more about the issues that can be detected.
+
+#### Site level issues
+
+### Show focus indicators
+
+Focus indicators are blue rectangles that appear around interactive elements (like buttons or links) when visitors use a keyboard to navigate through the live site.
+They allow the visitor to see where their current position is - and are therefore crucial to site accessibility. As a result, focus indicators are automatically enabled on all Studio Editor sites and cannot be turned off.
+
+### Add 'Skip to Main Content' link
+
+'Skip to Main Content' is a feature that allows visitors using keyboard navigation to bypass the topmost sections of a site (such as menus and page headings) and skip directly to the main content of the page. 
+A 'Skip to Main Content' link is automatically added to all sites you build in the Studio Editor, and cannot be turned off.
+
+### Set main site language
+
+Setting the site's main language provides assistive technologies with the information they need to accurately render the content. It does this by: 
+- Indicating the script / characters used in site text
+- Determining the pronunciation of text content
+- Allowing media players to show the correct captions
+
+It is therefore important to set the site's main language, as it ensures visitors using these technologies get the best experience.
+If you have added Wix Multilingual to your site, the main language chosen during set-up [cannot be changed](https://support.wix.com/en/article/wix-multilingual-request-changing-your-sites-main-language).  
+However, you can:
+- [Delete Multilingual from the site](https://support.wix.com/en/article/wix-multilingual-deleting-wix-multilingual-from-your-site), re-add it, and set it up with the language you want.
+- [Change the layout of the language menu](https://support.wix.com/en/article/wix-editor-accessibility-setting-your-sites-language) to ensure the best experience for visitors.
+
+### Organize DOM order
+
+The Document Object Model (DOM) order of a site determines the "reading" order of elements on the page.
+Some site visitors use screen readers and other assistive technologies to navigate a site.Screen readers, for example, scan the site content, and "read" it aloud to the visitor. These visitors, as well as those with mobility needs, may also use the Tab key to navigate through site content. 
+Organizing a site's DOM order is therefore important for accessibility, as it ensures that visitors using these assistive and additional technologies can browse and navigate the site in a logical order.
+
+#### Page issues
+
+### Add descriptive page title
+
+The wizard prompts you to change the title of a page when the title is 'New page' (the default assigned to new pages you add to a site), or the title contains 'Copy of' (the default assigned to duplicate pages).
+Site visitors frequently use page titles to direct them to specific content / information. In order to ensure the best experience, page titles should be:
+- **Descriptive:** The titles should accurately summarize the page's content and include any essential information.
+- **Unique:** Titles should only be used on one page on the site, and not repeated across pages.
+- **Concise:** Page titles should summarize the content while including relevant information and keywords.
+
+### Organize heading structure
+
+Heading tags are elements in a site's HTML code that determine the hierarchy / structure of text content on a page. Heading tags follow a top-down order, from Heading 1 (H1) to Heading 6 (H6), and then paragraph text (P).
+Assistive technologies use heading tags to know the order of page content. For example, screen readers read H1 content first, followed by H2, H3, etc. An accurate heading structure is therefore important, as it provides a clear, logical experience for visitors using these technologies. [Learn more about heading tags](https://support.wix.com/en/article/accessibility-preparing-your-site-structure)
+
+### Add alt text to images
+
+Alternative (alt) text is a textual description of an image on a web page.
+Some visitors may use assistive technologies such as screen readers to navigate through sites. These read the site's content aloud to the visitors - including the alt text. Alt text is therefore an important part of a site, as it ensures that visitors using these technologies can access the content, and understand what the image contains. [Learn more about alt text and accessibility](https://support.wix.com/en/article/accessibility-preparing-your-images-and-galleries)
+
+### Improve color contrast
+
+[Color contrast](https://support.wix.com/en/article/accessibility-preparing-your-text-and-graphics) is a measure of the difference in perceived brightness between two colors, and is expressed as a ratio ranging from 1:1 (no contrast) to 21:1 (strong contrast).. Having a strong contrast ensures site content is easy to see and read. 
+The required color contrast ratio depends on the element's type and [the Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG21/#abstract) level you want to achieve - [AA (the minimum requirement)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html), or [AAA (enhanced)](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html):
+
+- **Small text: **Text smaller than 24px (18pts):
+
+- **AA:** 4.5:1 and above
+- **AAA:** 7:1 and above
+- **Large text:** Text bigger than 24px (18pts), or text over 18px (14pts) and bold:  
+
+- **AA:** 3:1 and above
+- **AAA:** 4.5:1 and above
+- **Non-text components** (e.g. icons):
+
+- **AA:** 3:1 and above
+
+**Note:** Only level AA is currently required in the Accessibility Wizard.
+
+---
+
+### Completing manual tasks
+
+The manual tasks highlight more site settings that may need to be adjusted for accessibility. This section is not automatic, and you therefore need to manually check the site and make the necessary changes.
+
+### Use descriptive link and button text
+
+Text or elements that link to other pages, sections, or websites should be as descriptive as possible. For example, 'Read more about our latest research' is clearer than 'Read more'. They should also be clear if they lead to an action, such as submitting a form. [Read the Web Content Accessibility Guidelines (WCAG) document on Link Purpose](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+
+### Avoid using only color to provide information
+
+Information conveyed by color should also have separate indicators, such as patterns, font style, and icons. For example, linked text should be underlined, and graphs should also display data with different patterns or textures. [Read the Web Content Accessibility Guidelines (WCAG) document about Use of Color](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+
+### Add important text from images to alt text
+
+Text in images (such as photos of signs or slogans) cannot be read by screenreaders. We recommend replacing these images with real text where possible. 
+If the image text is an important part of the site's content, or is essential in conveying information, include the text in the image's description (alt text). [Learn more about text in images](https://support.wix.com/en/article/accessibility-preparing-your-images-and-galleries#text-in-images)
+
+### Provide text alternatives to site media
+
+If the site contains media (e.g. videos, GIFs, and audio files), you should ensure that it is accessible to all site visitors.You can do this by adding alternatives, such as transcripts and captions. These ensure that all site visitors can access and enjoy the content. [Learn more about media alternatives ](https://support.wix.com/en/article/accessibility-making-videos-and-audio-accessible)
+
+### Add controls to animation and audio
+
+Some video and audio players may be set to play automatically when the page loads. However, this can cause confusion and distraction for visitors, and may interfere with assistive technologies. For example, an audio player that starts automatically can override or 'speak' over a screen reader. 
+We therefore advise providing visitors with option to stop / pause, and mute the content. [Learn more about adding controls](https://support.wix.com/en/article/accessibility-reducing-motion#autoplay-on-a-site)
+
+### Make sure all content is visible when the browser is zoomed in
+
+Site elements / components should still be visible if the browser is zoomed. This is to ensure that users with visual conditions can magnify the site, and still see all of the page's content. You can check this by previewing the site, and changing your browser's zoom to 200%. [Learn more about zoomed content](https://support.wix.com/en/article/accessibility-about-zoomed-content)
+
+### Add accessibility statement
+
+Web accessibility is a legal requirement in several countries. However, even if it is not a legal requirement in your region, we recommend adding the statement. These demonstrate the site / your client's commitment to providing a website that can be enjoyed by all visitors. [Read more about accessibility statements](https://support.wix.com/en/article/accessibility-adding-an-accessibility-statement-to-your-site)
+
+> **What's next?**
+>
+> [Use our Accessibility Checklist](https://support.wix.com/en/article/accessibility-checklist-for-improving-your-sites-accessibility) to keep improving the accessibility of the site.
+
+> **Have a Multilingual site?**
+>
+> The Accessibility Wizard is only currently supported in a site's primary language and cannot be accessed in secondary languages you add with [Wix Multilingual](https://support.wix.com/en/article/wix-multilingual-an-overview). However, you can [use our Accessibility Checklist](https://support.wix.com/en/article/accessibility-checklist-for-improving-your-sites-accessibility) to manually check and adjust the site in all languages.
+
+---
+Source: https://support.wix.com/en/article/accessibility-using-the-accessibility-wizard-in-the-studio-editor

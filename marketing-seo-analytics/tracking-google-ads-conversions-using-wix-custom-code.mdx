@@ -1,0 +1,81 @@
+---
+title: "Tracking Google Ads Conversions Using Wix Custom Code"
+---
+
+You can use Google Ads conversion tracking to measure the conversion actions that users take on your Wix site after they click or view your Google ads. For example, a visitor might reach a purchase confirmation page on your site after clicking an ad.
+
+After you create your conversion action in Google Ads, you can track it by adding a snippet of custom code in your site's dashboard.
+
+> **Tip:**
+>
+> - You can also track Google Ads conversion actions [using Google Tag Manager](https://tagmanager.google.com/#/home).
+> - If you need to track business events, it's a good idea to [use Google Analytics instead](https://support.wix.com/en/article/tracking-events-on-your-wix-site-with-a-google-analytics-property).
+
+> **Before you begin:**
+>
+> - You need to [connect Google Tag Manager to your site](https://support.wix.com/en/article/connecting-your-google-tag-manager-account-to-your-wix-site) before you can set up conversion tracking.
+> - By using this service, you are engaging directly with a third-party service provider. We recommend reviewing the service provider's Privacy Policy and Terms of Use prior to your use of such third-party service. You acknowledge that we are not liable for any loss or damage resulting from your use of such third-party service, including any liability arising from any personal data exchanged between you and such third-party.
+
+---
+
+### Step 1 | Create a conversion action
+
+First, you need to create a conversion action in your Google Ads account. This gives you the Conversion ID and Label ID that you need to use in your custom code snippet to track the action.
+
+#### To create a conversion action:
+
+Sign in to [your Google Ads account](https://ads.google.com/).   (If you're using [Smart Mode](https://support.google.com/google-ads/answer/9520605?hl=en)) Click the **Tools & Settings **icon select **Switch to Expert Mode**.
+
+**Note: **After you make this switch, you won't be able to switch back to Smart Mode.   Click **Tools & Settings ** at the top.  Select **Conversions **under **Measurement **in the drop-down menu.
+
+Click **New conversion action**.  Select **Website**.   Enter your website domain.  Click **Scan**.  Scroll down to **Create conversion actions manually using code**.  Click **Add a conversion manually**.  Select the type of conversion action to track from the **Goal and action optimization **drop-down menu.  Enter a name for the conversion action in the **Conversion name **field.
+
+Select **Use different values for each conversion **in the **Value **section.
+
+Note: You don't need to change the default value.  Click **Done**.   Click **Save and continue**.  Select the **Use Google Tag Manager **tab.  Make a note of the Conversion ID and Conversion Label ID.
+
+---
+
+### Step 2 | Set up tracking using custom code
+
+After you've created your conversion action, you can start tracking it by embedding a snippet of custom code on your site.
+
+#### To set up custom code:
+
+Copy the following code snippet into a text editor.
+
+`\<script>
+function registerListener() \{
+    window.wixDevelopersAnalytics.register('conversionListener', (e, p) => \{
+        if (e === 'Purchase') \{
+            gtag('event', 'conversion', \{
+                'send_to': 'AW-CONVERSION_ID/LABEL_ID',
+                'value': p.revenue,
+                'currency': p.currency,
+                'transaction_id': p.orderId
+            \});
+        \}
+    \});
+\}
+window.wixDevelopersAnalytics ? registerListener() : window.addEventListener('wixDevelopersAnalyticsReady', registerListener);
+\</script>`
+
+Find the **send_to** line in the code.  Replace the placeholder values with your values:
+
+- **AW-CONVERSION_ID: **Your Conversion ID from Google Ads
+- **LABEL_ID: **Your Label ID from Google Ads
+    Copy the entire code snippet.  [Go to Custom Code](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/manage-website/embeds/?&title=Select%20a%20site&buttonText=Go+to+Custom+Code) in your site's dashboard.  Click** + Add Custom Code** at the top right.  Paste the code snippet in the text box.   Enter a name for your code.
+
+Tip:** **Give it a name that is easy to recognize so you can quickly identify it later.   Select an option under **Add Code to Pages**:
+
+- **All pages: **This adds the code to all of your site's pages, including any new pages that you create in the future. Choose whether to load the code only once per visit, or on each page your visitor opens.
+- **Choose specific pages: **Use the drop-down menu to select the relevant pages.
+    Choose where to place your code under **Place Code in:**.
+
+- Head
+- Body - start
+- Body - end
+    Click **Apply**.  [Go to Marketing Integrations](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Integrations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/marketing-integration) in your site's dashboard.  Click **Connect **under **Google Ads**.  Click **Add Google Ads Tag**.  Add your conversion ID.  Click **Save**.
+
+---
+Source: https://support.wix.com/en/article/tracking-google-ads-conversions-using-wix-custom-code

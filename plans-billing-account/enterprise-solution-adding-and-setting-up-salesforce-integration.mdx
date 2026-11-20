@@ -1,0 +1,149 @@
+---
+title: "Enterprise Solution: Adding and Setting Up Salesforce Integration"
+---
+
+Connect your Wix Studio for enterprise account to your Salesforce account so you always have the most up-to-date information. Using our automations, you can send data like store orders and form submissions to Salesforce, as soon as they're captured in Wix.
+
+> **Note:**
+>
+> Wix integrates with Salesforce using API version 61.0. For the most up-to-date information on Salesforce's API capabilities, please consult their documentation.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-salesforce-integration-en).
+
+---
+
+### Step 1 | Add and connect Salesforce
+
+Contact your enterprise success manager to connect Salesforce to your Wix Studio for enterprise account. When connecting your Salesforce account, you are providing permissions for Wix to access your spreadsheet data. You can remove permissions at any time from your Salesforce account.
+
+> **Already connected to Salesforce?**
+>
+> Skip ahead to [Step 2 | Create an automation](https://support.wix.com/en/article/wix-enterprise-adding-and-setting-up-salesforce-integration#step-2-create-an-automation).
+
+#### To connect your Wix Studio enterprise solution site to Salesforce:
+
+[Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/manage-installed-apps/) in the relevant site's dashboard.  Click **Salesforce**.   Click **Connect**.
+
+[Log in to your Salesforce account](https://login.salesforce.com/).
+
+---
+
+### Step 2 | Create an automation
+
+Once you have connected your Salesforce account, you can now create an automation with Salesforce as the action.
+
+#### To create an automation:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/triggers/) in your site's dashboard.  Click **+ New Automation**.   Click **+ Start from Scratch**.  Give your automation a title and choose the relevant app under **Trigger**:
+
+- **Wix Forms**
+- **Wix Stores**
+- **Wix Bookings**
+- **Wix Events**
+    Set up the trigger based on the app you selected.
+
+---
+
+### Step 3 | Map data from the trigger to Salesforce
+
+Next, you need to match the data from your chosen trigger to the relevant Salesforce entity and fields. This ensures the data from Wix gets to the right place on Salesforce.
+
+For example, if your trigger is a new store order, you will need to match the customer's data to the relevant entity fields in Salesforce.
+
+#### To map data from the trigger to Salesforce:
+
+Scroll down to **Action** and select **Update** **Salesforce**.  Select the relevant entity from the **Select which entity to update in Salesforce** drop-down.   Click **Map Fields**.   Choose the relevant pieces of Wix data under **Data from trigger**, so the right **Salesforce fields **get updated.  Click **Save**.
+
+---
+
+### Step 4 | Activate automation
+
+Click **Activate** to make your automation live. Now, every time the automation is triggered (e.g. whenever a new store order is placed), the data you mapped from Wix will be updated in the relevant Salesforce fields.
+
+For example, if you created an automation with a form submission trigger, every time a site visitor fills in that form, their submission details are sent to the relevant Salesforce entity and fields.
+
+---
+
+### FAQs
+
+Click a question below to learn more about the Wix Studio for enterprise Salesforce integration.
+
+### I can't connect to Salesforce with Single Sign-On (SSO), how do I resolve this issue?
+
+If you are having issues with SSO, there may be an issue with Wix servers being blocked from Salesforce servers. You can resolve this by whitelisting the relevant Wix server IP addresses. 
+**To whitelist the relevant Wix server IP addresses:**
+1. [Go to your enterprise dashboard](https://manage.wix.com/enterprise-dashboard/home).
+2. Hover over **Settings **in the left sidebar.
+3. Select **IP Allowlisting**.
+4. Click **Create Rule**.
+5. Enter a name for the rule.
+6. Click the **Add URLs **drop-down.
+7. Choose the relevant URLs from your connected sites.
+8. Enter each of the following IP addresses in the **IP address** field under **Allowed IP addresses**, and click **Add** each time:
+
+- 64.7.220.0/24
+- 64.95.157.0/24
+- 70.42.116.0/24
+- 70.42.119.0/24
+- 185.230.60.0/22
+- 199.15.160.0/22
+- 91.199.119.0/24
+- 65.38.108.0/24
+- 3.219.52.190/32
+- 3.234.195.187/32
+- 23.23.59.232/32
+- 44.199.164.16/32
+- 3.90.122.42/32
+- 54.147.198.201/32
+- 34.235.216.255/32
+- 52.203.188.4/32
+- 35.167.2.215/32
+- 54.212.48.139/32
+- 35.84.122.228/32
+- 100.20.131.234/32
+- 34.252.5.25/32
+- 54.170.22.1/32
+- 34.248.203.220/32
+- 46.137.24.202/32
+9. Click **Create** once you have entered all the IP addresses above.
+[image: A screenshot showing a whitelisted IP address in the Enterprise dashboard.]
+
+### Do Salesforce automations count towards my automations quota?
+
+Yes, this automation counts towards your automations quota.
+
+### What is a Salesforce entity?
+
+A Salesforce entity is a contact, lead, account or order, whose data fields you can update (e.g. first name, last name, email address).
+
+### What is a Salesforce required field?
+
+These are the fields you must map when updating your records. The required fields are based on each of your Salesforce entities.
+
+### Why can't I see some of my Salesforce fields while mapping them?
+
+There are a number of reasons why your Salesforce fields might not be showing in Wix:
+- **Read-only fields:** If you set a Salesforce field to read-only, it cannot be updated through the automation. Wix will only show the Salesforce fields that can be updated.
+- **New fields: **It may take some time for your newly created Salesforce fields to appear. Please allow up to 24 hours these fields to appear in Wix.
+
+### What happens if I delete a field in my Wix Form being mapped to Salesforce?
+
+The automation stays active and data will continue to be transferred to Salesforce – just without the field you deleted. Having said that, any previous data from the deleted field will still appear on Salesforce.
+
+### What happens if I rename a field in the Wix form mapped to Salesforce?
+
+Renaming a field does not impact the automation, as the mapping is based on the ID of the field, not its name.
+
+### How do I disconnect the Salesforce integration?
+
+You can disconnect the Salesforce integration at any time, which also disables any automations that send data to Salesforce.
+
+**To disconnect the Salesforce integration:**
+1. [Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/manage-installed-apps/) in the relevant site's dashboard.
+2. Click **Salesforce**.
+3. Click **Disconnect** at the top.
+4. Click **Disconnect** to confirm.
+[image: A screenshot showing how to disconnect the salesforce integration from the manage apps section of the site dashboard.]
+
+---
+Source: https://support.wix.com/en/article/wix-enterprise-adding-and-setting-up-salesforce-integration

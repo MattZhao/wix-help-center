@@ -1,0 +1,326 @@
+---
+title: "CMS: Creating Dynamic Pages that List Items by Category"
+---
+
+Organize your CMS (Content Management System) collection items by category on your website with dynamic pages. You can create a dynamic 'category' page with a different version for each category. In each version, visitors view a list of the items within the category and can click to view the specific items.
+
+> **Before you begin:**
+>
+> - Make sure you have a [CMS collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) with items that you want to categorize.
+> - Make sure you've created a [dynamic item page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page) for your collection. You will add a dynamic link to this page from your dynamic 'category' page so visitors can click to view details about a particular item.
+
+---
+
+### Step 1 | Add a field for categorizing your collection items
+
+To display different categories of items on your site, your collection needs a field that defines which category each item belongs to. Add or choose a 'category' field in your collection, then enter values in the field to categorize each item.
+
+#### To add a 'category' field to your collection:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in your editor, then click **Your Collections**.** **  Click the relevant collection.  Click **Manage Fields**.   Click **+ Add Field**, choose the **Text **or **Number **field type and click **Choose Field Type**.   Enter the **Field name **(e.g. Category).  (Optional for Velo only) Update the **Field ID**, which is used in the site's code. You cannot update this ID later.   (Optional) Enter **Help text** that will appear in your collection view as a tooltip next to the field name.  (Optional) Click the **Validations **tab to make this a required field, limit the character count, or accept specific values only. Learn more about [adding field validations](https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections).  (Optional) Click the **Default value** tab to add text that gets added to the field automatically for each new item in the collection. Learn more about [adding default values to fields](https://support.wix.com/en/article/cms-adding-default-values-to-fields-in-your-collections).  Click **Save**.
+
+Enter the name of the category that each item belongs to in your new 'category' field. Make sure to spell, capitalize, and use the same number of spaces for each unique category.
+
+---
+
+### Step 2 | Add a dynamic page that lists items per category
+
+Create a new dynamic list page for your collection. Later, this dynamic page will serve as a template with different versions for each category. Each version will only show items that belong to its category.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Your Collections**.
+4. Hover over the relevant collection and click the **More Actions **icon .
+5. Click **Add dynamic page**.
+[image: A screenshot of adding a dynamic page for a collection.]
+1. Select **List page **and click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the editor.
+3. Click **Your Collections**.
+4. Hover over the relevant collection and click the **More Actions **icon .
+5. Click **Add dynamic page**.
+[image: A screenshot of adding a dynamic page in the Studio Editor.]
+1. Select **List page **and click **Add to Site**.
+
+---
+
+### Step 3 | Modify the URL slug structures
+
+You need to convert your new dynamic list page to a type of dynamic item page that lists items per category. To do so, edit the page's URL slug structure. Make sure to add your 'category' field as a variable and to keep the slug structure unique to your site.
+
+> **Important:**
+>
+> If you change the URL slug structure of your dynamic pages, all the existing links to these pages will no longer work. This affects links within your site, any links you've shared externally, and SEO links in search engines. We're releasing [a feature that will let you add an automatic redirect](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls#editing-url-slugs-for-specific-dynamic-item-pages), taking visitors and search engines from the old URL to the new one.
+
+#### Unique URL slug structure
+
+The URL slug structure cannot already be used by other existing pages on your site. To be [unique](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls), the URL slug structure **cannot** **have the same prefix** (e.g. \{Collection name\}) **and the same number of variables **as another page on your site, even if the variables are different.
+
+### Show me an example of conflicting URL slug structures that cannot be used
+
+In the example image below, the URL slug structures conflict with each other because they share the same prefix and have the same number of variables: 
+- **felines/\{origin\}**
+- **felines/\{category\}**
+[image: A screenshot of the error message that appears if you try to create conflicting URL slug structures.]Even though technically, the web addresses generated could be unique for each page, the total number of variables after the shared prefix causes the slug structures to conflict.  
+When editing the URL slug structure, make sure it does not have the same prefix and number of variables as another slug structure used on your site.
+
+#### What converts the dynamic list page to a dynamic item page?
+
+When you create any dynamic page, a Page Link field is added to your collection. The Page Link field generates the actual URL slug values for each item in your collection based on the URL slug structure of the dynamic page.
+
+### Show me an example of duplicate Page Link field values in a collection
+
+In the example collection below, a dynamic list page was turned into a dynamic item page that includes a version for each unique Page Link field (URL slug). 
+[image: A screenshot of a collection with Page Link fields and a Category field used in the slug.]In the URL slug structure of a dynamic list page, renamed **Felines (Item) (Category)**, the **Category **field variable was added. Since multiple items have the same value (URL slug) in their **Felines (Item) (Category) **Page Link field, the dynamic list page was converted to a dynamic item page with a version for each unique URL slug.
+As a result, this dynamic 'category' page has the following versions:
+- **felines/medium **The version of the dynamic page using this URL slug shows 3 items because 3 of the items share this Page Link field value (URL slug).
+- **felines/large **The version of the dynamic page at this URL shows 2 items because 2 of the items share this Page Link field value (URL slug).
+
+> **Creating dynamic 'category' pages from combined field variables:**
+>
+> You can create dynamic 'category' pages with versions for each unique combination of field values. If you add multiple field variables to the URL slug structure of a dynamic page, the values are combined in the Page Link field. If this field is the same for multiple items, the dynamic page is converted to a dynamic item page with versions for each unique Page Link value (URL slug).
+
+#### Example URL slug structures you can create
+
+You can use any text or number fields as variable in your dynamic pages' URL slug structures. For example, you could create the following URL slug structures for your dynamic pages:
+
+**Dynamic item page: **https://www.\{your-domain.com\}/\{collection-name\}/\{category\}/\{primary-field\}  **Dynamic category page: **https://www.\{your-domain.com\}/\{collection-name\}/\{category\}  **Dynamic list page: **https://www.\{your-domain.com\}/\{collection-name\}
+
+#### To edit the URL slug structures of your dynamic pages:
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu**on the left side of the editor.
+3. Click **Dynamic Pages**.
+4. Edit the URL slug structures of the dynamic pages that connect to your collection. Click the relevant dynamic page type below for directions:
+Dynamic item page (used to display individual items)If necessary, you can edit the URL slug structure of your collection's dynamic item page, used to show details about individual items. Keep in mind that changing the URL slug structure of your existing dynamic pages will cause the existing links to these pages to no longer work. This affects links within your site, any links you've shared externally, and SEO links in search engines. 
+**To edit the URL slug structure of your dynamic item page used to display individual items:**
+1. Hover over the dynamic item page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure **field and press **Enter **on your keyboard. For example, you could use the following slug structure for your dynamic item page: **\{collection-name\}/\{category\}/\{primary-field\}
+
+Tip: **Click **Add Variable **to add a collection field to the URL that will dynamically adjust based on the item displayed on the page.
+Dynamic page (that will display items per category)Convert your dynamic list page into a dynamic page with different versions for each category. To do so, edit the URL slug structure so it remains unique to your site and includes your 'category' field as a variable. 
+**To edit the URL slug structure of your dynamic 'category' page: **
+1. Hover over the dynamic list page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure** so it includes your 'category' field and does not conflict with existing URL slug structures. For example, you could use the following slug structure for this dynamic 'category' page: **\{collection-name\}/\{category\}
+
+Tip: **Click **Add Variable **to add your 'category' field to the URL slug structure.
+3. Press **Enter **on your keyboard. The page name changes from **\{Collection Name\} (List) **to **\{Collection Name\} (Item)**.
+4. (Optional) Rename your dynamic category page so you can easily recognize it in your editor:
+
+1. Hover over the dynamic 'category' page under **Site Pages and Menu**,** **click the **More Actions **icon  and select **Rename**.
+2. Edit the name of the page and press **Enter **on your keyboard. For example, you could name the page: "\{Collection name\} (Item) (Category)"
+Dynamic list page (used to show all collection items)If needed, you can edit the URL slug structure of a dynamic list page that shows all the collection items. Make sure you do not add variables that would make the Page Link field values repeat in your collection, as this would turn the page into a dynamic item 'category' page. 
+**To edit the URL slug structure of a dynamic list page: **
+1. Hover over the dynamic list page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure **field and press **Enter **on your keyboard. For example, you could use the following slug structure for your dynamic list page: **\{collection-name\}**
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Edit the URL slug structures of the dynamic pages that connect to your collection. Click the relevant dynamic page type below for directions:
+Dynamic item page (used to display individual items)If necessary, you can edit the URL slug structure of your collection's dynamic item page, used to show details about individual items. Keep in mind that changing the URL slug structure of your existing dynamic pages will cause the existing links to these pages to no longer work. This affects links within your site, any links you've shared externally, and SEO links in search engines.
+**To edit the URL slug structure of your dynamic item page used to display individual items:**
+1. Hover over the dynamic item page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure **field and press **Enter **on your keyboard. For example, you could use the following slug structure for your dynamic item page: **\{collection-name\}/\{category\}/\{primary-field\}
+
+Tip: **Click **Add Variable **to add a collection field to the URL that will dynamically adjust based on the item displayed on the page.
+Dynamic page (that will display items per category)Convert your dynamic list page into a dynamic page with different versions for each category. To do so, edit the URL slug structure so it remains unique to your site and includes your 'category' field as a variable. 
+**To edit the URL slug structure of your dynamic 'category' page: **
+1. Hover over the dynamic list page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure** so it includes your 'category' field and does not conflict with existing URL slug structures. For example, you could use the following slug structure for this dynamic 'category' page: **\{collection-name\}/\{category\}
+
+Tip: **Click **Add Variable **to add your 'category' field to the URL slug structure.
+3. Press **Enter **on your keyboard. The page name changes from **\{Collection Name\} (List) **to **\{Collection Name\} (Item)**.
+4. (Optional) Rename your dynamic category page so you can easily recognize it in your editor:
+
+1. Hover over the dynamic 'category' page under **Site Pages**,** **click the **More Actions **icon  and select **Rename**.
+2. Edit the name of the page and press **Enter **on your keyboard. For example, you could name the page: "\{Collection name\} (Item) (Category)"
+Dynamic list page (used to show all collection items)If needed, you can edit the URL slug structure of a dynamic list page that shows all the collection items. Make sure you do not add variables that would make the Page Link field values repeat in your collection, as this would turn the page into a dynamic item 'category' page.
+**To edit the URL slug structure of a dynamic list page:**
+1. Hover over the dynamic list page, click the **More Actions** icon  and select **SEO**.
+2. Edit the **URL slug structure **field and press **Enter **on your keyboard. For example, you could use the following slug structure for your dynamic list page: **\{collection-name\}**
+
+---
+
+### Step 4 | Customize your dynamic category page
+
+Your dynamic 'category' page should now act as a dynamic item page with different versions for each of your categories. In each version, a repeater has various elements already connected to your CMS collection fields to show details about each item within the category.
+
+> **Want to use a gallery or table instead of a repeater?**
+>
+> If you'd rather display the items in a [gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery) or [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), you can.* *Delete the default repeater and add a Pro Gallery or table. Then connect each part of your gallery or table to the CMS collection through the dataset.
+
+#### To customize your dynamic category page:
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your dynamic category page: 
+
+1. Click **Pages & Menu**on the left side of the editor.
+2. Click **Dynamic Pages**.
+3. Click the dynamic category page you created in the previous section's steps.
+[image: A screenshot of selecting the dynamic category page in the Wix Editor.]
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the **Connect to CMS** icon  .
+3. In the **Connect Repeater** panel on the right, click the element you want to connect.
+4. Under **Connections**, click the relevant drop-downs to connect the element to the relevant collection field or dataset action. The options vary depending on the element type.
+Tips:
+- Connect text at the top of the page to your 'category' field so it dynamically adjusts, depending on which category is displayed.
+- Connect the image or button in your repeater to your dynamic item page used to display one item at a time.
+[image: A screenshot of connecting a button to the dynamic item page.]
+1. Click **Repeater connections** at the top of the panel.
+2. Repeat steps 3-7 above to connect the elements to collection fields or dataset actions.
+[image: A screenshot of the repeater's CMS connections on a dynamic category page.]
+1. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change.
+2. Click **Preview **and use the toolbar to test each version of your dynamic category page.
+
+**Tip: **If you get a 404 error message when you enter preview mode, save and reload your editor, then try again.
+[image: A screenshot of using the Preview toolbar to view other versions of a dynamic page.]
+1. Click **Publish** if you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your dynamic category page: 
+
+1. Click **Pages**  on the left side of the editor.
+2. Click the dynamic category page you created in the previous section's steps.
+[image: A screenshot of navigating to a dynamic category page in the Studio Editor.]
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the **Connect to CMS** icon  .
+3. In the **Connect Repeater** panel on the right, click the element you want to connect.
+4. Under **Connections**, click the relevant drop-downs to connect the element to the relevant collection field or dataset action. The options vary depending on the element type.
+Tips:
+- Connect text at the top of the page to your 'category' field so it dynamically adjusts, depending on which category is displayed.
+- Connect the image or button in your repeater to your dynamic item page used to display one item at a time.
+[image: A screenshot of linking a repeater buttons to the dynamic item page.]
+1. Click **Repeater connections** at the top of the panel.
+2. Repeat steps 3-7 above to connect the elements to collection fields or dataset actions.
+[image: A screenshot of the CMS connection options in a repeater.]
+1. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change.
+2. Click the **Preview** icon  at the top right and use the toolbar to test each version of your dynamic category page.
+
+**Tip: **If you get a 404 error message when you enter preview mode, save and reload your editor, then try again.
+[image: A screenshot of using the toolbar to preview each version of a dynamic category page.]
+1. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 5 | (Optional) Create a dynamic page that lists your categories
+
+Now that you have a dynamic page with different versions for each of your categories, you may want to create a page that lists all of these categories. That way, visitors can view an index of all your categories, then click to go to the relevant version of the dynamic 'category' page you created earlier.
+
+#### a | Create a collection for listing your categories
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click **+ Create Collection** at the top right.   Click **Start from scratch**, then click **Next**.  Enter a name for your collection, leave **Multiple items (Default) **selected and click **Create**.   Add a multi-reference field that references your main collection:
+
+1. Click **Add Field**, select **Multi-reference**, then click **Choose Field Type**.
+2. Enter the **Field name**.
+3. Click the **Referenced Collection **drop-down, select the main collection that includes your 'category' field, then click **Save**.
+
+(Optional) Add more fields to display on your list of categories page (e.g. image, text). For example, you could add an image field for displaying an image representing each category.    Add a new item for each category:
+
+1. Click **+ Add Item**.
+2. Enter the name of one of your categories in your primary **Title **field.
+3. Click the **Multi-Reference** cell and select the items that have a category field matching this item's primary **Title **field.
+4. Fill out any additional fields you added for this item/category.
+5. Repeat these steps to add items representing each category.
+
+#### b | Add a dynamic page for displaying your list of categories
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Your Collections**.
+4. Hover over the collection you just created for listing your categories and click the **More Actions **icon .
+5. Click **Add dynamic page**.
+[image: A screenshot of adding a dynamic page.]
+1. Select **List page **and click **Add to Site**.
+2. Add a dataset that connects to your main collection and has a filter that includes the **Title** ('categories') field from your 'categories' collection:
+
+1. Click **CMS**  on the left side of the editor.
+2. Click **Add Content Elements **then select **Dataset**.
+3. Click the drop-down, select the main collection and click **Create**.
+4. Click **+ Add Filter** in the **Dataset Settings **panel on the right.
+5. Click the **Field** drop-down and select your 'category' field.
+6. Select **Another dataset** under **Value source**.
+7. Click the **Dataset **drop-down and select your collection that lists the categories.
+8. Leave **Title** selected in the **Field **drop-down and click **Add Filter**.
+[image: A screenshot of adding a filter to the dataset.]
+1. Connect the 'Read More' buttons in your repeater to your dynamic category page:
+
+1. Click the button in your repeater and select the **Connect to CMS **icon .
+2. Click the **Choose a dataset** drop-down and select the dataset you just added that connects to your main collection.
+3. Click the **Click action connects to** drop-down and select the dynamic 'category' page.
+[image: A screenshot of linking to the dynamic 'category' page.]
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater and select the **Connect to CMS** icon  to adjust the connections between the elements and your collection.
+[image: A screenshot of adjusting the CMS connections in a repeater.]
+1. (Optional) [Modify the URL slug structure](https://support.wix.com/en/article/cms-creating-dynamic-pages-that-list-items-by-category%EF%BB%BF#step-3-modify-the-url-slug-structures) of this dynamic page.
+2. Click **Preview** to test your connections.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Your Collections**.
+4. Hover over the collection you just created for listing your categories and click the **More Actions **icon .
+5. Click **Add dynamic page**.
+[image: A screenshot of adding a dynamic page for a collection in the Studio Editor.]
+1. Select **List page **and click **Add to Site**.
+2. Add a dataset that connects to your main collection and has a filter that includes the **Title** ('categories') field from your 'categories' collection:
+
+1. Click **CMS**  on the left side of the editor.
+2. Click **Add Content Elements **then select **Dataset**.
+3. Click the drop-down, select the main collection and click **Create**.
+4. Click **+ Add Filter **in the **Dataset Settings **panel on the right.
+5. Click the **Field** drop-down and select your 'category' field.
+6. Select **Another dataset** under **Value source**.
+7. Click the **Dataset **drop-down and select your collection that lists the categories.
+8. Leave **Title** selected in the **Field **drop-down and click **Add Filter**.
+[image: A screenshot of adding a dataset filter.]
+1. Connect the 'Start Now' buttons in your repeater to your dynamic category page:
+
+1. Click the button in your repeater and select the **Connect to CMS **icon .
+2. Click the **Choose a dataset** drop-down and select the dataset you just added that connects to your main collection.
+3. Click the **Click action connects to** drop-down and select the dynamic 'category' page.
+[image: A screenshot of linking to the dynamic category page.]
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater and select the **Connect to CMS** icon  to adjust the connections between the elements and your collection.
+[image: A screenshot of adjusting the CMS connections in a repeater.]
+1. (Optional) [Modify the URL slug structure](https://support.wix.com/en/article/cms-creating-dynamic-pages-that-list-items-by-category%EF%BB%BF?tabs=Studio-Editor-1#step-3-modify-the-url-slug-structures) of this dynamic page.
+2. Click the **Preview** icon  at the top right to test your connections.
+3. Click **Publish** if you are ready to make the changes go live.
+
+> **Next:**
+>
+> - Learn how to [add links to your new dynamic pages in your site's menu](https://support.wix.com/en/article/cms-linking-to-dynamic-pages#linking-your-site-menu-to-dynamic-pages).
+> - Learn how to [add a 'Load More' button to your dynamic list page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-list-page#step-5-optional-add-a-load-more-button).
+> - Learn how to [add input elements that allow visitors to filter collection content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+---
+
+### FAQs
+
+Click below for answers to common questions about creating dynamic category pages.
+
+### Why do I get a 404 error message when I preview my new dynamic category page?
+
+If you get a **Page Not Found** **(404)** error message when previewing newly created dynamic pages, try saving and reloading your editor. If the issue persists, [contact us](https://www.wix.com/contact) so we can look into resolving the issue. 
+[image: A screenshot of the Page Not Found 404 error message that can appear in preview mode.]
+
+### Can I add links to my dynamic category pages in my site menu?
+
+Yes. When adding a link to your site menu, you can choose which dynamic pages you'd like to link. For dynamic item pages like your dynamic 'category' page, you can choose which specific item (category) the menu link leads to. 
+You can also link other elements such as text, buttons, or images to your dynamic pages.
+Learn how to [add links to your dynamic pages](https://support.wix.com/en/article/cms-linking-to-dynamic-pages).
+
+### Can I add 'Load More' or navigational buttons to my dynamic pages?
+
+If you have more items than you'd like to show when the page initially loads, consider adding a '[Load More](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#load-more)' button to improve the page's loading performance. This allows you to hide items from displaying until visitors click the button. To help visitors navigate through various collection items, add [navigational buttons](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-dynamic-page-previous-dynamic-page) or [pagination bars (Wix Editor only)](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar).
+
+---
+Source: https://support.wix.com/en/article/cms-creating-dynamic-pages-that-list-items-by-category-2254237

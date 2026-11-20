@@ -1,0 +1,117 @@
+---
+title: "Accessibility: Checking and Adjusting a Site's DOM Order"
+---
+
+A site's DOM order is the order in which screen readers and the Tab key highlight and / or "read" content on the page. It should follow a logical order to ensure that visitors get the best possible experience on the site, and can navigate and enjoy its content.
+
+**In this article, learn more about:**
+
+[DOM order on sites](https://support.wix.com/en/article/accessibility-checking-and-adjusting-a-sites-dom-order#dom-order-on-sites)  [Why DOM order is important](https://support.wix.com/en/article/accessibility-checking-and-adjusting-a-sites-dom-order#why-dom-order-is-important)  [Auto DOM in the Accessibility Wizard](https://support.wix.com/en/article/accessibility-checking-and-adjusting-a-sites-dom-order#auto-dom-in-the-accessibility-wizard)  [Manually changing the DOM order of a site](https://support.wix.com/en/article/accessibility-checking-and-adjusting-a-sites-dom-order#manually-changing-the-dom-order-of-a-site)
+
+---
+
+### DOM order on sites
+
+Site DOM is the loading and reading order of elements on site pages. Wix automatically sets a DOM order based on the visual order of the elements; from left to right, and top to bottom. When developing our accessibility tools, we test our products using the following screen readers:
+
+Windows + Firefox or Chrome: **NVDA** (Free reader)  iOS + Safari: **Voiceover** (Built-in reader)
+
+This means that we've created your site's automatic DOM order with the above applications' functions in mind.
+
+> **Important:**
+>
+> The automatic DOM order on desktop Wix sites has been built for left-to-right scripts (e.g. English, Spanish, etc.). If your site uses a right-to-left script such as Arabic or Hebrew, you need to manually re-arrange the DOM order in the Layers panel.
+
+---
+
+### Why DOM order is important
+
+Some site visitors may use screen readers and other assistive technologies to navigate your site. These technologies assist visitors with visual impairments by scanning the site content, and reading it aloud to the visitor.
+
+Visitors who use screen readers, as well as those with conditions that affect mobility, may use the Tab key to navigate through your site content. Site DOM order is therefore important for visitors using screen readers and / or the Tab key, as they need to be able to navigate around your site in a logical order.
+
+For example, the site menu should come first, followed by the rest of the elements in the header, then the page title, then the page contents, etc. If the DOM order is incorrect, it can cause the screen reader / Tab key to skip or jump around your page content.
+
+> **Want to test your site's DOM order?**
+>
+> You can test out the automatic DOM order of your site by using your keyboard's Tab key or a screen reader the live version of the site.
+
+---
+
+### Auto DOM in the Accessibility Wizard
+
+When working on a Studio Editor site, you may see the option to automatically organize its DOM order in the Accessibility Wizard. We recommend selecting this option, as it ensures the Wizard's scan and resulting tasks are correct.
+
+> **Don't see this checkbox?**
+>
+> The option to organize the site's DOM does not populate if: 
+> - The site was created after the beginning of November 2024
+> - You have previously organized the site's DOM with the Accessibility Wizard
+> - You have [disabled auto DOM on the site](https://support.wix.com/en/article/studio-editor-reorganizing-elements-by-dom-order#disabling-auto-dom)
+
+---
+
+### Manually changing the DOM order of a site
+
+If you notice your site's DOM order is not logical, we recommend changing it to ensure an improved experience for visitors.
+
+Use the [Accessibility Wizard](https://support.wix.com/en/article/accessibility-about-the-accessibility-wizard-7284021) and Layers panel to change the DOM on Wix Editor sites. If you're building a site in the Studio Editor, you can adjust the order with the site's Layers and Pages panels.
+
+> **Important:**
+>
+> If the tabbing order of your site is logical, then you don't need to do anything. Changing the order when it is already correct can cause issues for visitors using screen readers and / or the Tab key.
+
+#### To change the DOM order:
+
+Wix EditorStudio EditorAs Wix automatically sets a DOM order for your site, you need to disable it in the [advanced settings of the Accessibility Wizard.](https://support.wix.com/en/article/accessibility-about-the-accessibility-wizard-7284021) You can then manually adjust the DOM order of elements in your site's Layers panel as needed.To change your site's DOM settings and order:
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Settings **at the top and select **Accessibility Wizard**.
+3. Click the **More Actions **icon  at the top of the Accessibility Wizard panel.
+4. Select **Advanced accessibility settings**.
+5. Select** Automatic DOM Order**.
+6. Disable the toggle in the panel.
+7. Select **Turn It Off **in the pop-up window.
+[image: The advanced settings panel of the accessibility wizard. The automatic DOM order toggle has been disabled.]
+1. Select **Layers**   at the bottom left of the editor.
+2. Check over the list and delete any redundant elements. This includes duplicate elements that do not have a use on your site and can confuse screen reader users.
+3. Drag and drop the remaining elements into the desired order.
+[image: A site's Layers panel. A pro gallery is being dragged into another position.]Next step:[Open the mobile Editor](https://support.wix.com/en/article/wix-editor-getting-started-with-the-mobile-editor) and repeat the same steps.Depending on the site's needs and / or script, you can disable auto DOM on [sections / containers, grid cells, element stacks, or the entire site](https://support.wix.com/en/article/studio-editor-reorganizing-elements-by-dom-order). You can then manually adjust the order as needed.To manually arrange the DOM order:
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Choose where you want to disable auto DOM:
+
+- **The entire site:**
+
+1. Click the **Wix Studio** icon  at the top left of the editor.
+2. Click **Tools**.
+3. Click **Auto DOM Order **to deselect it.
+4. Click **Turn Off **to confirm.
+- **Sections, containers, or grid cells:**
+
+1. Right-click the relevant section / container / grid cell.
+2. Click **Auto DOM Order** in the right-click menu to deselect it.
+3. Click **Layers**  on the left side of the editor.
+4. Choose what you want to organize:
+
+- **Elements inside a section / container / grid cell / stack: **
+
+1. Click the relevant parent element (e.g. the section) in the panel to open it.
+2. Drag and drop the elements into the correct position.
+- **Sections / containers / grid cells / stacks: **
+
+1. Hover over the top section and click the **More Actions** icon .
+2. Click **Arrange**.
+3. Click **Bring to Front**.
+4. Repeat steps a-c with all other sections, going from top to bottom in the panel.
+[image: A site's Layers panel. The cursor is clicking the option to bring the top section to the front.]
+
+> **Notes:**
+>
+> - Navigating a site using the Tab key only navigates through the interactive elements and not static elements such as text. If you want to test out a screen reader on static elements such as text, follow the instructions in your screenreader's help center on how to properly navigate a website with a keyboard.
+> - Pinned elements are automatically placed at the end of the tabbing sequence. If you want it to be tabbed earlier in the sequence, we recommend that you unpin the element and place it in the header.
+
+> **What's next?**
+>
+> Go back to the [Accessibility Checklist](https://support.wix.com/en/article/accessibility-checklist-for-improving-your-sites-accessibility) to continue working on your site's accessibility.
+
+---
+Source: https://support.wix.com/en/article/accessibility-checking-and-adjusting-a-sites-dom-order

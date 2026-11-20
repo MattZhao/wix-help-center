@@ -1,0 +1,60 @@
+---
+title: "Wix Bookings: Troubleshooting Issues With Video Conferencing Links in Confirmation Emails for Online Services"
+---
+
+We are aware that, if you recently switched to [the latest version of Wix Bookings](https://support.wix.com/en/article/wix-bookings-about-the-new-wix-bookings-pages), you may be experiencing changes to how confirmation emails send to your clients when they book [online services](https://support.wix.com/en/article/creating-an-online-service-in-wix-bookings).
+
+Previously, your clients received a confirmation email for their booking, with the video conferencing link included. Now, they may be receiving both a confirmation email (Subject: "Thanks for booking!") and a second email (Subject: "Here are your online session details”) containing the video conferencing link.
+
+To make sure your clients receive the video conferencing links for their online sessions, we recommend you follow the steps below.
+
+---
+
+### Step 1 | Disable your confirmation emails
+
+First, disable your normal confirmation emails to prevent your clients from receiving too many notifications per booking. Your clients still receive the relevant video conferencing link in a separate email.
+
+#### To disable your confirmation emails:
+
+[Go to Booking Settings](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Booking%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/bookings/settings) in your site's dashboard.  Click **Emails & SMS Reminders**.  Disable the toggle next to Confirmation email.
+
+---
+
+### Step 2 | Create automated confirmation emails with video conferencing links
+
+With your normal confirmation emails disabled, you can now create an automated email to clients when they book services. Once the automated email is set up, your clients receive two emails with the relevant video conferencing link. This helps you make sure that no one misses their sessions.
+
+The automated email contains the relevant booking details, including the video conferencing link and password for online services. The URL and password do not appear in the automated emails for in-person services booked.
+
+> **Important:**
+>
+> When setting up the email automation, if you select specific services, no confirmation email will send for the remaining services. Therefore, we recommended you apply the automated email to all services. You can also create a second automation for offline services without adding the video conference link.
+
+#### To create automated confirmation emails with video conferencing links:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/triggers/) in your site's dashboard.  Click **+ New Automation**.  Click **+ Start from Scratch**.  Click **Wix Bookings**.   Click **Session booked** as the trigger for the automation.   Click the services drop-down and choose **Specific services**.  Under **Select a service**, click the checkboxes to select all relevant online services you want to send the single confirmation email to.   Click **Apply**.
+
+Click **Send an email** under **Choose an action**.   Click **Edit Template**.
+
+**Note:** Click **Add Details** and confirm your sender details for the automated emails, if prompted.   Click **Add**.   Click **Text**.  Add the relevant text, for example: "Video conference link:" or "Online lesson link:".  Click **+ Add Dynamic Value**.   Select **Video Conference URL** from the drop-down.   (Optional) Enter the fallback text in the field provided. Fallback text appears when there is no data for the value you chose in the dynamic value field.   Click **Add**.
+
+(Optional) If you use Zoom with password protection for your [online services](https://support.wix.com/en/article/wix-bookings-creating-an-online-service-via-zoom#create-an-online-service-with-zoom), add your password to the emails so clients can access their links:
+
+1. Click **+ Add Dynamic Value**.
+2. Select **Video Conference Password** from the drop-down to add your Zoom password to your the emails.
+3. Enter the password.
+4. Click **Add**.
+    Click **Save & Publish** at the top.
+
+> **Note:**
+>
+> Your clients can unsubscribe from your automated emails if they wish, but not from your Booking confirmation emails.
+
+---
+
+#### Still need help?
+
+If the problem persists, [contact us](https://www.wix.com/contact) and we will be happy to help.
+
+---
+Source: https://support.wix.com/en/article/wix-bookings-troubleshooting-issues-with-video-conferencing-links-in-confirmation-emails-for-online-services

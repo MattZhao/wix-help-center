@@ -1,0 +1,39 @@
+---
+title: "Connecting a Subdomain to an External Resource"
+---
+
+Connecting a subdomain to an external resource allows you to seamlessly integrate other platforms, like a blog, into your Wix website. Doing so expands your site's functionality and gives your visitors a more comprehensive online experience.
+
+For example, you could create a subdomain for an externally hosted blog at **blog.mystunningwebsite.com** if your main domain, **mystunningwebsite.com **is connected to your Wix site. This means when your visitors click on your blog link, they'll be redirected to your blog without leaving your website.
+
+> **Restrictions for setting up a subdomain:**
+>
+> - If your main domain is connected to Wix via pointing, these directions do not apply. Contact your domain host to create your subdomain with them, as they host the DNS records.
+> - You cannot connect a subdomain in your Wix account if the main domain is in a different Wix account. You must create the subdomain in the same Wix account as the main domain.
+
+### To connect a subdomain to an external resource:
+
+Contact the host of the external resource/site (e.g., WordPress) and ask for the DNS records required to point to the resource/site.  [Go to Domains](https://premium.wix.com/wix/api/mpContainerStaticController#/domains) page in your Wix account.
+
+**Note**: If you have multiple domains in your account, scroll to the main domain of the subdomain you're connecting (e.g., mystunningwebsite.com for connecting blog.mystunningwebsite.com).  Click the More Options** **icon  on the right and select **Manage DNS Records**.
+
+Add the DNS records (e.g., A or CNAME records) you received from your resource/site host:
+
+1. Click **+ Add Record **under the relevant A (Host) or CNAME (Aliases) section.
+2. Click **Got it** in the pop-up message.
+3. Edit the **Host Name** field with the name of your subdomain (e.g. 'blog'). Edit the **Value** field for each record you need to add.
+
+**Note:** Leave the** Host Name** field blank if instructed to add an **@** sign in it.
+4. Click **Save**, then click **Save Changes** in the pop-up message.
+5. Repeat step 4 for each DNS record you need to add.
+
+> **Note:**
+>
+> It may take up to **48 hours** for your subdomain to propagate. [Learn More](https://support.wix.com/en/article/about-domain-propagation)
+
+> **Connecting a subdomain to your Wix site?**
+>
+> Learn how to [connect a subdomain to your Wix site](https://support.wix.com/en/article/connecting-a-subdomain-to-a-site-in-your-wix-account).
+
+---
+Source: https://support.wix.com/en/article/connecting-a-subdomain-to-an-external-resource

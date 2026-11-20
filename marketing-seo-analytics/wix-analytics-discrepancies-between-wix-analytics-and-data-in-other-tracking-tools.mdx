@@ -1,0 +1,139 @@
+---
+title: "Wix Analytics: Discrepancies Between Wix Analytics & Data in Other Tracking Tools"
+---
+
+If you are using Wix Analytics and other tracking tools, such as Google Ads, Google Analytics, or Facebook Ads, you may find there are differences in your data.
+
+**In this article, learn more about:**
+
+[Google Analytics data discrepancies](https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools#google-analytics-data-discrepancies)  [Google Ads data discrepancies](https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools#google-ads-data-discrepancies)  [Facebook Ads data discrepancies](https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools#facebook-ads-data-discrepancies)  [Other reasons for data discrepancies](https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools#other-reasons-for-data-discrepancies)
+
+> **Note:**
+>
+> The most common reason for seeing discrepancies in analytics data is [cookie consent](https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools#other-reasons-for-data-discrepancies).
+
+---
+
+### Google Analytics data discrepancies
+
+Click a title below to learn more about the differences between Wix Analytics and Google Analytics data:
+
+### Differences in Traffic Data
+
+Wix Analytics and Google Analytics filter out traffic from bots such as computer scripts, search engines, and QA checks by default. As Google and Wix use different algorithms to filter bot traffic, your analytics data may show different results.
+
+### Differences in Sales and People Reports
+
+The differences in sales and people reports between Wix Analytics and Google Analytics are due to the different ways in which data is collected and processed:
+- **Wix Analytics** has access to production data in your Wix site, such as your contact list and transaction database. Wix Analytics will not show you cancelled orders, and it will show you zero sum (free) orders.
+- **Google Analytics** data source is client events. Client events might be lost due to network issues, or not collected if cookies are not enabled, or if javascript does not run. Google Analytics will show you cancelled orders, and won't show you zero sum (free) orders.
+
+### Differences in Metric Names
+
+Metric names between Wix Analytics and Google Analytics aren't always an exact match. When comparing data, note:
+
+- **Users** in Google Analytics = **Visitors** in Wix Analytics.
+- **Traffic Channe**l in Google Analytics = **Referring Category** in Wix Analytics.
+- **Referral **in Google Analytics = **Referring URL** in Wix Analytics.
+- **Page** in Google Analytics = **Page Path **in Wix Analytics.
+- **Transactions** in Google Analytics = **Orders** in Wix Analytics.
+- **Revenues** in Google Analytics = **Total Sales** in Wix Analytics.
+
+### Differences in Time Frames
+
+When Google show stats for the last 7 days, the end date they refer to is yesterday. In Wix Analytics, the last 7 days time period includes today. This applies to all "Last X" time periods (last 30 days, last month, last year, etc.)
+
+---
+
+### Google Ads data discrepancies
+
+Click a title below to learn more about the differences between Wix Analytics and Google Ads data:
+
+### Discrepancies caused by disabled URL auto-tagging
+
+If there are discrepancies between your site's Wix Analytics data and Google Ads data, check if URL auto-tagging is enabled. If auto-tagging is disabled, most of your traffic will be tagged as organic.
+[Tagging your Google Ads URLs](https://support.google.com/analytics/answer/1034383)
+
+### Metrics that are similar, but not the same
+
+In **Wix Analytics**, a Site Session is all of the actions performed by a visitor, and ends after 30 minutes of inactivity.
+If you compare **Google Ad Clicks** to **Wix Analytics Site Sessions**, it's possible you'll see a difference in your data. This is because the same visitor can click your ad more than once during a session.
+
+---
+
+### Facebook Ads data discrepancies
+
+Click a title below to learn more about the differences between Wix Analytics and Facebook Ads data:
+
+### Differences in metric names
+
+In **Wix Analytics**, a Site Session is all of the actions performed by a visitor, and ends after 30 minutes of inactivity.
+If you use **Facebook Pixel**, you'll see Landing Page Views metrics in your Facebook metrics. Landing Page Views can be compared to Site Sessions in Wix Analytics. Facebook's Link Clicks metrics should not be compared to Site Sessions in Wix Analytics. 
+**Learn more:**
+- [Facebook Visits Metric Information](https://www.facebook.com/business/help/1502960513074071)
+- [Facebook Metrics for Website Visitors Ads](https://www.facebook.com/business/help/400437100749708)
+
+### Differences in Traffic Source attribution models
+
+Attribution models are customer touchpoints, showing which marketing campaigns and social media platforms are used to find and then revisit your site in a 30 day period. Due to the differences in traffic source attribution models, you might see more visits (landing page views) in Facebook metrics than in Wix Analytics.
+**Traffic Source in Wix Analytics:**The traffic source is where the visitor was referred from. If a visitor clicks a Facebook Ad, the traffic source is Facebook.
+**Traffic Source in Facebook metrics:**Wix gathers traffic data from sources that Facebook is not aware of, which can lead to data discrepancies. 
+Example: A visitor clicked a Facebook ad, then received a marketing email sent through your Wix site, and they clicked a link in the email. Wix will attribute the visit to email marketing, and Facebook will attribute it to Facebook ads.
+If you’re using the Wix Facebook Ads tool, you can count visits like these the same way Facebook does. Meaning, if a visitor clicked a Facebook ad in the last 7 days, and then came via email marketing, you can still attribute the visit to Facebook Ads by selecting the Wix FB Ads Last Click attribution model.
+[Learn more about Facebook attribution models](https://www.facebook.com/business/help/370704083280490?id=399393560487908)
+
+### Differences in data due to visitors changing devices or browsers
+
+**Wix Analytics data: **The data collected is based on site sessions, and each sessions limited to the browser in use at that time. If someone clicks a Facebook Ad, but completes the purchase later on a different device or browser, the order will not be attributed to the Facebook Ad.
+**Facebook Ads data: ** Facebook can track data from the same person over different devices and browsers. This means that if someone clicks a Facebook Ad and completes a purchase later on using a different device, the order is attributed to the Facebook Ad.
+
+---
+
+### Other reasons for data discrepancies
+
+Click a title below to find more reasons for data discrepancies in Wix Analytics:
+
+### Discrepancies when using multiple marketing channels
+
+Wix Analytics collects traffic data from multiple marketing channel sources such as Facebook Ads, and Google Ads. The data in Facebook and Google may not be exact match to Wix Analytics data, as their data is based on one source.
+
+### Cookie Consent data discrepancies
+
+If your site has a cookie consent banner, Wix Analytics data can only be collected from visitors who have clicked "Accept". Our analysis shows approximately 50% of visitors accept cookies, so if you have a Cookie Consent banner, it's fair to assume your traffic data should be doubled. 
+[Learn more about displaying cookie banners](https://support.wix.com/en/article/displaying-a-cookie-banner-on-your-site)
+
+### Discrepancies caused by Analytics Blockers
+
+Your site visitors can set their browser preferences to prevent the collection of data on specific websites, which can result in data discrepancies.
+
+### Discrepancies caused by timezone differences
+
+There may be discrepancies between Wix Analytics and other analytics tools data due to different reporting timezones. 
+For example: If your Wix account's time zone is set to Dublin GMT 00:00, and your Google Analytics account time zone is set to Kiev GMT +02:00, there will be a two hour difference in data collected.
+**To change the time zone in your Wix account:**
+1. Go to [Settings](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/manage-website/overview) in your site's dashboard.
+2. Scroll to the **General section** and click **Languages & Region**.
+3. Scroll to **Time zone** and update your time zone as required.
+
+### Discrepancies due to data latency
+
+Wix Analytics and other analytics tools have different latency periods. There is a 1 hour latency in Wix Analytics. For the most accurate overview, compare long date ranges instead of hour by hour data.
+
+### Discrepancies due to different bot algorithms
+
+Wix Analytics and other tracking tools filter out traffic from bots such as computer scripts, search engines, and QA checks by default. As each tool uses different algorithms to filter bot traffic, your analytics data may show different results.
+
+### Discrepancies resulting from HTTPS redirects in promotion tool ads
+
+If your site is uses **HTTPS**, the referral data will be stripped out as direct data if you use **http**:’your site address’ in Google Ads or Facebook Ads.
+
+### Missing clicks in promotion ad tools
+
+Not all clicks on your ads will result in your site page loading.
+
+> **Need help?**
+>
+> If you need further assistance with Wix Analytics data discrepancies, [contact us](https://support.wix.com/en/article/contacting-wix-customer-care-for-support) for support.
+
+---
+Source: https://support.wix.com/en/article/discrepancies-between-wix-analytics-data-in-other-tracking-tools

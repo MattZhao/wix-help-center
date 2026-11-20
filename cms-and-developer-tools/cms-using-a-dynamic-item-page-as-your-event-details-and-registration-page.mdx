@@ -1,0 +1,243 @@
+---
+title: "CMS: Using a Dynamic Item Page as Your Event Details & Registration Page"
+---
+
+Do you need more control over the design and layout of your Event Details & Registration page? If so, you can use the Wix CMS (Content Management System) to build a dynamic item page that serves as a custom template for displaying each individual event.
+
+> With this method, we recommend also [creating a dynamic list page for your events](https://support.wix.com/en/article/cms-displaying-your-events-in-a-dynamic-list-page) where visitors can view all of your events in one place. When they click an event on the dynamic list page, they're taken to this dynamic item page where details about the event are displayed.
+
+> **Before you begin:**
+>
+> - [Add Wix Events to your site](https://support.wix.com/en/article/adding-wix-events-to-your-site) and publish your events.
+> - [Add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Events with the CMS.
+
+---
+
+### Step 1 | Add a dynamic item page for your event
+
+Start in your editor by accessing the CMS [Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) and finding the Events collection. Then create a dynamic item page from this collection. This dynamic page will act as a template, with each event getting its own version of the page.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left of the editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to the **Events **collections.
+5. Hover over **Events**, click the **More Actions** icon  and select **Add dynamic page**.
+
+1. Click **Item page**.
+2. Click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  at the top of your editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to the **Events **collections.
+5. Hover over **Events**, click the **More Actions** icon  and select **Add dynamic page**.
+6. Click **Item page**.
+7. Click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of your editor.
+3. Click **Wix App Collections**.
+4. Scroll down to the **Events **collections.
+5. Hover over **Events**, click the **More Actions** icon  and select **Add dynamic page**.
+
+1. Click **Item page**.
+2. Click **Add to Site**.
+
+---
+
+### Step 2 | (Optional) Modify the URL slug structure
+
+Each of your events will have a dedicated version of the dynamic item page you just created. By default, these pages have the following URL structure, with the last **\{Title\}** part changing based on the name of the event:
+
+### Show me an example of conflicting URL slug structures that cannot be used
+
+In the example image below, the URL slug structures conflict with each other because they share the same prefix and have the same number of variables: 
+- **felines/\{origin\}**
+- **felines/\{category\}**
+[image: A screenshot of the error message that appears if you try to create conflicting URL slug structures.]Even though technically, the web addresses generated could be unique for each page, the total number of variables after the shared prefix causes the slug structures to conflict.  
+When editing the URL slug structure, make sure it does not have the same prefix and number of variables as another slug structure used on your site.
+
+#### To edit the URL slug structure:
+
+Wix EditorEditor XStudio EditorIf you're using the Wix Editor, the **events** part of your URL slug is already used by a page that displays your upcoming and past events. This is why the CMS adds **-1** after **events**, to give this new dynamic item page a unique URL. You can change this URL slug to a new structure that is not already used by your live site.**To edit your dynamic item page's URL slug structure:**
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu**on the left side of the editor.
+3. Click **Dynamic Pages**.
+4. Hover over the **Events (Item) **page under **EVENTS/EVENTS COLLECTION** and click the **More Actions** icon  on the right.
+5. Click **SEO**.
+6. Click the **URL slug structure** field.
+
+1. Customize the URL slug structure and press **Enter** on your keyboard. For example, you could change **events-1 **to **event**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  at the top of the editor.
+3. Under **Events Pages (Dynamic)**, hover over the **Events (Item) **page.
+4. Click the **More Actions **icon  on the right and select **SEO**.
+5. Click the **URL slug structure** field.
+6. Customize the URL slug structure and press **Enter** on your keyboard. For example, you could change **events **to **event**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Under **Events Pages (Dynamic)**, hover over the **Events (Item) **page.
+4. Click the **More Actions **icon  on the right and select **SEO**.
+5. Click the **URL slug structure** field.
+
+1. Customize the URL slug structure and press **Enter** on your keyboard. For example, you could change **events **to **event**.
+
+---
+
+### Step 3 | Customize your new dynamic item page
+
+When using the CMS, datasets are the hidden tools that connect your page elements to the items in your collection. In this case, you're connecting text, buttons, and an image to your Events collection, which allows each version of the page to display details about the relevant event. You can add and connect more text or button elements then arrange the page as you see fit.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Events (Item) page.
+3. Connect the elements on the page:
+
+- **Back button: **Click the **Back **button, then click the **Link **icon  and choose where the button navigates visitors to.
+
+**Tip: **Link this button to a page or section on your site that has a list of your events.
+- **Text elements: **Click the relevant text element, then click the **Connect to CMS** icon  . In the **Connect Text **panel, click the **Text connects to **drop-down and choose the Events field that you want to use in the text element. Repeat this step for each text element on the page that you want to connect to text from your events.
+- **Image:** Click the image, then click the **Connect to CMS** icon . In the **Connect image **panel, click the relevant drop-downs to connect the image, alt text, tooltip and link.
+[image: A screenshot of an image's connection options on an Events dynamic item page.]
+1. (Optional) Add more text elements and click their** Connect to CMS **icons  to connect them to your Events CMS collection. For example, you can connect text to the following [Events fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-events/wix-events-events-collection-fields): 
+
+- **Title (Text): **The event name.
+- **Description (Text): **The description from the event's **Short teaser (optional) **field.
+- **About (Rich Text): **The event's **About the event (optional) **rich text field.
+- **Schedule formatted (Text): **The event's date and time (e.g. "April 1, 2024, 7:00 - 11:00 PM")
+- **Start date formatted (Text): **The event's start date (e.g. "April 1, 2024")
+- **Start time formatted (Text): **The event's start time, formatted to your local settings. If the event schedule is TBD, this field is blank.
+- **Location name (Text): **The event's location or the TBD message from Events dashboard.
+- **Location address (Text): **The full address of the event. If the location is TBD, the field is blank.
+- **Status (Text): **One of the following event statuses: 
+
+- **SCHEDULED:** The event date is in the future.
+- **STARTED:** The event start time has arrived.
+- **ENDED: **The event end time has passed.
+- **CANCELED: **The event was canceled.
+- **Lowest price formatted (Text): **The lowest price available, formatted with your currency. Note:
+
+- If the event has RSVP registration or is external, this field is blank.
+- If tickets are sold for this event, the lowest price available is displayed.
+- If free tickets are offered, "Free" is displayed.
+
+1. Add dynamic buttons that allow guests to register for the event or add it to their calendar: 
+
+1. Click **Add Elements** on the left, click **Button**, then select the button you want to add.
+2. Click the button, then click the **Connect to CMS **icon  .
+3. Click the **Click action connects to** drop-down and choose what happens when visitors click the button:
+
+- **Site event page url: **Visitors go to the [Event Details & Registration page](https://support.wix.com/en/article/wix-events-setting-up-your-event-details-page) where they can register for the event.
+- **Google calendar url (URL): **The visitor adds the event to their Google calendar.
+- **iCalendar url (URL): **The visitor downloads an iCalendar link to the event.
+- **Registration url (URL): **Visitors go to the Registration URL if registration for the Wix event is managed externally.
+4. Choose how the link opens: **In the current window **or** As a new window. **
+5. Click the **Label connects to **drop-down and choose a field to use as the dynamic button text. Or click **Change Text & Icon** on the button to enter static button text (e.g. "Register").
+
+1. Adjust the size, location, and design of the elements on your page to your liking.
+2. Click **Preview **to test your dynamic Events page.
+3. Click **Publish** when you're ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Events (Item) page.
+3. Connect the elements on the page:
+
+- **Text elements: **Click the relevant text element, then click the **Connect to CMS** icon  . In the **Connect Text **panel, click the **Text connects to **drop-down and choose the Events field that you want to use in the text element. Repeat this step for each text element on the page that you want to connect to text from your events.
+- **Image:** Click the image, then click the **Connect to CMS** icon . In the **Connect image **panel, click the relevant drop-downs to connect the image, alt text, tooltip and link.
+4. (Optional) Add more text elements and click their** Connect to CMS **icons  to connect them to your Events CMS collection. For example, you can connect text to the following [Events fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-events/wix-events-events-collection-fields): 
+
+- **Title (Text): **The event name.
+- **Description (Text): **The description from the event's **Short teaser (optional) **field.
+- **About (Rich Text): **The event's **About the event (optional) **rich text field.
+- **Schedule formatted (Text): **The event's date and time (e.g. "April 1, 2024, 7:00 - 11:00 PM")
+- **Start date formatted (Text): **The event's start date (e.g. "April 1, 2024")
+- **Start time formatted (Text): **The event's start time, formatted to your local settings. If the event schedule is TBD, this field is blank.
+- **Location name (Text): **The event's location or the TBD message from Events dashboard.
+- **Location address (Text): **The full address of the event. If the location is TBD, the field is blank.
+- **Status (Text): **One of the following event statuses: 
+
+- **SCHEDULED:** The event date is in the future.
+- **STARTED:** The event start time has arrived.
+- **ENDED: **The event end time has passed.
+- **CANCELED: **The event was canceled.
+- **Lowest price formatted (Text): **The lowest price available, formatted with your currency. Note:
+
+- If the event has RSVP registration or is external, this field is blank.
+- If tickets are sold for this event, the lowest price available is displayed.
+- If free tickets are offered, "Free" is displayed.
+5. Add dynamic buttons that allow guests to register for the event or add it to their calendar: 
+
+1. Click **Add Elements**  at the top of the editor, click **Button**, then select the button you want to add.
+2. Click the button, then click the **Connect to CMS **icon  .
+3. Click the **Click action connects to** drop-down and choose what happens when visitors click the button:
+
+- **Site event page url: **Visitors go to the [Event Details & Registration page](https://support.wix.com/en/article/wix-events-setting-up-your-event-details-page) where they can register for the event.
+- **Google calendar url (URL): **The visitor adds the event to their Google calendar.
+- **iCalendar url (URL): **The visitor downloads an iCalendar link to the event.
+- **Registration url (URL): **Visitors go to the Registration URL if registration for the Wix event is managed externally.
+4. Choose how the link opens: **In the current window **or** As a new window. **
+5. Click the **Label connects to **drop-down and choose a field to use as the dynamic button text. Or click **Change Text & Icon** on the button to enter static button text (e.g. "Register").
+6. (Optional) Add a "Back" button that takes visitors to a list of your events: 
+
+1. Click **Add Elements**  at the top of the editor, click **Button**, then select the button you want to add.
+2. Click the button, then click the **Link **icon  and choose where the button navigates visitors to.
+7. Adjust the size, location, and design of the elements on your page to your liking.
+8. Click **Preview **to test your dynamic Events page.
+9. Click **Publish** when you're ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Events (Item) page.
+3. Connect the elements on the page:
+
+- **Text elements: **Click the relevant text element, then click the **Connect to CMS** icon  . In the **Connect Text **panel, click the **Text connects to **drop-down and choose the Events field that you want to use in the text element. Repeat this step for each text element on the page that you want to connect to text from your events.
+- **Image:** Click the image, then click the **Connect to CMS** icon . In the **Connect image **panel, click the relevant drop-downs to connect the image, alt text, tooltip and link.
+[image: A screenshot of the CMS connection options for an image in the Studio Editor.]
+1. Optional) Add more text elements and click their** Connect to CMS **icons  to connect them to your Events CMS collection. For example, you can connect text to the following [Events fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-events/wix-events-events-collection-fields): 
+
+- **Title (Text): **The event name.
+- **Description (Text): **The description from the event's **Short teaser (optional) **field.
+- **About (Rich Text): **The event's **About the event (optional) **rich text field.
+- **Schedule formatted (Text): **The event's date and time (e.g. "April 1, 2024, 7:00 - 11:00 PM")
+- **Start date formatted (Text): **The event's start date (e.g. "April 1, 2024")
+- **Start time formatted (Text): **The event's start time, formatted to your local settings. If the event schedule is TBD, this field is blank.
+- **Location name (Text): **The event's location or the TBD message from Events dashboard.
+- **Location address (Text): **The full address of the event. If the location is TBD, the field is blank.
+- **Status (Text): **One of the following event statuses: 
+
+- **SCHEDULED:** The event date is in the future.
+- **STARTED:** The event start time has arrived.
+- **ENDED: **The event end time has passed.
+- **CANCELED: **The event was canceled.
+- **Lowest price formatted (Text): **The lowest price available, formatted with your currency. Note:
+
+- If the event has RSVP registration or is external, this field is blank.
+- If tickets are sold for this event, the lowest price available is displayed.
+- If free tickets are offered, "Free" is displayed.
+[image: A screenshot of connecting a text element to an Events collection field.]
+1. Add dynamic buttons that allow guests to register for the event or add it to their calendar: 
+
+1. Click **Add Elements**  on the left side of the editor, click **Buttons**, then select the button you want to add.
+2. Click the button, then click the **Connect to CMS **icon  .
+3. Click the **Click action connects to** drop-down and choose what happens when visitors click the button:
+
+- **Site event page url: **Visitors go to the [Event Details & Registration page](https://support.wix.com/en/article/wix-events-setting-up-your-event-details-page) where they can register for the event.
+- **Google calendar url (URL): **The visitor adds the event to their Google calendar.
+- **iCalendar url (URL): **The visitor downloads an iCalendar link to the event.
+- **Registration url (URL): **Visitors go to the Registration URL if registration for the Wix event is managed externally.
+4. Choose how the link opens: **In the current window **or** As a new window. **
+5. Click the **Label connects to **drop-down and choose a field to use as the dynamic button text. Or click **Change Text & Icon** on the button to enter static button text (e.g. "Register").
+[image: A screenshot of connecting a button to the Event Details and Registration page in the Studio Editor.]
+1. (Optional) Add a "Back" button that takes visitors to a list of your events: 
+
+1. Click **Add Elements**  on the left side of the editor, click **Buttons**, then select the button you want to add.
+2. Click the button, then click the **Link **icon  and choose where the button navigates visitors to.
+2. Adjust the size, location, and design of the elements on your page to your liking.
+3. Click the **Preview** icon  at the top right to test your dynamic Events page.
+4. Click **Publish** if you are ready to make the changes go live.
+
+---
+Source: https://support.wix.com/en/article/cms-creating-a-custom-event-details-page

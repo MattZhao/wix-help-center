@@ -1,0 +1,78 @@
+---
+title: "Tracking Campaigns and Traffic Sources in Wix Analytics"
+---
+
+Your visitors may find your site in different ways, such as via search engines, social media, and marketing campaigns. In [Wix Analytics](https://www.wix.com/my-account/site-selector/?title=Select%20a%20Site&buttonText=Analytics%20Reports&actionUrl=https%3A%2F%2Fmanage.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fanalytics/reports/?referralInfo=sidebar), you can view your traffic sources, and find out which campaigns bring the most traffic to your site.
+
+**In this article, learn more about:**
+
+[Identifying your traffic sources ](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#identifying-your-traffic-sources)  [Tracking campaigns with UTM tags](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#tracking-campaigns-with-utm-tags)  [Using UTM mediums for different traffic categories](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#using-utm-mediums-for-different-traffic-categories)  [The recognized search engines and social media domains in Wix Analytics](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#recognized-search-engines-and-social-media-domains)
+
+---
+
+### Identifying your traffic sources
+
+Wix Analytics identifies where your site's traffic originates, including URLs, in-app browsers, specific ad IDs, and UTM parameters. Each traffic source is explained below.
+
+#### URL
+
+A Uniform Resource Locator (URL), also known as a web address, is the most common way to identify a traffic source.
+
+> **Note:**
+>
+> You can track traffic resulting from paid ads, rather than an organic search results, by [using the correct UTM mediums in your campaigns](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#utm-parameters).
+
+#### In-app browser
+
+When a visitor uses a social media app (such as Instagram or Facebook) and clicks one of your posts, your site can open in a dedicated browser within the app. When this happens, the traffic source data collected is in-app browser, and not the URL.
+
+#### Specific ad identifiers
+
+Traffic sources can be determined by specific ad identifiers, used by popular ad networks. An ad ID shows which company or service the ad originates from, and is visible in the campaign URL. Each time a visitor arrives at your site, Wix Analytics searches the referring URL for an ad ID.
+
+Examples:
+
+#### UTM Parameters
+
+An Urchin Tracking Module (UTM), is a tag added to your site’s URL which identifies the exact source of your site's traffic. The UTM tag is composed of three parts, known as **UTM parameters**:
+
+**Source**: The platform the visitor came from. Examples: Facebook, Google, Bing, email.  **Medium**: How the visitor reached your site. Examples: An advert, email, or organic search.  **Campaign Name**: The name of the campaign, as defined by the campaign creator.
+
+The URL is connected to the UTM with a question mark (**?**) and the UTM parameters are connected with ampersands (**&**).
+
+---
+
+### Tracking campaigns with UTM tags
+
+When you use [Wix Email Marketing](https://support.wix.com/en/article/email-marketing-getting-started) or [Facebook Ads by Wix](https://support.wix.com/en/article/facebook-ads-an-overview), the UTM tag is added automatically to the URL. You can also manually add UTM tags to URLs in other marketing campaigns.
+
+It's advisable to use UTM tags for the following campaigns:
+
+---
+
+### Using UTM mediums for different traffic categories
+
+In order to identify your traffic sources correctly, you should use UTM mediums recognized by Wix Analytics. For example, a paid ad on a social media platform should have the word ‘paid’ as a UTM medium.
+
+In the table below, you can see how site traffic is categorized, a definition for each category, UTM sources and mediums, and UTM examples.
+
+Traffic category UTM sourceUTM mediumExample**Paid Search:** Visitors that clicked a paid search ad.[Any search engine recognized by Wix Analytics](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#recognized-search-engines-and-social-media-domains)cpc, ppc, paidsearch
+Note: If the link contains an identifier such as "gclid", it will be also be classified as Paid Search.?utm_source=google&utm_medium=ppc&utm_campaign=mysearchcampaign**Paid social: **Visitors that came from a paid post on social media.[Any social media platform recognized by Wix Analytics](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#recognized-search-engines-and-social-media-domains)cpc, ppc, cpm cpv, cpe, cpa, cpl, cpi, or contains the word ‘paid’?utm_source=Instagram&utm_medium=cpe&utm_campaign=mysocialad**Facebook Ads by Wix:** Visitors that came from a paid social media post that was created with Wix.Facebookcpc
+Note: The UTM link is added by Wix?utm_source=Facebook&utm_medium=cpc&utm_campaign=fbadsbywix**Organic social: **Visitors that came from a post on social media that isn’t a part of a paid campaign.[Any social media platform recognized by Wix Analytics](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#recognized-search-engines-and-social-media-domains)
+?utm_source=Facebook&utm_campaign=mysocialpost**Email:** Visitors that came to your site through an email marketing campaign.
+email?utm_medium=email&utm_campaign=myemailcampaign**Wix Email Marketing: **Visitors that came to your site through an email marketing campaign created with Wix.So (shoutout)Note: The UTM link is added by Wix?utm_source=so&utm_campaign=myWixemailcampaign**Organic Search: **Visitors that clicked an organic search result (that was not a paid ad on a search engine). [Any search engine recognized by Wix Analytics](https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics#recognized-search-engines-and-social-media-domains)
+
+**Referral: **Visitors that clicked a link placed on another website (that is not a search engine or a social media platform).No parameters needed
+
+**Direct:** Visitors that typed your site address directly into their browser, without clicking any link. No parameters needed
+
+---
+
+### Recognized search engines and social media domains
+
+Wix Analytics recognizes traffic data from the search engines and social media domains detailed in the table below.
+
+Search engine domainsSocial media domainsAlice, AOL, Ask, Auone, Avg, Babylon, Baidu, Biglobe, Bing, Centrum.cz, CNN, Daum, DuckDuckGo, Ecosia, Hurryiet, Eniro, Globo, go.mail.ru, Google, goo.ne.jp, Kvasir, Haosou, Lycos, Mamma, MSN, Mynet, Najdi, Naver, ONET, Rakuten, Viber, search.smt.docomo, Sesam, Seznam, So.com, Sogou, Startsiden, Terra, Tut.by, Ukr, Virgilio, Wirtualna Polska, Yahoo, Yandex, Yam, Qwant. Renren, Pinterest, Facebook, Tumblr, Blogspot, Twitter, Google, Youtube, Yelp, Xing, SoundCloud, Twitch, Instagram, Linkedin, Livejournal, Reddit, VK, TikTok, WhatsApp.
+
+---
+Source: https://support.wix.com/en/article/tracking-campaigns-and-traffic-sources-in-wix-analytics

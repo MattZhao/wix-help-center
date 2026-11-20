@@ -1,0 +1,422 @@
+---
+title: "CMS: Using CMS Expressions to Manipulate Text Strings"
+---
+
+Use CMS expressions to unlock the full potential of your CMS without the use of Velo or JS code.
+
+> For an overview of this process, check out our [Ultimate CMS Guide video](https://youtu.be/S2AgB6wGnk4?t=1082&si=8UMbKTpQiqVStyMv).
+
+---
+
+### About CMS expression functions
+
+A CMS expression combines functions, literal values, and collection field values to present data on your site in new ways.
+
+#### Expressions consist of the following structure:
+
+**Functions: **Define how to calculate the values that appear in parenthesis after the function, with values separated by commas (e.g. **MULTIPLY(price, count)**, **DAYS(_createdDate, NOW())**, **CONCAT("Created on ", _created Date))**.  **Field IDs: **The unique identifiers of each collection field (e.g. **title**, **_createdDate**, **clientName**).  **Strings: **A sequence of characters that can include letters, numbers, symbols and spaces. 
+
+- **String literals: **A sequence of characters enclosed in quotes used to show static text (e.g. **"Hello"**, **'Hello'**, **'"Errata" by Kevin Young'**, **"\"Errata\" by Kevin Young"**, **"backslash is \\, forward slash is /"**).
+- **Number literals: **Numeric values used by the function (e.g. **123**, **1000**, **3.14**).
+- **Array literals: **A way to express an array, which is an ordered collection of values, typically of the same type, enclosed in square brackets (e.g. **[1,2,3]**, **["cat", "dog", "mouse"]**).
+    **Special Constants: **Predefined values that have a specific meaning within the scope of the function (e.g. **true**, **false**, **undefined**, **null**).
+
+Keep in mind that expressions are case-sensitive. When using fields within expressions, use field IDs rather than field names, and remember that field IDs are also case-sensitive.
+
+> **Important info about writing expressions:**
+>
+> - Enter the field IDs instead of the field names when referencing collection fields. Field IDs are unique identifiers for each collection field, unlike field names.
+> - Functions and field IDs are case-sensitive. Pay attention to the capitalization used in both.
+> - For **CONCAT** functions, put 'static' string literal values in quotation marks. This includes static punctuation marks and spaces between referenced fields.
+> - If the function doesn't work, check the error message at the bottom of the **Expression** field for clues on how to fix the issue.
+
+---
+
+### Connecting elements to expressions in the dataset
+
+To get started, connect the relevant element to the CMS and choose the Expression connection option. Then enter the expression you want to use. See the next sections for help with creating your expression.
+
+Wix EditorEditor XStudio Editor
+1. In your Editor, click the element you want to connect to the CMS (e.g. text, button, gallery).
+2. Click the Connect to CMS icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click **Create a New Dataset**, then choose the collection you want to connect.
+4. Click the relevant drop-down under **Connection options** and select **Expression**.
+
+1. Click the **Expression** field.
+2. Enter the name of the function you want to use (e.g. **CONCAT**, **DATE**, **TEXT**).
+
+**Tip:** Once you start typing, you can select from a list of possible functions to use.
+
+1. Type an opening parenthesis: **(**
+2. Enter the field IDs or values you want to use in the expression. As you type, a list of matching field IDs that you can select from appears.
+3. Type a closing parenthesis: **)**
+
+1. In your Editor, click the element you want to connect to the CMS (e.g. text, button, gallery).
+2. Click the Connect to CMS icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click **Create a New Dataset**, then choose the collection you want to connect.
+4. Click the relevant drop-down under **Connection options** and select **Expression**.
+5. Click the **Expression** field.
+6. Enter the name of the function you want to use (e.g. **CONCAT**, **DATE**, **TEXT**).
+
+**Tip:** Once you start typing, you can select from a list of possible functions to use.
+7. Type an opening parenthesis: **(**
+8. Enter the field IDs or values you want to use in the expression. As you type, a list of matching field IDs that you can select from appears.
+9. Type a closing parenthesis: **)**
+
+1. In your Editor, click the element you want to connect to the CMS (e.g. text, button, gallery).
+2. Click the Connect to CMS icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click **Create a New Dataset**, then choose the collection you want to connect.
+4. Click the relevant drop-down under **Connection options** and select **Expression**.
+
+1. Click the **Expression** field.
+2. Enter the first part of the function (e.g. **CONCAT**, **DATE**, **TEXT**).
+
+**Tip:** Once you start typing, you can select from a list of possible formulas to use.
+
+1. Type an opening parenthesis: **(**
+2. Enter the field IDs or values you want to use in the expression. As you type, a list of matching field IDs that you can select from appears.
+3. Type a closing parenthesis: **)**
+
+---
+
+### Expression examples
+
+Check out the examples for writing different types of expressions in the following sections.
+
+#### Combining values from several fields using string concatenation
+
+Use the **CONCAT** function to combine values from several different collection fields into a single text field. Add your own text to the function to combine static characters with dynamic values. The static characters don't change, while the dynamic values change based on the item retrieved by the dataset. Make sure to put all static text in quotes, including spaces and punctuation marks (e.g. **" "** or **","**).
+
+An example for using the **CONCAT** function is to create custom text for a dynamic item page introduction. The text could introduce each member by name, mention their job title, and how long they've been with the company. Here's what that expression would look like:
+
+`CONCAT("Our ",jobTitle,", ",title,", has worked here since ",date,".")`
+
+> **In this example:**
+>
+> The **jobTitle** field ID represents the collection field with each member's job title. The **title** field ID is for the field with the names of each member. The **hireDate **key is from a field with the employee start date of each member. Notice how all the static text and punctuation is surrounded by quotes.
+
+### Show me how to combine functions and display the year without the month or day
+
+In this basic example of the **CONCAT** function above, the months and days display. This is because the function references a date field that includes them.
+To format the date differently, you need to combine another function in the expression. For example, you could add the **YEAR** function before the **hireDate** key to only display the year from the date field. The expression would look like this: 
+CONCAT("Our ",jobTitle,", ",title,", has worked here since ",YEAR(hireDate),".")
+View additional options in the [date/time formatting section below](https://support.wix.com/en/article/cms-using-cms-expressions-to-manipulate-text-strings#datetime-formatting).
+
+**View the table below for more basic examples of using the CONCAT function:**
+
+Use caseExpressionExampleResultCombine field values without spaces or punctuationCONCAT(value,value)CONCAT(title,jobTitle)Brian ChangVP ProductCombine field values separated by a comma and a spaceCONCAT(value,", ",value)CONCAT(title,", ",jobTitle)Brian Chang, VP ProductCombine static text with field valuesCONCAT("Hello, ",value)CONCAT("Hello, ",title)Hello, Brian ChangCombine field values with static text at the beginning and endCONCAT("Hello, ",value,", welcome back.")CONCAT("Hello, ",title,", welcome back.")Hello, Brian Chang, welcome back.
+
+---
+
+#### Date/time formatting
+
+When you want to control how dates and times are formatted on your live site, or calculate values from dates, use date/time functions. These functions work with Date, Time, and Number field types.
+
+> **In the example above:**
+>
+> The **DAYS** function returns the number of days between a dynamic **dueDate** field and today's date. Notice how it combines the **DAYS **function with the **TODAY** function, as well as the **CONCAT **function used for merging static and dynamic text.
+
+**Click the relevant function below to learn more about it:**
+
+### DATE
+
+Use the **DATE** function when you want to combine multiple Number field types to display in a date/time format. 
+
+- **Expression: **DATE(year,month,date)
+- **Example: **DATE(year,month,date)
+- **Result: **Sun Jul 08 2008 00:00:00 GMT-0700 (Pacific Standard Time)
+
+### DATEVALUE
+
+Use the **DATEVALUE** function when you want to display a Text field type in a date/time format.
+
+- **Expression: **DATEVALUE(date_string)
+- **Example: **DATEVALUE(textDate)
+- **Result: **Mon Aug 22 2011 00:00:00 GMT-0700 (Pacific Standard Time)
+
+### YEAR
+
+Use the **YEAR** function when you want to display only the year from a Date field type.
+
+- **Expression: **YEAR(date)
+- **Example: **YEAR(_createdDate)
+- **Result: **2008
+
+### MONTH
+
+Use the **MONTH** function when you want to display only the month from a Date field type. The month displays in a number format from 1-12 (e.g. "1" for January). 
+
+- **Expression: **MONTH(date)
+- **Example: **MONTH(_createdDate)
+- **Result: **2
+
+### DAY
+
+Use the **DAY **function when you want to display only the day from a Date field type. The day displays as a number from 1-31. 
+
+- **Expression: **DAY(date)
+- **Example: **DAY(_createdDate)
+- **Result: **2
+
+### HOUR
+
+Use the **HOUR **function when you want to display only the hour from a Date field type. The hour displays in numeric format from 0 (12:00am) to 23 (11:00pm). If your Date field does not include a time, the result is 0.
+
+- **Expression: **HOUR(time)
+- **Example: **HOUR(_createdDate)
+- **Result: **2
+
+### MINUTE
+
+Use the **MINUTE **function when you want to display only the minute from a Date field type. The minute displays in numeric format from 0-59.
+
+- **Expression: **MINUTE(time)
+- **Example: **MINUTE(_createdDate)
+- **Result: **30
+
+### SECOND
+
+Use the **SECOND **function when you want to display only the seconds from a Date field type. The seconds displays in numeric format from 0-59.
+
+- **Expression: **SECOND(time)
+- **Example: **SECOND(_createdDate)
+- **Result: **23
+
+### DAYS
+
+Use the **DAYS **function when you want to calculate the number of days between two dates from separate Date field types. 
+
+- **Expression: **DAYS(end_date,start_date)
+- **Example: **DAYS(_createdDate,_updatedDate)
+- **Result: **46
+
+### DAYS360
+
+Use the **DAYS360 **function when you want to calculate the number of days between two dates, based on a 360-day year (12 months x 30 days). This function works with Date field types and can be helpful with many accounting and financial interest calculations.
+
+- **Expression: **DAYS360(start_date,end_date)
+- **Example: **DAYS360(_createdDate,_updatedDate)
+- **Result: **360
+
+### EDATE
+
+Use the **EDATE **function when you want to calculate the number of months before or after another date. This function works with Date field types. 
+
+- **Expression: **EDATE(start_date,months)
+- **Example: **EDATE(_createdDate,_updatedDate)
+- **Result: **3
+
+### EOMONTH
+
+Use the **EOMONTH **function when you want to calculate a maturity/due date that falls on the last day of a month. In the parenthesis, enter the date field, followed by the number of months before or after the date. Use a positive value for calculating future dates or a negative value for past dates. This function works with Date field types. 
+
+- **Expression: **EDATE(start_date,months)
+- **Example: **EDATE(_createdDate,_updatedDate)
+- **Result: **Tue Oct 31 2023 00:00:00 GMT-0700 (Pacific Daylight Time)
+
+### NETWORKDAYS
+
+Use the **NETWORKDAYS **function when you want to calculate the number of working days, excluding weekends and holidays, between two Date fields. In the parenthesis, enter the start and end dates, followed by the holiday date(s) you want to exclude from the total. 
+
+- **Expression: **NETWORKDAYS(start_date,end_date,[holidays])
+- **Example: **NETWORKDAYS(start_date,end_date,['11/23/2023','11/24/2023'])
+- **Result: **87
+
+### NETWORKDAYSINTL
+
+Use the **NETWORKDAYSINTL **function when you want to calculate the number of working days between two dates, and you want to specify which weekend and holidays to exclude. In the parenthesis, enter the start and end dates, followed by the weekend number or string and holiday date(s) you want to exclude from the total.  
+You can use either the string, or number method when defining the weekends:
+- **String: **Use seven 0s and 1s to specify weekends. The first number in the set represents Monday and the last number is for Sunday. A zero represents a work day and a 1 indicates a weekend. For example, 0000011 sets Saturdays and Sundays in the time period as weekends.
+- **Number: **Use a single number to indicate weekends. Examples for this pattern include:
+
+- 1 makes Saturday/Sunday weekends
+- 2 makes Sunday/Monday weekends
+- 7 makes Friday/Saturday weekends
+- 11 makes Sunday the only weekend day
+- 12 makes Monday the only weekend day
+- 17 Makes Saturday the only weekend day
+
+- **Expression: **NETWORKDAYSINTL(start_date,end_date,[weekend],[holidays])
+- **Example: **NETWORKDAYSINTL(start_date,end_date,7,['11/23/2023','11/24/2023'])
+- **Result: **64
+
+### NOW
+
+Use the **NOW **function when you want to display the current date and time. 
+
+- **Expression: **NOW()
+- **Example: **NOW()
+- **Result: **Thu Feb 20 2020 23:02:55 GMT+0100 (Central European Standard Time)
+
+### TODAY
+
+Use the **TODAY **function when you want to display the current day's date and the time in which the day began (midnight 00:00:00 [time zone]). 
+
+- **Expression: **TODAY()
+- **Example: **TODAY()
+- **Result: **Wed Oct 18 2023 00:00:00 GMT-0700 (Pacific Daylight Time)
+
+**Note:** If you want to show today's date without the time, use the following **CONCAT** function instead: CONCAT(YEAR(TODAY()), '-', MONTH(TODAY()), '-', DAY(TODAY()))
+
+### TIME
+
+Use the **TIME **function when you want to convert an hour, minute, and second value to a decimal value between 0 and 0.999988426.
+
+- **Expression: **TIME(hour,minute,second)
+- **Example: **TIME(number,number2,number3)
+- **Result: **0.120555555
+
+### TIMEVALUE
+
+Use the **TIMEVALUE **function when you want to convert a date value to a decimal value. For example, 12:00 PM is represented as 0.5 because it is half of a day. 
+
+- **Expression: **TIMEVALUE(time_string)
+- **Example: **TIMEVALUE(_createdDate)
+- **Result: **0.370034722
+
+### WEEKDAY
+
+Use the **WEEKDAY **function when you want to convert a date value into a number representing the day of the week. For example, by default, Sunday is represented as 1 and Saturday as 7. 
+In the parenthesis, enter the date value you want to convert. You can add an optional "type" value to choose which day is used to start the week. Enter the type as "2" to make Monday the start of the week, represented as "1", with Sunday represented as "7". Learn more about [using the WEEKDAY function](https://support.microsoft.com/en-us/office/weekday-function-60e44483-2ed1-439f-8bd0-e404c190949a). 
+
+- **Expression: **WEEKDAY(date,[type])
+- **Example: **WEEKDAY(_createdDate,2)
+- **Result: **3
+
+### ISOWEEKNUM
+
+Use the **ISOWEEKNUM **function when you want to show the ISO (International Organization for Standardization) week of the year for a given date. Learn more about the [ISOWEEKNUM function](https://support.microsoft.com/en-us/office/isoweeknum-function-1c2d0afe-d25b-4ab1-8894-8d0520e90e0e).
+
+- **Expression: **ISOWEEKNUM(date)
+- **Example: **ISOWEEKNUM(_createdDate)
+- **Result: **42
+
+### WEEKNUM
+
+Use the **WEEKNUM **function when you want to show the week of the year for a given date. By default, the optional "type" is set to 1 to indicate the weeks start on Sunday. You can make the weeks start on Monday by setting "2" as the type. Learn more about [using the WEEKNUM function](https://support.microsoft.com/en-us/office/weeknum-function-e5c43a03-b4ab-426c-b411-b18c13c75340).
+
+- **Expression: **WEEKNUM(date,[type])
+- **Example: **WEEKNUM(_createdDate,2)
+- **Result: **33
+
+### WORKDAY
+
+Use the **WORKDAY **function when you want to show a date after a specified number of working days. In the parenthesis, enter the start date, followed by the number of working days to add (positive number) or subtract (negative number). You can add an optional "holidays" date range to exclude these days from the calculation. Learn more about [using the WORKDAY function](https://support.microsoft.com/en-us/office/workday-function-f764a5b7-05fc-4494-9486-60d494efbf33). 
+
+- **Expression: **WORKDAY(start_date,num_days)
+
+or
+- **Expression: **WORKDAY(start_date,num_days,holidays)
+- **Example: **WORKDAY(_createdDate,3,["2023-12-25","2023-12-26"])
+- **Result: **Wed Oct 18 2023 00:00:00 GMT-0700 (Pacific Daylight Time)
+
+### WORKDAYINTL
+
+Use the **WORKDAYINTL **function when you want to show a date after a specified number of workdays with custom holidays and weekend parameters. In the parenthesis, enter the start date, followed by the number of working days to add (positive number) or subtract (negative number). You can then add the optional weekend and holidays parameters to exclude these days from the calculation. Learn more about [using the WORKDAYINTL function](https://support.microsoft.com/en-us/office/workday-intl-function-a378391c-9ba7-4678-8a39-39611a9bf81d).
+
+- **Expression: **WORKDAYINTL(start_date,num_days,holidays)
+- **Example: **WORKDAYINTL(_createdDate,3,1,["2023-12-25","2023-12-26"])
+- **Result: **Wed Oct 18 2023 08:52:51 GMT-0700 (Pacific Daylight Time)
+
+### YEARFRAC
+
+Use the **YEARFRAC **function when you want to calculate the number of fractional years between two dates. You can use an optional day count convention at the end of the expression. Learn more about [working with the YEARFRAC function](https://support.microsoft.com/en-us/office/yearfrac-function-3844141e-c76d-4143-82b6-208454ddc6a8). 
+
+- **Expression: **YEARFRAC(start_date,end_date,day_count_convention)
+- **Example: **YEARFRAC(_updatedDate,_createdDate,1)
+- **Result: **0.5780821918
+
+---
+
+#### Number formatting with the TEXT function
+
+Use the **TEXT** function to apply formatting to numbers. For example, you could format values from a Number field type as a currency or percentage.
+
+> **In the example above:**
+>
+> The **TEXT** function formats a Number field type (**price**) as a dollar amount. Notice how the **TEXT **function is inserted within a **CONCAT** function, which adds the static text before the price.
+
+**Click below for examples of using the TEXT function:**
+
+### Convert a number to a currency format
+
+Use the **TEXT **function with a pattern format in quotation marks ("") to convert a Number field into a currency format. You can use the expression below to convert a number to a currency format with a thousands separator and two decimals (e.g. $1,234.57).
+
+- **Expression: **TEXT(value,"$#,##0.00")
+- **Example: **TEXT(9876.54,"$#,##0.00")
+- **Result: **$9876.54
+
+### Convert a number to a percentage (%) format
+
+Use the **TEXT** function with a pattern format in quotation marks ("") to convert a Number field into a percentage. 
+
+- **Expression: **TEXT(value,"0.0%")
+- **Example: **TEXT(3.21,"0.0%")
+- **Result: **321.00%
+
+---
+
+#### Mathematical functions
+
+You can use mathematical functions to perform calculations based on different Number field types and/or static numbers.
+
+> **In the example above:**
+>
+> The **MINUS** function calculates 20-11=9. The 20 value is static, while the Number field value (**rewardPoints**) is dynamic. Notice how the expression inserts the **MINUS** function within the **CONCAT** function, which combines static text with dynamic values.
+
+**View the table below for more examples of using mathematical expressions: **
+
+Use caseExpressionExamplesResultsCalculate the sum of 2 numbersADD(value,value)ADD(number1,number2)
+
+ADD(4,20)24Calculate the difference between 2 numbersMINUS(value,value)MINUS(number1,number2)
+
+MINUS(100,1)99Calculate multiplying 2 numbersMULTIPLY(value,value)MULTIPLY(number1,number2)
+
+MULTIPLY(2,4)6Calculate 1 number divided by anotherDIVIDE(value,value)DIVIDE(number1,number2)
+
+DIVIDE(10,2)5Return "true" if 2 values are equal and "false" otherwiseEQ(value,value)EQ(number1,number2)
+
+EQ(200,200)trueRaise a number ('x') to the power of another number ('y')POW(x,y)POW(2,3)POW(3,3)827Checks if two values are equalEQ (Equal)EQ(5,5) trueChecks if two values are not equalNE (Not Equal)NE(5,7)trueChecks if one value is greater than anotherGT (Greater Than)GT(7,5)
+
+GT(7,7)true
+
+falseChecks if one value is less than anotherLT (Less Than)LT(5,7)
+
+LT(7,5)true
+
+falseChecks if one value is greater than or equal to anotherGTE (Greater Than or Equal)GTE(7,5)
+
+GTE(5,5)
+
+GTE(5,4)true
+
+true
+
+falseChecks if one value is less than or equal to anotherLTE (Less Than or Equal)LTE(5,7)
+
+LTE(5,5)
+
+LTE(5,4)true
+
+true
+
+false
+
+---
+
+### FAQs
+
+Click below for answers to common questions about using expressions.
+
+### Which elements can I use expressions with?
+
+You can use expressions with any elements that have text values that you can connect to CMS collection fields. For example, text boxes, button labels, or titles, descriptions, and alt text in galleries. You can even connect images to expressions and write functions that calculate the image URLs. Learn more about the [supported elements and the collection fields they can connect to](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to). 
+If you have an input element set to [collect content](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection), that allows you to connect a list of items, you can connect them to expressions. For example, you could add use the **CONCAT **function to add "Dr." before a list of names that appear in a dropdown input element.
+
+### Where can I find the field IDs?
+
+You need the field IDs, which are unique identifiers for each collection field, when adding fields to expressions. 
+To view the field IDs, [enable Dev mode](https://dev.wix.com/docs/develop-websites/articles/getting-started/resources/getting-started-with-velo-by-wix) in your Editor, then click the Databases icon  in the [Velo sidebar](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/sidebar/working-with-the-velo-sidebar). From there, you can click to expand the relevant collection and view the field IDs in parenthesis next to each field.
+
+---
+Source: https://support.wix.com/en/article/cms-using-cms-expressions-to-manipulate-text-strings

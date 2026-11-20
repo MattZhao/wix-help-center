@@ -1,0 +1,120 @@
+---
+title: "Editor X: Setting the Size of Your Element"
+---
+
+Using the options in the Inspector panel, you can set your element's size exactly how you want it. Enter fixed width and height values for pixel-perfect accuracy, or use fluid measurements so your element seamlessly adjusts to any screen size.
+
+**In this article, learn more about sizing your elements in Editor X:**
+
+[Structuring a responsive site](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#structuring-a-responsive-site)  [Fixed vs. fluid sizing](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#fixed-vs-fluid-sizing)  [Available units of measure](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#units-of-measure)  [Calculating the size of your elements](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#using-calculation-to-determine-the-size-of-your-elements)  [Stretching an element](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#stretching-an-element)
+
+> **Want to learn more?**
+>
+> Check out [our lesson on sizing](https://www.editorx.com/academy/lessons/sizing) in the Editor X academy.
+
+---
+
+### Structuring a responsive site
+
+Before adding content to your site, it's important to create a structure and build your layers according to that logic. Your layers are organized in the [parenting model](https://www.wix.com/editorx/academy/parenting-lesson), which means the top layer acts as the parent to the bottom layer.
+
+### Show me an example
+
+In this example, the page is the section's parent. That section is the page's child, but also the [Layouter](https://support.wix.com/en/article/editor-x-using-layouters)'s parent. Accordingly, the items within the Layouter are its children.
+
+The size of a parent element can affect its child elements as they resize relatively to the parent. To make sure your design stays responsive, define the sizing and positioning of your layers from top to bottom.
+
+> **Working with breakpoints:**
+>
+> You can set different sizing options for your elements at each breakpoint.
+
+---
+
+### Fixed vs. Fluid sizing
+
+When sizing an element, you can choose whether to use fixed or fluid sizing from the [Inspector](https://support.wix.com/en/article/editor-x-a-guided-tour) panel:
+
+**Fixed: **This option keeps the width of the element the same across all viewports. It doesn't shrink or grow according to screen size.   **Fluid: **This option adjusts the width - and sometimes the height - of elements depending on the screen size. 
+
+- **Scale Proportionally: **Select this checkbox so that your element's height and width maintain a ratio when resized. When this option is not selected, it means your element's width is adjusted according to screen size while its height stays the same.
+
+> **Tip:**
+>
+> You can also drag the handles around your element to change its dimensions.
+
+---
+
+### Available units of measure
+
+In Editor X, you can use a variety of different CSS [units of measure](https://support.wix.com/en/article/editor-x-units-of-measure) to size your elements. The type of measurements you want to use depends on how you want elements to resize as the viewport width changes.
+
+Click below to learn about each unit of measure and when to use it:
+
+### Auto
+
+When you set an element's height or width to **Auto**, its size is automatically determined by the content inside. 
+For example, you can set a button's height to Auto so it always looks proportional to the text box inside.
+
+### Pixels (Px)
+
+If you want your element to stay exactly the same in every screen size, you can simply set its height and width in px values.
+
+### Percentage (%)
+
+Use this unit of measure when setting your element's sizing to **Fluid**, to ensure the element resizes in proportion to its parent. When you set your element's width or height in percentage, its size depends on the parent's dimensions. 
+For example, you can dock a text element (child) to a container (parent) and set its width to 50%. This way, your text element always takes up 50% of the container's width regardless of the screen size.
+
+### Viewport Width (Vw)
+
+Viewport is the size of the browser from which visitors are viewing your site. 
+Vw represents the width of a given viewport, so 1vw equals 1% of the browser's width. Accordingly, if you set the width of an element to 100vw it takes up a 100% of the viewport which is the full width.
+
+### Viewport Height (Vh)
+
+Viewport is the size of the browser from which visitors are viewing your site.
+Vh represents the height of a given viewport, so 1vh equals 1% of the browser's height. Accordingly, if you set the element's height to 100vh it takes up the full height of the viewport.
+
+### Min & max values
+
+While using **Fluid** units of measure, you can add minimum or maximum values to the width and/or height of an element. 
+**Note:** When dragging the handles to resize an element, you won't be able to make it bigger or smaller than the min. and max. values you've selected.
+
+### Max Content (max-c)
+
+Max Content is an advanced sizing unit that sets an element's **width**.** **You can apply this unit to Flexbox elements (i.e., Containers, Layouters, Repeaters), as well as vertical sections, text elements and buttons.
+When using Max Content to define the width of an element, it's actually determined by the size of its children elements – no matter how big the content is or how many words it contains. The parent element fits itself to the children's maximum content size.
+[image: undefined]
+
+---
+
+### Using calculation to determine the size of your elements
+
+Calculation is a handy tool when you need to accurately size an element while using fluid units of measure. Using mathematical principals, you can write a "formula" that determines an element's width or height. You can even combine different measurements in this calculation (e.g., vh and px).
+
+### Show me how
+
+1. Select the relevant element in Editor X.
+2. Click the Inspector icon ﻿ at the top of Editor X.
+3. Under **Size**, click the current measurement (e.g., px, %, etc.) marked in blue.
+4. Click **Calculation**.
+5. Enter the formula for your element's width or height.
+
+For instance, use calculation to design a header (100px) and a section that, together, take up the exact viewport height (100vh) in every screen size. You can set the section's height to (100vh - 100px), so the header is always taken into account in the calculation (100px).
+
+---
+
+### Stretching an element
+
+Stretch your element to cover the entire background of its parent container. When using grids, you can either stretch the element to cover a specific cell or the entire grid area.
+
+Stretching an element sets its width and height to **Auto** so that the element and its container resize according to the viewport. Since the element is stretched, its width and height values would be the same as its parent container.
+
+> **Learn more:**
+>
+> Read more about creating a responsive site using Editor X tools:
+> - [Setting the size of text across breakpoints](https://support.wix.com/en/article/editor-x-adding-and-customizing-text#scaling-text)
+> - [Managing your page's sections](https://support.wix.com/en/article/editor-x-adding-and-managing-sections)
+> - [Working with the Layers panel](https://support.wix.com/en/article/editor-x-using-the-layers-panel)
+
+---
+Source: https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element

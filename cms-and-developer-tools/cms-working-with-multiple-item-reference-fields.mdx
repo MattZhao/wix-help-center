@@ -1,0 +1,26 @@
+---
+title: "CMS: Working with Multiple-Item Reference Fields"
+---
+
+You can use multiple-item reference fields to create master-detail pages, where you display items from one collection that relate to an item from another collection. To do this, you put 2 datasets on your page, one for the master and the other for the details. You filter the detail dataset by the multiple-item reference field it shares with the master dataset. This causes the detail dataset to only include items that match the current item in the master dataset. To display the relevant items, you connect a gallery or a table to the filtered detail dataset.
+
+Note that you cannot connect any element directly to a multiple-item reference field.
+
+In our [article](https://support.wix.com/en/article/cms-creating-multi-reference-fields) about multiple-item reference fields, we had 2 collections, one for movies and one for actors. We used multiple-item reference fields to connect between the two, creating a many-to-many relationship between them. Now we're going to build dynamic item pages from these collections, one displaying a movie with its actors displayed in a gallery and the other displaying an actor with their movies displayed in a table. You could, of course, build regular pages by adding a dataset to your page and connecting it to a collection.
+
+Let's start with the Actor page. Its dynamic dataset is our main dataset because it controls which actor the page is currently displaying. 
+
+To display the movies the actor appeared in, we need to add another dataset and connect to our Movies collection. We then filter the Movies dataset by its multiple-item reference field that points to the Actors collection. This means that the Movies dataset will only contain movies that have the current actor listed in its multiple-item reference field.
+
+Now that we've connected our datasets, we can design our page. To display information about the actor, we'll connect a Text element and an Image to the Actor dynamic dataset. To list the movies, we'll connect a table to the filtered Movies dataset. The image below illustrates this.
+
+Some actual pages for actors could look like this.
+
+We'll do something similar with our Movies dynamic page. In this case, the Movies dataset is our main dataset, and we add and filter the Actors dataset so that it only displays the actors that appear in the current movie.
+
+We connect a text element and an image to the Movies dataset, and a gallery to the filtered Actors dataset.
+
+Some actual page for movies could look like this.
+
+---
+Source: https://support.wix.com/en/article/cms-working-with-multiple-item-reference-fields

@@ -1,0 +1,85 @@
+---
+title: "CMS: Supported Content in Collection Field Types"
+---
+
+In your CMS (Content Mangement System) collections, the field type determines what kind of content you can store in the field. For example, you cannot store alphabetic letters in the number field type reserved for numbers only. The field type also determines [which site elements can connect to the field](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to).
+
+---
+
+### Content limitations for each collection field type
+
+View each field type's content limitations in the table below:
+
+Field TypeContent LimitationsTextStore plain text for use with titles, descriptions, and other text-based content.ImageStore the following types of image files: JPG, PNG, SVG, and GIF
+You can add images to fields by pasting their image URLs in the fields. 
+Max size: 25 MBBooleanStore binary "true" or "false" values that appear as checkboxes in the collection fields. 
+You can only use the boolean field type with the Checkbox user input.NumberStore numerical data for various purposes (e.g. quantity, price, dimensions). You can save any value from **-2147483647** to **2147483647**.DateUse date and optional time values to display them on your site, save user inputs, or both. Add the Date Picker user input element if you want site visitors to submit dates to your collection.
+In your collection, the date field displays in the following format: Month, Day, Year (e.g. Feb 14, 2024)
+The optional time value displays after the date in a 12-hour format: HH:MM:AM/PM (e.g. 11:30:PM)
+When you connect the date field to an element on your site, you can choose to display the date and time in another format (e.g. Short, Medium, Long, or Full date).    
+To [import date and time content into a collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection), the value in the source file must precisely match one of the following formats: 
+- MM/DD/YYYY HH:mm **(Recommended)**
+- YYYY-MM-DDTHH:mm
+- DD/MM/YYYY HH:mm
+Please note the different separators used in each option.
+**Velo: **When creating a date field in your collection, if you include the time field, the data is treated as a date field (object). However, if you do not include the time field, the data is treated as a type of string. TimeStore time information for associated items independently of the date.The time is stored in the following format: **HH:mm:ss**
+**HH:** Hours in 24-hour format (16:00, not 4:00) **mm:** Minutes 
+**Examples:** 16:45, 16:45Rich ContentCreate and manage content with rich text formatting, media embeds, and other advanced features directly in your CMS. 
+Learn more about [working with rich content and connecting it to dynamic pages](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-rich-content-and-adding-it-to-a-dynamic-page).Rich TextCreate and manage text using formatting options, directly in your CMS. ReferenceCreate a relationship between content items by referencing another content item. This field can only be used to reference an item stored in another collection. URLStore web addresses to use as links. You can use the following formats only: **http://**, **https://**, **ftp://**, **mailto:**, **sms:**, **tel:**
+
+Web addresses must be in the format **http:// **or **https://**. Entries that start with **www.** are automatically converted to **http://**.DocumentStore single document files for each item. You can add documents to fields by pasting their document URLs in the fields.
+You can save the following document file types: **DOC**, **DOCX**, **XLS**, **XLSX**, **PPT**,** PPTX**,** ODT**,** ODP**, and** PDF **
+You cannot upload password protected documents.
+Max size: 25 MBMulti DocumentStore multiple document files for each item. You can also add multiple documents to fields by pasting their URLs in the fields. 
+Connect the [upload button input element](https://support.wix.com/en/article/cms-uploading-multiple-documents-with-the-upload-button) to the multi document field type to let visitors upload several files at once to your collection. VideoStore single video files for each item. You can save the following video file types: **AVI**,** MPEG**,** MPE**,** MP4**,** MKV**,** WEBM**,** MOV**,** OGV**, **VOB**,** M4V**,** 3GP**,** DIVX**,** **and** XVID**
+Max size: 1GBAudioStore single audio files for each item. You can store the following file types only: **AAC**,** AIF**,** AIFF**,** FLAC**,** M4A**,** MP3**,** WAV**,** **and** WMA**
+Max size: 50 MBMaximum number of channels: 1 (mono) or 2 (stereo).AddressStore structured data for physical addresses such as street names, city, state/province, postal code, and country. TagsManage and categorize content items using keywords or descriptive labels. You can use this field to apply tags to an item or allow visitors to submit selections from a multi checkbox element. ArrayInput and manage multiple values within a single field. You can use the array field type to handle a collection of related data, such as a list of options, tags, or other sets of related values. 
+Allows turning a string into an "array" data type in JavaScript while working with a collection via API.
+**Note: **The value in Object and Array fields has to be a valid JSON, entering anything else results in saving a string. JavaScript does not require putting field names in quotes, JSON does. For example: [
+
+ \{ "rating": "rating 1", "value": 1 \},
+
+ \{ "rating": "rating 2", "value": 2 \}
+
+]ObjectManage complex and structured data using custom objects or data structures. You can use the object field type to store and organize multiple related pieces of data as a single unit. 
+This allows you to turn a string into an "object" data type in JavaScript while working with a collection via API.
+**Note: **﻿﻿﻿Object Keys that start with "$" are not supported by the "Object" type.Media GalleryStore multiple images or videos in each field. 
+You can save the following image file types: JPG, PNG, SVG, and GIFYou can save the following video file types: AVI, MPEG, MPE, MP4, MKV, WEBM, MOV, OGV, VOB, M4V, 3GP, DIVX, and XVID
+Max size of each media file: 25 MB
+
+---
+
+### FAQs
+
+Click below for answers to common questions about the supported content in each field type.
+
+### Are there storage limits for collection fields?
+
+Yes. You can store up to 500KB of data in a single item's total collection fields. This limit does not apply to image, document, multi document, video, audio, or media gallery fields. [Click here to vote for increasing the storage limits](https://support.wix.com/en/article/cms-request-increasing-the-total-field-storage-limit-for-an-item-in-a-collection).
+
+### Can I create a dynamic link that visitors click to send emails?
+
+Yes. You can create dynamic links that open the visitor's mail client so they can send an email to the relevant address.
+**To create dynamic links that open the visitor's mail client: **
+1. [Create a URL field type](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) in your collection for storing the email addresses.
+2. Add the email addresses to the field with **mailto: **at the beginning of each address (e.g. **mailto:support@email.com**).
+3. [Link a button or image to a dataset](https://support.wix.com/en/article/cms-connecting-a-button-to-a-dataset) that connects to this URL field. When visitors click the link, their email client opens with the relevant address in the 'To:' field.
+
+### How do I connect page elements to collections?
+
+Connect page elements to datasets which connect to the relevant collections. Once connected, you decide which collection fields connect to each part of the page elements. 
+For example, with image elements, you can connect the: 
+- **Image source** to an **image field type** in your collection.
+- **Alt text** source to a **text field type** in your collection.
+- **Tooltip** to a **text field type** in your collection.
+- **Link** (when clicked) to a **URL field type**, a **dynamic item page**, or various [click actions](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images) such as **Submit**, **Load more**, or **Next item**.
+
+Learn more about [connecting page elements to datasets](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset).
+
+### Can I add default values to fields?
+
+Yes. You can [add default field values](https://support.wix.com/en/article/cms-adding-default-values-to-fields-in-your-collections) that populate automatically whenever you add new items to your collection.
+**Important: **Default field values are not applied to items added via [input elements](https://support.wix.com/en/article/cms-about-user-input-elements) or the [Wix app](https://support.wix.com/en/article/cms-managing-your-collections-from-the-wix-owner-app). These default fields only apply to items that you or site collaborators add within your CMS collections from desktop computers.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types

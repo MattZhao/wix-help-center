@@ -1,0 +1,37 @@
+---
+title: "Wix Restaurants: Using a Webhook to Integrate Wix Restaurants with Third-Party Services"
+---
+
+> **Important:**
+>
+> - This article is about the **original Restaurants Orders app**.
+> - We've released a new online ordering app. Learn how to [add and set up the new Wix Restaurants Orders (New) app](https://support.wix.com/en/article/wix-restaurants-adding-and-setting-up-wix-restaurants-orders-new).
+
+Webhooks allow two systems to interact with each other. You can use a webhook to integrate Wix Restaurants with other third-party services, such as:
+
+Point of sale (POS) systemsDelivery management systemsLoyalty programs
+
+> **Important:**
+>
+> Creating a webhook requires computer programming skills. The steps below show you how to add a webhook that you or your programmer already developed. For information about developing webhooks, check out the [Wix Restaurants Developers Portal](https://dev.wix.com/api/rest/wix-restaurants).
+
+### Click to learn how to add a webhook to online ordering notifications.
+
+1. [Go to Order Settings](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20Order%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/restaurants/ordersSettings) in your site's dashboard.
+2. Click the **Notifications** tab.
+3. Click **+ Add New Notification**.
+4. Under **Receive Orders**, select **Webhook** from the drop-down list.
+5. Enter the webhook URL.
+**Note: **The URL must begin with HTTPS. Once a webhook notification is successfully received, the order is considered "accepted". An unhandled alert will not be triggered.
+
+### Click to learn how to add a webhook to reservation notifications.
+
+1. [Go to Reservation Settings](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20My%20Reservations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/restaurants/reservationsSettings) in your site's dashboard.
+2. Click the **Notifications** tab.
+3. Click **+ Extra Notification**.
+4. Under **Receive Reservations**, select **Webhook** from the drop-down list.
+5. Enter the webhook URL.
+**Note: **The URL must begin with HTTPS.
+
+---
+Source: https://support.wix.com/en/article/wix-restaurants-using-a-webhook-to-integrate-wix-restaurants-with-third-party-services

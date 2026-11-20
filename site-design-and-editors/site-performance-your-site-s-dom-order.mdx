@@ -1,0 +1,55 @@
+---
+title: "Site Performance: Your Site's DOM Order"
+---
+
+Your site's DOM order refers to the reading order of elements on your pages. This order is important for visitors using assistive technologies such as the Tab key or screen readers, as it determines the order in which they can view or interact with these elements.
+
+We recommend ensuring that the DOM order matches the visual order of elements on your pages, so every visitor can navigate through your site with ease. As well as improved accessibility, matching the loading order also prevents layout issues on your site.
+
+**In this article, learn more about:**
+
+[How DOM impacts your site's performance](https://support.wix.com/en/article/site-performance-your-sites-dom-order#dom-order-and-site-performance)  [DOM order on Wix Editor sites](https://support.wix.com/en/article/site-performance-your-sites-dom-order#dom-order-on-wix-editor-sites)  [DOM order on Studio Editor sites](https://support.wix.com/en/article/site-performance-your-sites-dom-order#dom-order-on-studio-editor-sites)
+
+---
+
+### DOM order and site performance
+
+The DOM determines the sequence in which elements load on your site. If the DOM order does not match the visual order of elements, it can impact your site's loading.
+
+For example, if a button appears at the bottom of a page but is first in the DOM order, it loads before the elements above it. As additional content loads, the page's layout may shift and move around to accommodate the other elements.
+
+Furthermore, if a visitor attempts to click that button while the rest of the content loads, they may accidentally select another element and be taken to another page or section.
+
+Your site's DOM order should match the visual order of the page, regardless of the reading sequence of the language (left-to-right or right-to-left script) to ensure that it loads correctly, and is a smoother experience for visitors.
+
+---
+
+### DOM order on Wix Editor sites
+
+Automatic DOM order is automatically enabled on your desktop Editor site. This means that any changes you make to the visual order of elements are automatically applied to the DOM order, so you don't need to do anything.
+
+When you build a site with the desktop Editor, a mobile version of your site is created. The DOM order of your mobile site is also automatically arranged, and doesn't require any manual changes.
+
+> **Important:**
+>
+> The automatic DOM order on desktop Editor sites has been built for left-to-right scripts (e.g. English, Spanish, etc.). If your site uses a right-to-left script such as Arabic or Hebrew, you need to manually re-arrange the DOM order in the Layers panel.
+
+> **Note:**
+>
+> Automatic DOM order is only applied to changes on desktop when you save your site.
+
+---
+
+### DOM order on Studio Editor sites
+
+Auto DOM order is automatically enabled on sites you  build in the Studio Editor. The order is automatically rearranged when you add, align, and resize elements - so it should stay optimized as you go.
+
+You can disable auto DOM on a Studio Editor site and make manual changes if needed. [Learn more about DOM order on Studio Editor](https://support.wix.com/en/article/studio-editor-reorganizing-elements-by-dom-order)
+
+> **Important:**
+>
+> - Auto DOM is automatically enabled on sites created in the Studio Editor after the beginning of November 2024. If you created a site before this date, it is not enabled.
+> - The automatic DOM order on desktop sites has been built for left-to-right scripts (e.g. English, Spanish, etc.). If your site uses a right-to-left script such as Arabic or Hebrew, you need to manually re-arrange the DOM order in the Layers panel.
+
+---
+Source: https://support.wix.com/en/article/site-performance-your-sites-dom-order

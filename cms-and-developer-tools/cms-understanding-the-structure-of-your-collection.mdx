@@ -1,0 +1,46 @@
+---
+title: "CMS: Understanding the Structure of Your Collection"
+---
+
+Wix's CMS (Content Management System) allows you to manage your site's content efficiently. It helps you create, store, and display content dynamically across your website. Understanding the structure of your CMS collections ensures that your content is organized, easily manageable, and dynamically displayed on your Wix site.
+
+---
+
+### How collections work
+
+In the CMS, [collections](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) are like databases where you store your content. Each collection has a specific structure that defines the fields and their types. When you add a dataset to your page, it includes only the fields defined in your collection. This setup ensures that your content is organized and can be dynamically displayed on your site.
+
+---
+
+### Benefits of defined fields
+
+Defined fields in your collections help in several ways:
+
+---
+
+### Undefined fields
+
+Undefined fields are those that appear in your collection but are not part of the defined structure. This can happen if you [restore a previous version of your site](https://support.wix.com/en/article/viewing-and-managing-your-site-history). In such cases, the old structure is restored, but the content remains unchanged, leading to undefined fields. These fields appear with a **Warning** icon , indicating they need to be defined.
+
+#### To define an undefined field:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **  Click the relevant collection.  Hover over the **Warning** icon  that appears next to the undefined field's name.   Click **Define field**.   Click **Change type **next to the **Field type**.  Select the appropriate [field type](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#field-type) for the data you are storing in the field.   Click **Change Field Type**.   Click **Save**.
+
+> **Note:**
+>
+> The Field ID is automatically defined when an undefined field is created and cannot be modified.
+
+---
+
+### Velo by Wix and undefined fields
+
+When using Velo by Wix, you can add content that doesn't belong to an existing field [using the Data API](https://dev.wix.com/docs/develop-websites/articles/databases/wix-data/data-api/working-with-the-data-api). This creates a new field in your collection, but it remains undefined. To use these fields in datasets, you need to define them by selecting a field type. See the steps above for directions.
+
+---
+
+### Handling errors and restoring site history
+
+[Restoring your site from site history](https://support.wix.com/en/article/viewing-and-managing-your-site-history) reverts its pages and their designs to a previous version. This applies to your [dynamic pages](https://support.wix.com/en/article/cms-about-dynamic-pages) and their layouts. However, the content and data structure (schema) in your CMS collections are not reverted when restoring your site. This can result in undefined fields. If needed, you can restore your collections to older versions using [CMS backups](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections).
+
+---
+Source: https://support.wix.com/en/article/cms-about-the-structure-of-your-collection

@@ -1,0 +1,143 @@
+---
+title: "CMS: Displaying Collection Content on Bookings Pages"
+---
+
+With the CMS (Content Management System), you can now display content from your collection directly on Wix Bookings pages. This gives you the ability to personalize and enhance your service listings with additional information, creating a richer experience for potential clients.
+
+> **Important:**
+>
+> - You must use code to build custom Bookings pages.
+> - Displaying CMS collection content on Bookings pages is not yet available in all Wix accounts. We're working on releasing this feature.
+
+> **Before you begin:**
+>
+> - Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Bookings with the CMS.
+
+---
+
+### Step 1 | Create a collection that references your Wix app collection
+
+Create a [multiple item collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) where you will keep the additional info you want to integrate into your Bookings pages. In this article, we'll call this your 'Details' collection.   In the collection, click **+ Add Item** to add items for each service that you want to save additional details about.   Click **+ Add Field **to add fields for each type of content you want to save (e.g. [Rich Content](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-rich-content-and-adding-it-to-a-dynamic-page)).   Click the relevant cells to add your content to each item.   Add a Reference field type and connect it to the Bookings Wix app collection: 
+
+1. Click **Manage Fields **then click **+ Add Field**.
+2. Select **Reference** and click **Choose Field Type**.
+
+**Tip: **Select the **Multi-reference **field if you want to use an item's content for more than one service.
+3. Enter the **Field name**.
+4. (Velo only) If necessary, update the **Field ID**, which is used in the site's code. You cannot update this ID later.
+5. Click the **Referenced Collection **drop-down and select the relevant Wix App collection. For example, select **Services **under **Bookings**.
+6. (Optional) Enter help text to include a tooltip in your collection next to the field name.
+7. Click **Save**.
+
+For each item, click the reference field and select the relevant service. You can select multiple services if you added a multi-reference field in the previous step.
+
+---
+
+### Step 2 | Build custom Bookings pages
+
+If you want to add more details from your CMS collection to your Bookings Service or Calendar page, you must convert them to custom pages. This involves adding code and using the Velo APIs. You only need to convert the Bookings pages in which you want to add details from your 'Details' collection.
+
+---
+
+### Step 3 | Set up the datasets on your page
+
+[Datasets](https://support.wix.com/en/article/cms-about-datasets) link your page elements to the collection content so the elements can display your Bookings content. You need two datasets on your page, one connected to your Bookings Wix app collection, and the other connected to your 'Details' collection.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the custom Bookings page where you want to show details from your CMS collection:
+
+**Note: **The following steps show you how to set this up on your Custom Service Page. Alternatively, you could choose to only show details from your CMS collection on your Custom Booking Calendar page instead. 
+
+1. Click **Pages & Menu ** on the left side of the editor.
+2. Click **Bookings Pages **and select the **Custom Service Page**.** **This page displays details about an individual service, with each service getting its own URL version of the page. Later, if needed, you can repeat this process for your **Custom Booking Calendar** page. After clients select the service that they want to book, they choose the date and time they want to book on the Custom Booking Calendar page.
+[image: Screenshot of the Custom Booking pages created using Velo code.]
+1. Add a dataset that connects to your 'Details' CMS collection:
+
+1. Click **CMS **** **on the left.
+2. Click **Add Content Elements**.
+3. Click **Dataset**.
+4. Click the **Choose a collection **drop-down and select your 'Details' collection.
+5. Edit the **Dataset name** if needed and click **Create**.
+2. (If you haven't already) Add a dataset that connects to your Bookings Wix app collection:
+
+1. Click **Add a Dataset** at the bottom of the panel on the right.
+2. Click the **Choose a collection **drop-down and select the **Services **collection under **Bookings**. 
+
+**Tip: **Make sure to select **Services **under **Bookings** instead of under **BookingsV2**. If editing your Custom Booking Calendar page, select **Calendar** under **Bookings**. ** **
+3. Edit the **Dataset name** if needed and click **Create**.
+[image: Screenshot of connecting a dataset to the Bookings Wix app collection.]
+1. Add a URL slug filter to your Services dataset:
+
+**Tip: **If editing your Custom Booking Calendar page, add a URL slug filter for your Calendar dataset. 
+
+1. Click the **More Actions **icon  next to your Services dataset and select **Dataset settings**.
+2. Click **+ Add Filter **under **Filter**.
+3. Click the **Field **drop-down and select **Slug (Text)**.
+4. Leave **is **selected as the **Condition**.
+5. Under **Value source**, select **URL Slug**.
+6. Click **Add Filter**.
+[image: Screenshot of adding a URL Slug filter to the Services dataset.]
+1. Add a reference filter to your 'Details' dataset:
+
+1. Click **All page datasets **at the top of the **Dataset Settings **panel on the right.
+2. Click the **More Actions **icon  next to your 'Details' dataset and select **Dataset settings**.
+3. Click **+ Add Filter **under **Filter**.
+4. Click the **Field **drop-down, select your **Reference (Services)** field or **Multi-Reference (Services)** field, then click **Add Filter**.
+[image: Screenshot of adding a reference filter to your 'Details' dataset.]
+1. Add the [supported elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that you want to display details from your CMS 'Details' collection. For example, you could add the [Rich Content](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-rich-content-and-adding-it-to-a-dynamic-page#adding-the-rich-content-element-to-your-page) element to display the rich content fields from your 'Details' collection.
+2. [Connect the elements](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset) to the relevant fields in your 'Details' dataset.
+3. (If you haven't already) Add and connect elements to your Services dataset to display details from your Bookings Wix app collection. When editing your Custom Booking Calendar page, add and connect elements to your Calendar dataset.
+4. (Optional) If you also want to display content from your 'Details' collection on your Booking Calendar page, repeat these steps for your Custom Booking Calendar page.
+5. Click **Preview **at the top right and use the **Preview **toolbar to test the connections for the relevant services.
+6. Publish your site when you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the custom Bookings page where you want to show details from your CMS collection: 
+
+**Note: **The following steps show you how to set this up on your Custom Service Page. Alternatively, you could choose to only show details from your CMS collection on your Custom Booking Calendar page instead. 
+
+1. Click **Pages**  on the left side of the editor.
+2. Click **Bookings Pages **and select the **Custom Service Page**.** **This page displays details about an individual service, with each service getting its own URL version of the page. Later, if needed, you can repeat this process for your **Custom Booking Calendar** page. After clients select the service that they want to book, they choose the date and time they want to book on the Custom Booking Calendar page.
+3. Add a dataset that connects to your 'Details' CMS collection:
+
+1. Click **CMS **** **on the left.
+2. Click **Add Content Elements**.
+3. Click **Dataset**.
+4. Click the **Choose a collection **drop-down and select your 'Details' collection.
+5. Edit the **Dataset name** if needed and click **Create**.
+4. (If you haven't already) Add a dataset that connects to your Bookings Wix app collection:
+
+1. Click **Add a Dataset** at the bottom of the panel on the right.
+2. Click the **Choose a collection **drop-down and select the **Services **collection under **Bookings**. 
+
+**Tip: **Make sure to select **Services **under **Bookings** instead of under **BookingsV2**. If editing your Custom Booking Calendar page, select **Calendar** under **Bookings**. ** **
+3. Edit the **Dataset name** if needed and click **Create**.
+5. Add a URL slug filter to your Services dataset:
+
+**Tip: **If editing your Custom Booking Calendar page, add a URL slug filter for your Calendar dataset. 
+
+1. Click the **More Actions **icon  next to your Services dataset and select **Dataset settings**.
+2. Click **+ Add Filter **under **Filter**.
+3. Click the **Field **drop-down and select **Slug (Text)**.
+4. Leave **is **selected as the **Condition**.
+5. Under **Value source**, select **URL Slug**.
+6. Click **Add Filter**.
+[image: Screenshot of adding a URL Slug filter to the Services dataset.]
+1. Add a reference filter to your 'Details' dataset:
+
+1. Click **All page datasets **at the top of the **Dataset Settings **panel on the right.
+2. Click the **More Actions **icon  next to your 'Details' dataset and select **Dataset settings**.
+3. Click **+ Add Filter **under **Filter**.
+4. Click the **Field **drop-down, select your **Reference (Services)** field or **Multi-Reference (Services)** field, then click **Add Filter**.
+[image: Screenshot of adding a reference filter to the 'Details' dataset.]
+1. Add the [supported elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that you want to display details from your CMS 'Details' collection. For example, you could add the [Rich Content](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-rich-content-and-adding-it-to-a-dynamic-page#adding-the-rich-content-element-to-your-page) element to display the rich content fields from your 'Details' collection.
+2. [Connect the elements](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset?tabs=Studio-Editor) to the relevant fields in your 'Details' dataset.
+3. (If you haven't already) Add and connect elements to your Services dataset to display details from your Bookings Wix app collection. When editing your Custom Booking Calendar page, add and connect elements to your Calendar dataset.
+4. (Optional) If you also want to display content from your 'Details' collection on your Booking Calendar page, repeat these steps for your Custom Booking Calendar page.
+5. Click the **Preview** icon  at the top right and use the **Preview **toolbar to test the connections for the relevant services.
+6. Publish your site when you are ready to make the changes go live.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-collection-content-on-bookings-pages

@@ -1,0 +1,120 @@
+---
+title: "CMS Request: Dynamic Lightboxes"
+---
+
+Currently, it is not possible to make lightboxes dynamic by connecting them to CMS collections. However, you can connect a lightbox's attached elements to CMS collection content to make the elements dynamic (e.g. text, images, buttons).
+
+We are always working to update and improve our products, and your feedback is greatly appreciated.
+
+---
+
+### Workaround
+
+Using Velo, you can create a lightbox that opens from a dynamic item page and displays the same item as shown on the page that the lightbox was opened from.
+
+> **Before you begin:**
+>
+> Make sure your site has the following: 
+> - [A lightbox](https://support.wix.com/en/article/wix-editor-adding-and-setting-up-a-lightbox).
+> - A [dynamic item page](https://support.wix.com/en/article/cms-about-dynamic-pages#dynamic-item-pages) with a button that links to the lightbox.
+> - [Collection fields](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) for the content that will appear in the lightbox elements.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to relevant dynamic item page.
+3. Enable Velo Dev Mode: 
+
+1. Click **Dev Mode** at the top of the editor.
+2. Click **Turn on Dev Mode**.
+4. Copy the code snippet below and paste it at the top of your page code:
+`import wixWindowFrontend from 'wix-window-frontend';`[image: A screenshot of adding a code snippet to the top of a dynamic item page's code.]
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{**
+`$w('#openLightbox').onClick(async () => \{
+        const item = await $w('#dynamicDataset').getCurrentItem();
+        const id = item._id;
+        wixWindowFrontend.openLightbox("Dynamic Lightbox", id);
+    \})
+`[image: A screenshot of pasting the second snippet of code in the dynamic item page's code.]
+1. In the sample code you pasted, replace the IDs listed below with those used by your site:
+
+- **openLightbox: **Replace with the ID of the button that opens the lightbox.
+- **dynamic Dataset: **Replace with the ID of the dynamic item page dataset.
+- **Dynamic Lightbox: **Replace with the name of the lightbox.
+[image: A screenshot showing the IDs and lightbox name that needs to be replaced in the code.]
+1. In your editor, go to the lightbox.
+2. Add a dataset and connect it to the same collection as your dynamic item page:
+
+1. Click **CMS**  on the left side of the editor.
+2. Click **Add Content Elements**.
+3. Click **Dataset.**
+4. Click the **Choose a collection** drop-down and select the same collection that connects to your dynamic item page.
+5. Click **Create**.
+3. Click the **Maximum items displayed **field in the dataset settings and type the number **1**.
+4. Connect the elements in your lightbox (e.g. text, images, buttons) to the dataset:
+
+1. Click the relevant element on the lightbox.
+2. Click the **Connect to CMS **icon .
+3. Click the dropdowns under **Connections** and select the relevant collection fields or dataset actions.
+4. Repeat these steps for each element on your lightbox that you want to connect.
+5. Copy the code snippet below and past it at the top of your lightbox code:
+`import wixWindowFrontend from 'wix-window-frontend';
+import wixData from 'wix-data';`[image: A screenshot of pasting the code snippet to the top of the lightbox code.]
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{**
+`const getData = async () => \{
+       const id = await wixWindowFrontend.lightbox.getContext();
+       $w('#dataset1').setFilter(wixData.filter().eq('_id', id));
+\}
+getData();`[image: A screenshot of adding the code snippet above to the lightbox code.]
+1. In the sample code you pasted, replace **dataset1 **with the ID of your lightbox dataset.
+2. Preview your site to test the functionality.
+3. When ready, publish your site.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to relevant dynamic item page.
+3. Click the Code icon  on the left.
+4. (If necessary) Click **Start** **Coding**.
+5. Copy the code snippet below and paste it at the top of your page code:
+`import wixWindowFrontend from 'wix-window-frontend';`[image: A screenshot of adding a code snippet to the top of a dynamic item page's code.]
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{**
+`$w('#openLightbox').onClick(async () => \{
+        const item = await $w('#dynamicDataset').getCurrentItem();
+        const id = item._id;
+        wixWindowFrontend.openLightbox("Dynamic Lightbox", id);
+    \})
+`[image: A screenshot of pasting the second snippet of code in the dynamic item page's code.]
+1. In the sample code you pasted, replace the IDs listed below with those used by your site:
+
+- **openLightbox: **Replace with the ID of the button that opens the lightbox.
+- **dynamic Dataset: **Replace with the ID of the dynamic item page dataset.
+- **Dynamic Lightbox: **Replace with the name of the lightbox.
+[image: A screenshot showing the IDs and lightbox name that needs to be replaced in the code.]
+1. In your editor, go to the lightbox.
+2. Add a dataset and connect it to the same collection as your dynamic item page:
+
+1. Click **CMS**  on the left side of the editor.
+2. Click **Add Content Elements**.
+3. Click **Dataset.**
+4. Click the **Choose a collection** drop-down and select the same collection that connects to your dynamic item page.
+5. Click **Create**.
+3. Click the **Maximum items displayed **field in the dataset settings and type the number **1**.
+4. Connect the elements in your lightbox (e.g. text, images, buttons) to the dataset:
+
+1. Click the relevant element on the lightbox.
+2. Click the **Connect to CMS **icon .
+3. Click the dropdowns under **Connections** and select the relevant collection fields or dataset actions.
+4. Repeat these steps for each element on your lightbox that you want to connect.
+5. Copy the code snippet below and past it at the top of your lightbox code:
+`import wixWindowFrontend from 'wix-window-frontend';
+import wixData from 'wix-data';`[image: A screenshot of pasting the code snippet to the top of the lightbox code.]
+1. Copy the code snippet below and paste it after: **$w.onReady(function () \{**
+`const getData = async () => \{
+       const id = await wixWindowFrontend.lightbox.getContext();
+       $w('#dataset1').setFilter(wixData.filter().eq('_id', id));
+\}
+getData();`[image: A screenshot of adding the code snippet above to the lightbox code.]
+1. In the sample code you pasted, replace **dataset1 **with the ID of your lightbox dataset.
+2. Preview your site to test the functionality.
+3. When ready, publish your site.
+
+---
+Source: https://support.wix.com/en/article/cms-request-dynamic-lightboxes

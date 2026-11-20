@@ -1,0 +1,161 @@
+---
+title: "Wix Stores: Setting Up Amazon Multi-Channel Fulfillment"
+---
+
+Amazon Multi-Channel Fulfillment (MCF) is a service which houses your products in Amazon fulfillment centers, then packs and ships them to your customers when a relevant order comes in.
+
+After setup, the fulfillment process runs automatically:
+
+Orders are forwarded from Wix to Amazon  Amazon fulfills the order and generates a tracking number  The tracking number is added to the order   Customers automatically receive shipping confirmation sent from your store
+
+> **Important:**
+>
+> - This app is currently available only for US merchants.
+> - The MCF app can be used to ship to addresses in the US and Canada.
+> - Currently, Amazon cannot fulfill partial orders. If a customer purchases products that are set to be fulfilled by Amazon MCF along with products that are set to be fulfilled using another method, Amazon does not fulfill any of the order. You can, however, [manually create an order in the Amazon MCF dashboard](https://supplychain.amazon.com/learn/seller-central-guide?utm_source=website&utm_medium=referral&utm_campaign=wix_support).
+> - The app is free to add. Payment to Amazon is made for storage and fulfillment. [Learn more](https://supplychain.amazon.com/pricing?utm_source=website&utm_medium=referral&utm_campaign=wix_pricing)
+
+---
+
+### Step 1 | Add the Amazon MCF app to your site
+
+To get started, go to the Wix App Market and add the Amazon MCF app to your site.
+
+#### To add the app:
+
+Click **Add Apps **** **on the left side of the Editor.
+
+  Start typing Multi-Channel Fulfillment in the search field and click to select it.   Click **Add to Site**.  Review the permissions and click **Add to Site** again.
+
+---
+
+### Step 2 | Connect an Amazon account
+
+Now you can create an Amazon account or connect to one you already have. There are 2 types of Amazon accounts you can connect to:
+
+If you plan to [sell on Amazon](https://support.wix.com/en/article/adding-and-setting-up-the-amazon-app) at some point, connect to an [Amazon Seller's account](https://sellercentral.amazon.com/help/hub/reference/G2?locale=en_US).   If you only want to use Amazon to fulfill orders, connect to an [Amazon Supply Chain account](https://aws.amazon.com/industrial/supply-chain-management/).
+
+#### To connect to an Amazon account:
+
+[Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/manage-installed-apps/) in your site's dashboard.  Click **Open** next to **Multi-Channel Fulfillment**.   Select an option:
+
+- Connect an existing account:
+
+1. Click **Connect App to Amazon** at the bottom left.
+2. Sign into your account.
+- Create a new Amazon Sellers account:
+
+1. Click **Create an Amazon Seller account**.
+2. Complete the required steps to create the account.
+- Create a new Amazon Supply Chain account:
+
+1. Click** Create an Amazon Supply Chain account**.
+2. Complete the required steps to create the account.
+
+---
+
+### Step 3 | Send inventory to Amazon fulfillment
+centers
+
+Before Amazon MCF can start fulfilling any orders, your products need to physically arrive at one of their fulfillment centers. [Learn how to ship your products to an Amazon fulfillment center](https://m.media-amazon.com/images/G/01/mcf-new-collection/Send_to_Amazon_overview.pdf).
+
+> **Tip:**
+>
+> Complete setup only after your inventory items have arrived at the Amazon fulfillment center.
+
+---
+
+### Step 4 | Map your Wix SKUs to your Amazon SKUs
+
+For Amazon MCF to understand which products you want to fulfill, the SKUs of your products must be mapped to Amazon's own SKUs.
+
+> **Notes:**
+>
+> - Each variant is listed separately and must have its own SKU.
+> - Amazon product lists include many brand name items. If an item you sell doesn't yet have an Amazon SKU, you can create an Amazon SKU at Seller Central. If you don't intend to sell this product on Amazon, you can set your "start selling" date far into the future to avoid it being listed on Amazon.
+> - If you create your own products, you can add items to Amazon's product lists through [Amazon Handmade](https://sell.amazon.com/programs/handmade).
+
+In the SKU Mapping tab, the SKUs you assigned to your product and variant appear above the product name.
+
+#### To map SKUs:
+
+[Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/manage-installed-apps/) in your site's dashboard.  Click **Open** next to **Multi-Channel Fulfillment**.  Select the **SKU Mapping** tab.
+
+(Optional) Click **Sync Wix SKUs** and **Continue **to make sure any products you added after you connected to Amazon appear in the list.
+
+**Tip: **The sync can take up to 10 minutes. Refresh the page to see the new items.  Select an option:
+
+- **Your store's SKUs match SKUs in Seller Central:**
+
+1. Click Automap.
+2. (Optional) To view matches, click the Filter icon and select SKUs Mapped.
+- **Your store's SKUs aren't the same as Amazon SKUs:**
+
+1. Click the Edit icon next to the first product you want to map.
+2. Enter the Amazon SKU for the exact same product and variant.
+3. Click the checkmark.
+
+---
+
+### Step 5 | (Optional) Override automatic shipping rates
+
+Amazon automatically generates live shipping rates per order. You can optionally override these rates. For example, you can offer your customers free shipping when they make a purchase over a set price.
+
+> **Note:**
+>
+> Overriding shipping rates does not affect the fulfillment fees you pay to Amazon.
+
+#### To override shipping rates:
+
+[Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/manage-installed-apps/) in your site's dashboard.  Click **Open** next to **Multi-Channel Fulfillment**.  Select the **Settings** tab.
+
+Click **Edit**.  Click the toggle next to a shipping speed to enable editing.  Enter the new shipping rate.  (Optional) Enter a price in the **On Orders Over **column to apply the rate only to orders that total over a set rate (e.g. free shipping on order over $50).
+
+Repeat steps 5 - 7 for any additional shipping speed rates you want to override.  Click **Save**.
+
+---
+
+### Step 6 |  Display Amazon shipping rates at checkout
+
+For Amazon MCF to deliver products, you must first enable the display of live rates provided by Amazon in checkout.
+
+Amazon offers three shipping options (shipping speeds), from "Standard" which is the slowest to "Priority" which delivers most quickly.
+
+The actual shipping cost varies according to the items purchased and delivery location.
+
+Once you display Amazon shipping rates at checkout, Amazon can start fulfilling your orders.
+
+> **Important:**
+>
+> - You must enable Amazon shipping rates for Amazon MCF to automatically fulfill your orders.
+> - Amazon rates appear at checkout **only **when all the products in a customer's cart are products fulfilled by Amazon. If you sell products that you or another service fulfill, you must create other shipping rules so customers can purchase them.
+> - If you sell items not fulfilled by Amazon, you must create your own shipping rules so that customers can purchase them.
+> - If you create your own shipping rules, they always appear during checkout (whether or not the products are set to be fulfilled by Amazon MCF). In the event that a customer selects your shipping option for an order that can be fulfilled using Amazon, you can[ create a manual order in the Amazon dashboard](https://supplychain.amazon.com/learn/seller-central-guide?utm_source=website&utm_medium=referral&utm_campaign=wix_support).
+
+#### To enable Amazon live shipping rates:
+
+[Go to the Settings](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/settings) in your site's dashboard.   Select **Shipping & Fulfillment**.  Select the relevant shipping region.
+
+**Note: **Amazon MCF is currently available only for shipments to the US and Canada.
+
+(Optional) Create your own shipping rules. [Learn more](https://support.wix.com/en/article/wix-stores-a-guide-to-setting-up-shipping-delivery-and-pickup)
+
+**Note: **These appear in addition to Amazon shipping options. Your own shipping rules are needed if you sell items that Amazon doesn't fulfill. You can also create store pickup rules for local customers.  Scroll down to the **Installed Apps **section and click the toggle next to Multi-Channel Fulfillment to enable it.
+
+**Note: **If you ship to more than one region (e.g. the US and Canada), you must enable this toggle separately for each region.
+
+---
+
+### Step 7 | (Optional) Add the "Fulfilled by Amazon" badge
+
+Increase customer confidence in your site by displayed the "Fulfilled by Amazon" badge anywhere on your site.
+
+[Click to download a variety of Amazon badges](https://m.media-amazon.com/images/G/01/mcf-new-collection/homepage/Fulfilled_by_Amazon_Badge.zip).
+
+> **Next steps:**
+>
+> - Learn about [fulfilling orders after you've set up Amazon MCF](https://support.wix.com/en/article/wix-stores-handling-orders-with-amazon-mcf).
+> - For questions about the app and technical support contact Amazon at [mcf-app-support@amazon.com](mailto:mcf-app-support@amazon.com).
+
+---
+Source: https://support.wix.com/en/article/wix-stores-setting-up-amazon-multi-channel-fulfillment

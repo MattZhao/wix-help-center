@@ -1,0 +1,195 @@
+---
+title: "Enterprise Solution: Setting Up System Cross Identity Management (SCIM) for Your Account"
+---
+
+System Cross Identity Management (SCIM) is a standard protocol for managing user identity information. You can use it to automatically communicate identity data such as your user groups and profile information between your Identity Provider (IdP) and your Wix account.
+
+You can customize the SCIM settings in your dashboard to assign Wix roles to your team members based on their group in your organization's IdP account. Any changes that you make in your IdP are synced in your Wix account. For example, if you change a team member's group in your IdP, it is also updated in your Wix account.
+
+You can also automate some account actions such as deleting a team member's Wix account when you remove them in your IdP.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-scim-en).
+
+---
+
+### Step 1 | Create an app in your IdP
+
+First, you need to create a new app in your IdP. In this example, we'll create the app in Azure. This app will let Azure communicate with your Wix account to send information about your organization's employees.
+
+> **Note:**
+>
+> If you want to use a different IdP, you should contact Wix Customer Care before you set it up.
+
+#### To create an app:
+
+Sign in to your [Azure account](https://portal.azure.com/).  Select **Azure Active Directory**.  Select **Enterprise applications**.  Select **New application**.   Click **Create your own application**.  Enter a name for your application.  Select **Integrate any other application you don't find in the gallery**.  Click **Add**.  Select **Provisioning** in the left panel.  Select **Automatic **from the **Provisioning Mode** drop-down menu.   Leave the tab open.
+
+---
+
+### Step 2 | Create your SCIM URL and add it to Azure
+
+Next, you need to create your SCIM URL in your dashboard and then add it to your Azure account.
+
+> **Important:**
+>
+> You must have a role with the Manage SSO and SCIM permission to customize the settings of your dashboard.
+
+#### To connect your app:
+
+In a new tab, [go to your enterprise dashboard](https://manage.wix.com/enterprise-dashboard/home).  Click **Settings **on the left.  Select **SSO and SCIM Settings**.  Click **Set Up **next to **SCIM**.  Click **Get Started**.  Select a default role using the drop-down menu.
+
+**Important: **This role will be assigned to all new groups that you sync with Wix. The default role replaces any roles that your team members currently have that were synced using SCIM.   Click **Set Role & Continue**.  Click **App Created, Next Step**.  Copy the URL.  Go back to the tab with your Azure dashboard.  Paste the URL in the field under **Tenant URL**.
+
+---
+
+### Step 3 | Get your provisioning key and add it to Azure
+
+After you've created your SCIM URL and added it to your Azure account, you also need to add your provisioning key. This is an API key that gives your Azure app the necessary permissions to interact with the SCIM settings in your account.
+
+#### To add and verify:
+
+Go back to the tab with your dashboard.  Click **Next**.  Click **Send Code**.  In a new tab, go to your email account and login.  Copy the 6-digit code in your verification email.   Go back to the tab with your dashboard.  Paste the code under **Enter your 6-digit code**.  Click **Verify & Generate Token**.  Copy your provisioning token.
+
+> **Important:**
+>
+> - This is the only time that you see your provisioning token. It is not possible to see the full token again after this point.
+> - You can manage your provisioning token in [the API Keys section](https://support.wix.com/en/article/wix-enterprise-using-wix-api-keys) of your dashboard.
+
+Go back to the tab with your Azure dashboard.  Paste the provisioning token in the field under **Secret Token**.  Click **Test Connection **to make sure that it's working correctly.  Click **Provision Azure Active Directory Users **under **Mappings**.  Select **mailNickname** under **Attribute Mapping**.  Select **ObjectId **from the drop-down menu under **Source attribute**.  Click **Ok**.  Click **Save**.  Click **Yes** on the pop-up.
+
+---
+
+### Step 4 | Select the groups to sync and start provisioning
+
+Next, you need to select the users and groups in your Azure dashboard that you want to sync with your Wix account.
+
+#### To select groups and start provisioning:
+
+Go back to the overview page of your Azure app.  Select **Users and groups** in the left sidebar.  Click **Add user/group**.  Select the groups or users that you want to sync.  Click **Select**.  Click **Provisioning **in the left sidebar.  Click **Start provisioning**.
+
+> **Note:**
+>
+> It may take some time for this information to appear in your Wix dashboard.
+
+---
+
+### Step 5 | Map your organization's groups to Wix roles
+
+When you enable SCIM, Wix creates a default group called "Ungrouped" in your SCIM dashboard. Any users that you sync from your IdP without a group are assigned to this default group.
+
+After you've verified your SCIM setup, you can map your organizations groups to Wix roles. This will automatically synchronize your groups to Wix's roles.
+
+#### To map your groups:
+
+Go back to the tab with your dashboard.  Click **Next**.  Click **Finish**.  Click **Refresh **under **Map your organization's groups to Wix roles** to see your groups.  Hover over the group that you want to map under **Map your organization's groups to Wix roles**.  Click **Change Role**.  Select the role that you want to use under **Role & Site Access**.  Click **Save**.
+
+> **Tip:**
+>
+> - You can map multiple groups at the same time by selecting the checkbox next to a group.
+> - You can sync your groups gradually if required. For example, you can decide to sync some groups at this point and sync more groups in the future.
+
+---
+
+### SCIM FAQs
+
+Click a question below to learn more about SCIM and your Wix account.
+
+### How does syncing work?
+
+When you sync your IdP to Wix, we check each team member's email against our records.
+
+- If the team member's email is not used for an existing Wix account, we create an account for them and assign them to your account.
+- If the team member has a Wix account but it is not part of your organization's account, we don't sync them and return an error message.
+- If the team member's Wix account is already part of your organization's account, we replace their current role, sync their details, and add them to their correct group.
+
+### I lost my provisioning token, can I generate a new one?
+
+You can rotate your provisioning key in the API Keys section of your dashboard. This creates a new token that you can add to your Azure account to replace the one you've lost. 
+**Important:**
+- After you rotate an API key, any user or application that previously used it will immediately lose access to your data.
+- It is not possible to recover a previous token after you rotate its API key.
+
+**To generate a new token and replace your old token:**
+1. Go to your dashboard.
+2. Hover over **Settings **in the left sidebar.
+3. Select **API Keys**.
+4. Click the **More Actions** icon  next to the API key you want to rotate.
+5. Select **Rotate**.
+6. Click **Rotate Key **on the pop-up.
+7. Click **Send Code** to send a 6-digit verification code to [the email address linked to your account](https://support.wix.com/en/article/changing-the-email-address-of-your-wix-account).
+8. Get your verification code from the email.
+9. Enter the code in the **Verify your account **pop-up.
+10. Click **Validate & Rotate Key**.
+11. Click **Copy Token & Close**.
+12. Go back to the tab with your Azure dashboard.
+13. Paste the provisioning token in the field under **Secret Token**.
+14. Click **Test Connection **to make sure that it's working correctly.
+15. Click **Save**.
+16. Click **Start provisioning**.
+
+### Where can I see the status of the SCIM sync?
+
+You can check the status of your sync in the provisioning logs of your Azure app. 
+In these logs, you can see how many objects were synced successfully. You can also see if there are any errors. 
+[Learn more about Azure provisioning logs](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/concept-provisioning-logs)
+
+### I started provisioning but I cant see any users or groups in my dashboard
+
+If your Azure account is not syncing with your account, there are a few things you can check.
+
+- Make sure that you clicked **Start provisioning **in your Azure account.
+- Check that you added the users and groups that you want to sync in the provisioning filters of your Azure app.
+- Check the [provisioning logs of your Azure app](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/concept-provisioning-logs) to see if there are any errors.
+
+If the problem persists, [contact us](https://www.wix.com/support/conversations/category/contact) and we will be happy to help.
+
+### How do I change the default role?
+
+You can change the default role that you previously selected in the **Manager default role** section of your SCIM settings.
+**To change the default role:**
+1. Go to your dashboard.
+2. Click **Settings **on the left.
+3. Select **SSO Settings**.
+4. Click **Edit **next to **SCIM**.
+5. Click **Manage default role**.
+6. Click **Manager roles**.
+7. Click **Change** under **Set a default role**.
+8. Select a new default role using the drop-down menu.
+9. Click **Save**.
+
+### How do I change multiple groups to a role at the same time?
+
+You can change the roles of multiple groups at a time in the **Map your organization's groups to Wix roles** section of your SCIM settings.
+**To change the role of multiple groups:**
+1. Go to your dashboard.
+2. Click **Settings **on the left.
+3. Select **SSO Settings**.
+4. Click **Edit **next to **SCIM**.
+5. Click **Map your organization's groups to Wix roles**.
+6. Select the checkboxes next to the groups that you want to update.
+7. Click **Change Role**.
+8. Click **Continue **on the pop-up.
+9. Select a role under **Role & Site Access**.
+10. Click **Save**.
+
+### How do I disable SCIM?
+
+You can disable SCIM for your account in the **IdP configuration and settings **section of your SCIM settings.
+**To disable SCIM:**
+1. Go to your dashboard.
+2. Click **Settings **on the left.
+3. Select **SSO Settings**.
+4. Click **Edit **next to **SCIM**.
+5. Click **IdP configuration and settings**.
+6. Click **Disable SCIM**.
+7. Click **Disable SCIM** on the pop-up.
+
+**Important:**When you disable SCIM for your account, the following actions automatically happen:
+- Your provisioning key is revoked.
+- Your default role is removed.
+- All other group roles are not removed in case you want to reenable SCIM in the future.
+- Any team members that were previously synced are not removed. However, they are disconnected from any group that they were part of.
+- Your team members keep the role that they were assigned based on the groups they were connected to when you synced. You can manually change their role in the Team Management section of your dashboard.
+
+---
+Source: https://support.wix.com/en/article/setting-up-system-cross-identity-management-scim-for-your-account

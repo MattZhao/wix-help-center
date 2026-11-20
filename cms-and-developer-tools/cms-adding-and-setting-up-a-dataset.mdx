@@ -1,0 +1,212 @@
+---
+title: "CMS: Adding and Setting Up a Dataset"
+---
+
+A [dataset](https://support.wix.com/en/article/cms-about-datasets) serves as the bridge connecting elements on your page to the content in your CMS (Content Management System) collection. Use datasets to create a two-way connection for displaying collection content, storing user input values, or both. You can control which items appear, the order in which they display, and how many can load at a time from your dataset settings.
+
+> **Before you begin:**
+>
+> Make sure to [add the CMS to your site](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) if you haven't already.
+
+---
+
+### Step 1 | Add a dataset
+
+In your editor, go to the page in which you want to connect elements to a CMS collection and add a dataset. If you want to use the dataset to collect visitor submissions, choose the form dataset.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26) and navigate to the relevant page.
+2. Click **CMS **** **on the left.
+3. Click **Add Content Elements**.
+4. Click the dataset type you want to add: 
+
+- **Dataset: **Add a blank dataset to connect page elements so they can display content from your collection.
+- **Form dataset: **Add a dataset configured to accept form submissions from site visitors.
+[image: A screenshot of adding a dataset in your Editor.]
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26) and navigate to the relevant page.
+2. Click **CMS **** **on the left.
+3. Click **Add Content Elements**.
+4. Click the dataset type you want to add: 
+
+- **Dataset: **Add a blank dataset to connect page elements so they can display content from your collection.
+- **Form dataset: **Add a dataset configured to accept form submissions from site visitors.
+[image: A screenshot of adding a dataset in the Studio Editor.]
+
+---
+
+### Step 2 | Connect the dataset to a collection
+
+Choose which collection you want to connect your dataset to. You will use this collection to either display content on your page elements, capture visitor inputs, or both.
+
+Wix EditorStudio Editor
+1. Click the **Choose a collection** drop-down and select the collection you want to connect. 
+
+**Tip: **Select **Create Collection **to [create a new collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection).
+2. (Optional) Click the **Dataset name** field to edit the name of the dataset.
+3. Click **Create**.
+[image: A screenshot of creating a dataset in the Wix Editor.]
+1. Click the **Choose a collection** drop-down and select the collection you want to connect. 
+
+**Tip: **Select **Create Collection **to [create a new collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection)..
+2. (Optional) Click the **Dataset name** field to edit the name of the dataset.
+3. Click **Create**.
+[image: A screenshot of creating a dataset in the Studio Editor.]
+
+---
+
+### Step 3 | Edit the dataset settings
+
+Choose a dataset mode to control whether the dataset can read content from the collection, write content to the collection, or both. Edit the maximum items that can display per load if you plan to connect the dataset to a repeater or gallery. Add filters to include or exclude specific items from appearing in elements you connect to the dataset and add sorts to control the order in which they appear.
+
+Wix EditorStudio Editor
+1. (Velo only) In the dataset settings, edit the **Dataset ID** used to identify the dataset in your page's code, if necessary.
+2. Click the **Dataset mode** drop-down and select an option:  
+
+- **Read:** Connected elements can read and display content from your collection. The elements cannot modify the collection content.
+- **Write:** Connected elements cannot display content from the collection. [Input elements](https://support.wix.com/en/article/cms-about-user-input-elements) can add content to the collection but cannot modify the collection's existing content.
+- **Read & Write:** Connected elements can display content from your collection. Input elements can add or edit content in your collection.
+3. (Optional) Click the permission type next to** Permissions** to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+4. Edit the **Maximum items displayed **field to determine how many items can initially load in connected [repeaters](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) and [galleries](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery#step-4-optional-create-a-load-more-button). It also controls how many additional items appear when visitors click  "Load More" buttons, ["Next/Previous Page"](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons, or [pagination bars](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar). Learn more about [setting the 'Maximum items displayed' field](https://support.wix.com/en/article/cms-changing-the-maximum-items-displayed-in-your-dataset-settings).
+5. (Velo only) Select the relevant checkboxes under **Performance**:
+
+- **Fetch after the page loads: **The dataset's data is fetched only after the rest of the page has finished loading. This means the initial rendering of the page will not be blocked by this dataset, making the page load faster. We recommend this option when elements displaying the data are not initially visible. For example, if they require scrolling into view or opening a section.
+- **Fetch pages using cursors: **The dataset will load initial and subsequent data using sequential cursors. This makes data loading faster at the expense of only allowing navigation between next and previous pages of data. Navigating between different pages with a pagination bar or 'Next/Previous page' dataset actions is not available with this option.
+6. (Optional) Add a filter to include or exclude items from the dataset:  
+
+1. Click **+ Add Filter**.
+2. Click the **Field **drop-down and select the field you want to filter.
+3. Click the **Condition **drop-down and choose the condition to use in the filter.
+4. (If necessary) Select the **Value source: **
+
+- **Manual entry: **Enter the value you want to filter in the **Value **field.
+- **Another dataset: **Select another dataset and the field you want to filter from the relevant drop-downs.
+5. Click **Add Filter**.
+
+1. (Optional) Add a sort that controls the order in which connected items display: 
+
+**Tip: **Alternatively, you can display items in the same order as they appear in your collection view by [enabling 'Mirror on Site'](https://support.wix.com/en/article/cms-mirroring-the-order-of-items-in-your-collection-to-your-sites-connected-elements). If you've enabled 'Mirror on Site', you can add sorts to the dataset to override the order used in your collection.
+
+1. Click **+ Add new sort**.
+2. Click the **Field **drop-down and choose the field you want to sort.
+3. Click the **Order** drop-down and choose the order you want the content to appear in.
+4. Click **Add Sort**.
+
+1. (Optional) Enable the **Show on all pages **toggle under **Advanced Settings** to use the dataset globally across all site pages. This allows you to connect elements in your header or footer to your CMS collection.
+
+**Note: **Adding many global datasets may slow your site's performance.
+
+1. (Velo only) In the dataset settings, edit the **Dataset ID** used to identify the dataset in your page's code, if necessary.
+2. Click the **Dataset mode** drop-down and select an option:  
+
+- **Read:** Connected elements can read and display content from your collection. The elements cannot modify the collection content.
+- **Write:** Connected elements cannot display content from the collection. [Input elements](https://support.wix.com/en/article/cms-about-user-input-elements) can add content to the collection but cannot modify the collection's existing content.
+- **Read & Write:** Connected elements can display content from your collection. Input elements can add or edit content in your collection.
+3. (Optional) Click the permission type next to** Permissions** to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+4. Edit the **Maximum items displayed **field to determine how many items can initially load in connected [repeaters](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater?tabs=Studio-Editor-11#step-5-optional-create-a-load-more-button) and [galleries](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery?tabs=Studio-Editor-5#step-4-optional-create-a-load-more-button). It also controls how many additional items appear when visitors click  "Load More" or  ["Next/Previous Page"](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons. Learn more about [setting the 'Maximum items displayed' field](https://support.wix.com/en/article/cms-changing-the-maximum-items-displayed-in-your-dataset-settings).
+5. (Velo only) Select the relevant checkboxes under **Performance**:
+
+- **Fetch after the page loads: **The dataset's data is fetched only after the rest of the page has finished loading. This means the initial rendering of the page will not be blocked by this dataset, making the page load faster. We recommend this option when elements displaying the data are not initially visible. For example, if they require scrolling into view or opening a section.
+- **Fetch pages using cursors: **The dataset will load initial and subsequent data using sequential cursors. This makes data loading faster at the expense of only allowing navigation between next and previous pages of data. Navigating between different pages with 'Next/Previous page' dataset actions is not available with this option.
+6. (Optional) Add a filter to include or exclude items from the dataset:  
+
+1. Click **+ Add Filter**.
+2. Click the **Field **drop-down and select the field you want to filter.
+3. Click the **Condition **drop-down and choose the condition to use in the filter.
+4. (If necessary) Select the **Value source: **
+
+- **Manual entry: **Enter the value you want to filter in the **Value **field.
+- **Another dataset: **Select another dataset and the field you want to filter from the relevant drop-downs.
+5. Click **Add Filter**.
+
+1. (Optional) Add a sort that controls the order in which connected items display: 
+
+**Tip: **Alternatively, you can display items in the same order as they appear in your collection view by [enabling 'Mirror on Site'](https://support.wix.com/en/article/cms-mirroring-the-order-of-items-in-your-collection-to-your-sites-connected-elements). If you've enabled 'Mirror on Site', you can add sorts to the dataset to override the order used in your collection.
+
+1. Click **+ Add new sort**.
+2. Click the **Field **drop-down and choose the field you want to sort.
+3. Click the **Order** drop-down and choose the order you want the content to appear in.
+4. Click **Add Sort**.
+
+> **Learn more about:**
+>
+> [Adding filters and sorting conditions to datasets](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content).
+
+---
+
+### Step 4 | Connect page elements to the dataset
+
+Now it's time to connect the page elements to your dataset so they can read or write content. You'll see different connection options depending on the element you connect. If you're connecting an image or a button, you can [choose click actions](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images) to determine what happens when visitors click them (e.g. load more, submit, next item).
+
+Wix EditorStudio Editor
+1. In your editor, select the element you want to connect to the dataset.
+2. Click the **Connect to CMS** icon .
+3. Click the **Choose a dataset** drop-down and select the dataset you want to connect.
+4. Click the relevant drop-down menus under **Connections** and choose the collection fields or dataset actions you want to connect to each part of the element. The connection options vary depending on the [type of element you connect](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to).
+[image: A screenshot of the dataset connection options for an image.]
+1. Click **Preview** to test your CMS connections.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. In your editor, select the element you want to connect to the dataset.
+2. Click the **Connect to CMS** icon .
+3. Click the **Choose a dataset** drop-down and select the dataset you want to connect.
+4. Click the relevant drop-down menus under **Connections** and choose the collection fields or dataset actions you want to connect to each part of the element. The connection options vary depending on the [type of element you connect](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to).
+[image: A screenshot of a dataset's connection options in the Studio Editor.]
+1. Click the** Preview** icon  at the top right to test your CMS connections.
+2. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click a question below to learn more about setting up datasets.
+
+### How do I control how much content appears in repeaters and galleries?
+
+For repeaters and galleries linked to datasets, the **Maximum items displayed **dataset field controls how much content can load at a time. This is also the maximum items that load when visitors click 'Load More' buttons, 'Next/Previous Page' buttons, and pagination bars (Wix Editor only). 
+Learn more about:
+- [Displaying collection content in repeaters](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater).
+- [Displaying collection content in galleries](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery).
+
+### Can my dataset display content from different collections?
+
+Yes. You can use reference fields to associate an item in one collection with an item in another collection. For example, in a "Songs" collection you could reference a field from another "Artists" collection to display both the artist and the song title in the dataset's connected element. 
+Learn more about [using reference fields in your collections](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections).
+
+### Can I connect text elements to show the total items in a collection?
+
+Yes. You can [connect text elements to the dataset item count](https://support.wix.com/en/article/cms-connecting-text-elements-to-the-dataset-item-count) to display the total number of items in the collection. 
+If you filter out items in the dataset settings, these items don't count towards the total. For example, if your collection has 10 items and the dataset filter excludes 2 items, the dataset item count is 8 since 10-2=8.
+The same concept applies if you have input elements that allow site visitors to filter the content they see. When visitors use the filters to exclude items, the item count changes to reflect the new total items retrieved by the dataset.
+
+### Can I control the order in which the items display on my live site from my collection?
+
+Yes. You can enable the "[Mirror on Site](https://support.wix.com/en/article/cms-mirroring-the-order-of-items-in-your-collection-to-your-sites-connected-elements)" feature to apply the order of your collection view to connected site elements. Keep in mind that any [sorts added to datasets](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content) override the order set in the mirrored collection view.
+
+### How do I link buttons or images to an item's dynamic item page?
+
+Connect buttons or images to the dataset to link them to an item's dedicated dynamic item page. Click the relevant button or image and select the **Connect to CMS **icon . Then connect the element to the relevant dataset and select the relevant dynamic item page from the **Click action connects to** drop-down (use the **Link connects to** drop-down for images).  
+
+Learn more about [linking buttons to dynamic pages](https://support.wix.com/en/article/cms-linking-to-dynamic-pages).
+
+### How do I create a 'Load More' button?
+
+'Load More' buttons allow visitors to click to load more items in repeaters or galleries connected to datasets. The total maximum items that can load at a time is determined by the **Maximum items displayed** field in the dataset settings. You can set this field to show up to 1,000 items at a time. 
+To create a 'Load More' button, add a button or image, connect it to the dataset and set the element's click action to **Load more**. 
+Learn how to add a 'Load More' button to a: 
+- [Repeater](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) on a dynamic list page.
+- [Gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery#step-4-optional-create-a-load-more-button) on a dynamic list page.
+
+**Note: **If you [connect a Pro Gallery to your collection's Media Gallery field type](https://support.wix.com/en/article/cms-connecting-the-media-gallery-collection-field-type-to-a-pro-gallery), you can use the gallery's built-in 'Load More' button to restrict the number of images or videos displayed on the page.
+
+### Can I add 'Next' and 'Previous' buttons to cycle through items?
+
+Yes, you can create ['Next' and 'Previous' buttons or images](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) visitors can click to see other collection items. 
+**To create 'Next' and 'Previous' buttons:**
+- **On static pages:** Set the dataset's **Click action connects to** field to **Next item** or **Previous item**. When visitors click the buttons, the dataset's connected elements change to reflect the next or previous item retrieved by the dataset.
+- **On dynamic list pages: **Set the **Click action connects to **field to **Next page** or **Previous page**. When visitors click the buttons, the next or previous 'page' of items loads in the connected repeater or gallery. The **Maximum items displayed** field determines the maximum items per 'page'.
+- **On dynamic item pages: **Set the **Click action connects to **field to **Next dynamic page **or **Previous dynamic page**. When visitors click the buttons, they navigate to the next or previous item's version of the page at the item's dedicated dynamic URL.
+
+Learn more about [the various click actions you can set for buttons and images](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images).
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset

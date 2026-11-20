@@ -1,0 +1,55 @@
+---
+title: "Connecting PayU Turkey as a Payment Provider"
+---
+
+> Wix no longer supports connection to PayU Turkey as a payment provider. This change affects both new and existing PayU account holders. In Turkey, PayU merged with iyzico to build a local fintech giant and you can contact [iyzico](https://www.iyzico.com/en/support/contact-us) about Wix integration.
+
+General Info
+**Supported countries**Turkey**Supported currencies**TRY, EUR, USD, GBP, RUB
+
+**Note: **The currency used in your Wix account must match the currency in your PayU account. **If the currencies do not match, the transactions may be declined. **Click [here](https://support.wix.com/en/article/setting-your-currency-for-accepting-payments) to learn how to change your currency.**Transaction fees**There are 2 options:**Per Transaction:** 2.49% + 0.3TL per transaction
+
+**Yearly Service Fee: **620TL per year
+
+**Note:** If you accept payment in installments, fees may differ depending on the number of installments.**Account activation**Requires review by PayU Turkey**Note**Currently, this payment provider cannot be used with Wix Bookings.
+
+---
+
+### Settings in your PayU Account
+
+Enable the following settings to make sure PayU processes orders from your site correctly and notifies you of any new transaction.
+
+### IPN settings
+
+1. Sign in to your PayU Turkey account.
+2. Click **Account Management**.
+3. Click **Account Settings**.
+4. Click the **IPN Settings** tab.
+5. Enter the following URL in the** URL field**: https://api.paymentsos.com/callbacks/payuturkey/live/notifications
+6. Select the following fields under **Data**:
+- SALEDATE
+- REFNOEXT
+- ORDERSTATUS
+- IPN_PID
+- IPN_PNAME
+- IPN_DATE
+- IPN_TOTALGENERAL
+7. Click **Save Settings**.
+8. Click the** Account Settings** tab.
+9. Select the following under **Notifications**:
+- Canceled and returned orders
+- Complete orders
+
+### Notifications settings
+
+1. Sign in to your PayU Turkey account.
+2. Click **Account Management**.
+3. Click **Account Settings**.
+4. Select one of the following options under **Notifications**: 
+
+- Email Text & IPN
+- IPN (Instant Payment Notifications)
+**Note**: Do not select the **Email Text** option as your orders won't be processed correctly.
+
+---
+Source: https://support.wix.com/en/article/connecting-payu-turkey-as-a-payment-provider

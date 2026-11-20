@@ -1,0 +1,152 @@
+---
+title: "Setting Up a 301 Redirect for a Page on Your Site"
+---
+
+You can use the URL Redirect Manager to create 301 redirects for pages on your site. 301 redirects tell web browsers that the URL of a page on your site has changed permanently to a new URL. It also tells browsers that visitors who try to access the page's old URL should be sent to the new URL instead.
+
+This is useful when you want to change a page's URL, but you want to make sure that anyone who tries to use the old URL can still reach the page.
+
+For example, your site visitors may have bookmarked a previous URL for a page on your site. When they use the bookmark, you want to redirect them to the page's new URL so that they can still reach it.
+
+301 redirects can also help you retain your page's ranking in search engine results after you change its URL. Search engines like Google may still use an old URL in some search results from previous times that they crawled and indexed your site. Creating a 301 redirect means anyone clicking that link in the search result will still be able to reach your page.
+
+> **Important:**
+>
+> - 301 redirects only work with [custom domains](https://support.wix.com/en/article/purchasing-a-domain-vs-purchasing-a-premium-plan). You can't set up a 301 redirect from free Wix URLs to a Premium site. If you're not sure if your domain is properly connected to Wix, you can check it using the [Wix Domain Assistant](https://support.wix.com/en/article/wix-domain-assistant-3777632).
+> - It is not possible to create a 301 redirect from your homepage using the URL Redirect Manager. You can create redirects from your homepage by [redirecting from one domain to another domain](https://support.wix.com/en/article/setting-up-a-301-redirect-from-one-domain-to-another).
+
+**In this article, learn more about:**
+
+[How 301 redirects work](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#how-301-redirects-work)  [When to use a 301 redirect ](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#when-to-use-a-301-redirect-for-a-page)  [Manually creating a 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#manually-creating-a-301-redirect-for-a-page)  [Editing a 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#editing-a-301-redirect)  [Viewing a 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#viewing-a-301-redirect)  [Deleting a 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#deleting-a-301-redirect)  [Resolving a 301 redirect conflict](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#resolving-a-301-redirect-conflict)
+
+---
+
+### How 301 redirects work
+
+When you create a page for your site, Wix automatically creates a new URL for it. The URL is based on your site's domain and has a unique name for the page at the end of it (known as a URL slug). An example URL of this type is: "https://mystunningwebsite.com/**about**".
+
+If you update a page's URL slug, the old URL will no longer work. For example, if you change your page's URL to "https://mystunningwebsite.com/**about2**", your site visitors will see [a 404 error message page](https://support.wix.com/en/article/about-the-wix-404-error-message-page) if they use the old URL. Your page authority for the page's old URL will also not carry over to the new URL.
+
+To stop this from happening, Wix automatically creates a 301 redirect for your page when you update the URL slug. Visit the URL Redirect Manager to [edit](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#editing-a-301-redirect) or [delete](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#deleting-a-301-redirect) these automatic 301 redirects (after publishing your site).
+
+> **Wix Blog exception:**
+>
+> For Wix Blog pages, 301 redirects will not automatically be created. When you update a URL slug for a Blog page, you need to use the URL Redirect Manager to [manually create your own 301 redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#manually-creating-a-301-redirect-for-a-page).
+
+Automatic redirects are available for the following types of pages:
+
+[Editor pages](https://support.wix.com/en/article/wix-editor-changing-your-page-url)  [ADI pages](https://support.wix.com/en/article/adi-changing-your-page-url)  [Wix Stores product pages](https://support.wix.com/en/article/wix-stores-seo-for-product-pages)  [Wix Stores category pages](https://support.wix.com/en/article/wix-stores-seo-for-category-pages)  [Wix Bookings services](https://support.wix.com/en/article/customizing-your-pages-seo-settings-in-the-seo-panel#optimizing-your-pages-title-tags-meta-descriptions-and-url-slugs)  [Online Programs](https://support.wix.com/en/article/online-programs-customizing-the-seo-settings-for-your-programs)  [Wix Events](https://support.wix.com/en/article/wix-events-editing-default-seo-settings#optimizing-seo-for-the-events-details-page)
+
+> **Important:**
+>
+> If you previously created a manual 301 redirect for a page, you'll see a notification that we couldn't create an automatic redirect for it. You can [resolve the 301 redirect conflict](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#resolving-a-301-redirect-conflict) in the URL Redirect Manager by either keeping the old redirect or saving the new one instead.
+
+> **Want to redirect to another site?**
+>
+> You can also use the URL Redirect Manager to manually create a 301 redirect to an external page on another site.
+
+---
+
+### When to use a 301 redirect for a page
+
+You should create a 301 redirect for a page any time that you change the page's URL slug. You can choose to let Wix [automatically create a redirect ](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#how-301-redirects-work) for your page when you update the URL slug, or use the URL Redirect Manager to [manually create your own redirect](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#manually-creating-a-301-redirect-for-a-page).
+
+If you've moved your site to Wix, you should also create 301 redirects for your site's pages if it's not possible to create pages with URLs that match the URLs from your old site.
+
+> **Tip:**
+>
+> You can also create group redirects for groups of pages with the same path in their URLs (e.g. your Wix Stores product pages or Wix Blog posts). [Learn more about group redirects](https://support.wix.com/en/article/creating-a-group-redirect-301)
+
+---
+
+### Manually creating a 301 redirect for a page
+
+You can manually create 301 redirects for your pages using the URL Redirect Manager in your site's SEO Dashboard.
+
+> **Important:**
+>
+> - It is not possible to use a source link with a **#** in the URL.
+> - You can create a maximum of 5,000 redirects per Wix site.
+
+> **Tip:**
+>
+> If you need to update multiple pages which share the same path, you can [create a group redirect](https://support.wix.com/en/article/creating-a-group-redirect-301).
+
+#### To create a 301 redirect:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to URL Redirect Manager **under **Tools and settings**.  Click **+** **New Redirect**.   Select **Single redirect**.
+
+Enter the old URL path you want to redirect from (e.g., /about-us) under **Old URL**.  Enter the new URL that you want to redirect to:
+
+- **For pages on your site:** Start typing the URL slug of your new page and select it from the drop-down.
+- **For external pages:** Enter the entire URL that you want to redirect to.
+    Click **Save**, or click **Save & Add Another** to add more.
+
+> **Tip:**
+>
+> Once you've added the redirect, hover over it in the list to see options to [edit it](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#editing-a-301-redirect), [view it live](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#viewing-a-301-redirect) to check it's set up correctly, or [delete it](https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site#deleting-a-301-redirect) if needed.
+
+---
+
+### Editing a 301 redirect
+
+You can edit your 301 redirects using the URL Redirect Manager in your site's SEO Dashboard.
+
+#### To edit a 301 redirect:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to URL Redirect Manager **under **Tools and settings**.  Hover over the 301 redirect that you want to edit.  Click **Edit**.
+
+Make the changes that you need to the Old URL or the new URL.  Click **Save Changes**.
+
+---
+
+### Viewing a 301 redirect
+
+After you've created a 301 redirect, you can make sure that it's working correctly by viewing it using the URL Redirect Manager in your site's SEO Dashboard.
+
+#### To view a 301 redirect:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to URL Redirect Manager **under **Tools and settings**.  Hover over the 301 redirect that you want to view.  Click the View Redirect icon . The page that you've redirected to should open in a new tab.
+
+---
+
+### Deleting a 301 redirect
+
+You can delete any 301 redirects that you no longer need using the URL Redirect Manager in your site's SEO Dashboard.
+
+> **Important:**
+>
+> It is not possible to recover a 301 redirect after you delete it.
+
+#### To delete a 301 redirect:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to URL Redirect Manager **under **Tools and settings**.  Hover over the 301 redirect that you want to delete.  Click the Delete icon .
+
+Click **Delete** on the pop-up.
+
+---
+
+### Resolving a 301 redirect conflict
+
+If you try to create an automatic redirect for a page that you've already manually redirected, you'll see a notification that we couldn't create the redirect. You can resolve the conflict in the URL Redirect Manager by either keeping the old redirect or saving the new one instead.
+
+#### To resolve a conflict:
+
+Click **Fix Now **on the pop-up, or [go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO) and select **Go to URL Redirect Manager **under **Tools and settings**.  Click **Retry**.  Select how you want to resolve the conflict:
+
+- **Update Redirect: **Update your manual redirect to the new URL slug.
+- **Keep Existing Redirect: **Keep the manual redirect you created.
+
+---
+
+> **Want to learn more about 301 redirects?**
+>
+> - Check out our article about 301 redirects in [the Wix SEO Hub](https://www.wix.com/seo/learn/resource/301-redirects).
+> - Get tips for [successfully migrating your site](https://www.wix.com/seo/learn/resource/advanced-site-migrations-for-seo).
+
+Get help with your SEO from a
+        professional.
+    [ Hire an Expert ](https://www.wix.com/arena/dynamic-brief/welcome-page?entry=SEOWizard&serviceType=6&innerType=1&origin=seo_support_articles)
+
+---
+Source: https://support.wix.com/en/article/setting-up-a-301-redirect-for-a-page-on-your-site

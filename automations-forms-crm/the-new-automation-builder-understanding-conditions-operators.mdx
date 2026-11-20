@@ -1,0 +1,91 @@
+---
+title: "The New Automation Builder: Understanding Conditions Operators"
+---
+
+> This article refers to the new automation builder that is currently being released. If you're not seeing this version, then see our article about the [previous version of the automation builder](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions).
+
+Conditions let you create complex automation flows by defining criteria for continuing the flow.
+
+In the **THEN** path, the automation flow continues only if the condition is met.   In the** ELSE** path, you can define what happens if the condition isn’t met.
+
+For conditions to work effectively, make sure to select the correct operator (e.g. "is greater than", "contains") and follow the best practices described in this article.
+
+**In this article, learn more about conditions that use:**
+
+[Text operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions#text-operators)  [Number operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions#number-operators)  [Date and time operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions#date-and-time-operators)  [Array (list) operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions#array-list-operators)  [True/false operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions#truefalse-operators)
+
+---
+
+### Text operators
+
+Text operators are used for comparing names, labels, etc.
+
+**Best practice:** Use text operators for properties that are text strings, for example when a restaurant name is exactly "Paulie's Pizza".
+
+### See an example
+
+Drew wants to give a 10% discount on the next purchase for those who paid for their order.
+Drew created an automation to send a coupon when an order is placed. To ensure that a coupon is sent only once the order has been paid for, she added a text operator condition specifying the PAID payment status.
+
+Important notes for this automation to work properly: 
+- The value must be PAID / UNPAID written in English, even for sites in other languages.
+- This will only work payments made online.
+
+---
+
+### Number operators
+
+Number operators are used for comparing any numerical property, like quantities.
+
+**Best practice:** Use number operators for properties that will always be numbers, for example sending an email when a reservation party size is greater than 10.
+
+### See an example
+
+Benjie is introducing a chef's menu for tables of 5 guests and over. He wants to send an email update to all customers who have made such bookings. 
+Benjie sets up an automation with a number operator condition, ensuring that an email is only sent to groups with a party size of 5 or greater.
+
+---
+
+### Date and time operators
+
+Date and time operators are used for comparing date and time properties to specific dates and times.
+
+**Best practice:** Use date and time operators when you're basing a condition on an exact date or time, for example contacting all customers who made a purchase this month.
+
+### See an example
+
+Debbie owns a yoga studio. She wants to send a special "thank you" email to all her clients who book a session at her studio on New Years, encouraging them to start the year off right. 
+To ensure that her email will reach the right clients, Debbie creates a condition using the date & time of when a client booked their session.
+
+---
+
+### Array (list) operators
+
+Array operators are used to specify a list of multiple values or objects, instead of selecting just one.
+
+**Best practice:** Use array operators when you're including a specific list of products in your automation, for example shirts sold in your store.
+
+### See an example
+
+Sophie got new soaps in her inventory. She wants to include a '20% off your next purchase' coupon with every purchase of her new soaps. 
+To ensure that the email gets sent to the right customers, Sophie sets up an array condition that specifies the list of products that are relevant for the automation.
+
+---
+
+### True/false operators
+
+True/false operators are used for comparing any boolean properties that will always be true or false.
+
+**Best practice:** Use true/false operators for properties that will always be one of two states, for example a checkbox that is ticked or unticked.
+
+### See an example
+
+Josh is launching his newsletter. He wants to add a label to every subscriber contact who opts into receiving the newsletter. 
+Josh uses a true/false condition in his automation to include only those who have selected the checkbox to sign up for the newsletter.
+
+> **Looking for more capabilities?**
+>
+> Vote for the ability to [create a multipath automation](https://support.wix.com/en/article/request-creating-multipath-automations) or [a condition based on customer interaction](https://support.wix.com/en/article/request-adding-interaction-based-conditions).
+
+---
+Source: https://support.wix.com/en/article/the-new-automation-builder-understanding-conditions-operators

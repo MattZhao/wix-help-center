@@ -1,0 +1,91 @@
+---
+title: "Wix Multilingual: Using Multi-State Boxes to Switch From LTR to RTL"
+---
+
+> **Warning:**
+>
+> Your site's SEO will be impacted by adding multi-state boxes because search engine bots cannot read the boxes' content.
+
+Some languages like English are written from left-to-right (LTR), while others like Hebrew are written from right-to-left (RTL). If your multilingual site supports both types, you can add [multi-state boxes](https://support.wix.com/en/article/velo-about-multi-state-boxes) that display different content based on the selected language. This allows you to create a different 'state' for each language and tailor the design individually.
+
+---
+
+### Step 1 | Add a Multi-State Box in your site's main language version
+
+The first step is adding a blank multi-state box to your site in your main language. Design it for that language, adding text, images, buttons or any element you need.
+
+> **Before you begin:**
+>
+> Make sure you've added [Wix Multilingual](https://support.wix.com/en/article/wix-multilingual-an-overview) to your site and enabled [Velo by Wix](https://support.wix.com/en/article/about-velo-by-wix).
+
+[Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).  Click **Add ** on the left side of your editor.   Click **Box**.  Click **Multi-State Boxes**.  Drag the **Blank** multi-state box to the relevant location on your page.   Add elements to the box and design it as you wish.
+
+---
+
+### Step 2 | Change the current state's name
+
+Once your box is ready in your main language, open the Manage States panel to rename the current state. Call it "default", in that exact spelling and capitalization (without the quotation marks), to ensure the code you'll add functions properly.
+
+Select your multi-state box.  Click **Manage States**.   Click the** More Actions** icon  next to the current state's name.  Select **Edit ID**.  Type "default" in the text box and click **Done**.
+
+---
+
+### Step 3 | Duplicate the state and rename it
+
+After creating the "default" state in the Manage States panel, duplicate it and call the new one "RTL". Similarly to the first step, it's important that you call it "RTL", in that exact spelling and punctuation, so the code works as it should.
+
+Select your multi-state box.  Click **Manage States**.   Click the** More Actions** icon  next to the current state's name.  Select **Duplicate**.  Click the** More Actions ** icon next to the duplicate state.   Select **Edit ID**.  Type "RTL" in the text box and click **Done**. 
+
+**Note: **If your secondary language is LTR, you can change the state's name to LTR instead.
+
+> **Note:**
+>
+> Make sure your multi-state box's [element ID](https://support.wix.com/en/article/velo-glossary#element-id) is identical in all parts of the code. In the steps above, the example box's ID is #statebox8.
+
+---
+
+### Step 4 | Adjust your box in the secondary language
+
+Now, your multi-state box is set up and ready for translation. Switch to your RTL language, change the state to RTL and start localizing your content. Then, copy the code snippet to your page's code.
+
+Click the **Switch languages **drop-down menu at the top of the editor.
+
+Select the RTL language you want to edit.   Click the multi-state box dropdown and select RTL.
+
+Select the element in the box that you want to translate:
+
+- **Text: **Click **Edit** **Translation **or** Auto-translate** to translate the text. Then, click the **Change text direction **icon  in the **Text Settings** panel to switch the text direction.
+- **Images:** Click **Edit Translation**, then click **Change** to choose a different image for the RTL version of your site.
+
+Copy the following code snippet below and paste it in the **Page Code Tab** in your editor.
+
+`import wixWindow from 'wix-window';
+const RTLLangs = ['he','ar','fa'];
+$w.onReady(function () \{
+    let lang = wixWindow.multilingual.currentLanguage;
+    //based on RTL
+    /////////////////////////////////////
+    if(RTLLangs.includes(lang))\{
+        $w('#statebox8').changeState('RTL');
+        \}
+    //based on exact match or default:
+    /////////////////////////////////////
+    let states = $w('#statebox8').states;
+    let foundStates = states.filter((state)=>\{state.id === lang\});
+    if(foundStates.length>0)\{
+        $w('#statebox8').changeState(foundStates[0]);
+    \}
+    else\{
+        $w('#statebox8').changeState('default');
+    \}
+\});`
+
+Click** Preview** to test your multi state box.  Publish your site when you are ready to make the changes go live.
+
+> **Would you like to see additional RTL capabilities?**
+>
+> With Wix Multilingual, you can create a multilingual site with right-to-left content. Currently, you can [customize some aspects of your site like the menu, text, and images to be RTL per language](https://support.wix.com/en/article/wix-multilingual-creating-a-multilingual-site-with-right-to-left-content) (e.g., Hebrew, Arabic).
+> What additional RTL capabilities would you like to see in Wix Multilingual? [Contact Customer Care with your feedback and suggestions](https://www.wix.com/contact)
+
+---
+Source: https://support.wix.com/en/article/wix-multilingual-using-multi-state-boxes-to-switch-from-ltr-to-rtl

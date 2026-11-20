@@ -1,0 +1,143 @@
+---
+title: "Wix Stores: Setting Up Shipping Rate By Product"
+---
+
+Charge customers shipping rates that reflect the shipping costs you actually pay for each product.
+
+Start by planning how many regions you ship to, how many product groups you need to set up, and how many delivery options you want to offer your clients. Let's look at an example.
+
+### Example of How to Set Up Shipping Rate By Product
+
+Kathrine sells handmade home accessories. Her store is based in the US, but she also ships to Canada and Mexico - 3 regions in total. After looking at how much it costs to ship her products, Kathrine has decided to create 3 product groups: "Ceramics" for her breakable items, "Heavy" for items that weigh more than 4 pounds, and "Default" for everything else. She decides to offer American customers 2 delivery options at checkout: Standard shipping or Express but just one option for Mexico and Canada. To keep track, Kathrine prepares a table:
+
+RegionDefaultCeramicsHeavyUSStandard: $2Express: $4Standard: $5Express: $10Standard: $6Express: $12CanadaStandard: $4Standard: $10
+Standard: $12
+MexicoStandard: $3Standard: $7
+Standard: $9
+
+---
+
+### Step 1 | Create or Select a Shipping Region
+
+To start, create the region the shipping rule applies to.
+
+> **Tip:**
+>
+> If you already created the shipping region, just select it and move on to step 2.
+
+A region can be made of one or more countries. Alternatively, it can be made of one or more regions within a country. You can set up different shipping regions for your store. For example, a merchant might set up 4 shipping rules: a local shipping region for California, a region for the rest of the US, another for Mexico and Canada, and finally one for the rest of the world.
+
+### Show me how
+
+**Before you begin: **If you previously set up shipping (and tax) in a merchant account (e.g. in PayPal), remove these settings before starting.
+
+1. Go to the [Shipping & fulfillment](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Shipping&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/store/shipping-and-tax/list?referralInfo=sidebar) settings in your site's dashboard.
+2. Select an option:
+
+- Edit a default rule: Click the region you want to set up.
+- Create a new rule:
+
+1. Click **Add Region**.
+2. Click **+Add destination**, start typing a country name and select it.
+3. (Optional) Select specific region(s) within a country (not all countries have local regions):
+
+1. Click **Edit** next to the region number.
+2. Deselect the checkboxes next to the regions or states you don't want the rule to apply to and click **Done**.
+4. (Optional) Click the title (e.g. Region 2) and rename it (e.g. England & Scotland).
+5. Click **Done** or move directly on to the next step.
+
+---
+
+### Step 2 |  Create Product Groups and Add Products to the Group
+
+After selecting the **Rate by Product** option, you can start creating the product groups you need. When that's done, you can assign each product to the correct group.
+
+> **Tip:**
+>
+> Your first group acts as your default product group. We suggest you name it Default. All new products you add to your store are automatically added to the default group. You can re-assign products after, if needed.
+
+### Show me how
+
+1. Click **Shipping**.
+2. Select **Rate by Product **from the **Select how shipping is calculated **drop-down.
+3. Create your first group:
+
+1. Click **Create Groups**.
+2. Give this group a name (e.g. Default).
+3. Click **Next**.
+4. Create your next group:
+
+1. Click the **Setting** icon  at the top right.
+2. Select **+Add New Group**.
+3. Give this group a name (e.g. Heavy).
+4. Click **Add Group**.
+5. (Optional) Add additional groups.
+6. Assign each product to a group by selecting the relevant group from the drop-down.
+7. When you've created all your groups and assigned every product to a group, click **Done**.
+
+**Tip: **Go back any time to create additional groups or make changes to existing groups.
+
+---
+
+### Step 3 |  Set Shipping Rates for Product Groups
+
+Now that your store's product groups have been created, you can set how much you want to charge for shipping. You can set up one delivery option (e.g. Standard Shipping) or offer your customers a variety of options (e.g. Standard, Express, and Overnight Shipping).
+
+### Show me how
+
+1. Create the first delivery option:
+
+1. Enter a title in the **Shipping Option Name **field (e.g. Standard Shipping).
+2. (Optional) Enter the estimated delivery time.
+3. Enter the shipping fees for each product group.
+2. (Optional) Click the **Offer free shipping when customer buys over a certain amount** checkbox and enter the amount.
+3. (Optional) Click **+Add Another Delivery Option **to offer customers another shipping options (e.g. Express shipping). Follow the same instructions to set up delivery times and rates.
+
+---
+
+### Step 4 |  Select Advanced Settings
+
+Now you can decide what happens when customers buy more than one product. Are the shipping rates applied per product or per package? This setting applies for all regions you ship to using the shipping rate by product option.
+
+In addition, here is where you can add a handling fee and allow local customers to pick up purchases from your location. These settings are per region.
+
+### Show me how
+
+1. Select how to apply the shipping rates at checkout:
+
+- **Apply group rate to each product in the order: **For example, the "Ceramics" shipping group has a $5 charge. If a customer buys 2 vases, they are charged $10 for shipping.
+- **Apply group rate once for all products ordered from a group:** For example, the "Ceramic" shipping group has a $5 charge. If a customer buys 2 vases, they are charged $5 for shipping the 2 vases.
+- **Apply the highest group rate once to the entire order: **For example, the "Ceramics" shipping group has a $5 charge and the "Towel" shipping group has a $2 charge. When a customer buys a vase and a towel, they are charged $5 for the order.
+2. (Optional) Select the **Add a handling fee to every order **checkbox and enter the amount.
+
+---
+
+### Step 5 | (Optional) Offer Local Delivery or Pickup Options
+
+After saving your shipping rule, you can select the region again and add local delivery or pickup options.
+
+Add local delivery [Learn how](https://support.wix.com/en/article/wix-stores-setting-up-local-delivery)  Add store pickup [Learn how](https://support.wix.com/en/article/wix-stores-setting-up-store-pickup-as-a-delivery-option)
+
+---
+
+### Step 6 | (Optional) Set Up Additional Regions
+
+If you want to ship to other regions, you can set those up now. For other regions, follow the same instructions as above, skipping the product group creation step (that's done).
+
+After choosing a new region (e.g. Canada) and selecting **Rate by Product **from the drop-down, enter the name, time and rates for each delivery option you want to set up. The product groups are already there.
+
+---
+
+> **After the initial setup:**
+>
+> - **Adding new product groups: **To add a new product group or make changes, go to the **Shipping & fulfillment** settings, select a region, click **Shipping**, and then **Manage Product Groups**.
+>
+>
+>
+>
+>
+> From there, click the **Settings** icon  at the top right. Note that any new product groups you create appear in all regions and are assigned the default rate. Make sure to update the rates in each region, if necessary.
+> - **Adding new products: **While adding a new product, you can assign it to the correct product group in the **Advanced** section on the right.
+
+---
+Source: https://support.wix.com/en/article/wix-stores-setting-up-shipping-rate-by-product

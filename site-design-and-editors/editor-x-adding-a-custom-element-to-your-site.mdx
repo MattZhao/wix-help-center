@@ -1,0 +1,133 @@
+---
+title: "Editor X: Adding a Custom Element to Your Site"
+---
+
+Enhance your site with your own design features and CSS capabilities using Custom Elements. You can add any Javascript component by linking a custom element to a server URL or a Velo file. If needed, you can set more attributes directly from Editor X.
+
+#### Learn more about:
+
+[Custom elements](https://support.wix.com/en/article/editor-x-adding-a-custom-element-to-your-site#what-are-custom-elements)  [Adding and setting up a custom element](https://support.wix.com/en/article/editor-x-adding-a-custom-element-to-your-site#adding-and-setting-up-the-custom-element)  [Defining HTML attributes](https://support.wix.com/en/article/editor-x-adding-a-custom-element-to-your-site#setting-the-custom-elements-attributes)  [See a custom element example](https://support.wix.com/en/article/editor-x-adding-a-custom-element-to-your-site#custom-element-example-1)
+
+> **Before you begin:**
+>
+> Make sure your site has a Premium Plan and a connected domain with no Editor X ads. [Learn More](https://support.wix.com/en/article/upgrading-your-site-to-premium-3066683)
+
+---
+
+### What are Custom Elements?
+
+Custom elements let you use your own HTML tags on your Editor X site. These elements work across all supported browsers, and can be used with any JavaScript ES6 library or framework that works with HTML 5.
+
+### Examples of useful custom elements
+
+Using custom elements, you can:
+- Design your own elements that are not yet available in the Editor X Add panel or via apps.
+- Design elements with additional CSS capabilities, such as CSS animation, countdown animation, breadcrumbs, tooltips, tags, charts, quotes, cursor changes and scroll interactions.
+- Change the height of your element on your published site, to avoid layout collisions on the page.
+- Improve performance (compared to iframe-based components). This largely depends on the implementation of the custom element.
+
+### Code requirements
+
+When embedding a custom element, there are some requirements to keep in mind:
+- For security reasons, to use the custom element, you must upgrade your site with a Premium Plan, connect a domain and have no ads on it.
+- Your code must be hosted by you if you're not using [Velo](https://support.wix.com/en/article/velo-about-custom-elements) file.
+- Your code must contain HTTPS, not HTTP, or it will not be displayed on your live site.
+- Your code must be up to date and HTML5 compatible. Most browsers don't display pages and scripts properly if they were written using older versions of JS or HTML.
+- All relevant design settings and complex functionalities must be stored within the main JS code, for example the CSS and other JS files. In some cases, these settings are stored separately, which means they won't function on your site.
+
+> **Tips:**
+>
+> - You can use custom elements from third-party sources, just make sure to update the** Tag Name **in **Properties** when adding the custom element to your page.
+> - The performance of your custom element depends on its implementation.
+
+---
+
+### Adding and Setting Up the Custom Element
+
+Add as many custom elements as you need to your site. After dragging a custom element to your page, define its source (server URL or a [Velo file](https://support.wix.com/en/article/velo-about-custom-elements)) and give it a tag name to appear in the page registry.
+
+### Show me how
+
+1. Open the Add panel  at the top of Editor X.
+2. Click **Embed & Social**.
+3. Drag the Custom Element onto your page.
+4. Add your script file:
+
+1. Select the custom element.
+2. Click **Choose Source**.
+3. Select how you want to add your custom element:
+
+- **Server URL: **Click this option and enter the URL, including the file name.
+- **Velo file: **Click this option and select one of your Velo files. [Learn More](https://support.wix.com/en/article/velo-about-custom-elements)
+4. Enter a **Tag Name** for your element.
+
+**Note: **The tag name should be at least two words long, separated by a dash (e.g., big-weather-widget).
+
+**Tips:**
+- For security reasons, the custom element is rendered inside an iFrame inside the Editor and in preview mode. This might affect the layout of the component. **Go to your published site to see how it looks live**.
+- You can define your element's SEO settings using Velo API.
+
+Use the Inspector panel  to ensure your custom element looks great in all [breakpoints](https://support.wix.com/en/article/editor-x-designing-across-breakpoints-with-the-cascading-rule) – you can adjust its sizing, docking, alignment and more.
+
+> **Note:**
+>
+> By default, custom elements appear in your page's customElements registry. The tag name you enter for your custom element defines its name in this registry.
+
+---
+
+### Setting the Custom Element's Attributes
+
+Make further adjustments to your element's properties and behavior by setting HTML attributes. The Element Attributes panel lets you add, edit and remove attributes directly from Editor X, so you don't have to access the actual code.
+
+### Show me how
+
+1. Click **Set Attributes** on the custom element.
+2. Click **New Attribute**.
+3. Enter a name for the attribute, for example, "rotation" or "width". [Learn More](https://www.w3.org/TR/2011/WD-html5-20110525/syntax.html#attributes-0)
+4. Enter the value for the attribute (it can be any relevant string).
+
+> **Important:**
+>
+> The code for your custom element must acknowledge and handle the defined attributes. Otherwise, they won't function properly.
+
+---
+
+### Custom Element Example
+
+Below is an example of adding a basic custom element to your site. The instructions explain how to add "Hello World" text to your site.
+
+First, you need to create and code the element and its behavior in a JavaScript file.
+
+### Show me how
+
+1. Set up, or get access to, a server for your custom element. If you host externally on your own server, you will need to connect the custom element to the server URL when adding the custom element.
+
+- If you are hosting locally, you can use HTTP.
+- If you are hosting on an external server you must use HTTPS. [Click here](https://support.wix.com/en/article/velo-custom-element-faqs#how-can-i-create-a-server-for-hosting-custom-elements-optional) to learn how to get started hosting an external server.
+
+**Note:** If you are using Velo and want to host with Wix [click here](https://support.wix.com/en/article/velo-about-custom-elements).
+2. Use any IDE to create a custom element in a Javascript file using the standard ECMAScript 2015 class syntax. For full instructions and examples, see the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Web_Components).
+
+Next, define the custom element class.
+
+In this example, we defined it as HelloWorld and we'll use the same name when registering the custom element. The [connectedCallback()](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks) function below is a lifecycle callback function that's triggered automatically when the element is attached to DOM.
+
+`class HelloWorld extends HTMLElement \{
+  connectedCallback() \{
+    this.innerHTML = '\<br/>\<br/>\<br/>Hello World!';
+  \}
+\}
+customElements.define('hello-world', HelloWorld);`
+
+After defining the custom element class, we register it with the `customElements.define(name, class)` method.
+
+When adding the custom element to your site, enter the registered name as the Tag Name. Once registered, the custom element can be used on your site.
+
+`CustomElementRegistry.define('hello-world', HelloWorld);`
+
+> **Looking for more advanced information?**
+>
+> [Click here](https://support.wix.com/en/article/velo-about-custom-elements) to learn how to use this element with Velo by Wix.
+
+---
+Source: https://support.wix.com/en/article/editor-x-adding-a-custom-element-to-your-site

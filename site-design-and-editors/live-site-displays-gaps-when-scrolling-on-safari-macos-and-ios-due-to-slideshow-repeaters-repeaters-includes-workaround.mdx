@@ -1,0 +1,23 @@
+---
+title: "Live Site Displays Gaps When Scrolling on Safari macOS and iOS due to Slideshow Repeaters / Repeaters (Includes Workaround)"
+---
+
+> **Issue has been resolved on macOS and iOS version 17.5. Please update your device to the latest versions to confirm the fix.**
+
+We are aware of an issue affecting the scrolling performance of a site when slideshow repeaters or regular repeaters are present on the page and have their heights set to **fr** or **auto** (this also applies if it's stretched).
+
+> **In the meantime, you can use the following workaround:**
+>
+> 1. Find any slideshow repeater in the Studio Editor.
+> 2. Select component and open the inspector.
+> 3. Under the **Size** section, click the More Actions icon (...) and enable **Advance Sizing**.
+> 4. Add any height value to the component using pixels.
+> 5. Repeat steps 1-4 for any other slideshow repeater on the page.
+> 6. Publish and visit the live site to confirm the problem is no longer present.
+
+> **Notes:**
+>
+> If the slideshow repeater / regular repeater is stretched or docked both on top and bottom it is not possible to adjust the height. You will have to unstretch it (the width can then be adjusted to 100% width) or remove the docking from one of the sides.
+
+---
+Source: https://support.wix.com/en/article/live-site-displays-temporary-gaps-when-scrolling-the-page-in-safari-macos-and-ios-includes-workaround

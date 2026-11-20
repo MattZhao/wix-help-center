@@ -1,0 +1,76 @@
+---
+title: "CMS: About Validation Settings for Input Elements"
+---
+
+Wix's Content Management System (CMS) allows you to [create custom forms with input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) that submit to your collection. Using the validation settings in your input elements helps ensure that the data you collect from visitors meets your specific requirements. You can also [set validations for the collection fields](https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections) that store the submitted input values.
+
+---
+
+### Ensure data integrity with required fields
+
+Most input elements can be set as "Required." When an input element is required, the form will not submit if the field is empty. This prevents incomplete submissions and ensures that all necessary information is collected. If you set the connected collection field to "Required," users will see an error message if they attempt to submit the form with empty values. Note that switches do not have a "Required" option, but checkboxes do.
+
+---
+
+### Control the type of information collected
+
+You can configure text input elements to accept specific types of information, such as text, numbers, or email addresses. Each type performs a specific validation to ensure that the entered value matches the required format.
+
+Text Input TypeValidationAdditional ValidationsTextNoneLimit length, patternPasswordNoneLimit length, patternNumberValue is a numberMaximum value, minimum value, patternEmailValue is an email addressPatternURLValue is a URL that starts with "http" or "https"PatternPhone NumberValue is a phone numberPattern
+
+---
+
+### Limit the length of input values
+
+You can add character limits for input elements that are set to collect text. This ensures that the form does not submit if the entered value exceeds the specified length. This is useful for fields like usernames or descriptions where you want to control the amount of text entered.
+
+---
+
+### Set maximum and minimum values for numbers
+
+For input elements that collect numbers, you can specify the maximum and minimum values they can submit. This ensures that the submitted number falls within the acceptable range you define, preventing invalid data entries.
+
+---
+
+### Validate patterns with regular expressions
+
+Some input elements allow for additional pattern validation using regular expressions. For example, you can enforce a specific format for usernames using a regular expression like **^[a-zA-Z0-9_]\{5,20\}$**. This ensures that the username consists of 5 to 20 alphanumeric characters or underscores.
+
+`^[a-zA-Z0-9_]{5,20}$`
+
+In this expression, the `^` and `$` represent the beginning and end of the string, respectively. Inside of those symbols are two sections, one enclosed in square brackets `[]` and the other in curly brackets `{}`. The section enclosed in square brackets `[a-zA-Z0-9_]` matches lowercase letters `a-z`, uppercase letters `A-Z`, numbers `0-9`, or underscores `_`. The section enclosed in curly brackets `{5,20}` means you want between 5 and 20 characters that match the section that immediately preceded it, namely `[a-zA-Z0-9_]`.
+In this expression, the `^` and `$` represent the beginning and end of the string, respectively. Inside of those symbols are two sections, one enclosed in square brackets `[]` and the other in curly brackets `{}`. The section enclosed in square brackets `[a-zA-Z0-9_]` matches lowercase letters `a-z`, uppercase letters `A-Z`, numbers `0-9`, or underscores `_`. The section enclosed in curly brackets `{5,20}` means you want between 5 and 20 characters that match the section that immediately preceded it, namely `[a-zA-Z0-9_]`.
+
+---
+
+### Restrict dates and times visitors can select
+
+Date picker input elements allow you to control which dates users can select. You can restrict users from choosing past dates, future dates, or specific days of the week, such as weekends. Additionally, you can choose from four different date formats: **MM/DD/YYYY**, **DD/MM/YYYY**, **YYYY/MM/DD** or **YYYY/M/D**).
+
+---
+
+### FAQs
+
+Click below for answers to common questions about the validation settings in input elements.
+
+### Do all input elements have their own validation settings?
+
+No, not all input elements support validations. However, you can [add validations to fields in your collection](https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections) to make them required fields, limit character count, accept specific values only, or set default values.
+
+### How do field validations apply to collection content?
+
+Input elements and collection fields have their own separate validation settings. Both types of validations work independently. One does not override the other in case there is a mismatch in validations between the input element and the collection field it connects to.
+[Input elements](https://support.wix.com/en/article/cms-about-user-input-elements) have their own validation settings that apply to the specific element. They control what the user can submit through the input element. Click the relevant element and select **Settings **to access the element's validations. 
+Collection fields have their own [validations](https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections) you can set differently for each field. They control what kind of data can be saved in the relevant collection field by checking to ensure the values match the validations. Field validations apply to both the content submitted by visitors and the content edited by you or your team. If a required field is left blank, users will see an error message.
+
+### What happens if I disable the table layout in my collection?
+
+[Disabling the table layout in your collection](https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections#hiding-the-table-layout-to-prevent-empty-required-fields) prevents the automatic saving of items with blank required fields. This ensures that all required fields are filled out before saving.
+In the list and gallery layouts, if you try to save an item without filling in a required field, you are prevented from saving. Instead, a warning message lets you know which fields need values before you can save them.
+
+### Can I set default values for fields?
+
+Yes, you can [set default values](https://support.wix.com/en/article/cms-adding-default-values-to-fields-in-your-collections) that automatically populate when new items are added. This helps prevent empty fields and ensures commonly used values are included.
+
+---
+Source: https://support.wix.com/en/article/cms-about-validation-settings-for-input-elements

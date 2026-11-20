@@ -1,0 +1,50 @@
+---
+title: "Troubleshooting Google Analytics"
+---
+
+Adding a [Google Analytics Tracking ID](https://support.wix.com/en/article/tracking-events-on-your-wix-site-with-a-google-analytics-property) to your Wix site lets you track the number of visitors to your site, where they come from, how long they stay, what keywords they use to find your site, and more.
+
+If you're experiencing issues using Google Analytics, try the following troubleshooting steps:
+
+### Step 1 | Make sure your domain is connected to Wix correctly
+
+You can check your domain connection using [Wix Domain Assistant](https://support.wix.com/en/article/wix-domain-assistant-3777632).
+
+### Step 2 | Make sure the property ID is correctly formatted
+
+You can track information in Google Analytics about your site visitors using a [Google Analytics 4 (GA4) property](https://support.google.com/analytics/answer/10089681) (G-XXXXXXXXXX).
+If you're not sure if your property ID is correctly formatted, follow these steps to [get your Google Analytics property ID](https://support.wix.com/en/article/tracking-events-on-your-wix-site-with-a-google-analytics-property) and check the format. 
+**Note: **From July 1, 2023, Universal Analytics (UA) properties will stop collecting data. If you previously connected a UA property to your site, you should [upgrade to a Google Analytics 4 (GA4) property](https://support.wix.com/en/article/upgrading-universal-analytics-to-google-analytics-4-ga4).
+
+### Step 3 | Make sure you haven't added the HTML element
+
+Check to make sure you haven't added Google Analytics using the HTML tool.
+
+[Learn More](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget)
+
+### Step 4 | Make sure you haven't added Google Analytics multiple times
+
+Check that you haven't added Google Analytics to both Google Tag Manager and [Marketing Integrations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Marketing%20Integrations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/marketing-integration/). 
+If you've added it in multiple locations, remove it from one of the locations to allow Google Analytics to work properly.
+
+### Step 5 | Use DebugView to check your Google Analytics connection
+
+After adding your Google Analytics (GA4) tracking code to your Wix site, it may take some time before you see statistics in your Google Analytics account.
+If you are no longer receiving data in Google Analytics, you can use Google's DebugView to troubleshoot connection issues. DebugView shows you the events that Analytics collects in real time.
+[Learn more about using DebugView](https://support.google.com/analytics/answer/7201382)
+
+### Step 6 | Check if you have a cookie banner on your site
+
+When you add the cookie banner to your site, it automatically disables the usage of non-essential cookies and scripts until your visitor provides consent. [Learn More](https://support.wix.com/en/article/displaying-a-cookie-banner-on-your-site)
+As a result, Google Analytics will only collect information after a visitor approves using the relevant cookies. 
+**Note about Google Analytics and cookie banners:**
+- Using a cookie banner on your site can reduce the site traffic recorded by GA4. This is because some visitors might not give their consent to be tracked. For this reason, it is normal if you see a drop in your Google Analytics numbers.
+- Due to recent regulations that apply to Google, if you don't have a cookie banner on your site and a site visitor comes from a country that requires consent (e.g. those covered by GDPR) no data is sent to Google Analytics. Google only tracks sessions when visitors give explicit consent. As you know your target audience best, use this information to make an informed decision about whether to add a cookie banner.
+
+> **Important:**
+>
+> - You should make sure that your use of Google Analytics is compliant with local data protection regulations. [Learn more about Google Analytics and the GDPR](https://support.wix.com/en/article/about-google-analytics-and-the-gdpr)
+> - By using this service, you are engaging directly with a third-party service provider. We recommend reviewing the service provider's Privacy Policy and Terms of Use prior to your use of such third-party service. You acknowledge that we are not liable for any loss or damage resulting from your use of such third-party service, including any liability arising from any personal data exchanged between you and such third-party.
+
+---
+Source: https://support.wix.com/en/article/troubleshooting-google-analytics

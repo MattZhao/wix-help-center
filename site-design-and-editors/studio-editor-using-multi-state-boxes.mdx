@@ -1,0 +1,102 @@
+---
+title: "Studio Editor: Using Multi-State Boxes"
+---
+
+Multi-state boxes let you show different content for different situations in the same container box, displaying one state at a time. Choose the amount of states your box should have, design them completely and give them IDs that you will later use in your code.
+
+Your code defines when each state should be displayed. You can create conditions for each state to appear automatically, or let visitors navigate on their own.
+
+---
+
+### Step 1 | Add a multi-state box
+
+The first step is adding a multi-state box to your site directly from the Add panel. Drag the box to the desired location on your page.
+
+#### To add a multi-state box:
+
+Click **Add Elements ** on the left side of the Editor.  Click **Layout Tools**.  Click **Multi-state Boxes**.  Drag a multi-state box to the relevant location on your page.
+
+> **Use multi-state boxes inside repeaters:**
+>
+> Once you add a multi-state box to a [repeater](https://support.wix.com/en/article/studio-editor-adding-and-customizing-repeaters) item, it's automatically added to the rest of the items with the exact same design. This is useful for lists with repeating items like FAQs or product galleries.
+
+---
+
+### Step 2 | Add and design the states
+
+Once you've added the box, design the states that it displays. You can customize these states however you choose: Use them for small badges like product availability (e.g., "New", "Out of Stock"), or create a completely different design for each state.
+
+Click below to learn how to:
+
+### Select and design a state
+
+The states that you create are the [child elements](https://support.wix.com/en/article/studio-editor-working-with-layers) of the multi-state box. You can see and customize each one individually directly from the Manage States panel.
+**To select and design a state:**
+1. Select the multi-state box.
+2. Click **Manage States**.
+3. Click a state in the list.
+4. Add elements and design the state as you wish.
+
+**Tip:** While designing the states, code is not required. This means everyone can customize them – not just developers.
+
+### Add a state
+
+You can add as many states as you need to your multi-state box.
+**To add a new state:**
+1. Select the multi-state box.
+2. Click **Manage States**.
+3. Click **Add New State**.
+4. Add an ID for the state:
+
+1. Hover over the new state and click the More Actions icon .
+2. Click** Edit ID**.** **
+3. Enter a new ID for this state.
+4. Click **Done**.
+
+### Rename a state
+
+Enter a unique ID for each of your states. While writing the code that defines when the states appear, this is the IDs you'll need to use.
+**To rename a state:**
+1. Select the multi-state box.
+2. Click **Manage States**.
+3. Click the **More Actions** icon  next to the current state's name.
+4. Click **Edit ID**.
+5. Enter the new ID in the text box and click **Done**.
+
+### Remove a state
+
+1. Select the multi-state box.
+2. Click **Manage States**.
+3. Click the **More Actions** icon  next to the current state's name.
+4. Click **Delete**.
+
+### Reorder states
+
+For your convenience, you can move states in the Manage States panel by dragging and dropping them.
+
+1. Select the multi-state box.
+2. Click **Manage States**.
+3. Click and drag the **Reorder** icon  up or down to change the order of the states.
+
+> **Design tip:**
+>
+> The states can have different height properties, which allow you to reveal additional info for example. However, the width of your states always stays the same.
+
+---
+
+### Step 3 | Add code
+
+The last step to make the multi-state box functional is adding code that controls when each state appears.
+
+Using the functions and events available in the [Velo API](https://www.wix.com/velo/reference/$w.MultiStateBox.html) for multi-state boxes, you can define and implement rules for displaying and navigating your states.
+
+> **Important:**
+>
+> While adding the relevant code, make sure you wrote the state IDs correctly, with the exact same spelling and capitalization.
+
+> **Next:**
+>
+> Learn more about [working with your multi-state box and code](https://support.wix.com/en/article/velo-tutorial-working-with-multi-state-boxes-and-code).
+
+---
+Source: https://support.wix.com/en/article/studio-editor-using-multi-state-boxes

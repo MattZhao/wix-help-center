@@ -1,0 +1,88 @@
+---
+title: "Enterprise Solution: Adding and Setting Up HubSpot Integration"
+---
+
+Connect your Wix Studio for enterprise account to your HubSpot account so you always have the most up-to-date information. Using our automations, you can send data like store orders and form submissions to HubSpot, as soon as they're captured in Wix.
+
+> **Important:**
+>
+> - Wix integrates with HubSpot using API version 3. For the most up-to-date information on HubSpot's API capabilities, please consult their documentation.
+> - Only site Owners and Co-owners can manage the HubSpot integration.
+> - Mapping HubSpot leads is only available for premium HubSpot accounts.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/studio/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-salesforce-integration-en).
+
+---
+
+### Step 1 | Add and connect HubSpot
+
+Contact your enterprise solution success manager to connect HubSpot to your Wix Studio for enterprise account. When connecting your HubSpot account, you are providing permissions for Wix to access your spreadsheet data. You can remove permissions at any time from your HubSpot account.
+
+#### To connect your Wix Studio enterprise solution site to HubSpot:
+
+[Go to Manage Apps](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Apps&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/manage-installed-apps/) in the relevant site's dashboard.  Click **HubSpot**.   Click **Connect**.
+
+[Sign in to your HubSpot account](https://login.hubspot.com/).
+
+---
+
+### Step 2 | Create an automation
+
+Once you have connected your HubSpot account, you can now create an automation with HubSpot as the action.
+
+#### To create an automation:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/triggers/) in your site's dashboard.  Click **+ New Automation**.   Click **+ Start from Scratch**.  Give your automation a title and choose the relevant app under **Trigger**, including: Wix Forms, Wix Stores, Wix Bookings, Wix Events, etc.   Set up the trigger based on the app you selected.
+
+---
+
+### Step 3 | Map data from the trigger to HubSpot
+
+Next, you need to match the data from your chosen trigger to the relevant HubSpot object and fields. This ensures the data from Wix gets to the right place on HubSpot.
+
+For example, if your trigger is a new form submission, you will need to match the customer's data to the relevant object fields in HubSpot.
+
+#### To map data from the trigger to HubSpot:
+
+Scroll down to **Action** and select **Update** **HubSpot**.  Select the relevant object from the **Select which object to update in HubSpot** drop-down: **Contacts**, **Companies**, **Deals**,** Leads** and **Quotes**.   Click **Map Fields**.   Choose the relevant Wix data under **Data from trigger**, so the right **HubSpot properties **get updated.  (Optional) Click **+ Add Field** to collect more information and send it to your HubSpot account.   Click **Save**.
+
+---
+
+### Step 4 | Activate automation
+
+Click **Activate** to make your automation live. Now, every time the automation is triggered (e.g. whenever a new store order is placed), the data you mapped from Wix will be updated in the relevant HubSpot fields.
+
+For example, if you created an automation with a form submission trigger, every time a site visitor fills in that form, their submission details are sent to the relevant HubSpot object and fields.
+
+---
+
+### FAQs
+
+Click a question below to learn more about the Wix Studio for enterprise HubSpot integration.
+
+### Do HubSpot automations count towards my automations quota?
+
+Yes, this automation counts towards your automations quota.
+
+### What is a HubSpot object?
+
+A HubSpot object is a contact, lead, account or order, whose data fields you can update (e.g. first name, last name, email address).
+
+### What is a HubSpot required field?
+
+These are the fields you must map when updating your records. The required fields are based on each of your HubSpot entities.
+
+### Why can't I see some of my HubSpot fields while mapping them?
+
+If you set a HubSpot field to read-only, it cannot be updated through the automation. Wix will only show the HubSpot fields that can be updated.
+
+### What happens if I delete a field in the Wix Form that is mapped to HubSpot?
+
+The automation stays active and data will continue to be transferred to HubSpot – just without the field you deleted. Having said that, any previous data from the deleted field will still appear on HubSpot.
+
+### What happens if I rename a field in the Wix form mapped to HubSpot?
+
+Renaming a field does not impact the automation, as the mapping is based on the ID of the field, not its name.
+
+---
+Source: https://support.wix.com/en/article/enterprise-solution-adding-and-setting-up-hubspot-integration

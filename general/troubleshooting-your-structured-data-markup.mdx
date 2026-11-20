@@ -1,0 +1,86 @@
+---
+title: "Troubleshooting Your Structured Data Markup"
+---
+
+> **Important:**
+>
+> - Structured data markup is an advanced topic. Wix Customer Care cannot help you with any changes to your site's markup or submissions of it.
+> - Need help from an expert? You can [hire an SEO professional](https://www.wix.com/arena/dynamic-brief/welcome-page?entry=SEOWizard&serviceType=6&innerType=1&origin=seo_support_articles) from the Wix Marketplace.
+
+Structured data markup is a standardized format for giving search engines detailed information about your site's pages. Adding markup to your pages can help improve your website's search results and ranking.
+
+Search engines like Google can also use markup to [create rich results](https://developers.google.com/search/docs/advanced/structured-data/search-gallery) like article previews, product previews, and FAQs for your page's search results. [Learn More](https://support.wix.com/en/article/adding-structured-data-markup-to-your-sites-pages-2546962)
+
+> **Tip:**
+>
+> If you want to validate your markup for eligibility for rich results or you're having issues with your markup, you can check it by pasting it into the [Google Rich Results Tool](https://search.google.com/test/rich-results?utm_campaign=sdtt&utm_medium=code).
+
+Follow the steps below if the Rich Results Tool says your markup is eligible for rich results, but you still have errors when you add it to your site's pages.
+
+---
+
+### Step 1 | Check the Format of Your Markup
+
+Wix site pages can only use markup in a[ JSON-LD format](https://json-ld.org/). You can see an example of JSON-LD markup below.
+
+`\<script type="application/ld+json">
+\{
+    "@context":"https://schema.org",
+    "@type":"Website",
+    "name":"Wix.com",
+    "alternateName":"Wix",
+    "url":"https://wwww.wix.com"
+\}
+\</script>`
+
+You should also make sure that your code:
+
+Begins with the HTML tag **\<script type="application/ld+json">** and ends with **\</script>**  Uses only one script tag and includes only one main markup type  Has less than 7,000 characters
+
+> **Note:**
+>
+> A total of 8,000 characters of markup can be added in total to a page.
+
+---
+
+### Step 2 | Check for HTML tags inside your JSON-LD
+
+---
+
+### Step 3 | Check your punctuation
+
+Within the your markup, each JSON-LD element must be wrapped in curly brackets** \{ \}** . Each element in the JSON-LD must also separated from the next one with a comma. However, the last element shouldn't have a comma after it.
+
+You should also make sure that your code uses straight quotes "". Using curly quotes “”  will mean your code fails validation.
+
+Below is an example of markup with incorrect punctuation. Note the missing comma after the "name" line which causes a validation error.
+
+Here's the same markup with the comma added after the "name" line to fix the validation error.
+
+---
+
+### Step 4 | Check your fields for spaces
+
+All fields have the format: "key":"content" and each field must be on a single line. Pressing 'Enter' to create a line break will make a field fail validation.
+
+However, the field in this example will fail validation because part of it is on a new line:
+
+---
+
+> **Important:**
+>
+> Google guidelines require the information in the markup to be part of your page. If some of the information included in your markup doesn't appear in the page, it might not show as a rich result. [Learn More](https://developers.google.com/search/docs/guides/sd-policies#quality-guidelines_1)
+
+> **Tip:**
+>
+> Learn more about the markup types supported by:
+> - [Google](https://developers.google.com/search/docs/guides/search-gallery)
+> - [Bing](https://www.bing.com/webmaster/help/marking-up-your-site-with-structured-data-3a93e731)
+> - [Yandex](https://yandex.com/support/webmaster/site-content/data-transmit.html)
+
+Get help with your SEO from a
+        professional.
+    [ Hire an Expert ](https://www.wix.com/marketplace/brief-auto-match/marketing-promoting?entry=promote&origin=seo-articles&startStep=SERVICES&deep=false)
+
+---
+Source: https://support.wix.com/en/article/troubleshooting-your-structured-data-markup

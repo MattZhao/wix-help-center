@@ -1,0 +1,223 @@
+---
+title: "Tracking Google Ads Conversions Using Google Tag Manager"
+---
+
+Google Ads conversion tracking is a way to measure the conversion actions that users take on your Wix site after they click or view your Google ads. For example, a visitor might finalize a purchase after clicking an ad.
+
+You can use Google Tag Manager to track your Google Ads conversion actions by setting up variables, triggers, and tags that use the Conversion ID and Label ID of the action you want to track.
+
+> **Important:**
+>
+> - If you don't need to set up any special tracking, it's a good idea to [use Google Analytics instead](https://support.wix.com/en/article/tracking-events-on-your-wix-site-with-a-google-analytics-property), as it captures all essential business events.
+> - By using this service, you are engaging directly with a third-party service provider. We recommend reviewing the service provider's Privacy Policy and Terms of Use prior to your use of such third-party service. You acknowledge that we are not liable for any loss or damage resulting from your use of such third-party service, including any liability arising from any personal data exchanged between you and such third-party.
+
+---
+
+### Step 1 | Create a conversion action in Google Ads
+
+First, [create a conversion action](https://support.google.com/google-ads/answer/12216424?sjid=6783535481547499834-EU) in your Google Ads account. This gives you the Conversion ID and Conversion label that you need to use in Google Tag Manager to track the action.
+
+> **Before you begin:**
+>
+> You need to [connect Google Tag Manager to your site](https://support.wix.com/en/article/connecting-your-google-tag-manager-account-to-your-wix-site) before you can set up conversion tracking.
+
+---
+
+### Step 2 | Set up your conversion action in Google Tag Manager
+
+Now that you have created a conversion action, set it up in Google Tag Manager. Choose a conversion type and set up the action. You can create an eCommerce conversion, form submission conversion, or click button conversion.
+
+#### Create an eCommerce conversion based on purchase
+
+After you've created your conversion action, set up 2 variables in your Google Tag Manager account. Then, create 2 triggers that use these variables so that you can track your conversion action. Finally, you can start tracking the conversion action by creating 2 tags.
+
+> **Note:**
+>
+> Wix fires a special collection of business events that cover the recommended by Google conversions. Do not use the Thank You page capturing method to track eCommerce-based conversions.
+
+Click the steps below to learn more.
+
+### a | Create 2 variables
+
+1. Go to [Google Tag Manager](https://tagmanager.google.com/).
+2. (If required) Select the container that you want to create variables in.
+3. Click **Variables**.
+4. Click **New** under **User-Defined Variables**.
+5. Enter "dl_transaction_id" as the name for the variable.
+6. Click **Choose a variable type to begin setup**.
+7. Select **Data Layer Variable **under **Page Variables**.
+8. Enter "ecommerce.purchase.actionField.id" under **Data Layer Variable Name**.
+9. Click **Save**.
+10. Click **New** under **User-Defined Variables**.
+11. Enter "dl_conversion_value" as the name for the variable.
+12. Click **Choose a variable type to begin setup**.
+13. Select **Data Layer Variable **under **Page Variables**.
+14. Enter "ecommerce.purchase.actionField.revenue" under **Data Layer Variable Name**.
+15. Click **Save**.
+
+### b | Create 2 triggers
+
+1. Click **Triggers**.
+2. Click **New**.
+3. Enter a name for the trigger.
+
+**Tip: **We recommend "tr_pageview" or similar.
+4. Click **Choose a trigger type to begin setup**.
+5. Select **Custom Event** under **Other**.
+6. Enter "Pageview" under **Event name**.
+7. Click **Save**.
+8. Click **New**.
+9. Enter a name for the trigger.
+
+**Tip: **We recommend "tr_purchase" or similar.
+10. Click **Choose a trigger type to begin setup**.
+11. Select **Custom Event** under **Other**.
+12. Enter "Purchase" under **Event name**.
+13. Click **Save**.
+
+### c | Create 2 tags
+
+1. Click **Tags**.
+2. Click **New**.
+3. Enter a name for the tag.
+
+**Tip **We recommend "conversion_linker" or similar.
+4. Click **Choose a tag type to begin setup**.
+5. Select **Conversion Linker**.
+6. Click **Choose a trigger to make this tag fire**.
+7. Select **tr_pageview**.
+8. Click **Save**.
+9. Click **New**.
+10. Enter a name for the tag.
+
+**Tip: **We recommend "conversion_tracking" or similar.
+11. Click **Choose a tag type to begin setup**.
+12. Select **Google Ads Conversion Tracking**.
+13. Enter the following information:
+
+- **Conversion ID:** Enter your Conversion ID from your Google Ads conversion action.
+- **Conversion Label:** Enter your Conversion Label ID from your Google Ads conversion action.
+- **Conversion Value:** Enter "dl_conversion_value".
+- **Transaction ID:** Enter "dl_transaction_id".
+- **Currency Code: **Enter your 3-character currency code.
+14. Click **Choose a trigger to make this tag fire**.
+15. Select **tr_purchase**.
+16. Click **Save**.
+
+> **Create other types of eCommerce conversions:**
+>
+> Other types of eCommerce conversions you can set up are "View product page", "Add to cart", and "Begin checkout". See the FAQ below to learn more.
+
+#### Create a form submission conversion
+
+There are 2 types of events you can capture and track:
+
+**Lead event capturing: **Triggered when a site visitor submits a form  **Thank you page capturing: **Triggered if a site visitor is redirected to a form's Thank You page after submitting the form.
+
+**Lead event capturing (recommended)**
+
+### a | Create a variable
+
+1. Go to [Google Tag Manager](https://tagmanager.google.com/).
+2. Click **Variables**.
+3. Click **New** under **User-Defined Variables**.
+4. Enter "dl_event_label" as the name for the variable.
+5. Click **Choose a variable type** to begin setup.
+6. Select **Data Layer Variable** under **Page Variables**.
+7. Enter "event_label" under **Data Layer Variable Name**.
+8. Click **Save**.
+
+### b | Create a trigger
+
+1. Click **Triggers**.
+2. Click **New**.
+3. Enter a name for the trigger.
+
+**Tip:** We recommend "tr_form_submit" or similar.
+4. Click **Choose a trigger type** to begin setup.
+5. Select **Custom Event** under **Other**.
+6. Enter "lead" under **Event name**.
+7. (Optional) If you want to track 2 or more forms separately, select **Some Custom Events**, dl_event_label contains “your form name”.
+
+**Note: **You can find your form's name in the [form's settings](https://support.wix.com/en/article/wix-forms-adding-and-setting-up-a-form-on-your-site#step-3-edit-your-forms-settings-and-save) in your Wix site's dashboard.
+8. Click **Save**.
+
+**Thank You page capturing**
+
+### a | Create a Thank You page
+
+[Create a Thank You page](https://support.wix.com/en/article/wix-forms-customizing-the-success-message-and-thank-you-page-of-site-forms#creating-a-custom-thank-you-page) that your site visitor will be redirected to after successfully submitting a form.
+
+### b | Create a trigger
+
+1. Go to [Google Tag Manager](https://tagmanager.google.com/).
+2. Click **Triggers**.
+3. Click **New**.
+4. Enter a name for the trigger.
+
+**Tip:** We recommend "tr_form_submit" or similar.
+5. Click **Choose a trigger type** to begin setup.
+6. Select **Custom Event** under **Other**.
+7. Enter "Pageview" under **Event name**.
+8. Set the URL of the tracked Thank You page:
+
+1. Select **Some custom events**.
+2. Enter the **Page URL** that contains your Thank You page URL part.
+9. Click **Save**.
+
+#### Create click button conversions
+
+Track conversions for when site visitors click phone, e-mail, and WhatsApp buttons.
+
+### a | Create a variable
+
+1. Go to [Google Tag Manager](https://tagmanager.google.com/).
+2. Click **Variables**.
+3. Click **New** under **User-Defined Variables**.
+4. Enter "dl_element-url" as the name for the variable.
+5. Click **Choose a variable type** to begin setup.
+6. Select **Data Layer Variable** under **Page Variables**.
+7. Enter "gtm.elementUrl" under **Data Layer Variable Name**.
+8. Click **Save**.
+
+### b | Create a trigger
+
+1. Go to **Variables **and select **Built in variables**.
+
+**Note: **Make sure that all the click variables are selected.
+2. Click **Triggers**.
+3. Click **New**.
+4. Select the **Click – Just links** trigger.
+5. Enter a name for the trigger.
+
+**Tip:** We recommend "tr_click_email" or similar.
+6. Under **This trigger fires on **enter the value for the relevant use case:
+
+- **Email address: **mailto / or email address
+- **Telephone number: **Tel: / or telephone number
+- **WhatsApp: **wa.me
+
+---
+
+### FAQs
+
+Click a question to learn more about tracking Google Ads conversions.
+
+### Can I use custom code to track my Google Ads instead?
+
+Yes, you can also track Google Ads conversion actions by [adding custom code to your site](https://support.wix.com/en/article/tracking-google-ads-conversions-using-wix-custom-code).
+
+### My site uses a cookie banner - does this affect the tracking in any way?
+
+If your site uses a cookie banner, conversions’ data will only be sent to Google if a visitor provides consent and approves using the relevant cookies. However, if you don't have a cookie banner and a site visitor comes from a country that requires consent (e.g. those covered by GDPR) no data is sent to Google. Google only tracks sessions where visitors give explicit consent.
+
+### Are there other types of eCommerce conversions?
+
+Yes, other types of eCommerce conversions you can set up are:
+- **View product page: **The custom trigger name is viewContent.
+- **Add to cart: **The custom trigger name is addToCart.
+- **Begin checkout: **The custom trigger name is checkout.
+**Note:** Variables are not required for any of these conversions.
+
+---
+Source: https://support.wix.com/en/article/tracking-google-ads-conversions-using-google-tag-manager

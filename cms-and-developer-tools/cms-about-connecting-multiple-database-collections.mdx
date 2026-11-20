@@ -1,0 +1,34 @@
+---
+title: "CMS: About Connecting Multiple Database Collections"
+---
+
+Each collection in your database is a separate entity. However, you can connect the data in your different collections so that they can work together to display related information. This can be especially useful when working with [tables, galleries](https://support.wix.com/en/article/cms-about-displaying-collection-content-in-a-table-or-gallery), and [repeaters](https://support.wix.com/en/article/cms-formerly-content-manager-about-displaying-collection-content-in-a-repeater).
+
+### Reference Fields
+
+When you create [reference fields](https://support.wix.com/en/article/adding-a-reference-field-to-a-cms-collection), you create a pointer to a different collection, creating a connection between the collections in the actual [structure](https://support.wix.com/en/article/cms-about-the-structure-of-your-collection) of the primary collection. This connection gives you access to all the information in all the referenced collections from within the primary collection. 
+
+When you connect a dataset to a collection that has reference fields, that dataset automatically has access to all the fields in all the referenced collections. This means you can connect page elements  to fields from all the connected collections using a single dataset.
+
+You can also filter a dataset by a reference field. See below for a description.
+
+> **Note:**
+>
+> Dynamic page URLs cannot be based on reference fields.
+
+### Filtering Datasets
+
+[Filtering datasets](https://support.wix.com/en/article/cms-displaying-content-from-multiple-collections-using-datasets) lets you create connections between collections that both have a field with the same data without using a reference field. This lets you set up one dataset to respond to the other, where the first dataset displays only those items whose field values match the same field value for the current item of the second dataset. On a dynamic item page, for example, a filtered dataset will display all the information from the second dataset that matches the current item being displayed on the page. 
+
+What's important to remember is that the connection exists only between the datasets on that page. No other datasets are affected. If you add another dataset connected to one of those collections, you will need to filter it again in order to create a connection.
+
+> **Note:**
+>
+> You can filter a dataset by a regular field or a reference field.
+
+### How It All Works Together
+
+Once you get your collections working together, you have additional options for building your pages. Let’s look at some ideas.
+
+---
+Source: https://support.wix.com/en/article/cms-about-connecting-multiple-database-collections

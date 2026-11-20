@@ -1,0 +1,109 @@
+---
+title: "Wix Hotels by HotelRunner: Connecting Expedia to Your Site"
+---
+
+Expedia integrates with Wix Hotels by HotelRunner to streamline your booking management. Before connecting, ensure all room rates and availability are set on the Wix Hotels by HotelRunner dashboard, as this integration overwrites your Expedia calendar.
+
+---
+
+### Step 1 | Important information before connecting Expedia
+
+Before connecting, make sure to [set the rates and availability of all rooms on the Inventory Calendar](https://support.wix.com/en/article/wix-hotels-by-hotelrunner-managing-prices-and-availability-with-the-inventory-calendar). After connecting, HotelRunner will transfer all of your inventory to Expedia, replacing the existing calendar there. All updates must be made through Wix, as your extranet calendar will be locked.  Only the reservations you receive after the connection is complete will transfer to your Wix Hotels by HotelRunner dashboard. You can manually [add future reservations](https://support.wix.com/en/article/wix-hotels-by-hotelrunner-managing-your-reservations) that you received before connecting with Expedia to ensure your availability is correct.  You can connect only one Hotel ID from each channel to each Wix Hotels by HotelRunner account. Group Hotels or different Hotel IDs cannot be connected to the same Wix Hotels by HotelRunner account.  Before the integration, to open your slots on Expedia, please update your rooms with two weeks of rates and availability for the channel manager to fully register your rooms.  Ensure your account on Expedia is active and the room types are created and updated for at least three months.
+
+---
+
+### Step 2 | Approve Wix Hotels by HotelRunner for connection on Expedia
+
+To integrate your Expedia account with Wix Hotels by HotelRunner, log in to the Expedia extranet and set HotelRunner as your provider for updating rates and availability. Then, navigate to the Channel Manager in your Wix Hotels by HotelRunner dashboard, connect to Expedia, and enter your Expedia Hotel ID.
+
+> **Note:**
+>
+> For further assistance, [visit the Expedia help center](https://www.expedia.com/helpcenter/).
+
+#### To approve Wix Hotels by HotelRunner for connection on Expedia:
+
+Log in to the Expedia extranet.  Click **Room and Rates** in the menu on the left.   Click **Expedia Connectivity Settings**.   Search for "HotelRunner" in both the **Provider for updating rates** **and availability** and **Provider for receiving reservations** drop-downs.   Copy and paste your **Hotel ID** at the top.   Click **Save and continue**.   [Go to the Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in your Wix Hotels by HotelRunner dashboard.   Click **Connect** next to Expedia.   Enter your Expedia **Hotel ID**.  Click **Save and Continue**.
+
+---
+
+### Step 3 | Map your room types
+
+After completing the authorization, Wix Hotels by HotelRunner will fetch your active room types from Expedia.
+
+> **Important:**
+>
+> In the channels where you see the HotelRunner standard rate, it should always be selected as “Main Rate” and “Don't Send”.
+
+#### To map your room types:
+
+Collect your room IDs on the Expedia extranet in **Room Details** under **Property**.  In another tab on your browser, go to [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.   Click **View channel details** next to **Expedia**.  Click **Fetch room types**.   Hover over each room type and click **Expand**.   Match your Expedia room types with your room types on Wix Hotels by HotelRunner using the drop-downs.
+
+**Note: **Make sure to double-check you are matching the correct room types across both platforms, as there may be differences in room type names.   Click **Save** at the bottom.
+
+---
+
+### Step 4 | Adjust your advanced settings
+
+With the advanced settings for the Expedia integration, you can ensure your room availability doesn't fall below a set number using the base availability. You can also adjust room rates by specifying a different price to send to Expedia. Additionally, you can choose to stop sales for certain rate types or mark rates as read-only to prevent updates.
+
+#### To adjust your advanced settings:
+
+[Go to Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the Wix Hotels by HotelRunner dashboard.  Click **View channel details** next to **Expedia**.  Hover over the relevant room type and click **Expand**.  Click **Advanced Settings** at the top right.   Select the relevant option from the **Room type of your property** drop-down.   Choose the relevant option from the **Allocation type** drop-down:
+
+- **No changes:** Keeps the current availability settings without making any adjustments. Choose this option when you’re confident that your existing inventory data is accurate and up-to-date.
+- **Number of available beds in available rooms: **Sets the availability based on the number of beds in the rooms that are available. For example, if you manage a hostel where each room has multiple beds, and you want to track and sell each bed individually within the available rooms.
+- **Number of available beds:** Sets the availability based on the total number of beds available. For example, a dormitory, where beds can be booked individually, regardless of which specific room they are in.
+- **Number of available rooms: **Sets the availability based on the total number of rooms available. Use this option for traditional hotels where you want to set availability based on entire rooms being booked, without focusing on the number of beds in each room.
+    Enter the relevant number in the **Base availability** field. Base** **availability is the minimum number of rooms you always want to keep available, no matter how many you sell. For example, if you set it to 5, your system will always show at least 5 rooms available, even if others are booked. We recommend you **do not** make any changes here, as it can cause **overbooking**.  Select **Yes** under **Commission included**.   Enter the relevant **Adjustment** amount.   Choose either a percentage adjustment  or a monetary  adjustment, and choose whether the adjustment is an increase **+** or a decrease **-**.   Enable the **Main rate** toggle to set this rate type as the main rate.  Enable the **Read-only **toggle to update reservations and availability of the room.
+
+**Note: **Other updates such as rate, minimum stay, stop sell etc, are not affected.  Enable the **Send price** toggle to update only availability for the room type. The price for this rate type won’t be sent to Expedia.   Repeat steps 9-14 for all room types.   Click **Save**.
+
+### Show me how to use advanced settings to increase my room rates on Expedia
+
+For example, if you want to send your rate for a room type to Expedia at a 25% higher rate than on your Wix Hotels by HotelRunner calendar:
+
+1. In the drop-down next to the room type, select your room on Wix that corresponds to the room in the target channel.
+2. Select **Don't send.**
+3. Type **25** in the **Adjustment** field.
+4. Click the **percentage adjustment** icon .
+5. Click the **Increase** icon **+**.
+6. Enable the **Main rate** toggle.
+7. Enable the **Send price** toggle.
+8. Repeat steps 1-6 above for all relevant room types.
+9. Click **Save** at the bottom.
+
+---
+
+### Step 5 | Activate the Expedia connection
+
+After completing your room mapping, click **Activate**. Once the Expedia connection is complete, all your inventory (rates, availability, and restrictions) on your Wix Hotels by HotelRunner calendar will be transferred to your Expedia account. You can review and update your room mapping from the [Channel Manager](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fapp%2F826670ba-3a6b-4157-ac72-7c4fca9ce220%2F1a6e0874-2039-49cf-bef3-9138bb5c3b16%7C4%3F&title=Select+a+site&primaryButtonText=Open+Channel+Manager) in the dashboard at any time.
+
+---
+
+### Frequently Asked Questions (FAQs)
+
+Click a question below to learn more.
+
+### What should I do before connecting Wix Hotels by HotelRunner with Expedia?
+
+Make sure all your room rates and availability are set on the inventory calendar in the Wix Hotels by HotelRunner dashboard. This setup will be transferred to Expedia, and any updates must be managed from Wix after the connection. 
+Update your rooms with 2 weeks of rates and availability in Wix Hotels by HotelRunner. This allows the channel manager to fetch your rooms into the system.
+
+### How are reservations handled after the connection?
+
+All future reservations will be fetched into your Wix Hotels by HotelRunner dashboard. Reservations with an expired check-in date will not be fetched into your Wix Hotels by HotelRunner dashboard.
+
+### Can I connect multiple Hotel IDs or group hotels to one Wix Hotels by HotelRunner account?
+
+No, you can only connect one Hotel ID from each channel to a single Wix Hotels by HotelRunner account. Group hotels or different Hotel IDs require separate accounts.
+
+### What happens to blocked dates on my Expedia calendar after integration?
+
+Blocked dates on your Expedia calendar will remain unchanged. To manage these dates, you’ll need to unblock them from the Expedia extranet.
+
+### How do I map room types between Wix Hotels by HotelRunner and Expedia?
+
+Use room IDs to match your rooms between the two platforms. Ensure that room types and prices align, such as mapping both “Junior Suite for 1 person” and “Junior Suite for 2 people.”
+
+---
+Source: https://support.wix.com/en/article/wix-hotels-by-hotelrunner-connecting-expedia-to-your-site

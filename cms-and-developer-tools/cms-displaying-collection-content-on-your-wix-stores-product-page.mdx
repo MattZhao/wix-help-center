@@ -1,0 +1,148 @@
+---
+title: "CMS: Displaying Collection Content on Your Wix Stores Product Page"
+---
+
+Your [Stores Product page](https://support.wix.com/en/article/wix-stores-customizing-your-product-page) has different versions for each of your products that share the same layout. Using the [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview), you can now customize this page to include additional product details that are saved in a separate CMS collection. You can also hide default Product page contents and instead display them in [supported elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) for more control over the page layout. This gives you the ability to personalize your Product page and enhance your product listings, creating a richer experience for your customers.
+
+> **Before you begin:**
+>
+> - Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Stores with the CMS. Your Stores Wix app collection is read-only and automatically includes all the product details you've set up in Wix Stores.
+
+---
+
+### Step 1 | Create a collection that references your Wix app collection
+
+If you want your Product page to include details about your products that do not already exist in Wix Stores, you need to create a CMS collection with the additional info. For each item in the collection, you'll also need a reference field that connects to the relevant product in your Stores Wix app collection.
+
+> **Tip:**
+>
+> If you don't need to show additional product info, and instead, only want to use existing Wix Stores data in connected page elements on the Product page, skip this step.
+
+#### To create a CMS collection that references your Stores Wix app collection:
+
+Create a [Multiple items (Default) collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) where you will keep the additional info you want to integrate into your Product page.   Click **+ Add Item** to add items for each product you want to save additional details about.   Click **+ Add Field **to add fields for each type of content you want to save (e.g. [Rich Content](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-rich-content-and-adding-it-to-a-dynamic-page)).   Click the relevant cells to add your content to each item.   Add a Reference field type and connect it to the Stores Wix app collection: 
+
+1. Click **Manage Fields **then click **+ Add Field**.
+2. Select **Reference** and click **Choose Field Type**.
+
+**Tip: **Select the **Multi-reference **field if you want to use an item's content for more than one product.
+3. Enter the **Field name**.
+4. (Velo only) If necessary, update the **Field ID**, which is used in the site's code. You cannot update this ID later.
+5. Click the **Referenced Collection **drop-down and select **Products **under **Stores**.
+6. (Optional) Enter help text to include a tooltip in your collection next to the field name.
+7. Click **Save**
+
+For each item, click the reference field and select the relevant product. You can select multiple products if you added a multi-reference field in the previous step.
+
+---
+
+### Step 2 | Set up datasets and connect elements to them
+
+[Datasets](https://support.wix.com/en/article/cms-about-datasets) are the tools that link page elements like text, buttons, and images to collection content. They facilitate the connections between the elements and your collection field contents.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Product page:
+
+1. Click **Pages & Menu ** on the left side of the editor.
+2. Click **Store Pages **and select the **Product Page**.
+3. Add a dataset that connects to your 'Details' CMS collection and filters for your reference or multi-reference field:
+
+**Note: **Skip this step if you do not need to show additional details from a 'Details' CMS collection.  
+
+1. Click **CMS **** **on the left.
+2. Click **Add Content Elements**.
+3. Click **Dataset**.
+4. Click the **Choose a collection **drop-down and select your 'Details' collection.
+5. Edit the **Dataset name** if needed and click **Create**.
+6. Click **+ Add Filter **under **Filter **in the dataset settings.
+7. Click the **Field **drop-down, select your **Reference (Products)** field or **Multi-Reference (Products)** field, then click **Add Filter**.
+[image: Screenshot of adding a reference filter to your 'Details' dataset.]
+1. Add a dataset that connects to your Stores Wix app collection:
+
+1. Click **Add a Dataset** at the bottom of the panel on the right.
+2. Click the **Choose a collection **drop-down and select the **Products **collection under **Stores**.
+3. Edit the **Dataset name** if needed and click **Create**.
+[image: Screenshot of creating a dataset that connects to the Stores Wix app collection.]
+1. Add a URL slug filter to your Stores/Products dataset:
+
+1. Click the **More Actions **icon  next to your Stores/Products dataset and select **Dataset settings**.
+2. Click **+ Add Filter **under **Filter**.
+3. Click the **Field **drop-down and select **Slug (Text)**.
+4. Leave **is **selected as the **Condition**.
+5. Under **Value source**, select **URL Slug**.
+6. Click **Add Filter**.
+[image: Screenshot of adding a URL slug filter to the Wix app collection.]
+1. Add the [supported elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that you want to connect.
+2. [Connect the elements](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset) to the relevant fields in the relevant dataset: 
+
+- **Details dataset: **Connect to the collection fields in this dataset to use content from your 'Details' CMS collection.
+- **Stores/Products dataset: **Connect to the collection fields in this dataset to use content from your Stores Wix app collection.
+
+**Tip: **You can add a button or image, then [connect its click action](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#wix-stores-actions) to the **Add to cart** dataset action to create your own 'Add to Cart' button. Similarly, connect to the **Open quick view **action to create a button that opens the ['Quick View' window](https://support.wix.com/en/article/wix-stores-customizing-the-quick-view-in-the-product-gallery).
+[image: Screenshot of connecting a Rich Content element to the Rich Content field.]
+1. (Optional) Hide default details from your Product Page widget:
+
+1. Click the **Product Page** element and select **Settings**. 
+
+**Note: **If you don't see **Settings**, you're using the [new Wix Stores Product Page](https://support.wix.com/en/article/wix-stores-customizing-the-new-product-page). Select the **Elements **icon  instead and uncheck the boxes next to each widget element you want to hide. Then skip ahead to step 9.
+2. Click the **Settings **tab.
+3. Uncheck the checkboxes next to each detail you want to hide from the Product page widget.
+4. Disable the toggle next to the relevant buttons or icons to hide them from the widget.
+5. If necessary, [customize your Product page widget further](https://support.wix.com/en/article/wix-stores-customizing-your-product-page).
+[image: Screenshot of customizing the Product Page widget.]
+1. Use the **Preview **toolbar to test the connections for the relevant products.
+2. Publish your site when you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Product page:
+
+1. Click **Pages**  on the left side of the editor.
+2. Under **Store Pages**, select the **Product Page**.
+3. Add a dataset that connects to your 'Details' CMS collection and filters for your reference or multi-reference field:
+
+**Note: **Skip this step if you do not need to show additional details from a 'Details' CMS collection.  
+
+1. Click **CMS **** **on the left.
+2. Click **Add Content Elements**.
+3. Click **Dataset**.
+4. Click the **Choose a collection **drop-down and select your 'Details' collection.
+5. Edit the **Dataset name** if needed and click **Create**.
+6. Click **+ Add Filter **under **Filter **in the dataset settings.
+7. Click the **Field **drop-down, select your **Reference (Products)** field or **Multi-Reference (Products)** field, then click **Add Filter**.
+[image: Screenshot of adding a reference filter to the 'Details' dataset.]
+1. Add a dataset that connects to your Stores Wix app collection:
+
+1. Click **Add a Dataset** at the bottom of the panel on the right.
+2. Click the **Choose a collection **drop-down and select the **Products **collection under **Stores**.
+3. Edit the **Dataset name** if needed and click **Create**.
+[image: Screenshot of creating a dataset that connects to the Stores Wix app collection.]
+1. Add a URL slug filter to your Stores/Products dataset:
+
+1. Click the **More Actions **icon  next to your Stores/Products dataset and select **Dataset settings**.
+2. Click **+ Add Filter **under **Filter**.
+3. Click the **Field **drop-down and select **Slug (Text)**.
+4. Leave **is **selected as the **Condition**.
+5. Under **Value source**, select **URL Slug**.
+6. Click **Add Filter**.
+[image: Screenshot of adding a URL Slug filter to the Wix app collection.]
+1. Add the [supported elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that you want to connect.
+2. [Connect the elements](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset) to the relevant fields in the relevant dataset: 
+
+- **Details dataset: **Connect to the collection fields in this dataset to use content from your 'Details' CMS collection.
+- **Stores/Products dataset: **Connect to the collection fields in this dataset to use content from your Stores Wix app collection.
+
+**Tip: **You can add a button or image, then [connect its click action](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#wix-stores-actions) to the **Add to cart** dataset action to create your own 'Add to Cart' button. Similarly, connect to the **Open quick view **action to create a button that opens the ['Quick View' window](https://support.wix.com/en/article/wix-stores-customizing-the-quick-view-in-the-product-gallery).
+[image: Screenshot of connecting a Rich Content element to the Rich Content collection field.]
+1. (Optional) Hide default details from your Product Page widget:
+
+1. Select your **Product Page **element and click the **Elements **icon .
+2. Uncheck the boxes next to each widget element you wish to hide in the Product Page widget.
+3. If necessary, [customize your Product page widget further](https://support.wix.com/en/article/wix-stores-customizing-the-new-product-page).
+[image: Screenshot of hiding details in the Product Page widget.]
+1. Use the **Preview **toolbar to test the connections for the relevant products.
+2. Publish your site when you are ready to make the changes go live.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-collection-content-on-your-wix-stores-product-page

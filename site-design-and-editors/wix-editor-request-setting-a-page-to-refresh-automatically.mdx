@@ -1,0 +1,27 @@
+---
+title: "Wix Editor Request: Setting a Page to Refresh Automatically"
+---
+
+Currently, Wix does not have an automatic refresh page feature.
+
+### In the meantime, you can use the following workaround to refresh your page:
+
+[Add the HTML code element](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget) in your Editor.Enter the code:
+\<script> var timer = null;
+function auto_reload()
+\{
+ top.location.href = '**Enter your URL destination here**';
+\} \</script>  \<body onload="timer = setTimeout('auto_reload()',**5000**);">
+**Note:** 5000 refreshes the page every 5 seconds. You can change the number to the amount of time you want.Save and publish your site.
+**Note: **Be aware that the script also asks if you want to refresh your Editor. Make sure you save before you refresh the Editor.
+
+> **Important:**
+>
+> This workaround only works if you have upgraded your site with a Premium Plan.
+
+You can also set certain elements, such as [videos](https://support.wix.com/en/article/single-video-player-adding-and-setting-up-the-single-video-player) and [audio](https://support.wix.com/en/article/adding-audio-to-your-site) to loop without your site being refreshed.
+
+We are always working to update and improve our products, and your feedback is hugely appreciated.
+
+---
+Source: https://support.wix.com/en/article/wix-editor-request-setting-a-page-to-refresh-automatically

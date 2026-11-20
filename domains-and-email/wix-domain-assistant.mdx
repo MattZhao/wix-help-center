@@ -1,0 +1,303 @@
+---
+title: "Wix Domain Assistant"
+---
+
+> **Important:**
+>
+> From **January 17th, 2024 **some legacy DNS records are no longer supported for sites connected to Wix by pointing. If your site is affected, you should have received an email notifying you to update the A Record and CNAME records in your domain's host account (not Wix). [Go to the pointing section below](https://support.wix.com/en/article/wix-domain-assistant-3777632#issues-with-a-domain-connected-via-pointing) and click **Check and update your DNS records** to learn which records your domain should have.
+
+This article can help you troubleshoot issues with the various domain connection methods. If you are experiencing issues with your domain connection, follow the steps below.
+
+> **Unsure if you've connected via name servers or pointing?**
+>
+> [Learn the difference between the two connection methods](https://support.wix.com/en/article/pointing-vs-name-servers-domain-connection-methods).
+
+---
+
+### Issues with a domain purchased from Wix
+
+To resolve issues with a domain purchased from Wix, make sure you have done the following:
+
+### Make sure your site is published
+
+New edits and changes to your site are not automatically reflected on your live site. Make sure to [publish your site](https://support.wix.com/en/article/wix-editor-publishing-your-site) to make your changes go live.
+
+**To publish your site: **
+1. Click **Publish **at the top right of your editor.
+2. (Optional) Click **View Site** to go to your live site.
+3. Click **Done**.
+
+### Make sure your domain hasn't expired
+
+If your domain has expired, you'll need to resolve the payment issue to reconnect your site.
+
+**To check the expiration date of your domain**:
+1. [Go to Premium Subscriptions](https://premium.wix.com/wix/api/mpContainerStaticController?originWidgetName=billings) in your Wix account.
+2. Check the information in the **Next Payment Due** column.
+
+**Note**: Click **Update Payment Method** under the relevant domain to renew your domain.
+
+**If your domain is not listed in Premium Subscriptions**:
+1. Make sure you've signed in to [the correct Wix account](https://support.wix.com/en/article/troubleshooter-unable-to-find-a-site-in-your-account).
+2. Check that your domain isn't in [the redemption period](https://support.wix.com/en/article/retrieving-an-expired-domain-during-the-redemption-period).
+3. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account to check if you've transferred your domain from another Wix account.
+
+**Note**: View the expiration date to the right of your domain name.
+
+**Note**: 
+- Learn how to [resolve payment issues](https://support.wix.com/en/article/updating-your-payment-method-for-a-failed-domain-payment) for your Wix domain.
+- If you've recently completed a payment for your domain, it can take up to 48 hours for your site to be live again. Learn [about domain propagation](https://support.wix.com/en/article/about-domain-propagation).
+
+### Check that your Premium or Studio plan subscription is still active
+
+You must have an active [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan subscription for your site to be connected to a domain.
+
+**To check the status of your plan subscription**:
+1. Go to [Premium Subscriptions](https://premium.wix.com/wix/api/mpContainerStaticController?originWidgetName=billings) in your Wix account.
+2. Click the Expand icon  to the relevant plan subscription.
+3. View the status of your plan next to **Status**.
+
+**Note**: If your plan status is **Expired**, you must [upgrade to a new plan](https://www.wix.com/my-account/site-selector/?buttonText=Upgrade%20this%20Site&title=Select+a+Site&autoSelectOnSingleSite=true&actionUrl=https://premium.wix.com/wix/api/premiumStart?siteGuid=\{\{metaSiteId\}\}&alwaysfs) to reconnect your site to your domain.
+
+### Check that your domain is assigned to the correct site
+
+In order for your live site to appear, your domain must be assigned to a site with a [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan.
+
+**To assign a domain in your account to a site**:
+1. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account.
+
+**Note**: If you have more than one domain in your account, scroll to the domain you wish to assign.
+2. Click **Assign** next to **Not Assigned to a Site**.
+
+**Note**: If your domain is currently assigned to a different site, click the **Domain Actions** icon  on the right and select **Assign to a Different Site**.
+3. Select a site and click **Next**.
+
+**Note**: If the site is currently connected to a different domain, choose an option:
+
+- **Redirect it to the primary domain:** Redirect your domain to the site's primary domain that is already connected.
+- **Replace the current primary domain:** Connect your domain and disconnect the site's current domain.
+4. Click **Assign**.
+
+### Check your domain's DNS records in your Wix account
+
+Domains purchased from Wix automatically have the correct DNS records configured in your account. If your A (Host) or CNAME (Aliases) records have been changed, you'll need to correct them for your site to reconnect.
+
+**To check and update your DNS records:**
+1. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account.
+
+**Note**: If you have more than one domain in your account, scroll to the relevant domain.
+2. Click the **Domain Actions **icon  on the right and select **Manage DNS Records**.
+3. Check that your DNS records reflect the correct records:
+
+1. **A record**: 185.230.63.107
+2. **CNAME record**: initial.wixdns.net
+4. (If needed) [Update your A (Host) and CNAME (Aliases) records](https://support.wix.com/en/article/resetting-your-default-a-and-cname-records).
+
+**Note:** After making changes to your DNS records, it may take up to **48 hours** for your domain to [propagate](https://support.wix.com/en/article/about-domain-propagation).
+
+### Check that your domain hasn't been deactivated due to ICANN regulations
+
+The Internet Corporation for Assigned Names & Numbers (ICANN) requires that all domain registrants confirm their domain contact information.
+
+If you were sent an email titled **Action Required - Confirm Your Contact Information** and did not click **Confirm**, your domain is deactivated. Learn more about [confirming your domain](https://support.wix.com/en/article/icann-confirming-your-domain-contact-information).
+
+**To reactivate your domain**:
+1. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account.
+
+**Note:** If you have more than one domain in your account, scroll to the relevant domain.
+2. Click **Resend Confirmation Email**.
+
+**Note:** If you don't see this option, you do not need to confirm your domain's contact email.
+3. Confirm your domain's contact information:
+
+1. [Access the business email](https://support.wix.com/en/article/viewing-and-updating-your-wix-domain-contact-information) for your domain's contact email address.
+2. Open the email titled **Confirm Your Domain Contact Information** (sent from wix-team@notifications.wix.com).
+3. Click **Confirm **in the email.
+
+**Note**: After clicking **Confirm** in your email, it may take up to 48 hours for your domain to propagate and display your site again. Learn more about [domain propagation](https://support.wix.com/en/article/about-domain-propagation).
+
+> Still experiencing issues after following the steps above? [Contact Wix Customer Care](https://support.wix.com/en/article/wix-domain-assistant-3777632#still-need-help).
+
+---
+
+### Issues with a domain connected via name servers
+
+To resolve issues with a domain connected via name servers, make sure you have done the following:
+
+### Make sure your site is published
+
+New edits and changes to your site are not automatically reflected on your live site. Make sure to [publish your site](https://support.wix.com/en/article/wix-editor-publishing-your-site) to make your changes go live.
+
+**To publish your site**:** **
+1. Click **Publish **at the top right of your editor.
+2. (Optional) Click **View Site** to be taken to your live site.
+3. Click **Done**.
+
+### Check that your Premium or Studio plan subscription is still active
+
+You must have an active [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan subscription for your site to be connected to a domain.
+
+**To check the status of your subscription**:
+1. Go to [My Premium plans](https://premium.wix.com/wix/api/mpContainerStaticController?originWidgetName=plans).
+2. Select the relevant subscription.
+3. View the status of your plan next to **Status**.
+
+**Note**: If your plan status is not **Active**, you must [upgrade to a new plan](https://www.wix.com/my-account/site-selector/?buttonText=Upgrade%20this%20Site&title=Select+a+Site&autoSelectOnSingleSite=true&actionUrl=https://premium.wix.com/wix/api/premiumStart?siteGuid=\{\{metaSiteId\}\}&alwaysfs) to reconnect your site to your domain.
+
+### Check that your domain is assigned to the correct site
+
+In order for your live site to appear, your domain must be assigned to a site with a [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan.
+
+**To assign a domain in your account to a site**:
+1. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account.
+
+**Note**: If you have more than one domain in your account, scroll to the domain you wish to assign.
+2. Click **Assign** next to **Not Assigned to a Site**.
+
+**Note**: If your domain is currently assigned to a different site, click the** **More Actions** **icon on the right and select **Assign to a Different Site**.
+3. Select a site and click **Next**.
+
+**Note**: If the site is currently connected to a different domain, choose an option:
+
+- **Redirect it to the primary domain:** Redirect your domain to the site's primary domain that is already connected.
+- **Replace the current primary domain:** Connect your domain and disconnect the site's current domain.
+4. Click **Assign**.
+
+### Check your DNS records
+
+Make sure your domain has the correct Wix name servers in your domain host's account. You can do a [DNS lookup](https://support.wix.com/en/article/checking-your-domains-dns-records-using-whatsmydnsnet) to check which name servers are currently resolving for your domain.
+
+Click [here](https://support.wix.com/en/article/name-servers-widget) to view your account-specific name server records.
+
+### Check your domain's status
+
+Your domain must have an active status in order to be connected to a site.
+
+**To check the status of your domain**:
+1. Go to [whois.com](https://www.whois.com/).
+2. Enter your domain name in the search field and click **WHOIS**.
+3. Review the domain status and expiry date.
+
+**Tip**: Go to the URL displayed below **Domain Status** to learn about each status.
+
+**Note**: Contact your domain registrar if you need help ensuring your domain is active.
+
+### Wait for your domain to propagate
+
+Any time you make a DNS change to your domain, it takes time for the propagation to complete. Domain propagation is the process whereby your domain host notifies the root DNS servers of the change in your domain settings, which in turn notifies your Internet Service Provider (ISP).
+
+If you've recently changed your name servers, it may take up to **48 hours** for your domain to complete propagation and appear connected to your site. Learn more about [domain propagation](https://support.wix.com/en/article/about-domain-propagation).
+
+### Check that your SSL certificate is properly issued
+
+The SSL certificate is automatically generated within 48 hours of updating your DNS records.
+
+**To check your SSL certificate**:
+1. Make sure you have the correct Wix name servers in your domain host's account. Click [here](https://support.wix.com/en/article/name-servers-widget) to view your account-specific name server records.
+2. Ensure that DNSSEC is **unsigned** for your domain by checking [whois.com](http://www.whois.com). Contact your domain host for DNSSEC assistance.
+3. If you've added the HTML app to your site, make sure the code you've entered contains HTTPS (and not HTTP). Learn more [about the HTML app](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget).
+
+> Still experiencing issues after following the steps above? [Contact Wix Customer Care](https://support.wix.com/en/article/wix-domain-assistant-3777632#still-need-help).
+
+---
+
+### Issues with a domain connected via pointing
+
+To resolve issues with a domain connected via pointing, make sure you have done the following:
+
+### Make sure your site is published
+
+New edits and changes to your site are not automatically reflected on your live site. Make sure to [publish your site](https://support.wix.com/en/article/wix-editor-publishing-your-site) to make your changes go live.
+
+**To publish your site**:** **
+1. Click **Publish **at the top right of your editor.
+2. (Optional) Click **View Site** to be taken to your live site.
+3. Click **Done**.
+
+### Check that your Premium or Studio plan subscription is still active
+
+You must have an active [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan subscription for your site to be connected to a domain.
+
+**To check the status of your subscription**:
+1. Go to [My Premium plan](https://premium.wix.com/wix/api/mpContainerStaticController?originWidgetName=plans).
+2. Select the relevant plan subscription.
+3. View the status of your plan next to **Status**.
+
+**Note**: If your plan status is not **Active**, you must [upgrade to a new plan](https://www.wix.com/my-account/site-selector/?buttonText=Upgrade%20this%20Site&title=Select+a+Site&autoSelectOnSingleSite=true&actionUrl=https://premium.wix.com/wix/api/premiumStart?siteGuid=\{\{metaSiteId\}\}&alwaysfs) to reconnect your site to your domain.
+
+### Check that your domain is assigned to the correct site
+
+In order for your live site to appear, your domain must be assigned to a site with a [Premium](https://support.wix.com/en/article/choosing-a-premium-plan) or [Studio](https://support.wix.com/en/article/wix-studio-upgrading-sites) plan.
+
+**To assign a domain in your account to a site**:
+1. [Go to Domains](https://manage.wix.com/account/domains) in your Wix account.
+
+**Note**: If you have more than one domain in your account, scroll to the domain you wish to assign.
+2. Click **Assign** next to **Not Assigned to a Site**.
+
+**Note**: If your domain is currently assigned to a different site, click the More Actions icon  on the right and select **Assign to a Different Site**.
+3. Select a site and click **Next**.
+
+**Note**: If the site is currently connected to a different domain, choose an option:
+
+- **Redirect it to the primary domain:** Redirect your domain to the site's primary domain that is already connected.
+- **Replace the current primary domain:** Connect your domain and disconnect the site's current domain.
+4. Click **Assign**.
+
+### Check and update your DNS records
+
+Your domain must have the correct A record and CNAME records added in your domain host's account. You can do a [DNS lookup](https://support.wix.com/en/article/checking-your-domains-dns-records-using-whatsmydnsnet) to check which DNS records are currently resolving for your domain.
+**To view or update your DNS records:**
+1. Log in to your domain host account.
+2. Find the section where the DNS records are located.
+3. Update the A Record and CNAME Record to the following:
+
+- **A Record:**
+
+- **Host:** @ or [blank]
+- **Points to: **185.230.63.107
+- **CNAME:**
+
+- **Host:** www
+- **Points to: **pointing.wixdns.net
+
+### Check your domain's status
+
+Your domain must have an active status in order to be connected to a site.
+
+**To check the status of your domain**:
+1. Go to [whois.com](https://www.whois.com/).
+2. Enter your domain name in the search field and click **WHOIS**.
+3. Review the domain status and expiry date.
+
+**Tip**: Go to the URL displayed below **Domain Status** to learn about each status.
+
+**Note**: Contact your domain registrar if you need help ensuring your domain is active.
+
+### Wait for your domain to propagate
+
+Any time you make a DNS change to your domain, it takes time for the propagation to complete. Domain propagation is the process whereby your domain host notifies the root DNS servers of the change in your domain settings, which in turn notifies your Internet Service Provider (ISP).
+
+If you've recently changed your name servers, it may take up to **48 hours** for your domain to complete propagation and appear connected to your site. Learn more [about domain propagation](https://support.wix.com/en/article/about-domain-propagation).
+
+### Check that your SSL certificate is properly issued
+
+The SSL certificate is automatically generated within 48 hours of updating your DNS records.
+
+**To check your SSL certificate**:
+1. Make sure you have the correct A records and CNAME records in your domain host's account. [View the records your domain needs](https://support.wix.com/en/article/pointing-widget) to properly connect to your Wix site.
+2. Ensure that DNSSEC is **unsigned** for your domain by checking [whois.com](http://www.whois.com). Contact your domain host for DNSSEC assistance.
+3. If you've added the HTML app to your site, make sure the code you've entered contains HTTPS (and not HTTP). Learn more [about the HTML app](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget).
+
+---
+
+### Still need help?
+
+**If you are still experiencing issues, try the following local issue troubleshooting steps**:
+
+[Clear your browser's cache](https://support.wix.com/en/article/clearing-your-browsers-cache) and try accessing your domain again.  Go to your domain in [incognito mode](https://support.wix.com/en/article/opening-your-browser-in-incognitoprivate-browsing-mode).  Check [whatismybrowser.com](https://www.whatismybrowser.com/) and update your browser if it's not the latest version.   Go to your domain using a different [supported browser](https://support.wix.com/en/article/supported-browsers).  Go to your domain on another computer that uses different anti-virus, anti-malware, and firewall programs.   Connect to a different Wi-Fi network or use a smartphone's 3G/4G cellular network to access your domain. This detects if there's an issue with the network you're using.
+
+> If you are still unable to view your site on your domain, [contact Wix Customer Care](https://www.wix.com/contact) and we will be happy to assist you.
+
+---
+Source: https://support.wix.com/en/article/wix-domain-assistant-3777632

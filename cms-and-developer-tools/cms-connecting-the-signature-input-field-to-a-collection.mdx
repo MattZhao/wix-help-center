@@ -1,0 +1,118 @@
+---
+title: "CMS: Connecting the Signature Input Field to a Collection"
+---
+
+The signature input element lets you collect digital signatures directly on your website. Connecting it to a [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) collection allows you to store and manage signatures in one place.
+
+> **Before you begin:**
+>
+> - Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site or [enable coding](https://dev.wix.com/docs/develop-websites/articles/getting-started/getting-started-with-code) if you haven't already.
+> - Make sure you have a [CMS collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) for storing the submitted signatures.
+
+---
+
+### Step 1 | Add and set up the signature input element
+
+Add the signature input element to your page and customize its settings, layout, and design.
+
+Wix EditorStudio Editor
+1. Click **Add Elements ** on the left side of the editor.
+2. Click** Input**.
+3. Click **Signature Input**.
+4. Click and drag the **Signature Input **element of your choice onto the page.
+[image: Screenshot of adding the signature input element.]
+1. Click **Settings **on the signature element to edit the following: 
+
+- **Field title: **Edit the name that appears on the input, which also lets screen readers know what the input is about.
+- **Clear signature button: **Edit the name that appears on the button visitors click to clear their signature.
+- **This field is: **Select the **Required **checkbox to make it mandatory that the signature is filled out before it can be submitted to your collection.
+2. Click the **Layout **icon  to adjust the indentation, spacing, text direction and alignment.
+3. Click the **Design** icon  to choose a preset design. Then click **Customize Design** to adjust the design further.
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click** Input**.
+3. Click **Signature Input**.
+4. Click and drag the **Signature Input **element of your choice onto the page.
+[image: Screenshot of adding the Signature Input element.]
+1. Click **Settings **on the signature element to edit the following: 
+
+- **Field title: **Edit the name that appears on the input, which also lets screen readers know what the input is about.
+- **Clear signature button: **Edit the name that appears on the button visitors click to clear their signature.
+- **This field is: **Select the **Required **checkbox to make it mandatory that the signature is filled out before it can be submitted to your collection.
+[image: Screenshot of the Signature Input element settings.]
+1. Click the **Layout **icon  to adjust the indentation, spacing, text direction and alignment.
+2. Click the **Design** icon  in the Inspector panel to customize the design.
+
+---
+
+### Step 2 | Connect the signature input to the CMS
+
+Connect the signature input element to a dataset that binds to your CMS collection that will store the signatures. You can connect the signature value to image field types in your collection.
+
+Wix EditorStudio Editor
+1. In your editor, click the signature input element.
+2. Click the **Connect to CMS** icon** ** .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, select** Add a Dataset**, then choose the collection you want to connect, give the dataset a name and click **Create**.
+4. Click the** Value connects to **drop-down and select the Image field in which you want to save the signatures. Select **Add new field** if you need to add an Image field for storing the signatures.
+[image: Screenshot of connecting the signature value to a collection field.]
+1. (If needed) Adjust the [dataset settings](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset#step-3-edit-the-dataset-settings): 
+
+1. Click **Dataset Settings** in the **Connect Video Player **panel on the right.
+2. Click the permission type next to **Permissions **to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+3. Click the **Dataset mode** drop-down and select the relevant option: 
+
+- **Read & Write:** Elements that are connected to the dataset can display content from your collection. Input elements can add or edit content in your collection.
+- **Write: **Elements that are connected to the dataset can add and edit collection content. However, connected elements cannot display content from the collection.
+2. [Add a 'Submit' button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-5-create-a-submit-button) for visitors to click to submit their signature and responses to any other input elements that connect to the dataset.
+3. Click **Preview** to test your signature input.
+4. Click **Publish** if you are ready to make the changes go live.
+
+1. In your editor, click the signature input element.
+2. Click the **Connect to CMS** icon** ** .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, select** Add a Dataset**, then choose the collection you want to connect, give the dataset a name and click **Create**.
+4. Click the** Value connects to **drop-down and select the Image field in which you want to save the signatures. Select **Add new field** if you need to add an Image field for storing the signatures.
+[image: Screenshot of connecting the signature value to a collection field.]
+1. (If needed) Adjust the [dataset settings](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset#step-3-edit-the-dataset-settings): 
+
+1. Click **Dataset Settings** in the **Connect Video Player **panel on the right.
+2. Click the permission type next to **Permissions **to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+3. Click the **Dataset mode** drop-down and select the relevant option: 
+
+- **Read & Write:** Elements that are connected to the dataset can display content from your collection. Input elements can add or edit content in your collection.
+- **Write: **Elements that are connected to the dataset can add and edit collection content. However, connected elements cannot display content from the collection.
+2. [Add a 'Submit' button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection?tabs=Studio-Editor-5#step-5-create-a-submit-button) for visitors to click to submit their signature and responses to any other input elements that connect to the dataset.
+3. Click the** Preview** icon  at the top right to test your signature input element.
+4. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about the signature input element.
+
+### Are there specific regulations for collecting electronic signatures on my site?
+
+Yes, electronic signatures may be subject to different rules depending on your country’s local laws. It’s important to check the specific requirements that apply to your website and ensure you comply with these regulations.
+
+### What are the dataset modes I can use with the signature input element?
+
+The dataset mode determines what actions can be done between the connected elements and your collection. 
+In the dataset that connects to your signature input element, you can use the following dataset modes: 
+- **Read & Write:** Elements that are connected to the dataset can display content from your collection. Input elements can add or edit content in your collection.
+- **Write: **Elements that are connected to the dataset can add and edit collection content. However, connected elements cannot display content from the collection.
+
+### How do I find my submit button's success/failure messages in the editor?
+
+If you added and can't find the success/failure messages for your submit button, test out submitting your form in preview mode. This should cause the messages to reappear so you can go back to the editor to select and edit them. You can also use the [Layers panel in the Wix Editor Toolbar](https://support.wix.com/en/article/wix-editor-using-the-editor-tools#using-the-layers-panel) to locate the messages and rearrange them.
+
+### Can I automate what happens when I receive form submissions?
+
+Yes. With Wix Automations, you can choose from a variety of actions that you want to happen when you receive new submissions from your custom form. For example, you could receive an email, send data via webhooks, connect third-party web apps like Google Sheets, or automatically reply back. 
+Learn how to [create automations for CMS form submissions](https://support.wix.com/en/article/wix-automations-creating-automations-for-cms-form-submissions).
+
+### Can I export the submissions that get saved to my collection?
+
+Yes. You can [export any CMS collection as a CSV file](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) to use the data outside of the Wix CMS (e.g. in Microsoft Excel or Google Sheets).
+
+---
+Source: https://support.wix.com/en/article/cms-connecting-the-signature-input-field-to-a-collection

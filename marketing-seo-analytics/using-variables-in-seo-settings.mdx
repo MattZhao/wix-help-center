@@ -1,0 +1,157 @@
+---
+title: "Using Variables in SEO Settings"
+---
+
+Use variables in your SEO Settings to apply the same logic to a whole section of your site without having to customize each page individually.
+
+**In this article, learn more about:**
+
+[What a variable is](https://support.wix.com/en/article/using-variables-in-seo-settings#what-is-a-variable)  [Which variables you can use in SEO Settings](https://support.wix.com/en/article/using-variables-in-seo-settings#which-variables-can-i-use-in-seo-patterns)  [How to use variables in dynamic code](https://support.wix.com/en/article/using-variables-in-seo-settings#using-variables-in-dynamic-code)
+
+---
+
+### What is a variable?
+
+A variable is text that represents a value or text that's a placeholder for a value. Using variables, you can create general rules that use different values for each section or page of your site. 
+
+For example, you can set an SEO Setting to apply "'Product Name', 'Site Name'" to each of your product pages. Then each product page would have a unique title while following the same title setting, "Product 1, My Site"; "Product 2, My Site".
+
+---
+
+### Which variables can I use in SEO Settings?
+
+Each SEO Setting has its own set of available variables you can use. Some variables are relevant to all page types while others are more specific. Use the tables below to learn about the available variables and their meanings.
+
+#### Page variables
+
+NameDescriptionPage NameThe page's name that appears on your site menu. Page URLThe page URL that appears in the search result.
+
+#### Site variables
+
+NameDescriptionSite NameThe name that you gave your site. You can edit the name in your site's [Website Settings](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fwebsite-settings&title=Select+a+Site&primaryButtonText=Website+Settings). General Social ImageThe image that is shared on social networks including Facebook and Twitter. You can set the image in your site's [Website Settings](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fwebsite-settings&title=Select+a+Site&primaryButtonText=Website+Settings).
+
+#### SEO variables
+
+Use SEO variables to reference values from the page's other SEO fields (e.g. Title Tag, Meta Description).
+
+NameDescriptionTitle TagThe title tag defined in the SEO Basics section.Meta DescriptionThe meta description defined in the SEO Basics section.
+
+#### Business Variables
+
+NameDescriptionBusiness NameThe name of your business. You can edit the name in your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).Business DescriptionThe description of your business. You can edit it in your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).Business LogoThe logo of your business. You can change it in your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).
+
+#### Business location variables
+
+NameDescriptionCountryThe country that appears in the **Location & Contact Info **section of your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).StateThe state that appears in the **Location & Contact Info **section of your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).CityThe city that appears in the **Location & Contact Info** section of your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).StreetThe street that appears in the **Location & Contact Info** section of your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).Address DescriptionThe description of your address that appears in the Location & Contact Info section of your site's [Business Info](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fsettings%2Fbusiness-info&title=Select+a+Site&primaryButtonText=Business+Info).
+
+#### Product variables
+
+NameDescriptionProduct NameThe product name as you've defined it in its settings. Product DescriptionThe product description as you've written it in its settings. Product SKUIf you've created SKU numbers for your products to track them, you can use the product's SKU as a variable. Product BrandThe name of your product's brand. Product PriceThe product's current price. Product CurrencyThe currency for your product price (e.g. USD, EUR, etc.).Product AvailabilityIndicates if the product is in stock or not, depending on how you've marked it in the product settings. Main Product ImageYour product's main image. Product URLA direct link to your product page.
+
+In addition to these variables, there are also variables you can use in [the structured data markup for your product pages](https://support.wix.com/en/article/understanding-preset-markups-for-your-sites-pages#managing-your-preset-markups).
+
+NameDescriptionProduct Availability MarkupIndicates if the product is in stock or not, depending on how you've marked it in the product settings. 
+In Stock: "availability": "https://schema.org/InStock"
+Out of Stock: "availability": "https://schema.org/OutOfStock"Product Image WidthThe width of your main product image.Product Image HeightThe height of your main product image.Product Image Alt TextThe alt text that you added to your main product image.Product ThumbnailThe thumbnail version of your main product image.Product Thumbnail WidthThe width of the thumbnail version of your main product image.Product Thumbnail HeightThe height of the thumbnail version of your main product image.Product Thumbnail Alt TextThe alt text that you added to the thumbnail version of your main product image.All Product ImagesAll of your product's images.
+
+#### Dynamic item page variables
+
+You can add default dynamic item page variables and variables for any collection field you've connected to your dynamic item page. To use a variable when writing custom structured data markups, make sure the variable's associated field is connected to a page element. Learn how to [add variables to your dynamic page URLs](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+> **Important:**
+>
+> When using a variable in your SEO settings, make sure not to delete the variable's associated collection field. The SEO variables need to reference their associated collection fields to work properly.
+
+**Name****Definition**Primary fieldThe field designated as "primary" in your dynamic item page's connected collection. If you change the primary field in your collection, the SEO variable automatically updates to include the new primary field. Primary image URLThe URL of the 1st image field in your dynamic item page's connected collection. Primary page URLThe URL of the dynamic item page. Number of itemsThe total number of items in the dynamic item page's connected collection. Main collection nameThe name of the collection connected to your dynamic item page. IDThe system generated ID of the dynamic item page's connected item. OwnerThe system generated Owner field in your dynamic item page's connected collection. [Dynamic item page variables]The fields with the same names as the variables in the collection connected to your dynamic item page.
+
+#### Forum post variables
+
+**Name****Definition**Post TitleThe post's title. Category NameThe category's name. Post ContentThe first 300 characters of the post. No. of CommentsThe post's number of comments. No. of LikesThe post's number of likes. No. of ViewsThe post's number of view. Post ImageThe first image in the postPost URLThe URL of the post. Post AuthorThe author of the post. Date PublishedThe date the post was published. Date Last ModifiedThe date the post was last modified.
+
+#### Forum category variables
+
+**Name****Definition**Category NameThe name of the category.Category DescriptionThe description of the category. Category ImageThe background image for your category. Category URLThe category page's URL. Total Posts in CategoryThe total number of posts in the category. Total Category ViewsThe category's total number of views.
+
+#### Pro Gallery variables
+
+NameDescriptionItem TypeImage, video or text. Item DescriptionThe name of the Gallery item. Gallery Item ImageImage or video thumbnail. Expanded Item URLThe URL of the gallery item in its expand mode.
+
+#### Event variables
+
+NameDefinitionEvent NameThe title of your event.Event TeaserShort teaser defined by you when creating the event.Event DescriptionThe description of your event.Event ImageThe main image of your event.Lowest Ticket PriceThe lowest ticket price offered.Highest Ticket PriceThe highest ticket price offered.
+
+---
+
+#### Event location variables
+
+NameDefinitionVenue NameThe name of the venue where your event will take place.Venue AddressThe address of the venue where your event will take place.
+
+---
+
+#### Blog post variables
+
+Name DefinitionPost TitleThe title of your postPost DescriptionThe description of your post. Post URLThe post's URL.Post Cover ImageThe post's cover image.Post WriterThe post's author.Date Last ModifiedThe post's last modification date.Date PublishedThe post's publish date.Post ExcerptThe post's excerpt as written by you.
+
+#### Blog category variables
+
+NameDefinitionCategory LabelThe category's title.Category ImageThe category's image. Category Page URLThe category's page URL.Category Page NumberThe page number of the category.Total Page CountThe total page count of the category.
+
+#### Blog tag variables
+
+NameDefinitionTag NameThe tag name.Tag URLThe tag's URL.Tag Post CountThe number of posts with that tag.Current Page NumberThe current page number of the tag.Total Page CountThe total page count of the tag.
+
+#### Online Programs variables
+
+NameDefinitionProgram ImageThe main image of your Online Program.Program DescriptionThe description of your Online Program.Program NameThe name of your Online Program. Registration PriceThe registration price of your Online Program.Program URLThe URL of your Online Program.
+
+#### Portfolio variables
+
+NameDefinitionProject NameThe title of your project in Project Info.Collection NameThe name of your collection in Collection Info.Project DescriptionThe description of your project in Project Info.Collection DescriptionThe description of your collection.Number of ProjectsThe number of projects in a collection.Cover ImageThe cover image of your collection.Project Cover ImageThe cover image of your project.Project URLThe URL of your project.No. of Media FilesThe number of media files in your project or collection. Number of Files in ProjectThe number of files in your project. Image MarkupThis markup helps search engines understand that your page include images so they can be added to the image search engine.Video MarkupThis markup helps search engines understand that these pages include videos, so they are eligible for [rich results](https://www.wix.com/seo/learn/resource/rich-results).
+
+#### Group pages variables
+
+NameDefinitionGroup NameThe name of your group.Group DescriptionThe description of your group.Tab LabelLabel for the content tabs within your group, e.g. "About", "Members", "Media". Group Cover ImageThe cover image of your group. Group URLThe main URL of your group's page.Group Feed URLThe URL for your group's activity feed.
+
+#### Group posts variables
+
+NameDefinitionShort Group PostA short excerpt from the post. It can contain the first 60 characters of the post.Long Group PostA long excerpt from the post. It can contain the first 200 characters of the post. Post AuthorThe name of the author of the post.Post URLThe URL of the post's page.Group NameThe name of the group that the post was published in.Date PublishedThe date and time that the post was publishedPost ImageThe URL of the image used in the post.
+
+#### Members profile variables
+
+NameDefinitionFirst NameThe first name of the member as defined by them.Last NameThe last name of the member as defined by them.CompanyThe company of the member as defined by them.Job TitleThe job title of the member as defined by them.NicknameThe nickname of the member as defined by them.TitleThe title of the member as defined by them.
+
+#### Store categories variables
+
+NameDefinitionCategory URLA direct link to your category page.Category NameThe category name as you've defined it in its settings.Products in CategoryNumber of visible products in the category.Category DescriptionFirst 200 characters of the category description as you’ve written it in its settings.Category ImageYour category’s image.
+
+#### Bookings service variables
+
+NameDefinitionService NameThe service name as you've defined it in its settings.Service DescriptionThe service description as you've written it in its settings.Service PriceThe service's current price.Service CurrencyThe currency for your service price (e.g. USD, EUR, etc.).Service TypeThe service type the service belongs to (Course or Class).Main Service ImageYour service's main image.Service URLA direct link to your service page.
+
+---
+
+### Using variables in dynamic code
+
+You can also use variables in your [structured data markup](https://support.wix.com/en/article/adding-structured-data-markup-to-your-sites-pages-2546962) in your SEO Settings. Markup is a standardized format for giving search engines detailed information about your page. Adding variables to your markup creates dynamic code to allow for variable content based on the available data on a page.
+
+For example, the [preset markup](https://support.wix.com/en/article/understanding-preset-markups-for-your-sites-pages) for Wix Stores product pages uses a number of variables including:
+
+Product Name  Product Description  Product Brand  Product Price
+
+The actual information that is used for these variables depends on the content of your page. This means that the preset markup is automatically customized for each of your pages and creates unique rich results for every product.
+
+> **Important:**
+>
+> - Structured data markup is an advanced topic. Wix Customer Care cannot help you with any changes to your site's markup or submissions of it. However, if you experience any errors, you can check out our [structured data markup troubleshooting guide](https://support.wix.com/en/article/troubleshooting-your-structured-data-markup).
+> - You cannot add markup to pages from Wix Hotels or Wix Restaurants.
+> - Adding structured data markup to your site's pages does not guarantee that search engines will create rich results for them.
+
+---
+
+> **You can restore the default SEO settings:**
+>
+> - To restore any field to its default, delete the field's content, click **Save**,** **and confirm.
+> - To restore all fields their defaults at once, click the Reset to Wix Default icon . Be sure to click **Save** and confirm in order to save the default settings.
+
+---
+Source: https://support.wix.com/en/article/using-variables-in-seo-settings

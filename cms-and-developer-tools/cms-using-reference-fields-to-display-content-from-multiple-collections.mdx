@@ -1,0 +1,121 @@
+---
+title: "CMS: Using Reference Fields to Display Content from Multiple Collections"
+---
+
+Reference fields allow you to associate an item in one collection with an item in another collection. This lets you connect elements such as repeaters, galleries, and tables to fields from multiple collections, within the same [dataset](https://support.wix.com/en/article/cms-about-datasets).
+
+> **Do you need to associate items with multiple items from another collection?**
+>
+> If so, use [multi-reference fields](https://support.wix.com/en/article/cms-creating-multi-reference-fields) instead of reference fields. Multi-reference fields create a two-way connection between the collections and allow the items to reference and be associated with more than one item from each collection.
+
+---
+
+### Step 1 | (Optional) Change the primary field in the collection you want to reference
+
+The [primary field](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#primary-fields) of the collection you want to reference plays an important role. Later, when you select the items that you want to reference in your reference field, you'll see the values from the primary field. If needed, you can make a different field the primary field to help you see which items you're choosing to reference.
+
+> **Important:**
+>
+> By default, the primary field is used in your collection's dynamic item page URL. Changing the primary field will also change your dynamic page URLs if the primary field is used in the URL slug structure of your dynamic pages. This can cause links to your dynamic pages to break. Keep this in mind before changing your primary field. Learn more [about URL slug structures](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+#### To change the primary field of the collection you want to reference:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **  Click the collection that includes the field you want to reference. We'll call this your 'referenced' collection.   (If the field you want to reference is not the primary field) Click the title of the field you want to reference and select **Make primary**.
+
+---
+
+### Step 2 | Add a reference field to your main collection
+
+Add a reference field type to the 'main' collection in which you want to reference another collection. Later, when selecting fields to connect in your dataset, the referenced collection's fields appear indented under the reference field name, followed by the collection name in parenthesis: **\{Reference field name\} \{Collection name\} **
+
+#### To add a reference field to your main collection:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **  Select the main collection where you wish to reference the primary field from your referenced collection.  Add a reference field to your collection:
+
+1. Click **Manage Fields**.
+2. Click **+ Add Field**.
+3. Select the **Reference** field type and click **Choose Field Type**.
+4. Enter the **Field name**.
+5. (Velo only) Edit the **Field ID** used in your site's code, which cannot be changed later.
+6. Click the **Reference Collection **drop-down and select your referenced collection.
+7. (Optional) Enter **Help text **that will appear in a tooltip at the top of your collection.
+8. Click **Save**.
+
+Select a reference for each item in your collection:
+
+1. Click the reference field for the first item in your collection.
+2. Select the primary field from your referenced collection that corresponds to the item.
+
+**Tip: **Use your keyboard to search for the fields you want to select. You can also click **Open Collection **to view the referenced collection.
+3. Repeat these steps for each item in your collection.
+
+---
+
+### Step 3 | Connect elements to your referenced collection fields
+
+Connect elements such as repeaters, galleries, and tables to the relevant collection fields to display the field values on your site. When choosing which collection fields to connect in the dataset, you'll see fields from the referenced collection indented under your reference field name.
+
+#### To connect elements to your referenced collection fields:
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click the element you want to connect to the CMS (e.g. repeater, gallery, table).
+3. Click the **Connect to CMS** icon  .
+4. (Certain input elements only) Choose how you want to use the element:
+
+- **Filter content: **[Let site visitors filter page content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+- **Collect content:** [Collect content submitted by site visitors](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection).
+5. Click the **Choose a dataset** drop-down and select a dataset that connects to your main collection. Alternatively, click **Add a Dataset**, then choose your main collection, give the dataset a name and click **Create**.
+6. Click the relevant drop-down under **Connections** and select the field you want to display in the element. Fields from your referenced collection appear indented in the list under your reference field.
+[image: Screenshot of connecting fields from a referenced collection.]
+1. Repeat these steps for each element you want to connect to the referenced collection fields.
+2. Click **Preview** at the top right to test your connections.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click the element you want to connect to the CMS (e.g. repeater, gallery, table).
+3. Click the **Connect to CMS** icon  .
+4. (Certain input elements only) Choose how you want to use the element:
+
+- **Filter content: **[Let site visitors filter page content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+- **Collect content:** [Collect content submitted by site visitors](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection).
+5. Click the **Choose a dataset** drop-down and select a dataset that connects to your main collection. Alternatively, click **Add a Dataset**, then choose your main collection, give the dataset a name and click **Create**.
+6. Click the relevant drop-down under **Connections** and select the field you want to display in the element. Fields from your referenced collection appear indented in the list under your reference field.
+[image: Screenshot of connecting fields from a referenced collection.]
+1. Repeat these steps for each element you want to connect to the referenced collection fields.
+2. Click **Preview** at the top right to test your connections.
+3. Click **Publish** if you are ready to make the changes go live.
+
+> **Learn more about:**
+>
+> - [Connecting repeaters to your CMS collection content](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater).
+> - [Connecting galleries to your CMS collection content](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery).
+> - [Connecting tables to your CMS collection content](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table).
+
+---
+
+### FAQs
+
+Click below for answers to common questions about reference fields.
+
+### Can I reference fields from the same collection?
+
+Yes. You can create a reference field that connects to the same collection. This lets you associate items with other items within the same collection. For example, in a collection with employee details, you could use a "manager" reference field to associate each item (employee) with another item (employee's manager).
+
+### What happens if I delete an item from a referenced collection?
+
+If you delete a referenced item, "Untitled" appears in the reference field in your collection. Elements that were connected to the referenced field's item will no longer display content from the deleted item.
+
+### What happens if I change the primary field in my referenced collection?
+
+Changing the primary field in any collection can cause existing links to your dynamic pages to break if the primary field is used in the [URL slug structure](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls). Keep this in mind before changing any primary fields. 
+If you change your referenced collection's primary field, you'll see the new primary field's values in your main collection's reference field.
+
+### What is the URL slug structure?
+
+The URL slug structure defines the last part of the web address for each of your dynamic pages. It helps describe the content of each page so that site visitors and search engines understand what it is all about. 
+Add variables to the URL slug structure if you want to use fields from your collections in each dynamic page's URL. 
+Learn how to [add variables to dynamic page URLs](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+---
+Source: https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections

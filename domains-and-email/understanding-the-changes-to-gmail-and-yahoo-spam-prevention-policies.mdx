@@ -1,0 +1,59 @@
+---
+title: "Understanding the Changes to Gmail and Yahoo Spam Prevention Policies"
+---
+
+From February 1st 2024, Gmail and Yahoo are setting new email security policies for bulk email senders. You must comply with them so all email campaigns reach their target audience and aren’t sent to spam.
+
+For every custom domain purchased outside Wix, a DMARC record must be set up manually.
+
+> **Important:**
+>
+> If you have a Wix purchased or public domain, you do not need to set up a DMARC record manually. This will be handled for you by Wix and no action is required on your part.
+
+---
+
+### What's changing and what do I need to do?
+
+**Authenticate sender email: **Each custom domain purchased outside of Wix will need a DMARC record set up. Custom domains will have to have a DMARC policy in place to comply with the new spam prevention policies. If you have a custom domain, **you need to take action** and follow the steps below to set up your DMARC record.   **Enable easy unsubscription: **Any emails sent will need to support one-click unsubscribe to comply with the new policies. Emails sent from Wix support one-click unsubscribe and **there is no action needed** from you.  **Only send emails users want: **You will need to ensure your emails are keeping below a new set spam rate threshold that comes into effect with the new policies. Learn more about [Wix's email marketing compliance best practices](https://support.wix.com/en/wix-email-marketing-compliance) to reduce spam.
+
+---
+
+### What is a DMARC record and why is it needed?
+
+DMARC is an open email authentication protocol that helps protect email senders and recipients from advanced threats that can be the source of an email data breach. CNAME 5 is the name of the new authentication record that will set up your DMARC record.
+
+> **Note:**
+>
+> If no DMARC is set up, there is a risk of this domain not being protected against phishing and spoofing threats.
+
+---
+
+### How can I set up my DMARC record?
+
+The first step to manually authenticate your custom domain is locating the DNS records provided by Wix. You can find these either from your Email Marketing dashboard or when creating an automation using 'send an email' as a follow up action. Before viewing the records you must first confirm your email address with a confirmation code.
+
+---
+
+### FAQs
+
+Click a question below to learn more about the new sending security updates.
+
+### Do I have to authenticate my custom domain again if I have already done it?
+
+Yes, in order to set up your DMARC record using the new CNAME 5 record, you will need to authenticate your custom domain again [following the steps outline in this article](https://support.wix.com/en/article/email-marketing-authenticating-your-custom-email-domain).
+
+### What defines a bulk sender?
+
+A bulk sender is defined by Google as senders with volumes of 5000 or more messages to Gmail addresses in one day. 
+The new policy announcements don’t specify that a sender must send 5000 messages *each* day, or within a certain time frame, however. So, it’s important to consider your peak holiday sending habits, and large campaigns when checking if these rules will apply to you.** **
+
+### What happens if I don't set up my domains DMARC record?
+
+If your domain isn't authenticated, Wix automatically adds an authenticated Wix domain (e.g. wixemails.com). This helps with email deliverability. To remove the Wix signature, manually authenticate your domain by following the steps above.
+
+### What is a CNAME record?
+
+A CNAME is a type of DNS record that allows Wix to authenticate an email domain. When you add records provided by Wix into your domain host settings, it helps with domain authentication. Once the records are propagated, email providers recognize your emails sent using Wix as genuine and trustworthy.
+
+---
+Source: https://support.wix.com/en/article/understanding-the-changes-to-gmail-and-yahoo-spam-prevention-policies

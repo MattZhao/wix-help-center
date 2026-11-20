@@ -1,0 +1,406 @@
+---
+title: "CMS: Displaying Collection Content in a Pro Gallery"
+---
+
+Use a Pro Gallery to dynamically display images for each item in your CMS (Content Management System) collection. You control which image field to use for each item, while also connecting collection fields to the image titles, descriptions, alt texts, and links. This type of setup is ideal for both dynamic list pages and static pages as you can link the images to their items' dynamic item pages.
+
+> **Important:**
+>
+> This article refers to connecting a Pro Gallery to an Image field used for displaying one image per collection item. Alternatively, you can [connect a gallery to a Media Gallery field](https://support.wix.com/en/article/cms-connecting-the-media-gallery-collection-field-type-to-a-pro-gallery) used for displaying several images or videos for a single collection item on a dynamic item page.
+
+---
+
+### Step 1 | Create a CMS collection
+
+Create a multiple item collection for storing the images you want to show in the gallery. Add an image field type and text fields for the image titles, descriptions and alt text. Then add the images and values for each item in the collection. If needed, you can adjust the collection permissions from their default 'Show content' setting that allows anyone to view the content.
+
+#### To create a collection for storing gallery images:
+
+Wix EditorStudio EditorDashboard
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left side of the editor.
+3. Click **Create Collection**.
+4. Enter a name for your collection.
+5. Leave **Multiple items (Default) **selected and click **Create**.
+6. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+Tip:Make sure to add an Image field type to store images for each item. You can also add Text field types for use as the image titles, descriptions and alt text. 
+1. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the editor.
+3. Click **Create Collection**.
+4. Enter a name for your collection.
+5. Leave **Multiple items (Default) **selected and click **Create**.
+6. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+Tip:Make sure to add an Image field type to store images for each item. You can also add Text field types for use as the image titles, descriptions and alt text. 
+1. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+1. [Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.
+2. Click **Create Collection**.
+3. Enter a name for your collection.
+4. Leave **Multiple items (Default) **selected and click **Create**.
+5. Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+Tip:Make sure to add an Image field type to store images for each item. You can also add Text field types for use as the image titles, descriptions and alt text. 
+1. Add items to your collection:
+
+1. Click **+ Add Item**.
+2. Add content about the item to each relevant field.
+3. Repeat this step to create as many items as you need.
+[image: A screenshot of adding an item in a CMS collection.]
+1. Set permissions for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+Show contentAllow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+---
+
+### Step 2 | Connect a Pro Gallery to your collection
+
+Add a Pro Gallery to your site and connect it to a dataset that binds to your collection fields. Then connect the gallery's image sources to your collection's image field. You can also connect the titles, descriptions and alt text to fields in your collection. Use the "Links connect to" field to link the items to their dynamic item pages, or to a URL, Image, or Video field.
+
+Wix EditorStudio Editor
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page where you want a gallery to display images representing different collection items.
+3. Click **Add Elements ** on the left side of the Editor.
+4. Click **Gallery**.
+5. Click and drag the Pro Gallery you want to use onto the page.
+
+1. Remove the default images from the gallery:
+
+1. Click **Manage Media **on the gallery.
+2. Click **Select All**, then click **Delete**.
+3. Click **Done**.
+2. Click the **Connect to CMS **icon .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click **Create a New Dataset**, then choose the collection you want to connect.
+4. Click the relevant drop-downs to connect your collection fields to the gallery:
+
+- **Image sources connect to: **Select the image field you want to display.
+- **Titles connect to: **Select the field you want to use for the image titles.
+- **Descriptions connect to: **Select the field you want to use for the image descriptions.
+- **Alt texts connect to: **Select the field you want to use for the image alt texts.
+- **Links connect to: **Select the dynamic page, URL field, or image field you want to link the images to.
+
+1. Click the gallery and select **Settings** to customize your gallery's layout, design, and more. Learn more about [customizing your Pro Gallery](https://support.wix.com/en/article/wix-pro-gallery-customizing-the-gallery-settings).
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page where you want a gallery to display images representing different collection items.
+3. Click **Add Elements ** on the left side of the Editor.
+4. Click **Gallery**.
+5. Remove the default images from the gallery:
+
+1. Click the gallery element and select **Manage Media**.
+2. Click **Select All**, then click **Delete**.
+3. Click **Done**.
+6. Click the **Connect to CMS** icon .
+7. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click **Create a New Dataset**, then choose the collection you want to connect.
+8. Click the relevant drop-downs to connect your collection fields to the gallery:
+
+- **Image sources connect to: **Select the image field you want to display.
+- **Titles connect to: **Select the field you want to use for the image titles.
+- **Descriptions connect to: **Select the field you want to use for the image descriptions.
+- **Alt texts connect to: **Select the field you want to use for the image alt texts.
+- **Links connect to: **Select the dynamic page, URL field, or image field you want to link the images to.
+
+1. Click the gallery and select **Settings** to customize your gallery's layout, design, and more. Learn more about [customizing your Pro Gallery](https://support.wix.com/en/article/studio-editor-adding-and-customizing-the-pro-gallery#customizing-the-pro-gallery-settings).
+
+---
+
+### Step 3 | Manage the dataset settings
+
+Go to the dataset settings to set the total items that can load at a time, filter certain items from appearing, sort the order in which the items display, or change the mode. Set the mode to Read & Write if you plan on letting visitors submit or edit images in the gallery's connected collection.
+
+Wix EditorStudio Editor
+1. Go to the gallery's connected dataset settings:
+
+1. Click the gallery.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Gallery** panel on the right.
+2. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the gallery.
+- **Read & Write: **Allow the dataset to display your collection content in the gallery and allow visitors to add or edit collection content with input elements.
+3. Edit the **Maximum items displayed **field to adjust the maximum items that can initially load in the gallery. This is also the maximum items that load when visitors click 'Load More' buttons, 'Next/Previous page' buttons or pagination bars. See the next section for steps.
+
+1. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the gallery.
+2. (Optional) Click **+ Add Sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the gallery.
+
+1. Go to the gallery's connected dataset settings:
+
+1. Click the gallery element.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Gallery** panel.
+
+1. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the gallery.
+- **Read & Write: **Allow the dataset to display your collection content in the gallery and allow visitors to add or edit collection content with input elements.
+2. Edit the **Maximum items displayed **field to adjust the maximum items that can initially load in the gallery. This is also the maximum items that load when visitors click a 'load more' button (see the next section for steps).
+3. Edit the **Maximum items displayed **field to adjust the maximum items that can initially load in the gallery. This is also the maximum items that load when visitors click 'Load More' or 'Next/Previous page' buttons. See the next section for steps.
+4. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the gallery.
+5. (Optional) Click **+ Add Sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the gallery.
+
+---
+
+### Step 4 | (Optional) Create 'Load More' or navigational buttons
+
+You can improve your page's loading performance by adding a 'Load More' button if you have a lot of gallery images. Your dataset's ['Maximum items displayed' field](https://support.wix.com/en/article/cms-changing-the-maximum-items-displayed-in-your-dataset-settings) can be set as high as 1000 items. It controls how many items can initially load in your gallery, and how many additional items can load when visitors click the button.
+
+Wix EditorStudio EditorChoose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the gallery). Do not place the button on top of the gallery.
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your gallery.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Load More' button.
+7. Click **Preview** to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the gallery). Do not place the button on top of your gallery.  
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your gallery.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** icon  to customize the appearance of your 'Next Page' button.
+7. Duplicate your 'Next Page' button: 
+
+1. Right-click the button (**control **+ click on Mac).
+2. Select **Duplicate** (or press **Ctrl **+ **D **or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not place it on top of your gallery.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click **Preview** to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+Connect a pagination bar**Note:** Pagination bars are not relevant for static pages or dynamic item pages that can only display 1 item at a time. 
+
+1. Add a pagination bar: 
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Interactive**.
+3. Click **Pagination Bar**.
+4. Click and drag the pagination bar you want to use onto the page.
+2. Click **Change Layout **to adjust the layout.
+3. Click the **Design** icon  on the pagination bar to edit the design.
+4. Click the **Connect to CMS** icon** **.
+5. Click the **Choose a dataset** drop-down and select the same dataset that connects to your gallery.
+6. Click and drag the edges of your pagination bar to resize it.
+7. Click **Preview** to test your pagination bar.
+8. Click **Publish** if you are ready to make the changes go live.
+
+View a full tutorial on [adding and setting up a pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar). Choose what you want to do: Create a 'Load More' button
+1. Add a button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the gallery). Do not place it on top of your gallery.
+
+**Tip: **Alternatively, you can add an image and use it as your 'Load More' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Load More").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your gallery.
+5. Click the **Click action connects to** drop-down and select **Load more**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Click the** Preview** icon  at the top right to test your 'Load More' button.
+8. Click **Publish** if you are ready to make the changes go live.
+Create 'Next Page' and 'Previous Page' buttons
+1. Add a 'Next Page' button to your page:
+
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**, then drag the button onto your page where you want it to appear (e.g. below the gallery). Do not place it on top of your gallery.
+
+**Tip: **Alternatively, you can add an image and use it as your 'Next Page' button.
+2. Click **Change Text **and enter the text you want to display on the button (e.g. "Next Page").
+3. Click the **Connect to CMS** icon  .
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to your gallery.
+5. Click the **Click action connects to** drop-down and select **Next page**.
+6. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'Load More' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+7. Duplicate your 'Next Page' button: 
+
+1. Select the button.
+2. Press **Ctrl **+ **D **on your keyboard** **(or **⌘** + **D **on Mac).
+8. Click and drag the button where you want it to appear. Do not place it on top of the gallery.
+9. Click **Change Text **and enter the text you want to display on the button (e.g. "Previous Page").
+10. Click the **Connect to CMS** icon  .
+11. Click the **Click action connects to** drop-down and select **Previous page**.
+12. Click the** Preview** icon  at the top right to test your 'Next Page' and 'Previous Page' buttons.
+13. Click **Publish** if you are ready to make the changes go live.
+Note: Pagination bars are not yet available in the Studio Editor. [Vote for this feature](https://support.wix.com/en/article/cms-request-adding-a-pagination-bar-in-the-studio-editor) if you would like to see it in the future.
+
+---
+
+### FAQs
+
+Click below for answers to the most frequently asked questions about connecting a gallery to the CMS.
+
+### How can site visitors filter the content that appears in the gallery?
+
+To let site visitors filter the gallery content, connect input elements such as dropdowns or radio buttons to the same dataset that connects to your gallery. View a step-by-step tutorial for [allowing visitors to filter content with input elements](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+### Can I set the gallery image links to open when clicked?
+
+By default, [Expand Mode](https://support.wix.com/en/article/wix-pro-gallery-customizing-the-expand-mode-for-your-gallery) opens when visitors click an image in a Pro Gallery. In Expand Mode, the image displays in an enlarged window with the Title, Description, and Link on the side. Visitors can then click the link to go to the destination you set in the gallery's connection options ([see Step 2 | Connect a Pro Gallery to your collection](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery#step-2-connect-a-pro-gallery-to-your-collection)). 
+If you prefer, you can disable Expand Mode and set the gallery to open the links when visitors click the images. 
+To set the links to open when visitors click images in the gallery:
+1. Click the Pro Gallery element in your Editor and select **Settings**.
+2. Click **Settings **on the left.
+3. Click the drop-down under **Gallery Settings** and select **A link opens**.
+
+### What are the CMS connection options for this gallery?
+
+The connection options allow you to specify how different parts of the gallery link to specific fields in the collection.
+Connect the following options to collection fields: 
+- **Image sources connect to: **The images you want to display in the gallery.
+- **Titles connect to: **The fields used for each item's title in the gallery.
+- **Descriptions connect to: **The fields used for each item's description in the gallery.
+- **Alt texts connect to: **The fields used for each item's alt text in the gallery.
+- **Links connect to: **The fields or dynamic pages you want to link each item to.
+
+Learn more about [connecting CMS collection items to galleries](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery).
+
+### Why doesn't my Pro Gallery's 'Load More' button respond to the dataset settings?
+
+The Pro Gallery has a built-in 'Load More' button that can restrict the number of media items displayed in the gallery.
+If you enable this 'Load More' button in the gallery's layout settings, it uses these settings to determine when to appear and how many more images load. With the gallery's built-in 'Load More' button, the dataset's **Maximum items displayed **setting determines the aggregate total maximum items that can load in the gallery. However, it no longer determines how many items initially load in the gallery or how many additional items load when visitors click this 'Load More' button.
+
+[image: Screenshot of enabling the Pro Gallery's built-in Load More button settings.]
+Consider the [type of collection field](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types) your gallery connects to when deciding which 'Load More' button to use: 
+- **Image field type: **If your gallery connects to an image field used to display only 1 image per collection item, create a 'Load More' button that connects to the dataset.
+- **Media gallery field type: **If your [gallery connects to a media gallery field](https://support.wix.com/en/article/cms-connecting-the-media-gallery-collection-field-type-to-a-pro-gallery) used to display several images per collection item, use the gallery's built-in 'Load More' button. Learn how to enable the 'Load More' button in the [Pro Gallery's custom layout settings](https://support.wix.com/en/article/wix-pro-gallery-changing-the-layout-settings#custom-layouts).
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery

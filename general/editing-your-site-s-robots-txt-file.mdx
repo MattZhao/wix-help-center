@@ -1,0 +1,97 @@
+---
+title: "Editing Your Site’s Robots.txt File"
+---
+
+> **Important:**
+>
+> Editing your robots.txt file is an advanced feature. Making changes to this file can cause issues with your site appearing in search results. Wix Customer Care cannot help you with any changes you make to your robots.txt file.
+
+A robots.txt file tells search engines which of your site's pages to include or skip in their search results. Search engines check your site's robots.txt file when they [crawl and index your site](https://developers.google.com/search/docs/fundamentals/how-search-works#introducing-the-three-stages-of-google-search). This doesn't guarantee that search engines will or won't crawl a page or file, but it can help prevent less accurate indexing attempts.
+
+If you want better control of crawl requests to your site, you can edit your robots.txt file.
+
+> **Tip:**
+>
+> - You can prevent search engines from indexing an individual page in your site's Editor. Learn how to in [Editor](https://support.wix.com/en/article/wix-editor-preventing-search-engines-from-indexing-your-page) and [Editor X](https://support.wix.com/en/article/editor-x-adding-and-managing-your-pages).
+> - You can also get more control over how search engines index your site's pages using the robots meta tag. For example, can use a "nofollow" tag to tell search engines not to follow any links on a page. [Learn more about the robots meta tag](https://support.wix.com/en/article/using-the-robots-meta-tag)
+
+**In this article, learn more about:**
+
+[Understanding your robots.txt file](https://support.wix.com/en/article/editing-your-sites-robotstxt-file#understanding-your-robotstxt-file)  [Editing your robots.txt file](https://support.wix.com/en/article/editing-your-sites-robotstxt-file#editing-your-robotstxt-file)  [Resetting your robots.txt file](https://support.wix.com/en/article/editing-your-sites-robotstxt-file#resetting-your-robotstxt-file)  [Robots.txt errors in Wix Site Inspection or Google Search Console](https://support.wix.com/en/article/editing-your-sites-robotstxt-file#robotstxt-error-in-wix-site-inspection-or-google-search-console)
+
+---
+
+### Understanding your robots.txt file
+
+The robots.txt file contains instructions to allow or disallow certain requests from search engines. The “allow” command tells crawlers the links that they can follow, while the “disallow” command tells crawlers the links that they can't follow. It also includes the URL of [your site's sitemap file](https://support.wix.com/en/article/understanding-your-sites-sitemap-file).
+
+You can view your site's robots.txt file by adding "/robots.txt" to your root domain. An example would be: **https://www.mystunningwebsite.com/robots.txt**.
+
+> **Want to learn more?**
+>
+> - Go to the Wix SEO Learning Hub to read [our article about the robots.txt file](https://www.wix.com/seo/learn/resource/robots-txt-file).
+> - Learn more about [how Google interprets your site's robots.txt file](https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt#url-matching-based-on-path-values)
+
+---
+
+### Editing your robots.txt file
+
+You can edit your site's robots.txt file using the Robots.txt Editor in your site's SEO Dashboard. Your site’s robots.txt file allows search engine bots to access all of your site's pages by default. Bots may not be able to access certain pages if they are:
+
+[Password protected pages](https://support.wix.com/en/article/wix-editor-password-protecting-a-specific-page-of-your-site)  [Members only pages](https://support.wix.com/en/article/wix-editor-creating-members-only-pages)  Pages that you prevented indexing for in [your site's Editor](https://support.wix.com/en/article/customizing-your-pages-seo-settings-in-the-seo-panel#optimizing-your-pages-title-tags-meta-descriptions-and-url-slugs) or [your site's SEO Settings](https://support.wix.com/en/article/customizing-your-seo-settings-1420929)
+
+Before you make changes to your robots.txt file, we recommend checking [Google's guidelines and limitations for robots.txt files](https://developers.google.com/search/docs/crawling-indexing/robots/intro?visit_id=638005749287639436-1899372680&rd=1).
+
+> **Important:**
+>
+> Editing your site's robots.txt file may cause issues with your site's pages appearing in search results.
+
+#### To edit your robots.txt file:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to Robots.txt Editor **under **Tools and settings**.  Click **View File**.   Add your robots.txt file info by writing the directives under **This is your current file**.
+
+Click **Save Changes**.   Click **Save**.
+
+> **Tip:**
+>
+> - Search engines will update their cached version of your robots.txt file the next time that they crawl your site.
+> - If you need to update it faster, you can try [submitting your homepage's URL to search engines](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines#submitting-individual-urls-to-search-engines).
+
+---
+
+### Resetting your robots.txt file
+
+If you changed your site's robots.txt file and want to change it back, you can reset it to its default state using the Robots.txt Editor in your site's SEO Dashboard.
+
+#### To reset your robots.txt file:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to Robots.txt Editor **under **Tools and settings**.  Click **View File**.   Click **Reset to Default**.
+
+Click **Reset**.
+
+> **Tip:**
+>
+> - Search engines will update their cached version of your robots.txt file the next time that they crawl your site.
+> - If you need to update it faster, you can try [submitting your homepage's URL to search engines](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines#submitting-individual-urls-to-search-engines).
+
+---
+
+### Robots.txt error in Wix Site Inspection or Google Search Console
+
+You may sometimes see errors such as **Blocked by robots.txt** in [your Wix Site Inspection report](https://support.wix.com/en/article/wix-site-inspection-an-overview) or [your Google Search Console account](https://support.wix.com/en/article/using-google-search-console-to-resolve-seo-issues).
+
+If you see an error like this, you don't need to edit your robots.txt file, especially if you never edited it before. Instead, you should check your pages for the following settings:
+
+Search engines are prevented from indexing the page in:
+
+- [Your site's Editor](https://support.wix.com/en/article/customizing-your-pages-seo-settings-in-the-seo-panel#optimizing-your-pages-title-tags-meta-descriptions-and-url-slugs)
+- [Your site's SEO Settings for that page type](https://support.wix.com/en/article/customizing-your-seo-settings-1420929)
+- [Your site's SEO preferences](https://support.wix.com/en/article/preventing-search-engines-from-indexing-your-site)
+    The page is [password protected](https://support.wix.com/en/article/wix-editor-password-protecting-a-specific-page-of-your-site)  The page is for [members only](https://support.wix.com/en/article/wix-editor-creating-members-only-pages)
+
+If you need to update a page, Wix automatically updates your robots.txt after you publish the page. If you change your site's settings, your robots.txt file is updated immediately.
+
+After you make a change, search engines will update their cached version of your robots.txt file the next time that they crawl your site. If you need to update it sooner, you can try [submitting your homepage to search engines for reindexing](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines#submitting-individual-urls-to-search-engines).
+
+---
+Source: https://support.wix.com/en/article/editing-your-sites-robotstxt-file

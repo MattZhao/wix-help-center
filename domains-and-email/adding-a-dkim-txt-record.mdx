@@ -1,0 +1,27 @@
+---
+title: "Adding a DKIM (TXT) Record"
+---
+
+A Domain Keys Identified Mail (DKIM) record is an email authentication tool. Adding it to your business email verifies that your email was sent from a reliable, trustworthy source and was not modified en route to your recipients.
+
+> **Before you begin:**
+>
+> - You need to get the DKIM record from your email provider.
+> - The DKIM key bit length can be either 2048 or 1024 characters.
+
+#### To add or update a DKIM record:
+
+[Go to Domains](https://premium.wix.com/wix/api/mpContainerStaticController#/domains) in your Wix account.  Click the More Actions** ** icon next to the relevant domain.  Select **Manage DNS Records**.
+
+Scroll to the **TXT (Text)** section and click **+ Add Record**.
+
+Enter the DKIM selector under **Host Name**. 
+
+**Note:** For Google Workspace business emails, [generate a DKIM record](https://support.google.com/a/answer/174126?hl=en#zippy=%2Cfind-out-if-your-domain-provider-supports--bit-dkim-keys) at this link.  Enter the DKIM signature under **Value**.  Click **Save**.
+
+> **Important:**
+>
+> If your domain is connected via** pointing**, these directions do not apply. Contact your domain host to add DKIM records with them, as they control your DNS.
+
+---
+Source: https://support.wix.com/en/article/adding-a-dkim-txt-record

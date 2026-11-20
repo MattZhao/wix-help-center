@@ -1,0 +1,119 @@
+---
+title: "CMS: Adding a Dataset Filter to Display Content from Multiple Collections"
+---
+
+Using a [dataset filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content) in the CMS (Content Management System) allows you to display content from multiple collections on a single page. This can be particularly useful if you want to show related items from different collections together, offering a richer experience for your site visitors. For example, if you have a blog collection and an author collection, you can use a dataset filter to display blog posts along with author details on the same page.
+
+> **Before you begin, make sure to set up the following:**
+>
+> You need at least two CMS collections:
+> - **Primary collection:** Connect this collection to elements on the page where you want to display content from both collections. This can be a static or [dynamic page](https://support.wix.com/en/article/cms-about-dynamic-pages).
+> - **Secondary collection: **This collection includes info that relates to the items in your primary collection. Make sure your secondary collection has a field that matches the values of a field in your primary collection exactly.
+
+---
+
+### Adding a dataset filter to display content from multiple collections
+
+After adding the dataset filter, you need to connect elements on your page to the secondary collection's dataset to display the filtered content.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page where you want to show content from both collections. Your primary collection should already be connected to a dataset that connects to the page elements.
+3. Add a dataset and connect it to your secondary collection:
+
+1. Click **CMS **** **on the left.
+2. Click **Manage Page Connections**.
+3. Click **Add a Dataset** in the panel on the right.
+4. Click the **Choose a collection **drop-down and select your secondary collection.
+5. (Optional) Edit the name of the dataset.
+6. Click **Create**.
+[image: Screenshot of adding a dataset that connects to a secondary collection.]
+1. Add a filter to your secondary collection's dataset:
+
+1. Click the **More Actions **icon  next to your secondary collection's dataset in the panel on the right.
+2. Select **Dataset Settings**.
+3. Click **+ Add Filter**.
+4. Click the **Field **drop-down and select the field that has the same values as a field in your primary collection.
+5. (Optional) Click the **Condition **field to change the operator that determines how the filter is applied. For example, when set to **Is**, the secondary collection's dataset only retrieves values from the primary collection if the field used in the filter has the same value in both collections.
+6. Select **Another dataset** under **Value source**.
+7. Click the **Dataset **drop-down and select the dataset that connects to your primary collection.
+8. Click the next **Field **drop-down and select the field from your primary collection that matches the secondary collection field. The fields that contain the matching values should be selected in each of the **Field **drop-downs on this filter.
+9. Click **Add Filter**.
+[image: Screenshot of adding a dataset filter in the Wix Editor.]
+1. Connect elements to the secondary collection's dataset to show content from the collection:
+
+1. Click the relevant element (e.g. text, image) and select the **Connect to CMS **icon .
+2. Click the **Choose a dataset** drop-down and select your secondary collection's dataset.
+
+**Note: **Don't worry if any of the CMS connections in your editor appear to disconnect at this point. Once you're done with the connections, you can click **Preview** to test the new connections.
+3. Click the relevant drop-down(s) under **Connections** and select the secondary collection's field(s) that you want to connect.
+[image: Screenshot of connecting a text element to the secondary collection dataset.]
+1. Click **Preview** to test your connections.
+2. Publish your site when you are ready to make the changes go live.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page where you want to show content from both collections. Your primary collection should already be connected to a dataset that connects to the page elements.
+3. Add a dataset and connect it to your secondary collection:
+
+1. Click **CMS **** **on the left.
+2. Click **Manage Page Connections**.
+3. Click **Add a Dataset** in the panel on the right.
+4. Click the **Choose a collection **drop-down and select your secondary collection.
+5. (Optional) Edit the name of the dataset.
+6. Click **Create**.
+[image: Screenshot of adding a dataset that connects to a secondary collection.]
+1. Add a filter to your secondary collection's dataset:
+
+1. Click the **More Actions **icon  next to your secondary collection's dataset in the panel on the right.
+2. Select **Dataset settings**.
+3. Click **+ Add Filter**.
+4. Click the **Field **drop-down and select the field that has the same values as a field in your primary collection.
+5. (Optional) Click the **Condition **field to change the operator that determines how the filter is applied. For example, when set to **Is**, the secondary collection's dataset only retrieves values from the primary collection if the field used in the filter has the same value in both collections.
+6. Select **Another dataset** under **Value source**.
+7. Click the **Dataset **drop-down and select the dataset that connects to your primary collection.
+8. Click the next **Field **drop-down and select the field from your primary collection that matches the secondary collection field. The fields that contain the matching values should be selected in each of the **Field **drop-downs on this filter.
+9. Click **Add Filter**.
+[image: Screenshot of adding a dataset filter in the Studio Editor.]
+1. Connect elements to the secondary collection's dataset to show content from the collection:
+
+1. Click the relevant element (e.g. text, image) and select the **Connect to CMS **icon .
+2. Click the **Choose a dataset** drop-down and select your secondary collection's dataset.
+3. Click the relevant drop-down(s) under **Connections** and select the secondary collection's field(s) that you want to connect.
+
+**Note: **Don't worry if any of the CMS connections in your editor appear to disconnect at this point. Once you're done with the connections, you can click **Preview** to test the new connections.
+[image: Screenshot of connecting a text element to the secondary collection dataset.]
+1. Click the **Preview** icon  at the top right to test your connections.
+2. Publish your site when you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about filtering by another dataset.
+
+### How do I know which field to select for the filter?
+
+Select a field in your secondary collection that has values matching a field in your primary collection. This ensures the filter can correctly match and display related content.
+
+### Can I use more than one filter?
+
+Yes, you can add multiple filters to refine the content displayed from your collections further. Just repeat the steps to [add a filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content) for each additional condition.
+
+### Can I display content from more than two collections?
+
+Yes, you can add multiple datasets and filters to display content from more than two collections, as long as the fields you use for matching have corresponding values.
+
+### What if the fields in my collections don't match exactly?
+
+The content will not be displayed from your secondary collection if the values between the collections do not match. Ensure that the fields in your primary and secondary collections have matching values. If they don't, you may need to update the data in your collections to ensure they align correctly.
+
+### Is it possible to change the dataset name after creation?
+
+Yes, you can edit the name of the dataset during or after creation to keep your datasets organized and easily identifiable.
+
+### What should I do if my filtered content doesn't display as expected?
+
+Double-check the fields and values used in your filters to ensure they match correctly. Also, preview your site to test the connections and make any necessary adjustments.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-content-from-multiple-collections-using-datasets

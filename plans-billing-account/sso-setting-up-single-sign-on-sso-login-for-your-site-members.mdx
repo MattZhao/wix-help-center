@@ -1,0 +1,120 @@
+---
+title: "SSO: Setting Up Single Sign-On (SSO) Login for Your Site Members"
+---
+
+> **Important:**
+>
+> Currently, SSO login is only available with [Wix Studio enterprise solution](https://www.wix.com/enterprise) and [Wix Channels](https://www.wix.com/channels).
+
+Single Sign-On (SSO) is an additional authentication method that lets site members sign in to your Wix site using their organization profile login credentials. If you wish to create specific pages on your site which can only be accessed by site members using SSO, you'll first need to [create members only pages](https://support.wix.com/en/article/wix-editor-creating-members-only-pages).
+
+Once you have members only pages, [go to Site Member Settings](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/member-permissions/settings?&title=Select%20a%20site&buttonText=Manage+member+settings) in your site's dashboard and follow the steps below to enable SSO login for your Wix site.
+
+---
+
+### Step 1 | Add your Identity Provider (IdP) information
+
+> **Important:**
+>
+> - Wix currently supports only the Open ID Connect protocol.
+> - Make sure to set the SSO configuration in your IdP settings to allow the admin to ask for consent on behalf of all users.
+
+To set up SSO login for your site members, Wix needs some information from the settings of your Identity Provider (IdP). The information that you need to find is the **Client ID**, **Client Secret**, and the **Config URL**.
+
+You can use any IdP that supports the Open ID Connect protocol. Some IdPs use different terminology for the settings information that Wix needs. Check below for some helpful info about the most common IdPs and the terminology that they use.
+
+AzureOktaYou can find the information you need on the App Registration page that you created for Wix on your Azure Portal. [Learn more about registering an app](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).You need to have one of the following roles in Azure to view this information: Global Administrator, Cloud Application Administrator, Application Administrator, or owner of the service principal.Wix name Azure nameWhere to find itClient IDApplication (client) ID Under **Essentials **on the Overview tabClient SecretClient secretClick the link under **Client Credentials** on the Overview tabConfig URLOpenID Connect metadata documentSelect **Endpoints** on the Overview tabYou can find the information you need on the OIDC app page in your Okta account. [Learn more about managing your OIDC app](https://help.okta.com/en-us/Content/Topics/Apps/Apps_App_Integration_Wizard_OIDC.htm).Wix name Okta nameWhere to find itClient IDClient IDIn the **Client Credentials **section of the General tabClient SecretClient secretIn the **Client Credentials **section of the General tabConfig URLOpen ID Server Discovery EndpointThis is not found in your Okta account. You need to create this URL yourself.
+
+Use the format "https://$\{yourOktaOrg\}/.well-known/openid-configuration", where $\{yourOktaOrg\} is your Okta domain.
+
+Add the settings information from your Identity Provider in your Wix account's SSO Settings. This will let your Identity Provider communicate with Wix using the OpenID Connect protocol.
+
+#### To add your IdP information:
+
+[Go to Site Member Settings](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/member-permissions/settings?&title=Select%20a%20site&buttonText=Manage+member+settings) in your site's dashboard.  Click **SSO Settings**.  Enter the Client ID from your IdP in the **Client ID** field.  Enter the Client Secret from your IdP in the **Client Secret** field.  Select the Config URL** **option that you want to use:
+
+### Standard Config URL setup
+
+Enter the Config URL from your IdP in this field. 
+When you add the URL, Wix automatically adds values to the hidden nested fields based on a configuration file that Wix retrieves from your IdP. Click **Show nested fields** if you want to see these automatically added values.
+
+### Override well-known config
+
+You can choose to add your own authorization values in the hidden nested fields instead of using a standard Config URL setup.
+**Important:**Make sure that you fill in the correct values from your IdP in the fields. These values are used to generate a URL known as a Callback URL that you will need in the next step.
+To override the well-known config:
+1. Click **Show Nested Fields**.
+2. Select **Override Well-known Config** to unlock the fields.
+3. Enter the Authorization URL** **from your IdP in the **Authorization URL** field.
+4. Enter the Token URL** **from your IdP in the **Token URL** field.
+
+7.  (Optional) Copy the Logout URL value from the **Logout URL** field. This is a read-only URL that Wix generates based on the values you provided in the previous steps and the Open ID Connect protocol.
+
+> **Tip:**
+>
+> Your account owner and any account admins (co-owners) can access your SSO Settings. You can also [create a new role](https://support.wix.com/en/article/about-team-management#managing-your-teammates-roles) with the **Manage SSO** permission to grant access to other users in your organization.
+
+---
+
+### Step 2 | Copy the Callback URL
+
+When a user successfully authenticates themselves using an SSO service, the SSO service redirects to a predefined URL. This URL is known as a callback URL (sometimes called a redirect URL, or a reply URL).
+
+Wix automatically generates a callback URL based on the information that you added in the **Information your IdP needs **section of your SSO Settings. This is shown as the **Web Logins URL**.
+
+The callback URL is based on the Open ID Connect protocol. If you need to provide a callback URL to your IdP, click the Copy icon  next to the URL to copy it.
+
+> **Tip:**
+>
+> To add your callback URL, go to:**Okta**: General settings>Login>Sign-in redirect URLs**Azure**: Authentication>Web>Redirect URLs
+
+---
+
+### Step 3 | Enable SSO login and set as required if needed
+
+After you've added your IdP's information, you can enable SSO login to let your users sign in using SSO. You can also choose to require your users to sign in using SSO and disable all other methods for signing in.
+
+#### To enable SSO login and set as required:
+
+[Go to Site Member Settings](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/member-permissions/settings?&title=Select%20a%20site&buttonText=Manage+member+settings) in your site's dashboard.  Click **SSO Settings**.  Click the **Enable SSO **toggle to enable or disable SSO login:
+
+- **Enabled: **Your users can sign in to their Wix account using SSO or other methods such as an email address and password.
+- **Disabled: **Your users cannot sign in using SSO. They can still sign in using other methods.
+
+Click the **Set SSO as required** toggle to choose whether or not you want to require your users to sign in by SSO.
+
+- **Enabled:** Users can only sign in with SSO. They cannot sign in using other methods such as an email and password. Account owners can still sign in using other methods.
+- **Disabled:** Users can sign in using SSO or other methods.
+
+> **Important:**
+>
+> We recommend that you manually test your SSO settings before setting SSO as required.
+
+3.  Click **Save Changes**.
+
+---
+
+### Step 4 | (Optional) Copy your SSO login page info
+
+Wix generates a login page URL after you add your IdP details to the **Information from your IdP** section and save them. Your users can log in with SSO using this login page URL. You can also use it to test settings.
+
+Select the login page URL and copy it to share it with your users.
+
+---
+
+### Step 5 | (Optional) Customize the Advanced settings
+
+You can use the Advanced settings to override certain fields in your IdP's settings. This is useful when the default fields in your IdP are not defined by the Open ID Connect protocol.
+
+#### To set claims override mapping:
+
+Enter the user ID you want to use in the **IdP User ID **field.  Enter the email address you want to use in the **Email **field.  Enter a name the **First Name **field.  Enter a name in the **Last Name **field.  Enter a URL for the image you want to use for profiles in the **Profile image **field.  Click **Save Changes**.
+
+---
+
+> **Need more help?**
+>
+> Read more about SSO in our [troubleshooting and error codes article](https://support.wix.com/en/article/sso-troubleshooting-and-error-codes-for-it-admin).
+
+---
+Source: https://support.wix.com/en/article/sso-setting-up-single-sign-on-sso-login-for-your-site-members

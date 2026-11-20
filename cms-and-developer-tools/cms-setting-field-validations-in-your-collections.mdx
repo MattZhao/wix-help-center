@@ -1,0 +1,92 @@
+---
+title: "CMS: Setting Field Validations in Your Collections"
+---
+
+Add field validations in your CMS (Content Management System) collection to make certain fields required, limit their characters, or set them to accept specific values only.
+
+---
+
+### About field validations
+
+You can add validations to fields in your collection to help ensure the fields contain content and are not left blank. By setting a field as 'required' you can prevent new items from being saved if the field is left blank. With text fields, you can limit the character count or accept only predefined values.
+
+> **Tip:**
+>
+> Another way to help prevent empty collection fields is to [set default values](https://support.wix.com/en/article/cms-adding-default-values-to-fields-in-your-collections) for the fields that automatically populate when new items are added.
+
+---
+
+### Making required fields in your collections
+
+You can set a collection field to be required so that new items cannot be saved if the field is blank. To do so, edit the relevant field and enable the toggle in the Validations tab. After setting a field as 'required', an asterisk (*) appears next to the field name in your collection. If any of the fields you set as required are blank, a warning lets you know to fill them out.
+
+#### To make a field 'required' in your collection:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click the relevant collection.  Click **Manage Fields**.   Click the field that you want to make a required field.  Click the **Validations **tab.    Enable the **Make this a required field **toggle.  Click **Save**.
+
+---
+
+### Setting character count limits for text fields
+
+Ensure the total characters in your text fields are within a set range you define. When setting the character limit, spaces count as characters, while line breaks do not count.
+
+#### To limit the character count for a text field in your collection:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click the relevant collection.  Click **Manage Fields**.   Click the text field in which you want to limit the character count.  Click the **Validations **tab.    Enable the **Limit character count **toggle.  Enter the minimum and maximum character limits for the field.    Click **Save**.
+
+---
+
+### Setting text fields to accept specific values only
+
+Ensure that text fields in your collection can only accept specific values that you define. After creating the value options, you can either type in the field to search for the relevant values or select them from a drop-down menu.
+
+#### To set text fields to accept specific values only:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.   Click the relevant collection.  Click **Manage Fields**.   Click the text field in which you want to only accept specific values.   Click the **Validations **tab.    Enable the **Accept specific values only **toggle.  Enter the values that you want to make available for this field. Press **Enter** or add a comma (,) after each value.   Click **Save**.
+
+---
+
+### Hiding the table layout to prevent empty required fields
+
+When editing in the table layout, every change you make to items or fields is automatically saved. This makes it possible for you to add empty fields, even if the fields are set to 'required'. If you add a new item without filling out a required field, a Warning icon [image: undefined] appears in the fields to let you know to fill them out.
+
+> **Tip:**
+>
+> When you hide the table layout from a collection, you also hide the layout for collaborators who have [permissions](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) to edit your collections. This is a great way to prevent [your entire team](https://support.wix.com/en/article/wix-partners-managing-the-roles-of-your-teammates) from accidentally adding empty fields that are required.
+
+#### To hide the table layout in your collection:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click the relevant collection.  Click **More Actions **and select **Collection settings**.   Enable the toggle next to **Hide table layout**.   Click **Save**.
+
+---
+
+### FAQs
+
+Click below for answers to the most frequently asked questions about field validations.
+
+### Can my fields have default values that automatically appear for new items?
+
+Yes. Go to the **Default value** tab in the relevant field's settings to create a default value. The default value will appear in the field for every new item you add. This is another great way of ensuring you do not have blank fields, and instead have commonly used values in your fields. 
+**Important: **Default field values are not applied to items added via [input elements](https://support.wix.com/en/article/cms-about-user-input-elements) or the [Wix app](https://support.wix.com/en/article/cms-managing-your-collections-from-the-wix-owner-app). These default fields only apply to items that you or site collaborators add within your CMS collections from desktop computers.
+Learn more about [adding default values to collection fields](https://support.wix.com/en/article/cms-adding-default-values-to-fields-in-your-collections).
+
+### Can I add field validations to any field type?
+
+No. Currently, you cannot add field validations to the Rich Content field type.
+
+### Why can't I enable both the "Limit character count" and "Accept specific values only" validations?
+
+Enabling the **Limit character count** validation disables the **Accept specific values only** validation and vice versa. 
+With the **Limit character count **validation, you can enter any values in the fields as long as they fit within the minimum and maximum character counts. With the **Accept specific values only** validation, you can only add predefined values into the fields.
+
+### If I restore a collection from a backup, does it also restore the field validations?
+
+Yes. Restoring a backup overrides your collection with the content saved in the backup copy. This includes all the collection items, fields, validations, and other settings stored in the collection backup. 
+Learn more about [backing up your collections](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections).
+
+### What are the Roles & Permissions requirements for setting field validations?
+
+Collaborators with either of the default **CMS Editor** or **CMS Admin** [roles](https://support.wix.com/en/article/roles-permissions-overview#roles-for-integrated-wix-apps) can update field validations in your collection. If you create a [custom role](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions), it needs to have either the **Add Content **or the **Manage Collections** permissions to allow its collaborators to set field validations.
+
+---
+Source: https://support.wix.com/en/article/cms-setting-field-validations-in-your-collections

@@ -1,0 +1,67 @@
+---
+title: "Wix Editor: About the Order of Your Site's Elements"
+---
+
+The elements on your site pages are organized into a certain order. This order has both visual and functional aspects. It determines the display, loading, and tabbing sequence of elements on your live site.
+
+The order of your site's elements is automatically determined, however you can make manual changes if needed.
+
+**In this article, learn more about:**
+
+[The order of elements on your site](https://support.wix.com/en/article/wix-editor-about-the-order-of-your-sites-elements#the-order-of-elements-on-your-site)  [Manually changing the order of your site elements](https://support.wix.com/en/article/wix-editor-about-the-order-of-your-sites-elements#manually-changing-the-order-of-your-site-elements)  [Potential issues and troubleshooting steps](https://support.wix.com/en/article/wix-editor-about-the-order-of-your-sites-elements#potential-issues-and-troubleshooting-steps)
+
+---
+
+### The order of elements on your site
+
+Elements you add to your site are organized in your [page's layers](https://support.wix.com/en/article/wix-editor-using-the-layers-panel), and are displayed in a specific order. This sequence is taken from your site's [DOM order](https://support.wix.com/en/article/site-performance-your-sites-dom-order), which refers to the loading and reading sequence of page elements.
+
+The order of elements on your site is an [important part of your site's performance](https://support.wix.com/en/article/site-performance-your-sites-dom-order#dom-order-and-site-performance). It is also essential for your site's accessibility, as it [determines the sequence](https://support.wix.com/en/article/accessibility-checking-and-adjusting-your-sites-dom-order) in which visitors using assistive technologies (or the tab key) navigate your page content.
+
+Wix automatically sets a DOM order for you. The sequence uses the visual order of the elements; from left to right, and from top to bottom.
+
+---
+
+### Manually changing the order of your site elements
+
+Automatic DOM order is automatically enabled on your desktop site. If the visual and tabbing order of your site is logical, we recommend keeping the sequence as it is. However, if your site's DOM order is not logical, you can manually change it in the [Accessibility Wizard](https://support.wix.com/en/article/accessibility-about-the-accessibility-wizard-7284021).
+
+> **Want to check your site's DOM order?**
+>
+> [Preview](https://support.wix.com/en/article/wix-editor-saving-previewing-and-publishing-your-site#previewing-your-site) or open your live site, and press the **Tab key** on your keyboard to move through the page elements.
+
+#### To change the DOM settings:
+
+Select **Settings** on the top bar of your Editor.  Select **Accessibility Wizard**.  Select the More Actions icon  at the top right of the Wizard.  Select **Advanced accessibility settings**.  Select** Automatic DOM Order**.  Disable the toggle in the panel.  Select **Turn It Off **in the pop-up window.  Select the Layers icon  at the bottom left of the Editor.  Check over the list and delete any redundant elements. This includes duplicate elements that do not have a use on your site and can confuse screen reader users.  Drag and drop the remaining elements into the desired order.
+
+---
+
+### Potential issues and troubleshooting steps
+
+Issues with your site's DOM order can impact your site's performance and accessibility, as well as the overall structure of your site pages. Select an option to learn more about these issues, and discover potential resolutions.
+
+### The loading order of elements on my live site does not match the visual order of elements
+
+If you have disabled your site's automatic DOM order, the order in which they load may not match the visual order of elements. 
+For example, if a button appears at the bottom of a page but is first in the DOM order, it loads before the elements above it. As additional content loads, the page's layout may shift and move around. 
+We recommend enabling your site's automatic DOM order to ensure that the loading and visual sequence of your elements match. If the automatic order is not logical, however, you can [manually re-arrange the DOM order in the Layers panel](https://support.wix.com/en/article/wix-editor-using-the-layers-panel).
+
+### Elements move around on the page when I save my site
+
+Your site's DOM order is taken from the visual order of elements on your pages; from left to right, and top to bottom. This may cause elements to move position, or be hidden behind other elements when you save your site changes.
+You can rectify this issue with the following steps:
+1. Disable the automatic DOM order in your site's advanced accessibility settings.
+2. [Open the Layers panel in the Editor to locate and select the relevant elements](https://support.wix.com/en/article/wix-editor-viewing-and-selecting-overlapping-elements).
+3. [Manually rearrange the elements into your desired order](https://support.wix.com/en/article/wix-editor-using-the-layers-panel).
+
+### The tabbing order of elements on my live site does not match the visual order of elements
+
+If you have disabled your site's automatic DOM order, the tabbing order may not match the visual sequence of elements. This can impact your site's accessibility, as it makes it more difficult for visitors using assistive technologies to navigate your site.
+We recommend enabling your site's automatic DOM order to ensure that the tabbing and visual sequence of your elements match. If the automatic order is not logical, however, you can [manually re-arrange the DOM order in the Layers panel](https://support.wix.com/en/article/wix-editor-using-the-layers-panel).
+
+### The automatic DOM order doesn't match my site's language
+
+The automatic DOM order on desktop Editor sites has been built for left-to-right scripts (e.g. English, Spanish, etc.). If your site uses a right-to-left script such as Arabic or Hebrew, you need to [manually re-arrange the DOM order in the Layers panel](https://support.wix.com/en/article/wix-editor-using-the-layers-panel).
+
+---
+Source: https://support.wix.com/en/article/wix-editor-about-the-order-of-your-sites-elements

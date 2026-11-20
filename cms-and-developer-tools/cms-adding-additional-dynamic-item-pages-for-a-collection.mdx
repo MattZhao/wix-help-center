@@ -1,0 +1,93 @@
+---
+title: "CMS: Adding Additional Dynamic Item Pages for a Collection"
+---
+
+> **Before you begin, you will need:**
+>
+> - To [add the CMS to your site](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started).
+> - Existing [dynamic pages](https://support.wix.com/en/article/cms-about-dynamic-pages).
+
+You can add additional dynamic pages at any time. Use these pages to display your content in different ways, using different elements.
+
+This article refers to adding an additional dynamic page for an existing collection. If you want to add a new collection, with new dynamic pages, you can do so by [adding a preset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-collection-presets).
+
+> **New datasets experience:**
+>
+> In [Wix Studio](https://support.wix.com/en/article/about-wix-studio), we've moved datasets to the Inspector panel on the right to make them easier for you to use. Learn more [about the new datasets experience in Wix Studio](https://support.wix.com/en/article/cms-new-datasets-experience).
+
+---
+
+### Step 1 | Add a new dynamic item page
+
+You can display different collection fields, or update the design when you add a new dynamic item page. You can add up to 64 dynamic pages per collection.
+
+#### To add a new dynamic page:
+
+Add a blank dynamic page:
+
+- In **Wix Editor**: 
+
+1. Click **Menus & Pages ** on the left side of the Editor.
+2. Click** Dynamic Pages** then click the Settings icon  next to the collection you want to link your dynamic page to.
+3. Click **Add Dynamic Item Page**.
+
+[image: A screenshot of the the Menus & Pages panel in the Editor, highlighting the Add Dynamic Item Page option]
+- In **Editor X**:
+
+1. Click** Pages** in the top bar.
+2. Hover over the relevant group of dynamic pages and click the More Actions icon .
+3. Click **Add Dynamic Item Page**.
+
+[image: A screenshot of the the Pages panel in Editor X, highlighting the Add Dynamic Item Page option]
+    Use the page URL to determine the content displayed on the page:
+
+1. Click the More Actions icon  next to the new page.
+2. Click **Settings**.
+3. Edit the fields under **What's the page URL?**
+
+### How does the page URL work?
+
+A typical scenario for editing the page URL, is to display items based on the 'Title' field in your collection. 
+To do this, click **Add Field **and select **Title**.
+
+The setting is now using the 'Title' field as a reference to give the page a unique URL. It uses the main site URL, the name of the collection, and the value from the field to make up the URL. 
+For example, to display an item that has 'Lasagne' in the 'Title' field of a collection called 'Recipes', the URL looks like this:https://mystunningwebsite.com/food/recipes**/lasagne**To display an item that has 'pesto' in the 'Title' field, the URL looks like this:https://mystunningwebsite.com/food/recipes**/pesto**
+**What if I have two items with the same name?**Each dynamic page needs a unique URL in order to display. In the case of two items with the same name, only the first item in the collection is displayed. 
+Add a second field to give the URL an additional value, making each one unique. 
+Using the above example, a collection of recipes with two items called 'Lasagne', results in only the first item displaying as a dynamic page. In this case, the collection of recipes also has a field called 'Type' that can be used to generate unique URLs for each item.
+This time, click **Add Field **and select **Type**.
+
+Your URLs are now generated using two values instead of one. Our two items have 'Lasagne' in the 'Title' field, but in the 'Type' field, one has 'Meat' and the other has 'Vegetarian'.
+Having added the extra field in the settings panel, the URLs now look like this:https://mystunningwebsite.com/food/recipes**/lasagne/meat**https://mystunningwebsite.com/food/recipes**/lasagne/vegetarian**
+Read more about [creating a unique dynamic page URL](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+---
+
+### Step 2 | Add elements to the page and connect them
+
+You can now set up your dynamic page the way you want. Add suitable elements such as images, text boxes or buttons and connect them to your content using the desired fields in your collection. You can keep any default elements that come with the page, or delete them.
+
+#### To add an element and connect it:
+
+Go to the **Add** panel in your Editor.
+
+- **Wix Editor:** Click **Add ** on the left side of the Editor.
+- **Editor X: **Click **Add ** at the top of Editor X.
+    Click the element you want to add.  Select the element in the Editor and click the **Connect to Data **icon  (or  in Editor X).  Select the dataset you want to connect the element to under **Connect a dataset**.
+
+Choose what you want to connect to each field under **Connection Options **or **Components**.
+
+**Note: **The options vary depending on the type of element. For example, most elements have **Connection Options** while repeaters have a **Components **section.
+
+> **Tip:**
+>
+> If your collection does not have the correct field type, you can add a new collection field when selecting connection options. From the relevant **Connection Options** field, select **Add a new collection field**, enter a **Field Name** and select the **Field Type**.
+
+### Why connect to a new collection field?
+
+In the Connection Options, usually you can connect the element to an existing field in your collection. However, sometimes your collection doesn't have the right field to connect to. In this case, add a new collection field when choosing what you want to connect. 
+
+**Example: **You can add a Date Picker to your page, so visitors can select a date. If your collection doesn't have a Date and Time field to store the content, you can add and set up the new Date and Time field when you connect the element.
+
+---
+Source: https://support.wix.com/en/article/cms-adding-additional-dynamic-item-pages-for-a-collection

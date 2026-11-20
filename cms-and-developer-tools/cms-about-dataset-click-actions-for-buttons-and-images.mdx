@@ -1,0 +1,182 @@
+---
+title: "CMS: About Dataset Click Actions for Buttons and Images"
+---
+
+When [connecting a button or image to a dataset](https://support.wix.com/en/article/cms-connecting-a-button-to-a-dataset), choose what action occurs when visitors click the element. The list of available actions varies depending on the [dataset mode](https://support.wix.com/en/article/cms-working-with-the-dataset-mode-and-collection-permissions) and whether you connect to a regular dataset or a dynamic page dataset. Learn more about all the available dataset click actions below.
+
+---
+
+### Editing actions
+
+Use the dataset 'Editing Actions' to provide a way for visitors to add, edit, or delete content in your collection. To choose these actions, make sure to connect your button or image to a dataset that is in the **Write **or **Read & Write **mode. View the available dataset 'Editing Actions' below:
+
+#### Submit
+
+Use the 'Submit' click action to save information to your collection that visitors provide in [input elements](https://support.wix.com/en/article/cms-about-user-input-elements).
+
+> **Notes:**
+>
+> - This action is only available when the dataset mode is set to **Write **or **Read & Write**.
+> - If the dataset mode is **Write**, this action submits the inputs as a new item.
+> - If the dataset mode is **Read & Write**, this action updates the displayed item.
+
+---
+
+#### New
+
+Use the 'New' click action to create a new item in the dataset's connected collection.
+
+> **Note:**
+>
+> This click action is only available when the dataset mode is set to **Write **or **Read & Write**.
+
+---
+
+#### Revert
+
+Use the 'Revert' click action if you have [input elements that can edit collection items](https://support.wix.com/en/article/cms-formerly-content-manager-managing-collection-content-from-your-live-site) and you want a way to cancel the last changes made to an item. The 'Revert' action restores the edited item to its previous version before the recent changes were made. It also clears the values of the connected input elements.
+
+> **Note:**
+>
+> This click action is only available when the dataset mode is set to **Write **or **Read & Write**.
+
+---
+
+#### Delete
+
+Use the 'Delete' click action if you have [input elements that can edit collection items](https://support.wix.com/en/article/cms-formerly-content-manager-managing-collection-content-from-your-live-site) and you want a way to delete an item. The 'Delete' action removes the currently displayed item from your collection.
+
+> **Notes:**
+>
+> - This click action is only available when the dataset mode is set to **Write **or **Read & Write**.
+> - You can restore deleted collection items with [CMS backups](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections).
+
+---
+
+### List actions
+
+Use the dataset 'List Actions' when you need a button to interact with other elements that read content from your collection. Make sure to connect your button or image to a dataset that is set to the **Read **or **Read & Write **mode. View the available dataset 'List Actions' below:
+
+---
+
+#### Load more
+
+Use the 'Load more' click action to load additional items in the dataset's connected repeater or gallery. The ['Maximum items displayed' field in the dataset settings](https://support.wix.com/en/article/cms-changing-the-maximum-items-displayed-in-your-dataset-settings) determines both the number of items that initially load, and how many more items can load when visitors click the button. The dataset's filters and sort conditions also determine which items load and the order in which they appear.
+
+> **Notes:**
+>
+> - This action is only available when the dataset mode is set to **Read **or **Read & Write**.
+> - This action is only relevant for datasets connected to repeaters and galleries.
+
+---
+
+#### Apply filters
+
+Use the 'Apply filters' action if you have [input elements that filter content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements) and you only want the filters to apply after clicking a separate button. When visitors click the 'Apply filters' button, any input element filters they selected get applied to the dataset's connected elements.
+
+> **Note:**
+>
+> This click action is only available when the dataset mode is set to **Read **or** Read & Write**.
+
+---
+
+#### Reset input values
+
+The 'Reset input values' action clears the values of all input elements set to filter content. This allows visitors to easily reset any selections they've made when [using input elements to filter content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+> **Notes:**
+>
+> - This click action is only available when the dataset mode is set to **Read **or** Read & Write**.
+> - If you need to reset values in input elements that are set to collect submissions, use the 'Revert' click action instead.
+
+---
+
+#### Next item / Previous item
+
+Use the 'Next/Previous item' actions to cause connected elements to display content from the next or previous item retrieved by the dataset. When visitors click the 'Next/Previous item' buttons, the dataset's filters and sort conditions determine which collection item loads.
+
+> **Notes:**
+>
+> - These actions are only available when the dataset mode is set to **Read **or** Read & Write**.
+> - These actions are not relevant for buttons or images connected to dynamic datasets:
+>
+> - **On dynamic item pages:** Use the ['Next/Previous dynamic page'](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-dynamic-page-previous-dynamic-page) action instead, if you want to take visitors to the next/previous item's version of the page.
+> - **On dynamic list pages: **Use the ['Next/Previous page'](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) action instead, if you want the connected repeater or gallery to show the next set or 'page' of items. The **Maximum items displayed **field in the dataset settings determines how many items can appear in each 'page' of items.
+> - To use click actions to cycle through items displayed in a repeater or gallery on a regular page, use the ['Next/Previous page'](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page)** **action instead.
+
+---
+
+### Navigation actions
+
+Use the 'Navigation Actions' to create buttons that take your visitor to the next or previous dynamic page retrieved by the dataset, or to specific dynamic pages. View the available dataset 'Navigation Actions' below:
+
+---
+
+#### Next page / Previous page
+
+Use the 'Next/Previous page' actions to cause connected repeaters and galleries to display the next or previous 'page' of items. The dataset's **Maximum items displayed **field determines how many items are on each 'page'. The dataset's filters and sort conditions determine which items load and the order in which they appear in each 'page'.
+
+> **Notes:**
+>
+> - These click actions are only available when the dataset mode is set to **Read **or** Read & Write**.
+> - These actions are only relevant to datasets connected to repeaters and galleries.
+> - These actions are not relevant for dynamic item page datasets used to show only 1 item on the page. Instead, use the ['Next/Previous dynamic page'](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-dynamic-page-previous-dynamic-page) action to take visitors to the next or previous item's version (dynamic URL) of the page.
+
+---
+
+#### Next dynamic page / Previous dynamic page
+
+On a dynamic item page, the 'Next/previous dynamic page' actions take visitors to the next or previous item's version (dynamic URL) of the dynamic page. In the dataset settings, the dataset's sort condition determines the order in which the next or previous dynamic page URLs load. You can add a filter to the dataset to include or exclude specific items' dynamic page URLs from loading.
+
+> **Note:**
+>
+> - These click actions are only available when the dataset mode is set to **Read **or** Read & Write**.
+> - These click actions work with buttons and images on dynamic item pages only. The button or image must be connected to the dynamic item page's connected dataset.
+
+---
+
+### Download actions
+
+Use the dataset 'Download Actions' to allow visitors to click to download specific audio, document, image, or video files from your collection.
+
+---
+
+### Wix Stores actions
+
+Use the dataset 'Stores/Products Actions' to create buttons that interact with your Wix Stores products. To use these dataset actions, make sure to enable Wix App Collections in your CMS advanced settings. View the available dataset 'Stores/Products Actions' below:
+
+> **View full tutorials about:**
+>
+> - [Displaying Your Wix Stores Products on a Dynamic List Page](https://support.wix.com/en/article/cms-displaying-your-wix-stores-products-on-a-dynamic-list-page)
+> - [Displaying Your Wix Stores Products on Any Page](https://support.wix.com/en/article/cms-displaying-your-wix-stores-products-on-any-page)
+
+#### Add to cart
+
+Use the 'Add to cart' action to give visitors a way to add products to their shopping cart from a repeater displaying your products.
+
+> **Note:**
+>
+> This click action is available if you have [Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) enabled, Wix Stores products, and the dataset connects to the** Products** Wix App collection.
+
+---
+
+#### Open quick view
+
+If you have a repeater displaying your Wix Stores products, use the 'Open quick view' action to let visitors view products in the [quick view window](https://support.wix.com/en/article/wix-stores-customizing-the-quick-view-in-the-product-gallery). From there, visitors can read more about the product and add it to their cart.
+
+> **Note:**
+>
+> This click action is available if you have [Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) enabled, Wix Stores products, and the dataset connects to the** Products** Wix App collection.
+
+---
+
+### Pricing Plans actions
+
+Use the dataset 'PaidPlans/Plans Actions' to create separate buttons visitors can use to select a plan and go to checkout. To use these dataset actions, make sure to enable Wix App Collections in your CMS advanced settings.
+
+> **Note:**
+>
+> This click action is available if you have [Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) enabled, plans created in [Wix Pricing Plans](https://support.wix.com/en/article/pricing-plans-an-overview), and the dataset connects to the** Plans** Wix App collection.
+
+---
+Source: https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images

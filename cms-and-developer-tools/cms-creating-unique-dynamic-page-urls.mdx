@@ -1,0 +1,148 @@
+---
+title: "CMS: Creating Unique Dynamic Page URLs"
+---
+
+The URL slug structure of your dynamic pages determines both the type of dynamic page (list or item) and the actual URL slugs used by each version of a dynamic item page.
+
+**In this article, learn more about:**
+
+---
+
+### About URL slugs and URL slug structures
+
+URL slugs are the characters in the URL (web address) that appear after your domain name. They help humans and search engines understand what the page's content is about. URL slug structures determine how the actual URL slugs are constructed and what 'type' of dynamic page is used (list or item).
+
+#### URL slug structures define dynamic page URLs
+
+Whenever you create a dynamic page, its Page Link field is added to your collection. The Page Link field generates the URLs for each item by combining the characters and variables used in the dynamic page's URL slug structure. By default, dynamic item pages add the collection's primary field to the URL slug structure. Fields used in the URL slugs are converted to lowercase letters with dashes replacing any spaces.
+
+When you add a variable to the slug structure, you choose a collection field that the variable represents. Any variables that exist in the slug structure are replaced by the actual field values for each item. This allows you to use field values from collection items in their dynamic page URLs.
+
+> **In the example below:**
+>
+> A variable representing the 'Category' field was added to the URL slug structure of the dynamic item page used to display a single item. As a result, the values in the 'Category' field are added to each item's Page Link field to create the URL slugs for each version of the dynamic item page.
+
+#### Using variables to change the dynamic page type
+
+Each Page Link field in your collection represents a specific dynamic page and each value in the field represents an item's URL slug. When you add variables to change a dynamic page's URL slug structure, the Page Link field values adjust accordingly.
+
+> **In the example below:**
+>
+> A variable representing a 'Category' field was added to the URL slug structure of a dynamic list page. This converted the dynamic list page to a dynamic item page because the Page Link field value is no longer unique to each item.
+
+> **In the example below:**
+>
+> The Page Link field now has 2 unique URL slugs. So, its dynamic item page now has 2 versions:
+> - 1 version at **/felines/large **listing the 2 items that share this URL slug
+> - 1 version at **/felines/medium** listing the 3 items that share this URL slug.
+
+> Learn more about [creating dynamic pages that list items by category](https://support.wix.com/en/article/cms-creating-dynamic-pages-that-list-items-by-category-2254237).
+
+---
+
+### Why you should add variables to dynamic page URLs
+
+For a dynamic item page to have a dedicated version for each collection item, the page's Page Link field needs a unique URL slug. Otherwise, the page cannot exist for each item. You may need to add variables to the URL slug structure, to ensure each item has a unique URL slug.
+
+> **Example:**
+>
+> If your dynamic item page URL slug structure ends with **/team/\{primary-field\}**, and 2 items in the collection have "Sara" in the primary field, only 1 URL is generated for **/team/sara**. So only 1 version of the dynamic item page is created for only 1 of the 2 collection items. 
+> To solve this, you could add a variable field to the URL slug structure to create unique URL slugs for each item. For example, add a "phone" field if each item has a different value in a "phone" field. The URL would then be **/team/sara/\{phone\} **so each item gets its own unique dynamic item page URL. 
+> You can also [modify the Page Link field for one of the "Sara" items](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls#editing-url-slugs-for-specific-dynamic-item-pages) so that each has a unique URL ending. In this case, unique URLs are generated from both items and they both get their own unique versions of the dynamic item page.
+
+#### URL slug structures cannot conflict with existing slug structures
+
+The URL slug structure cannot already be used by other existing pages on your site. To be unique, the URL slug structure **cannot** **have the same prefix** (e.g. \{Collection name\}) **and the same number of variables **as another page on your site, even if the variables are different.
+
+### Show me an example of conflicting URL slug structures that cannot be used
+
+In the example image below, the URL slug structures conflict with each other because they share the same prefix and have the same number of variables (1 total variable): 
+- **felines/\{origin\}**
+- **felines/\{category\}**
+
+Even though technically, the web addresses generated could be unique for each page, the total number of variables after the shared prefix causes the slug structures to conflict.  
+When editing the URL slug structure, make sure it does not have the same prefix and number of variables as another slug structure used on your site.
+
+---
+
+### Adding variables to dynamic page URL slug structures
+
+Go to the SEO tab of the relevant dynamic page in your editor to check the URL slug structure. You can then manually edit the structure and add variable fields that change based on each collection item's actual field value.
+
+> **Important:**
+>
+> If you want the old URLs to automatically redirect to the new ones you create by adding variables, make sure your site first has a [connected domain](https://support.wix.com/en/article/connecting-a-domain-to-your-site-195136). If your site does not have a domain connected, the old URLs will no longer work and instead, will load 404 error pages.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu**on the left side of the editor.
+3. Click **Dynamic Pages**.
+4. Hover over the relevant dynamic page and click the **More Actions** icon  on the right.
+5. Click **SEO**.
+6. Edit the **URL slug structure **field: 
+
+1. Click **Edit **next to the **URL slug structure** field and choose what you want to do:
+
+- **Add Variable: **Click **+** **Add Variable** and choose a text or number field to use its values in the URL slug structure.
+- **Add static values: **Click the field and enter the static values you want to use in the URL slug structure. Use only English letters, numbers or dashes.
+2. Click **Save**.
+[image: Screenshot of saving changes to the URL slug structure of a dynamic item page.]
+1. Click **Replace URLs** to confirm the changes. The dynamic page's previous URLs will be deleted and will no longer work. Instead, the new URLs will be generated for the dynamic page.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Hover over the relevant dynamic page and click the **More Actions **icon  on the right.
+4. Click **SEO**.
+5. Edit the **URL slug structure **field: 
+
+1. Click **Edit **next to the **URL slug structure** field and choose what you want to do:
+
+- **Add Variable: **Click **+** **Add Variable** and choose a text or number field to use its values in the URL slug structure.
+- **Add static values: **Click the field and enter the static values you want to use in the URL slug structure. Use only English letters, numbers or dashes.
+2. Click **Save**.
+[image: Screenshot of editing the URL slug structure of a dynamic item page.]
+1. Click **Replace URLs** to confirm the changes. The dynamic page's previous URLs will be deleted and will no longer work. Instead, the new URLs will be generated for the dynamic page.
+
+---
+
+### Editing URL slugs for specific dynamic item pages
+
+From your collection, you can customize the end of the URL used by specific dynamic item pages. If your site has a domain connected to it, when you change the URL slug, the old URL will automatically redirect to the new URL. If you haven't connected a domain to your site, the old URL will no longer work after you change it and a 404 page will load instead.
+
+> **Important:**
+>
+> Make sure you've [connected a domain](https://support.wix.com/en/article/connecting-a-domain-to-your-site-195136) to your site before updating URL slugs for specific items. This ensures the old URLs will redirect to the new ones.
+
+#### To edit an item's URL slug:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS **** **in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.   Click the relevant collection.  Click the relevant Page Link field for the relevant item.
+
+**Note: **By default, the Page Link field is titled: **\{Collection name\} (Item)**
+
+Click the **URL Slug** field and edit the URL. Use only English letters, numbers or dashes.   Click **Save**.
+
+---
+
+### FAQs
+
+Click a question below to learn more about creating unique dynamic page URLs.
+
+### What are dynamic URLs?
+
+Dynamic URLs are webpage addresses that change based on the page's connected collection items and the fields used in the URL slug structure. Each item in your collection needs a unique dynamic item page URL for its version of the dynamic item page to exist. This is why you may need to add fields to the URL slug structure to give each item in your collection its own unique URL.
+
+### Where do I see the dynamic page URLs in my collections?
+
+Check your dynamic page's corresponding Page Link field in your collection to see the dynamic page URLs for each item. 
+Whenever you create a dynamic page, its Page Link field is added to your collection. The Page Link field generates the URLs for each item by combining the characters and variables used in the dynamic page's URL slug structure. 
+When you add a variable to the slug structure, you choose a collection field that the variable represents. Any variables that exist in the slug structure are replaced by the actual field values for each item. Fields used in the URL slugs are converted to lowercase letters with dashes replacing any spaces. This allows you to use field values from collection items in their dynamic page URLs.
+In your collection's Table layout, the fields are added at the far right of the collection, by default. 
+In List or Gallery layouts, click the relevant item to see the URL fields added at the bottom. Click **Preview** or **Open Preview **on the field to preview the dynamic pages. 
+Learn more about [managing your collection fields](https://support.wix.com/en/article/cms-formerly-content-manager-managing-your-collections).
+
+### Can I add variables to SEO meta tags?
+
+Yes. Go to your SEO dashboard to add variables to your dynamic page meta tags. The variables get replaced with the actual values from your collection so you can show relevant info about each dynamic page's content. Learn more about [editing your dynamic page SEO settings](https://support.wix.com/en/article/working-with-seo-settings-for-dynamic-pages).
+
+---
+Source: https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls

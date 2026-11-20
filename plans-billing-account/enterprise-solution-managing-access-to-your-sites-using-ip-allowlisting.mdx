@@ -1,0 +1,93 @@
+---
+title: "Enterprise Solution: Managing Access to Your Sites using IP Allowlisting"
+---
+
+IP allowlisting is a method for restricting access to a URL. It works by checking the Internet Protocol (IP) addresses of visitors against a list of approved IP addresses. If a visitor tries to access a URL from an IP address that is not on the list, they are automatically blocked. This can help prevent unauthorized access to a site's resources.
+
+You can use the Wix enterprise solution's IP Allowlisting feature to create rules that limit access to your sites. For example, you can create a rule to allow access only to visitors from your organization's IP addresses. Select which URLs on your account that you want to include in your rule and enter the IP addresses that are allowed to access them.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-ip-allowlisting-en).
+
+**In this article, learn more about:**
+
+[Creating a rule](https://support.wix.com/en/article/wix-enterprise-managing-access-to-your-sites-using-ip-allowlisting#creating-an-ip-allowlisting-rule)  [Editing a rule](https://support.wix.com/en/article/wix-enterprise-managing-access-to-your-sites-using-ip-allowlisting#editing-an-ip-allowlisting-rule)  [Deleting a rule](https://support.wix.com/en/article/wix-enterprise-managing-access-to-your-sites-using-ip-allowlisting#deleting-an-ip-allowlisting-rule)  [Troubleshooting issues](https://support.wix.com/en/article/wix-enterprise-managing-access-to-your-sites-using-ip-allowlisting#troubleshooting-ip-allowlisting-issues)
+
+---
+
+### Creating an IP Allowlisting rule
+
+You can create new IP Allowlisting rules in the Settings section of your enterprise dashboard. Use any of the following formats for your IP addresses:
+
+FormatExampleSingle IP address40.77.182.32IP address range40.77.182.32-40.77.182.200Classless Inter-Domain Routing (CIDR) notation40.77.183.32/27
+
+> **Important:**
+>
+> A URL can only be used in one rule at a time. You can't create two rules that contain the same URL.
+
+#### To create a rule:
+
+[Go to your enterprise dashboard](https://manage.wix.com/enterprise-dashboard/home).  Hover over **Security **in the left sidebar.  Select **IP Allowlisting**.  Click **Create Rule**.  Enter a name for the rule.  Click the **Add URLs **drop-down.
+
+Select the URLs on your account that you want to include.  Enter an IP address under **Allowed IP addresses**.   (Optional) Add a description to help you remember what the IP address is for.  Click **Add**.  Repeat steps 7-10 for all of the IP addresses that you want to add.  Click **Create**.
+
+---
+
+### Editing an IP Allowlisting rule
+
+You can edit an IP Allowlisting rule in the Settings section of your enterprise dashboard.
+
+#### To edit a rule:
+
+[Go to your enterprise dashboard](https://manage.wix.com/enterprise-dashboard/home).  Hover over **Security **in the left sidebar.  Select **IP Allowlisting**.  Hover over the rule that you want to update.  Click **Edit**.
+
+Make your changes to the rule.  Click **Save**.
+
+---
+
+### Deleting an IP Allowlisting rule
+
+You can delete an IP Allowlisting rule in the Settings section of your enterprise dashboard.
+
+> **Important:**
+>
+> It is not possible to recover a rule after you delete it.
+
+#### To delete a rule:
+
+[Go to your enterprise dashboard](https://manage.wix.com/enterprise-dashboard/home).  Hover over **Security **in the left sidebar.  Select **IP Allowlisting**.  Click the **More Actions** icon  beside the rule that you want to delete.   Select **Delete**.
+
+Click **Delete**.
+
+---
+
+### Troubleshooting IP Allowlisting issues
+
+If you're experiencing issues when you try to create a rule, try the steps below:
+
+### Make sure that you haven't used the URL in another rule
+
+A URL can only be used in one rule at a time. You can't create two rules that contain the same URL.
+If the URL that you want to include in your rule is not available in the list, check if you've already used the URL in another rule.
+
+### Check the format of your IP address
+
+Make sure that your IP address matches one of the following formats:
+
+- **Single IP address:** e.g. 40.77.182.32
+- **IP address range: **e.g. 40.77.182.32-40.77.182.200
+- **Classless Inter-Domain Routing (CIDR) notation:** e.g. 40.77.183.32/27
+
+If you see a message that says **IP address is not valid**, make sure that your IP address matches one of these formats.
+
+### Check your IP address for any spaces or incorrect characters
+
+You can only use numbers, periods, dashes, and slashes in your IP address. 
+If you see a message that says **IP address is not valid**, make sure that your IP address does not contain any spaces or incorrect characters.
+
+### Make sure you haven't used the same IP address more than once in your rule
+
+You can only use an IP address once in your allowlisting rule. 
+If you see a message that says **This** **IP address is already part of the rule**, check the addresses that you have already added to make sure that you're not repeating an IP address.
+
+---
+Source: https://support.wix.com/en/article/wix-enterprise-managing-access-to-your-sites-using-ip-allowlisting

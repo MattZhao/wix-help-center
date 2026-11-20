@@ -1,0 +1,96 @@
+---
+title: "CMS: Changing Your Collection Permissions"
+---
+
+In the [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview), you can change your collection permissions to control who can view, add, update, or delete collection content **on your live site**. The most common way visitors modify collection content from the live site is with [input elements set to collect content](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection). Collection permissions help you manage live site access to your collection content and maintain the security of your site's data.
+
+> **Important differences between permission types:**
+>
+> - **Collection permissions:** Determine who can access the CMS collection content **from your live site** and what they can do with the content (e.g. view, add items, update existing content, delete content). Usually, this is done with [input elements](https://support.wix.com/en/article/cms-about-user-input-elements), but can also be done with the [Data API](https://support.wix.com/en/article/cms-collection-permissions-overview#velo-by-wix-authorization-suppression). Collaborators are always considered 'admins' in collection permissions that control what people can do from the live site.
+> - **CMS roles & permissions: **The [roles and permissions you assign to collaborators](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) determine what they can do **from within the CMS itself**. This differs from what collaborators can do from your live site. All collaborators are considered 'admins' in the context of your collection permissions.
+
+---
+
+### Changing your collection permissions
+
+To change the permissions for a collection, go to the collection's settings and access the **Permissions & privacy** tab. Then choose the relevant option to show content, collect content, or create custom permissions.
+
+> **Important:**
+>
+> Setting collection permissions to 'Everyone' means any site visitor can access the collection by using an API, even if the content is not presented on the live site. Learn more about [using authorization suppression with the Data API](https://support.wix.com/en/article/cms-collection-permissions-overview#velo-by-wix-authorization-suppression) to bypass permissions.
+
+#### To change your collection permissions:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **  Hover over the relevant collection, click the **More Actions **icon  and select **Permissions & privacy**.  Choose which permissions the collection will have on your live site:
+
+### Show content
+
+Allow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+
+### Collect content
+
+Allow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See the [FAQ section below](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+
+### Custom
+
+Set custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about setting collection permissions.
+
+### Does the 'Collect content' permission allow visitors to update existing content?
+
+No. The 'Collect content' permission allows people to add new items to the collection and field values for these new items only. The 'Collect content' permission **does not allow visitors to update existing items or the field values of existing items**. 
+If you want to allow visitors to update existing items and their field values, use the 'Custom' permissions. In the custom permissions, select the 'Update' checkboxes next to the relevant roles so visitors can update existing collection items and field values from your live site. 
+
+Learn more about [creating a custom form with input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) that submit to your collection.
+
+### How do CMS roles differ from collection permissions?
+
+[CMS Roles](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) specify what collaborators can do within the CMS, while collection permissions specify what actions users can perform with the CMS collection content on your live site. Even though all collaborators are considered 'admins' in the context of collection permissions for the live site, their roles within the CMS might differ based on the permissions assigned to them.
+
+### Can I edit permissions for Wix app collections like Wix Stores or Wix Bookings?
+
+No, you cannot edit permissions for Wix app collections. You can view these collections in your CMS, but you cannot modify them there. Wix app collections get their content from the corresponding apps (e.g. Wix Stores, Wix Bookings). You can manage the content of these Wix app collections from the apps themselves.
+
+### Can I edit permissions for Wix Blocks collections?
+
+No, you cannot edit the permissions Wix Blocks collections. Go to Wix Blocks to modify the content of your Blocks.
+
+### What default permissions do newly created collections have?
+
+By default, new collections you create are set to **Show content **with **Everyone** allowed to view content.
+
+---
+Source: https://support.wix.com/en/article/cms-changing-your-collection-permissions

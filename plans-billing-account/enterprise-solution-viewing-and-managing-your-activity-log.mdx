@@ -1,0 +1,186 @@
+---
+title: "Enterprise Solution: Viewing and Managing Your Activity Log"
+---
+
+> **Important:**
+>
+> This feature is only available on [Wix Studio for enterprise](https://support.wix.com/en/article/wix-enterprise-an-overview).
+
+An Activity Log is the best way to track activities performed by team members within your organization. You can filter the activities by category, user or time. You can also export the log to download the data.
+
+> Learn more about [Wix Studio for enterprise](https://www.wix.com/enterprise) or [contact our sales team](https://www.wix.com/enterprise/form?referrer=kb-activity-log-en).
+
+**In this article, learn more about: **
+
+[Viewing and filtering your site's activities](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log#viewing-and-filtering-your-sites-activities)  [Creating views](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log#creating-views)  [Managing a saved view](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log#managing-a-saved-view)  [Exporting your data](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log#exporting-your-activity-log)  [Sending your activity log data to Amazon Web Services (AWS) in real time](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log)  [Frequently asked questions (FAQs)](https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log#faqs)
+
+---
+
+### Viewing and filtering your site's activities
+
+View and filter activities based on the category, user and time range. You can use these filters to narrow down results and find relevant information more efficiently.
+
+#### To view and filter your site's activities:
+
+[Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.  Click **Filter** at the top right.
+
+Click the type of filter you want to add:
+
+- **Category****: **Select the relevant category:
+
+- **Sites:** When a new site was created, deleted, duplicated or published, or when a site is renamed.
+- **Custom Templates:** When a template is created, duplicated, deleted, or updated. For example, a template is made available / unavailable or when settings are changed.
+- **Media:** When media has been uploaded, archived or unarchived.
+- **Domains:** When a domain is connected or added to a site.
+- **Team:** When members are invited as collaborators, changed roles, or are removed from the platform.
+- **SSO Setting: **When an SSO setting has been toggled on or off.
+- **IP Allowlisting: **When an Allowlist rule has been added, deleted or edited.
+- **Routing: **When a route has been added, deleted, or edited.
+- **Roles & Permissions:** When new members are invited to the platform for specific sites.
+- **Plan Status: **When a Premium plan is activated or deactivated for a site.
+- **User: **Filter by team members in your organization.
+- **Time: **Filter by time range. You can select pre-set times or customize your own:
+
+> **Tip:**
+>
+> To change between Category and User filters, click **Reset Filters** and start again.
+
+---
+
+### Creating views
+
+You can manage and monitor the activities that matter most to you by saving them in a dedicated, reusable view. For example, if you want to track template creation dates or when specific employees make changes. You can save these filters in their own view for future use. They are personalized to you and accessible at any time.
+
+#### To create a new view:
+
+[Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.  Click **Filter** at the top right.  Select the relevant filter(s): **Category**, **User**, or **Time**.  Save this view:
+
+1. Click **Manage View **at the top left.
+2. Select **Save as new view**.
+3. Name the view and click **Save**.
+
+---
+
+### Managing a saved view
+
+Once you create a new view, it's easy to manage. You can add or edit your view's filters, rename your views or set a view as your default.
+
+#### To manage your views:
+
+[Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.  Select your view from the **All activities** drop-down.
+
+Click **Manage View** and select the option you want:
+
+### Edit:
+
+1. [Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.
+2. Click the **All activities **drop-down at the top left.
+
+1. Select your personalized view under Saved views
+2. Edit the filters as you did above.
+3. Click **Manage View**
+4. Select **Save changes **
+[image: A screenshot showing how to save changes on an Activity Log view.]
+
+### Save as new view:
+
+Save the filters you have selected in a new view.
+
+### Rename:
+
+Edit the name of your current view.
+
+### Set as default view:
+
+Make the view the first one you see every time you visit the activity log.
+
+### Delete a view:
+
+1. [Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.
+2. Click the **All activities **drop-down at the top left.
+
+1. Select your personalized view under Saved views
+2. Click **Manage View**
+3. Select **Delete**
+[image: A screenshot showing how to delete a filtered view from the Activity Log.]**Note: **When you delete a view, a pop-up will appear at the top of your screen. Just click Undo to restore the deleted view.[image: A screenshot showing the pop up of how to undo a deleted view from the Activity Log.]
+
+---
+
+### Exporting your Activity Log
+
+You can export your Activity Log with all your activity or export a filtered version of the data. It is easy to do and is essential for audits and regulations, security, or debugging and incident investigations.
+
+#### To export your Activity Log:
+
+[Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.  Click the **Export **icon  on the top right.  Choose how you want to export your data:
+
+- **All data:** Export all the items and their data.
+- **Filtered:** Export only the items and their data after applying your filters. This option only appears if you added filters to your view.
+
+---
+
+### Sending your activity log data to Amazon Web Services (AWS) in real time
+
+Send your activity log data to your AWS, so your organization can store the activity log data for longer. Once connected to AWS, your activity log sends data every 5 minutes in JSON format. A new JSON file is created each day.
+
+> **Note:**
+>
+> To connect your organization's activity log to your AWS account through the enterprise dashboard, you will need your organization's: 
+> - Access key ID
+> - Secret access key
+> - Bucket name
+
+#### To send your activity log data to AWS in real time:
+
+[Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.  Click **More Actions** in the top right.   Click **Connect to AWS**.   Enter your **Access key ID**, **Secret access key**, and **Bucket name**.   Click **Connect**.
+
+> **Tip:**
+>
+> You can update the relevant keys or bucket at any time by clicking **Manage** in the banner at the top of the Activity Log page in the enterprise dashboard and entering the new values. [image: A screenshot showing how to update your access keys or bucket name in the Activity log section of the enterprise dashboard.]
+
+---
+
+### FAQs
+
+Click a question below to learn more about your Activity Log.
+
+### Who can access my account's activity log?
+
+Any Account Admin or Co-Admin can access your Activity Log. You can also customize roles for other team members to view it.
+
+### Which events can I see in the Activity Log?
+
+Each recorded event shows the action type, date, and time. It also includes the user's email ID and more specific events relevant to the action type.
+
+### Which filters can be used together?
+
+You can filter by Category, User or Time individually. You can also filter Time with either Category or User. At the moment you can't use the Category and User filter simultaneously.
+
+### Can I create my own categories to filter?
+
+At the moment, there is not an option to add personalized categories.
+
+### How do I update my organization's AWS credentials in the Activity log?
+
+You can update your organization's AWS credentials at any time.
+**To update your AWS credentials:**
+1. [Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.
+2. Click **Manage** on the banner at the top.
+3. Enter the new credentials, including Access key ID, Secret access key, and Bucket name.
+4. Click **Save**.
+
+[image: A screenshot showing how to enter new AWS credentials in the activity log of the enterprise dashboard.]
+
+### How do I disconnect my AWS connection in the Activity log?
+
+You can disconnect your organization's Activity Log from your AWS S3 bucket at any time. New activity log events won't be stored in your organization's AWS S3 bucket after you disconnect. 
+**To disconnect your Activity log from your AWS S3 bucket:**
+1. [Go to Activity Log](https://manage.wix.com/enterprise-dashboard/activity-log) in your enterprise dashboard.
+2. Click **Manage** on the banner at the top.
+3. Click **Disconnect**.
+4. Click **Disconnect** again to confirm.
+
+[image: A screenshot showing how to disconnect yourn organization's activity log from the AWS S3 bucket.]
+
+---
+Source: https://support.wix.com/en/article/wix-enterprise-viewing-and-managing-your-activity-log

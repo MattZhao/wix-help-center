@@ -1,0 +1,84 @@
+---
+title: "CMS: About Collection Permissions"
+---
+
+In the [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview), you can change your collection permissions to control who can view, add, update, or delete collection content on your live site. The most common way visitors modify collection content from the live site is with [input elements set to collect content](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection).
+
+> **Velo by Wix users:**
+>
+> The [Wix Data API](https://dev.wix.com/docs/develop-websites/articles/databases/wix-data/data-api/working-with-the-data-api) lets you access your collections directly using code, giving you more capabilities than the preset and custom collection permissions.
+
+---
+
+### Manage live site access to collection content
+
+Collection permissions determine who can access CMS collection content from your live site and what they can do with the content (e.g. view, add items, update existing content, delete content). Usually, this is done with input elements but can also be done with the [Data API](https://support.wix.com/en/article/cms-collection-permissions-overview#velo-by-wix-authorization-suppression). Collaborators are always considered 'admins' in collection permissions that control what people can do from the live site.
+
+> **About site owners and collaborators:**
+>
+> Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+
+---
+
+### Use the 'Show content' permission for view-only access
+
+The 'Show content' permission allows your collection content to be viewable on the live site by site visitors. This setting is useful when you want to make certain information publicly accessible without allowing any modifications. You can choose to make the content viewable by everyone, or restrict it to site members only. This ensures that sensitive content remains protected while still being accessible to those who need it.
+
+---
+
+### Use the 'Collect content' permission to allow adding new items
+
+The 'Collect content' permission lets visitors add new items to your collection through input elements or API. This is particularly useful for sites that gather user-generated content, such as reviews, comments, or posts. However, this permission does not allow visitors to update existing items or their field values. Use custom permissions if you need to allow existing items or their field values to be updated from the live site.
+
+---
+
+### Set 'Custom' permissions for more access control
+
+For more control over who can view, add, update, or delete content, set 'Custom' permissions. This allows you to tailor access based on different roles, such as site admins, item creators, members, and general site visitors. For instance, you might allow only admins to delete content, while letting item creators update their own submissions. This flexibility ensures that you can manage your collection content in a way that aligns with your site's specific needs and security requirements.
+
+> **Note:**
+>
+> Data access permissions do not change with PII encryption. Appropriate permissions must be set to maintain the confidentiality of the data. Learn more [about PII and data security](https://support.wix.com/en/article/cms-storing-personally-identifiable-information-pii-data).
+
+---
+
+### Modify permissions for all your collections
+
+Understanding and managing permissions for all your collections is crucial for maintaining the integrity and security of your site. Each collection can have its own set of permissions, allowing you to customize access based on the type of content and the intended audience. By regularly reviewing and adjusting these permissions, you can ensure that your site's data remains secure and that users have the appropriate level of access.
+
+---
+
+### Velo by Wix: Authorization suppression
+
+When interacting with your collections using the Data API, you can choose to bypass the permissions model in certain cases. The optional WixDataOptions argument can be sent to the API function call with the suppressAuth property set to true. This will cause the function to run without checking if the current user has the correct permissions. You can only bypass permissions when making API calls from backend code. Client-side API calls will always run permission checks, regardless of what options are passed.
+
+`import wixData from 'wix-data';
+// ...
+let options = \{
+    "suppressAuth": true
+\};
+wixData.query("myCollection")
+  .find(options)
+  .then( (results) => \{
+    if(results.items.length > 0) \{
+      let items = results.items;
+      let firstItem = items[0];
+    \} else \{
+      // handle case where no matching items found
+    \}
+  \} )
+  .catch( (error) => \{
+    let errorMsg = error.message;
+    let code = error.code;
+  \} );`
+
+Another example for the use of suppressAuth, is where you want to allow a [custom role](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) (a specific site member or a specific group of site members) access to a collection that is set with admin permissions. In this case, the web module must [check the identity](https://www.wix.com/velo/reference/wix-realtime-backend/permissionsrouter-obj/check) or the role of the site member before calling for the data.
+
+> **Notes:**
+>
+> - Collection permissions impact what data is loaded by datasets that connect to the collection. Learn more about [dataset modes](https://support.wix.com/en/article/cms-working-with-the-dataset-mode-and-collection-permissions) which determine whether the dataset can read, write, or read and write collection data.
+> - [Dataset settings](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset) can be used to refine what data operations can be performed by the elements connected to that specific dataset. Data is always accessible to the extent specified by collection permissions using the Data API.
+> - Some roles depend on your having a [Members Area](https://support.wix.com/en/article/site-members-adding-and-setting-up-the-members-area) on your site. If you use Velo by Wix, you can also add membership functionality with the [wix-members-backend API](https://www.wix.com/velo/reference/wix-members-backend).
+
+---
+Source: https://support.wix.com/en/article/cms-collection-permissions-overview

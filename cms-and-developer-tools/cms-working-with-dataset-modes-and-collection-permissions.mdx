@@ -1,0 +1,94 @@
+---
+title: "CMS: Working with Dataset Modes and Collection Permissions"
+---
+
+Understanding dataset modes and [collection permissions](https://support.wix.com/en/article/cms-collection-permissions-overview) is crucial for managing your site's dynamic content. Properly setting these options ensures your elements connect correctly to your [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview), maintaining both functionality and security. Whether displaying dynamic content or collecting visitor submissions, it's important to know how the dataset mode and collection permissions work together.
+
+---
+
+### Dataset modes control how elements interact with collections
+
+Dataset modes determine whether elements connected to your dataset can read from the collection, write to the collection, or both. This flexibility lets you decide how page elements like text, images, and buttons interact with your collection content.
+
+> **Tip:**
+>
+> Learn more about [adding and setting up a dataset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset).
+
+#### Read mode for displaying content
+
+In **Read** mode, the dataset and its connected elements can read and display content from your collection. Site visitors can view the data but cannot change it. This is ideal for when you want to [display content from your collection on the page](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-on-your-page).
+
+#### Write mode for collecting content
+
+In **Write** mode, the dataset and its connected elements cannot display content from the collection. Instead, visitors can interact with user input elements and a submit button to add content to your collection. This setup is perfect for [custom forms created with input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) that visitors use to submit responses.
+
+#### Read & Write mode for interactive content
+
+**Read & Write** mode allows the dataset and its connected elements to both display and modify content. Visitors can view collection content and use input elements to add or edit the content.
+
+---
+
+### Collection permissions manage access to collection content
+
+Collection permissions determine who can view and manage the collection content on your live site. This ensures your data is secure and only accessible by authorized users. Collection permissions also define what the connected datasets can do with the collection content.
+
+> **Tip:**
+>
+> Site owners and collaborators are always considered admins with collection permissions. This means the owner of the site and anyone invited to collaborate on the site can always view, add, update, and delete collection content from the live site.
+
+#### Show content to the right audience
+
+To make your collection content viewable on the live site, choose the **Show content** collection permissions.
+
+#### Collect content from visitors
+
+Select the **Collect content** collection permissions to allow visitors to add content to the collection. This is useful when you want visitors to use input elements to submit responses that add new items to your collection.
+
+> **Tip:**
+>
+> If you want to allow visitors to update field values of existing collection items, use the **Custom **permissions. Then, select the **Update** permission for each relevant role.
+
+#### Custom permissions for specific needs
+
+For more control, use the **Custom** permissions setting. You can select different permissions for viewing, adding, updating, and deleting content for each role.
+
+> **Tip:**
+>
+> If you want to allow visitors to update field values of existing collection items, select the **Update** permission for the relevant role.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about working with dataset modes and collection permissions
+
+### Can I display user-submitted feedback to everyone, but only allow members to submit it?
+
+Yes. Suppose you have a 'Comments' collection where you store visitor submissions. You want to allow anyone to read the comments on the live site, but you only want site members to [submit comments](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection). For this to work, set the following permissions and dataset modes:
+**For the collection permissions: **Set **Custom **permissions for your Comments collection. Then select **View **next to **Everyone** and select **Add **next to **Members only**. You could also select **Update** next to **Item's creator **if you want the member who submitted comment to also be able to edit their own comment after submitting it. Learn how to [change your collection's permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions). 
+**For the dataset modes: **
+- **The dataset that connects to your custom form: **Set the dataset mode to **Write**.
+- **The dataset that connects to the element that displays the comments: **Set the dataset mode to **Read**.
+
+**Note: **Alternatively, you could connect both your custom form and the element you use to display the comments to the same dataset. Then, choose the **Read & Write **dataset mode. This would allow the input elements that make up your custom form to 'write' to your collection. Meanwhile, the repeater, table, or text element used to show the comments would be able to 'read' the collection content and display it.
+
+### What are the differences between collection permissions and the roles and permission I can assign collaborators?
+
+There are important differences between [collection permissions](https://support.wix.com/en/article/cms-collection-permissions-overview) and the roles and permissions you assign to teammates and collaborators. 
+
+- **Collection permissions:** Determine who can access the CMS collection content **from your live site** and what they can do with the content (e.g. view, add items, update existing content, delete content). Usually, this is done with [input elements](https://support.wix.com/en/article/cms-about-user-input-elements), but can also be done with the [Data API](https://support.wix.com/en/article/cms-collection-permissions-overview#velo-by-wix-authorization-suppression). Collaborators are always considered 'admins' in collection permissions that control what people can do from the live site. Collection permissions also determine what the dataset and its connected elements can do with the collection content.
+- **CMS roles & permissions: **The [roles and permissions you assign to collaborators](https://support.wix.com/en/article/cms-formerly-content-manager-creating-custom-roles-and-permissions) determine what they can do **from within the CMS itself**. This differs from what collaborators can do from your live site. All collaborators are considered 'admins' in the context of your collection permissions.
+
+### Can people view my collection content from my live site, even if I haven't displayed it there?
+
+The answer depends on how you've set your collection permissions. If you set the content to be viewable to everyone, technically, anyone can access the collection content by using an API. This is true, even if you do not display the content on your live site. 
+Learn more about [using authorization suppression with the Data API](https://support.wix.com/en/article/cms-collection-permissions-overview#velo-by-wix-authorization-suppression) to bypass permissions.
+
+### Can I create a page on my live site where members can manage the collection content?
+
+Yes, you can manually set up a page for this in the Wix Editor. If using the Studio Editor, you can add the dynamic manage item page. 
+**In the Wix Editor:** You can create a page with input elements and interactive buttons. Then, choose custom permissions for the collection and allow **Members only **to view, add, update, and delete content. Learn how to [create a page in the Wix Editor for managing collection content on your live site](https://support.wix.com/en/article/cms-formerly-content-manager-managing-collection-content-from-your-live-site).
+**In the Studio Editor: **We've streamlined the process for you with a dynamic manage item page. Learn how to [add a dynamic manage item page](https://support.wix.com/en/article/cms-adding-a-dynamic-page-for-editing-items-from-your-live-site) that lets visitors update collection content from the live site.
+
+---
+Source: https://support.wix.com/en/article/cms-working-with-the-dataset-mode-and-collection-permissions

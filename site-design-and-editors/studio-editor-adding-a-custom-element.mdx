@@ -1,0 +1,75 @@
+---
+title: "Studio Editor: Adding a Custom Element"
+---
+
+Enhance your client's site with your own elements. You can add any Javascript component by linking a [custom element](https://dev.wix.com/docs/develop-websites/articles/wix-editor-elements/custom-elements/about-custom-elements) to a server URL or a code file. If needed, you can set more attributes directly from the editor.
+
+**In this article, learn more about:**
+
+[Custom elements](https://support.wix.com/en/article/studio-editor-adding-a-custom-element#what-are-custom-elements)  [Adding and setting up a custom element](https://support.wix.com/en/article/studio-editor-adding-a-custom-element#adding-and-setting-up-the-custom-element)  [Defining the element's attributes](https://support.wix.com/en/article/studio-editor-adding-a-custom-element#setting-the-custom-elements-attributes)
+
+> **Before you begin:**
+>
+> Make sure your client's site has a [connected domain](https://support.wix.com/en/article/connecting-a-domain-to-your-site-195136) and no Wix ads.
+
+---
+
+### What are custom elements?
+
+Custom elements let you use your own HTML tags. These elements work across all supported browsers, and can be used with any JavaScript ES6 library or framework that works with HTML 5.
+
+When embedding a custom element, there are some requirements to keep in mind:
+
+Your Javascript file must be [hosted](https://dev.wix.com/docs/develop-websites/articles/wix-editor-elements/custom-elements/about-custom-elements#host-the-custom-element-with-wix-using-velo) with Wix using Velo (recommended), or your own external or local server.  Your code must contain HTTPS, not HTTP, or it will not be displayed on your live site.  Your code must be up to date and HTML5 compatible. Most browsers don't display pages and scripts properly if they were written using older versions of JS or HTML.   All relevant design settings and complex functionalities must be stored within the main JS code, for example the CSS and other JS files. If these settings are stored separately, it means they won't function on your site.
+
+> **Tips:**
+>
+> - You can use custom elements from third-party sources, just make sure to update the** Tag Name **in **Properties** when adding the custom element to your page.
+> - The performance of your custom element depends on its implementation.
+
+---
+
+### Adding and setting up the custom element
+
+Add as many custom elements as you need. After dragging a custom element to your page, define its source (server URL or a Velo file) and give it a tag name so you recognize it easily in the page registry.
+
+#### To add and set up a custom element:
+
+Click **Add Elements ** on the left side of the editor.  Click **Embed & Social**.  Click** Custom Element**.  Click the **Add **icon  next to **Custom Element**.  Add your script file:
+
+1. Select the custom element.
+2. Click **Choose Source**.
+3. Select how you want to add your custom element:
+
+- **Server URL: **Enter the file URL, including the file name.
+- **Velo file: **Select one of your Velo files.
+4. Enter a **Tag Name** for your element.
+
+**Note: **The tag name should be at least two words long, separated by a dash (e.g. big-weather-widget).
+    (Optional) Adjust the element's size, docking and alignment from the Inspector panel.
+
+> **Notes:**
+>
+> - For security reasons, the custom element is rendered inside an iFrame in the editor and in preview mode. This might affect the layout of the component. **Go to your published site to see how it looks live**.
+> - You can define your element's SEO settings using Velo API.
+
+---
+
+### Setting the custom element's attributes
+
+Make further adjustments to your element's properties and behavior by setting attributes. The Element Attributes panel lets you add, edit and remove attributes directly from the editor, without having to access the actual code.
+
+> **Important:**
+>
+> The code for your custom element must acknowledge and handle the defined attributes. Otherwise, they won't function properly.
+
+#### To set the custom element's attributes:
+
+Select the custom element.  Click **Set Attributes**.  Click **New Attribute**.   Enter a name for the [attribute](https://www.w3.org/TR/2011/WD-html5-20110525/syntax.html#attributes-0) (e.g. "rotation", "width").  Enter the value for the attribute (it can be any relevant string).  Click **Set**.
+
+> **Looking for more advanced information?**
+>
+> [Learn how to use custom elements](https://dev.wix.com/docs/develop-websites/articles/wix-editor-elements/custom-elements/about-custom-elements) with Velo by Wix. For specific questions and troubleshooting, check out our [custom element FAQs](https://dev.wix.com/docs/develop-websites/articles/wix-editor-elements/custom-elements/custom-element-faqs).
+
+---
+Source: https://support.wix.com/en/article/studio-editor-adding-a-custom-element

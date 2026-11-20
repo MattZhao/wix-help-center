@@ -1,0 +1,192 @@
+---
+title: "CMS: Adding and Setting Up an Upload Button"
+---
+
+Create an upload button to allow site visitors to submit files directly to your [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) collections.
+
+> **Before you begin:**
+>
+> Make sure to [add the CMS to your editor](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) if you haven't already.
+
+---
+
+### Step 1 | Add the upload button element
+
+Go to the relevant page in your editor and add the upload button.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page in which you want to add an upload button.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Input**.
+5. Click **Upload Buttons** under **Advanced**.
+6. Click and drag the upload button you want to use onto the page.
+[image: Screenshot of adding an upload button in the Wix Editor.]
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page in which you want to add an upload button.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Input**.
+5. Click **Upload Buttons** under **Selections**.
+6. Click and drag the upload button you want to use onto the page.
+[image: Screenshot of adding an upload button in the Studio Editor.]
+
+---
+
+### Step 2 | Connect to the CMS through a dataset
+
+Connect your upload button to a [dataset](https://support.wix.com/en/article/cms-about-datasets) that connects to the CMS collection field where you will store the submissions.
+
+Wix EditorStudio Editor
+1. In your editor, click the upload button you just added.
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to the collection you will store submissions in. Alternatively, select **Add a Dataset**, then choose the collection you want to store submissions in.
+4. Add a field to your collection where you will store the upload button submissions:
+
+**Tip: **Alternatively, you can connect to an existing collection field. 
+
+1. Click the **File connects to** drop-down and select **Add new field**.
+2. Enter a **Field Name **for the new collection field.
+3. Select the **Field Type** you want to add to your collection from the drop-down. The field type determines [the kind of files you can store in the field](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+4. Click **Add**.
+[image: Screenshot of adding a field that connects to the upload button.]
+1. In your editor, click the upload button you just added.
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to the collection you will store submissions in. Alternatively, select **Add a Dataset**, then choose the collection you want to store submissions in.
+4. Add a field to your collection where you will store the upload button submissions:
+
+**Tip: **Alternatively, you can connect to an existing collection field. 
+
+1. Click the **File connects to** drop-down and select **Add new field**.
+2. Enter a **Field Name **for the new collection field.
+3. Select the **Field Type** you want to add to your collection from the drop-down. The field type determines [the kind of files you can store in the field](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+4. Click **Add**.
+[image: Screenshot of adding a collection field to store upload button submissions.]
+
+---
+
+### Step 3 | Set the dataset mode and collection permissions
+
+Datasets control the connection between your upload button and your CMS collection. Make sure to set the dataset mode to **Write** or **Read & Write** so the upload button can add the files to your collection. If needed, adjust the collection permissions to control who can interact with the collection content on your live site.
+
+Wix EditorStudio Editor
+1. In the panel on the right, click **Dataset Settings**.
+[image: Screenshot of clicking the dataset settings in the Wix Editor.]
+1. (If necessary) Click the [permission type](https://support.wix.com/en/article/cms-collection-permissions-overview) next to** Permissions** to determine who can view, add, update, or delete collection content on your live site.
+2. Click the **Dataset mode** drop-down and select **Write **or **Read & Write**.
+[image: Screenshot of setting the dataset mode.]
+1. In the panel on the right, click **Dataset Settings**.
+[image: Screenshot of clicking the dataset settings.]
+1. (If necessary) Click the [permission type](https://support.wix.com/en/article/cms-collection-permissions-overview) next to** Permissions** to determine who can view, add, update, or delete collection content on your live site.
+2. Click the **Dataset mode** drop-down and select **Write **or **Read & Write**.
+[image: Screenshot of setting the dataset mode.]
+
+---
+
+### Step 4 | Customize the upload button
+
+Go to the upload button settings to set the type of file(s) the button accepts and the number of files that can be uploaded at a time. In the layout and design settings you can customize the button's appearance to match your site.
+
+Wix EditorStudio Editor
+1. In your editor, click the upload button.
+2. Click **Settings** and edit the following:
+
+- **Upload settings: **Choose the file types accepted, the max number of files, and whether to set as required: 
+
+- **Supported file type: **Click the drop-down and choose the type of files the button accepts: **Image & Video**, **Image**, **Video**, **Document**, or **Audio**.
+- **Max number of files: **Drag the slider to set the limit on how many files can be uploaded per submission. If you want to accept more than one file at a time, make sure you've connected the button to a 'Multi-document' or 'Media Gallery' field type in your collection ([see Step 2](https://support.wix.com/en/article/cms-adding-and-setting-up-an-upload-button?tabs=Wix-Editor-0#step-2-connect-to-the-cms-through-a-dataset)). These are the only field types that can store multiple files per collection item.
+
+**Note: **Currently, it is only possible to upload one audio file at a time. You can [vote for the ability to upload more audio files at a time](https://support.wix.com/en/article/cms-request-allowing-visitors-to-upload-multiple-audio-files-at-once-using-the-upload-button) if you would like to see this in the future.
+- **Required: **Select the checkbox to make it mandatory that visitors upload a file before they can submit your custom form.
+- **Display options: **Customize the following options:
+
+- **Field title: **(Recommended) Enter a title that displays above the button text.
+- **Button text: **Edit the text that appears on the button itself.
+- **Text below button: **Choose what you want to display below the button:
+
+- **Show file info only: **Display the name of the file your visitor uploads.
+- **Show custom text: **Enter custom text that you want to display below the button such as file requirements. This text changes to the name of the file once it has been uploaded.
+[image: Screenshot of setting the upload button settings.]
+1. Click the **Layout** icon  to adjust the spacing, direction, alignment and icon position. Click **Advanced** to set the alignment and direction of specific text.
+2. Click the **Design** icon  and choose a preset button. Click **Customize Design **to further customize the button's design.
+
+1. In your editor, click the upload button.
+2. Click **Settings** and edit the following:
+
+- **Upload settings: **Choose the file types accepted, the max number of files, and whether to set as required:
+
+- **Supported file type: **Click the drop-down and choose the type of files the button accepts: **Image & Video**, **Image**, **Video**, **Document**, or **Audio**.
+- **Max number of files: **Drag the slider to set the limit on how many files can be uploaded per submission. If you want to accept more than one file at a time, make sure you've connected the button to a 'Multi-document' or 'Media Gallery' field type in your collection ([see Step 2](https://support.wix.com/en/article/cms-adding-and-setting-up-an-upload-button?tabs=Studio-Editor-1#step-2-connect-to-the-cms-through-a-dataset)). These are the only field types that can store multiple files per collection item.
+
+**Note: **Currently, it is only possible to upload one audio file at a time. You can [vote for the ability to upload more audio files at a time](https://support.wix.com/en/article/cms-request-allowing-visitors-to-upload-multiple-audio-files-at-once-using-the-upload-button) if you would like to see this in the future.
+- **Required: **Select the checkbox to make it mandatory that visitors upload a file before they can submit your custom form.
+- **Display options: **Customize the following options:
+
+- **Field title: **(Recommended) Enter a title that displays above the button text.
+- **Button text: **Edit the text that appears on the button itself.
+- **Text below button: **Choose what you want to display below the button:
+
+- **Show file info only: **Display the name of the file your visitor uploads.
+- **Show custom text: **Enter custom text that you want to display below the button such as file requirements. This text changes to the name of the file once it has been uploaded.
+[image: Screenshot of the upload button settings in the Studio Editor.]
+1. Click the **Layout** icon  to adjust the spacing, direction, alignment and icon position. Click **Advanced** to set the alignment and direction of specific text.
+2. Click the **Design** icon  in the Inspector panel on the right to customize the appearance of the upload button.
+
+---
+
+### Step 5 | Create a submit button
+
+You need to create a way for visitors to submit the files they upload with the button. Add a regular button or image and connect it to the same dataset that connects to your submissions collection. Then set the click action for the button or image to **Submit**. This allows the uploaded files to 'write', or create a new item in the submissions collection upon clicking the submit button.
+
+> Learn how to [create a submit button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-5-create-a-submit-button) for your upload button.
+
+---
+
+### Frequently Asked Questions (FAQs)
+
+Click below for answers to common questions about the upload button.
+
+### How do I connect to a 'Multi-document' field type?
+
+1. Select **Document **from the **Supported file type** drop-down in the upload button settings.
+2. Drag the **Max number of files** slider to set the limit on how many files can be uploaded per submission.
+3. Click the **Connect to CMS **icon   on your upload button.
+4. Click the **Choose a dataset** drop-down and select an existing dataset that connects to the collection you will store submissions in. Alternatively, select **Add a Dataset**, then choose the collection you want to store submissions in.
+5. Add a 'Multi-document' field to your collection where you will store the upload button submissions:
+
+**Tip: **Alternatively, you can connect to an existing 'Multi-document' collection field. 
+
+1. Click the **File connects to** drop-down and select **Add new field**.
+2. Enter a **Field Name **for the new collection field.
+3. Click the **Field Type **drop-down and select **Multi-Document**.
+4. Click **Add**.
+
+### Can visitors submit multiple images or videos with the upload button?
+
+Yes. Make sure to choose** Image & Video** as the supported file type in the button settings. Then connect the button to a 'Media gallery' field type in your collection. 
+1. In the upload button settings, select **Image & Video **from the **Supported file type **drop-down.
+2. Drag the **Max number of files** slider to set the limit on how many files can be uploaded per submission.
+3. Connect the button to a 'Media Gallery' field in your collection: 
+
+1. Click the **Connect to CMS **icon  on your upload button.
+2. Click the **Choose a dataset** drop-down and select an existing dataset that connects to the collection you will store submissions in. Alternatively, select **Add a Dataset**, then choose the collection you want to store submissions in.
+3. Add a 'Media gallery' field to your collection where you will store the upload button submissions:
+
+**Tip: **Alternatively, you can connect to an existing 'Media gallery' collection field. 
+
+1. Click the **File connects to** drop-down and select **Add new field**.
+2. Enter a **Field Name **for the new collection field.
+3. Click the **Field Type **drop-down and select **Media Gallery**.
+4. Click **Add**.
+
+### Do I need a 'Submit' button to allow visitors to submit their uploaded files?
+
+Yes. Without a 'Submit' button, visitors can still upload the files, but they won't have a way to submit them to your collection. 
+**To add a 'Submit' button: **
+1. Add a regular button in your editor and change the text to 'Submit'.
+2. [Connect the button to the same dataset](https://support.wix.com/en/article/cms-connecting-a-button-to-a-dataset) that connects to your upload button.
+3. Set the **Click action connects to **field to **Submit**.
+
+Learn more about [creating a 'Submit' button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-5-create-a-submit-button) for the input elements that make up your custom form.
+
+---
+Source: https://support.wix.com/en/article/cms-adding-and-setting-up-an-upload-button

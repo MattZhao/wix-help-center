@@ -1,0 +1,44 @@
+---
+title: "Wix Automations: Using the Run Velo Code Action"
+---
+
+Velo is Wix's full-stack development platform. Select the **Run Velo Code** action to enhance your automation using your own Velo code. Write your code, then run it to test, and then activate the automation.
+
+> **Before you begin:**
+>
+> - In order to use the **Run Velo Code** action, you must first [enable Velo](https://support.wix.com/en/article/enabling-velo).
+> - The custom extensions feature currently can’t be added to a site when using Git integration and Wix CLI. You need to have permission to publish the site and the site must be published.
+
+### To use the Run Velo Code action:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.  Start [creating your automation](https://support.wix.com/en/article/wix-automations-creating-a-new-automation) by choosing your trigger in the **Trigger** section and selecting **Run Velo Code** in the **Action** section.  Click **Start Coding**.
+
+Write your code in the window that opens.
+
+**Note:** 1. Lines 2 - 6 support the [autocompletion](https://en.wikipedia.org/wiki/Autocompletion) system. Make sure you keep it in your code file. 2. Use the "Invoke" function to implement your action logic.
+
+You can use the data from the trigger or other parts of the automation** **by employing:
+
+`payload.my_field`
+
+You can view the payload specification by clicking **Payload View**.
+
+Save your code to integrate your custom logic in this automation.  Before activating your automation, run your code to test it and make sure it gives the results you expect. Before you start your test:
+
+- Define the sample data that will run in the test.
+- Open your site logs to monitor the result.
+
+> **Important:**
+>
+> Running your code to test it means it's running live, so might make changes within your site and/or dashboard.
+
+When you're happy it's running correctly, click **Activate** to activate your automation.
+
+> **Notes:**
+>
+> - You can edit the Run Velo Code action to work in your neutral code environment. Only editing is possible from the VS code and Velo editor environments. Learn more about [custom extensions](https://www.wix.com/velo/reference/spis/getting-started).
+> - If you connect to a third-party provider using SPIs, you agree to the [Wix.com Terms of Use](https://www.wix.com/about/terms-of-use). Wix is not responsible for your use of such a third-party provider, and any liability resulting from such use will be your responsibility.
+> - Need help implementing an SPI? [Find a professional](https://www.wix.com/marketplace) to help you**.**
+
+---
+Source: https://support.wix.com/en/article/wix-automations-using-the-run-velo-code-action

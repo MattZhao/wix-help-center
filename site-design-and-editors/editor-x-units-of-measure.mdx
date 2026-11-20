@@ -1,0 +1,67 @@
+---
+title: "Editor X: Units of Measure"
+---
+
+In responsive design, you are no longer confined to the pixel. You can use a variety of different units of measure to set the width and height of elements. Understanding when to use each measurement allows you set your element's size in a way that meets your exact needs.
+
+**In this article, learn about units of measure offered by Editor X:**
+
+[Calculation](https://support.wix.com/en/article/editor-x-units-of-measure#calculation)  [Pixel (px)](https://support.wix.com/en/article/editor-x-units-of-measure#pixel-px)  [Percentage (%)](https://support.wix.com/en/article/editor-x-units-of-measure#percentage)  [Viewport width and height (vw and vh)](https://support.wix.com/en/article/editor-x-units-of-measure#viewport-width-vw-and-viewport-height-vh)  [Minimum and maximum](https://support.wix.com/en/article/editor-x-units-of-measure#minimum-maximum)  [Auto](https://support.wix.com/en/article/editor-x-units-of-measure#auto)  [Max content (max-c)](https://support.wix.com/en/article/editor-x-units-of-measure#max-content-max-c)
+
+> **Want to learn more?**
+>
+> Check out [our lesson on measurements](https://www.editorx.com/academy/lessons/measurements-lesson) in the Editor X academy.
+
+---
+
+### Calculation
+
+Calculation is a handy tool when you need to accurately size an element while using fluid units of measure. Using mathematical principals, you can [write a "formula"](https://support.wix.com/en/article/editor-x-setting-the-size-of-your-element#using-calculation-to-determine-the-size-of-your-elements) that determines an element's width or height. You can even combine different measurements in this calculation (e.g., vh and px).
+
+For instance, use calculation to design a header (100px) and a section that, together, take up the exact viewport height (100vh) in every screen size. You can set the section's height to (100vh - 100px), so the header is always taken into account in the calculation (100px).
+
+---
+
+### Pixel (px)
+
+Pixels (px) are the most commonly used unit of measure. They make sure that an element's size is always the same regardless of the screen size.
+
+---
+
+### Percentage (%)
+
+The percentage unit is a very useful fluid unit that's popular in responsive design. When setting width in %, the size is determined by a percentage of the parent element's width. If the height is set to %, the size is taken from the parent element's height.
+
+---
+
+### Viewport Width (vw) and Viewport Height (vh)
+
+Viewport is the size of the browser in which the site is displayed. Vw and vh are relative to the width and height of the viewport.
+
+---
+
+### Minimum & Maximum
+
+While using fluid units of measure you can set a minimum or maximum value to the width and/or height. For example, setting an element’s minimum width of 400px, means that the element is never displayed smaller than that.
+
+---
+
+### Auto
+
+When an element is set to Auto size, it is determined by other factors, and the results may vary. For example, the height and width of a stretched image is always set to auto, as it fills up the available space, on any screensize.
+
+---
+
+### Max Content (max-c)
+
+Max Content is an advanced sizing unit that sets an element's **width**.** **You can apply this unit to Flexbox elements (i.e., Containers, Layouters, Repeaters), as well as vertical sections, text elements and buttons.
+
+When using Max Content to define the width of an element, it's actually determined by the size of its children elements – no matter how big the content is or how many words it contains. The parent element fits itself to the children's maximum content size.
+
+### Show me an example
+
+In the example below, the button is the parent element of the text box ("Shop Now"). We changed the unit of measurement for this button from pixels to max-c. 
+This automatically changed the button's width to fit the text box's maximum possible size - no longer or shorter than that:
+
+---
+Source: https://support.wix.com/en/article/editor-x-units-of-measure

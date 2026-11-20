@@ -1,0 +1,163 @@
+---
+title: "Studio Editor: Working with an Advanced CSS Grid"
+---
+
+In the Studio Editor, you can use an advanced CSS grid to organize the layout of elements and sections. You can choose the number of rows and columns you want, and set their size using responsive measurements (e.g. fr, Min/max, %).
+
+> Go to our [Wix Studio Academy](https://www.wix.com/studio/academy) to check out additional Wix Studio webinars, tutorials, and courses.
+
+**In this article, learn all about working with a CSS grid:**
+
+[Switching from section grid to a CSS grid](https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid#switching-from-section-grid-to-a-css-grid)  [Applying a CSS grid on other elements](https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid#applying-a-css-grid-on-other-elements)  [Customizing a CSS grid](https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid#customizing-a-css-grid)  [Positioning elements in grid cells](https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid#positioning-elements-in-a-grid)  [Table of grid units](https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid#table-of-grid-units)
+
+---
+
+### Switching from section grid to a CSS grid
+
+Sections in the Editor come with the option to set a section grid. This is an easy-to-use version of the advanced grid, based on the same CSS logic. Switching to an advanced CSS grid gives you more precise control of the layout per breakpoint.
+
+> **Note:**
+>
+> Once you make the switch, it is not possible to go back to a section grid. However, if you just performed the action, you can use the Undo button  at the top right of the Editor.
+
+#### To switch from section grid to a CSS grid:
+
+Select the relevant section in the Editor.  Click the Open Inspector arrow  at the top right of the Editor.  Scroll down to **Layout**.  Click **Switch **next to **Advanced CSS grid**.  Click **Switch to CSS Grid**.
+
+> **What's next?**
+>
+> Customize the rows, columns and spacing from the Inspector panel. You can also drag grid lines on the canvas to move them.
+
+---
+
+### Applying a CSS grid on other elements
+
+You can apply a CSS grid to container, lightbox, flexbox and repeater items. Specifically in the repeater element, once you apply a grid to one item, the rest update automatically.
+
+#### To apply a CSS grid:
+
+Select the relevant element in the Editor.  Click the More Actions icon .  Click **Apply Advanced CSS Grid**.  Choose a layout from the **1x1** drop-down.
+
+**Tip:** Select **Other** if you want to set your own number of rows and columns.
+
+> **What's next?**
+>
+> Customize the rows, columns and spacing from the Inspector panel. You can also drag grid lines on the canvas to move them.
+
+---
+
+### Customizing a CSS grid
+
+Customize your grid to get the exact layout you want. You can change the number of rows and columns, adjust their size and the gaps between them.
+
+#### To customize a CSS grid:
+
+Select the relevant element or section.  Choose how you want to customize the grid:
+
+### Choose a different layout
+
+The drop-down that lets you choose a new layout is available in 2 places: 
+- On the element
+- In the Inspector panel
+
+The list of available layouts is based on the current number of rows and columns, suggesting different ways to organize the cells. 
+[image: A screenshot showing the drop-down that you can click to choose another layout]
+
+### Add more rows and columns
+
+Create the grid in a visual manner, looking at your existing layout while adding rows and columns. This doesn't change the elements' placement.
+1. Click the Customize grid on canvas icon .
+2. Drag from the left or upper edges of the grid to add new lines.
+
+[image: A GIF showing how dragging grid lines from the edges adds a new row or column]
+**Tip: **You can add more rows and columns from the Inspector panel as well. Hover over the relevant row / column and click the More actions icon  to see this option. This might move elements around to create enough space for the new row or column. [image: A screenshot showing how to add another row or column from the Inspector]
+
+### Change the size of your columns or rows
+
+There are 2 ways to change the size of the rows or columns on your grid:
+- **In the Inspector panel:** Enter the size and unit next to the relevant column / row number.
+
+[image: A screenshot of the layout section in the Inspector, resizing each column of the grid]
+- **On the page:** Drag the handles on the horizontal and vertical gridlines to the position you want.
+
+**Tip: **You can click the Customize grid on canvas icon  to drag the gridlines without affecting the elements' position. 
+
+[image: A GIF showing that dragging the gridlines on the canvas resizes the rows and columns]
+
+### Delete a column or row
+
+1. Click the More actions icon [image: undefined] next to an existing column or row.
+2. Click **Delete column** / **Delete row**.
+
+[image: A screenshot of the Inspector panel, showing how to find and delete a grid column]
+
+### Edit the size of the gaps
+
+You can change the size of the gaps between the grid rows and columns by entering new values next to **Gaps**.
+
+> **Working with breakpoints:**
+>
+> Your design only applies to the breakpoint you're working on. You should tailor the grid to each breakpoint to ensure the composition of your elements is flawless. In the example below, we set a different layout per breakpoint (3 columns on desktop vs. 3 rows on tablets).
+
+---
+
+### Positioning elements in a grid
+
+While adding elements to the grid, several tools can help you set their placement more accurately.
+
+#### Docking elements
+
+[Docking elements](https://support.wix.com/en/article/studio-editor-working-with-docking-margins-and-padding#adjusting-the-elements-docking-manually) to the gridlines ensures they're positioned exactly as you want. In the Studio Editor, all elements are automatically docked, but you can adjust the docking manually and add margins.
+
+#### Moving elements between grid cells
+
+Under the **Position** section in the Inspector, you can select an element and see the grid cell it's in. Click any grid cell to move the element there, without having to use drag-and-drop.
+
+You can also enter the specific column and row numbers, which is useful when you need to place an element over multiple grid cells.
+
+---
+
+### Table of grid units
+
+Use the whole range of CSS units to create your grid. You can set the size of the columns and rows using percentages, fractions or pixels. Alternatively, set the minimum and maximum size of the columns and rows, or use calculations to create the grid you require.
+
+### Percentage (%)
+
+Set the size of the columns/rows to take up a certain percentage of the grid.
+For example, if you set a row to 25%, it takes up 25% of the grid height. If you set a column to 10%, it takes up 10% of the grid width.
+
+### Fraction (fr)
+
+Set the size of your columns/rows to be a fraction of the size of the parent container.
+For example, in a grid of 2 columns where the left column is set to 2fr and the right one is set to 1fr, the left column will take up 2/3 of the parent container.
+
+### Auto
+
+The height and width of the rows and columns are automatically set to fit the content inside them.
+
+### Pixels (px)
+
+Set the size of your columns/rows to be a fixed number of screen pixels.
+
+### Viewport width and height (vw and vh)
+
+Viewport is the visitor's browser window. You can set the size of columns or rows to be a percentage of the viewport width or height (accordingly).
+
+### Min and Max content
+
+Set the size of your columns/rows to never get smaller than the minimum content.
+
+### Min/max
+
+This option lets you enter the minimum and maximum size of the row/column.
+
+### Calculation
+
+Write a formula to automatically calculate the size of a row/column.
+
+> **Dealing with overlapping elements?**
+>
+> Review [our troubleshooting video](https://www.youtube.com/watch?v=bh1TeMhCm4M) to learn what to check and how to resolve this issue.
+
+---
+Source: https://support.wix.com/en/article/studio-editor-working-with-an-advanced-css-grid

@@ -1,0 +1,246 @@
+---
+title: "CMS: Displaying Your Events in a Dynamic List Page"
+---
+
+Use a dynamic list page with the [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) to display a customizable list of your events.
+
+> With this method, we recommend also [creating a dynamic item page](https://support.wix.com/en/article/cms-creating-a-custom-event-details-page) you can link from your dynamic list page. This way, visitors can click an event from your dynamic list page and go to the event's dedicated version of your dynamic item page.
+
+> **Before you begin:**
+>
+> - [Add Wix Events to your site](https://support.wix.com/en/article/adding-wix-events-to-your-site) and publish your events.
+> - [Add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Events with the CMS.
+
+---
+
+### Step 1 | Add a dynamic list page for your events
+
+Access the CMS [Wix App Collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) in your editor and find the Events collection. Then create a dynamic list page from this collection.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left of the editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to the **Events **collections.
+5. Hover over **Events**, click the **More Actions** icon  and select **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of your editor.
+3. Click **Wix App Collections**.
+4. Scroll down to the **Events **collections.
+5. Hover over **Events**, click the **More Actions** icon  and select **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+
+---
+
+### Step 2 | (Optional) Modify the URL slug structure
+
+The URL slug structure determines the URL used for your dynamic list page. It also helps visitors and search engines understand what the page is about. If needed, you can modify this URL slug structure in the SEO tab of the page settings.
+
+Wix EditorStudio EditorIf you're using the Wix Editor, the **events** part of your URL slug is already used by a page that displays your upcoming and past events. This is why the CMS adds **-1** or **-2** after **events**, to give this new dynamic item page a unique URL. You can change this URL slug to a new structure that is not already used by your live site.**To edit your dynamic list page's URL slug structure:**
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu**on the left side of the editor.
+3. Click **Dynamic Pages**.
+4. Hover over the **Events (List) **page under **EVENTS/EVENTS COLLECTION** and click the **More Actions** icon  on the right.
+5. Click **SEO**.
+6. Click the **URL slug structure** field.
+
+1. Customize the URL slug structure and press **Enter** on your keyboard. For example, you could change **events-2 **to **all-events**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Under **Events Pages (Dynamic)**, hover over the **Events (List) **page.
+4. Click the **More Actions **icon  on the right and select **SEO**.
+5. Click the **URL slug structure** field.
+
+1. Customize the URL slug structure and press **Enter** on your keyboard. For example, you could change **events **to **all-events**.
+
+---
+
+### Step 3 | Customize your new dynamic list page
+
+You now have a dynamic list page with a repeater that includes text, buttons, and an image in each container. Each of the repeater's containers displays a different item (event) from your collection.
+
+> **Want to use a gallery or table instead of a repeater?**
+>
+> If you'd rather display your list of events in a [gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery) or [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), you can. Delete the default repeater and add a Pro Gallery or table. Then connect each part of your gallery or table to your Events collection through the dataset.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Events (List) page.
+3. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+4. Click the repeater element and select the **Connect to CMS** icon  .
+5. Under **Connections**, connect each element in which you want to display dynamic content from your events. The options vary depending on the type of element you connect:
+Image
+1. Click the **Image **element.
+2. Under **Connections**, click the relevant drop-downs to connect the image, alt text, tooltip and link.
+
+**Tips:**
+- Click **Text **below to view the Wix Events fields that you can connect to text elements.
+- Click **Button **below to view the available linking options you can choose for the image's **Link connects to **drop-down.
+Text
+1. Click the relevant text element.
+2. Click the **Text connects to **drop-down and choose the [Events field](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-events/wix-events-events-collection-fields) that you want to use as dynamic text:
+
+- **Title (Text): **The event name.
+- **Description (Text): **The description from the event's **Short teaser (optional) **field.
+- **About (Rich Text): **The event's **About the event (optional) **rich text field.
+- **Schedule formatted (Text): **The event's date and time (e.g. "April 1, 2024, 7:00 - 11:00 PM")
+- **Start date formatted (Text): **The event's start date (e.g. "April 1, 2024")
+- **Start time formatted (Text): **The event's start time, formatted to your local settings. If the event schedule is TBD, this field is blank.
+- **Location name (Text): **The event's location or the TBD message from Events dashboard.
+- **Location address (Text): **The full address of the event. If the location is TBD, the field is blank.
+- **Status (Text): **One of the following event statuses: 
+
+- **SCHEDULED:** The event date is in the future.
+- **STARTED:** The event start time has arrived.
+- **ENDED: **The event end time has passed.
+- **CANCELED: **The event was canceled.
+- **Lowest price formatted (Text): **The lowest price available, formatted with your currency. **Notes:**
+
+- If the event has RSVP registration or is external, this field is blank.
+- If tickets are sold for this event, the lowest price available is displayed.
+- If free tickets are offered, "Free" is displayed.
+3. Repeat these steps for each text element on the repeater in which you want to connect dynamic text from your events.
+Button
+1. Click the relevant button element.
+2. Click the **Click action connects to** drop-down and choose an option:
+
+- **Site event page url: **Link to the [Event Details & Registration page](https://support.wix.com/en/article/wix-events-setting-up-your-event-details-page) where visitors can register for the event.
+- **Events (Item): **Link to your [dynamic item page used to show details about each individual event](https://support.wix.com/en/article/cms-creating-a-custom-event-details-page), if you've created one.
+- **Registration url (URL): **Link to the Registration URL if registration for the event is managed externally.
+- **Google calendar url (URL): **Link to adding the event to the visitors Google calendar.
+- **iCalendar url (URL): **Link to downloading an iCalendar link to the event.
+3. Choose how the link opens: **In the current window **or** As a new window. **
+4. Click the **Label connects to **drop-down and choose a field to use as the dynamic button text. Or click **Change Text **on the button to enter static text that appears on the button (e.g. "View Event").
+[image: A screenshot of connecting a button to the Events (Item) dynamic page with the text 'View Event' displayed.]6.  Adjust the size, location, and design of the elements on your page to your liking. 7.  Click **Preview **to test your dynamic list page.8.  Click **Publish** when you're ready to make the changes go live.
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to your Events (List) page.
+3. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+4. Click the repeater element and select the **Connect to CMS** icon  .
+5. Under **Connections**, connect each element in which you want to display dynamic content from your events. The options vary depending on the type of element you connect:
+Image
+1. Click the **Image **element.
+2. Under **Connections**, click the relevant drop-downs to connect the image, alt text, tooltip and link.
+
+**Tips:**
+- Click **Text **below to view the Wix Events fields that you can connect to text elements.
+- Click **Button **below to view the available linking options you can choose for the image's **Link connects to **drop-down.
+Text
+1. Click the relevant text element.
+2. Click the **Text connects to **drop-down and choose the [Events field](https://dev.wix.com/docs/develop-websites/articles/wix-apps/other-apps/wix-events/wix-events-events-collection-fields) that you want to use as dynamic text:
+
+- **Title (Text): **The event name.
+- **Description (Text): **The description from the event's **Short teaser (optional) **field.
+- **About (Rich Text): **The event's **About the event (optional) **rich text field.
+- **Schedule formatted (Text): **The event's date and time (e.g. "April 1, 2024, 7:00 - 11:00 PM")
+- **Start date formatted (Text): **The event's start date (e.g. "April 1, 2024")
+- **Start time formatted (Text): **The event's start time, formatted to your local settings. If the event schedule is TBD, this field is blank.
+- **Location name (Text): **The event's location or the TBD message from Events dashboard.
+- **Location address (Text): **The full address of the event. If the location is TBD, the field is blank.
+- **Status (Text): **One of the following event statuses: 
+
+- **SCHEDULED:** The event date is in the future.
+- **STARTED:** The event start time has arrived.
+- **ENDED: **The event end time has passed.
+- **CANCELED: **The event was canceled.
+- **Lowest price formatted (Text): **The lowest price available, formatted with your currency. **Notes:**
+
+- If the event has RSVP registration or is external, this field is blank.
+- If tickets are sold for this event, the lowest price available is displayed.
+- If free tickets are offered, "Free" is displayed.
+3. Repeat these steps for each text element on the repeater in which you want to connect dynamic text from your events.
+Button
+1. Click the relevant button element.
+2. Click the **Click action connects to** drop-down and choose an option:
+
+- **Site event page url: **Link to the [Event Details & Registration page](https://support.wix.com/en/article/wix-events-setting-up-your-event-details-page) where visitors can register for the event.
+- **Events (Item): **Link to your [dynamic item page used to show details about each individual event](https://support.wix.com/en/article/cms-creating-a-custom-event-details-page), if you've created one.
+- **Registration url (URL): **Link to the Registration URL if registration for the event is managed externally.
+- **Google calendar url (URL): **Link to adding the event to the visitors Google calendar.
+- **iCalendar url (URL): **Link to downloading an iCalendar link to the event.
+3. Choose how the link opens: **In the current window **or** As a new window. **
+4. Click the **Label connects to **drop-down and choose a field to use as the dynamic button text. Or click **Change Text **on the button to enter static text that appears on the button (e.g. "View Event").
+[image: A screenshot of connecting a button to the Events (Item) dynamic page with the text 'View Event' displayed.]6.  Adjust the size, location, and design of the elements on your page to your liking. 7.  Click the **Preview** icon  at the top right to test your dynamic list page.8.  Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 4 | (Optional) Manage the dataset settings
+
+In your dataset settings, you can choose the maximum number of events that can display per load. You can also add filters to include only certain events, or add sorts to control the order in which the events display.
+
+Wix EditorStudio Editor
+1. Go to the repeater's connected dataset settings:
+
+1. Click the repeater.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Repeater** panel on the right.
+2. (Optional) Click the permission type next to** Permissions** to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions). Collection permissions define who can access the collection content on your live site.
+3. Edit the **Maximum items displayed **field to adjust the maximum events that can initially load in the repeater. This is also the maximum events that can load per page in a connected [pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) or per click in ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+4. (Optional) Click **+ Add Filter **to [only show specific events](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+5. (Optional) Click **+ Add new sort **to [choose the order in which the events appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset) in the repeater.
+6. Click **Preview** to test your dynamic list page.
+7. Click **Publish** if you are ready to make the changes go live.
+
+1. Go to the connected dataset settings:
+
+1. Click the repeater element.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings** in the **Connect Repeater **panel.
+2. (Optional) Click the permission type next to** Permissions** to edit your collection's [permissions & privacy settings](https://support.wix.com/en/article/cms-changing-your-collection-permissions). Collection permissions define who can access the collection content on your live site.
+3. Edit the **Maximum items displayed **field to adjust the maximum events that can initially load in the repeater. This is also the maximum events that can load per click in ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+4. (Optional) Click **+ Add Filter **to [only show specific events](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content?tabs=Studio-Editor#adding-filters-to-your-dataset) in the repeater.
+5. (Optional) Click **+ Add new sort **to [choose the order in which the events appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content?tabs=Studio-Editor,Studio-Editor-2#adding-sort-conditions-to-your-dataset) in the repeater.
+6. Click the** Preview** icon  at the top right to test your dynamic list page.
+7. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 5 | (Optional) Add 'Load More' or navigational buttons
+
+You can add a ['Load More' button](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#load-more) to improve your page's loading performance. Your dataset's **Maximum items displayed** field determines how many events initially load in the repeater, and how many additional items can load after visitors click the 'Load More' button.
+
+> **Learn how to:**
+>
+> - [Add a 'Load More' button to a repeater](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button)
+> - [Add a 'Load More' button to a Pro Gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery#step-4-optional-create-a-load-more-button)
+
+---
+
+### Step 6 | (Optional) Let visitors filter items
+
+Give visitors ways to filter the events that appear on your dynamic list page with [input elements](https://support.wix.com/en/article/cms-about-user-input-elements). Choose from any of the following input elements that allow filtering: **Radio Buttons**, **Checkboxes**, **Dropdown**, **Selection Tags**, or **Slider** (Range Sliders only).
+
+> Learn how to set up [input elements that allow visitors to filter collection content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+---
+
+### FAQs
+
+Click below for answers to common questions about using dynamic list pages to display events.
+
+### How do visitors get to my dynamic list page?
+
+To ensure visitors can access your dynamic list page, we recommend adding a link to it in your site's menu. You could also link other elements such as text, buttons, or images to your dynamic list page. 
+Learn how to [add a link to your dynamic list page that appears in your site's menu](https://support.wix.com/en/article/cms-linking-to-dynamic-pages#linking-your-site-menu-to-dynamic-pages).
+
+### Why can't I attach some elements to the repeater?
+
+Currently, there are limitations to the types of elements you can add to repeaters. Learn more about [which elements cannot be attached to repeaters](https://support.wix.com/en/article/wix-editor-elements-that-cant-be-added-to-repeaters).
+
+### Can I see how a pre-connected repeater works before setting up my own?
+
+Yes. You can [add a preset collection](https://support.wix.com/en/article/cms-formerly-content-manager-adding-collection-presets), built with sample items and fields, that adds dynamic pages to your site. Most presets add a [dynamic list page](https://support.wix.com/en/article/cms-setting-up-a-dynamic-list-page) with a repeater already connected to the collection so you can see how it works. The Portfolio preset adds a connected gallery instead of a repeater so choose a different preset to test a connected repeater.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-your-events-in-a-dynamic-list-page

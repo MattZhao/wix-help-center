@@ -1,0 +1,56 @@
+---
+title: "Viewing the Tracking Codes in Your Page's Source Code"
+---
+
+A tracking code is a piece of javascript code in the source code of your site's pages. Many tools can use these tracking codes to give you insights into how your site visitors interact with your pages.
+
+For example, Google Analytics uses a tracking code in the first section of your site's code (known as the header) to track information such as how many people are visiting your pages, where they visit from, and what device they're using.
+
+You can view the active tracking codes on your site by viewing your page's source code, changing the user agent in your browser's settings, and then filtering the result. The user agent helps identify which browser you're using. When you select a web crawler bot such as [Googlebot](https://developers.google.com/search/docs/crawling-indexing/googlebot) as your user agent, you can view the exact content that the bot crawls and see any tracking codes that are present.
+
+**In this article, learn more about:**
+
+[Viewing your page's tracking codes in Google Chrome](https://support.wix.com/en/article/viewing-the-tracking-codes-in-your-pages-source-code#viewing-your-pages-tracking-codes-in-google-chrome)  [Viewing your page's tracking codes in Safari](https://support.wix.com/en/article/viewing-the-tracking-codes-in-your-pages-source-code#viewing-your-pages-tracking-codes-in-safari)
+
+---
+
+### Viewing your page's tracking codes in Google Chrome
+
+You can use Google Chrome's developer tools to view the tracking codes that are in your page's source code.
+
+#### To view using Google Chrome:
+
+Open the relevant page of your site in Google Chrome.  Open the developer tools:
+
+- **Windows:** Press the F12 key on your keyboard.
+- **Mac:** Press CMD + Option + I on your keyboard.
+    Click the More Actions icon  at the top right.   Select **More tools**.
+
+Select **Network conditions**.   Deselect **Use browser default** under **User Agent**.   Select **Googlebot** from the drop-down menu.
+
+Close the **Network conditions **tab.  In the top tab, select **Network**.   Enter "/tags" in the filter field.
+
+Refresh the page to see the active tracking codes.
+
+---
+
+### Viewing your page's tracking codes in Safari
+
+You can use the Develop tab in Safari to view the active tracking codes on your page.
+
+#### To view using Safari:
+
+Open the relevant page of your site in Safari.  Click **Safari** in the top menu.  Select **Preferences**.  Select **Advanced**.  Select the **Show Develop menu in menu bar **checkbox.
+
+Close the Preferences pop-up.  Click **Develop** in the top menu.   Hover over **User Agent**.  Select **Other**.  Paste the following string in the text box: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36  Click **OK **to confirm.  Select **Network**.
+
+Enter "/tags" in the filter field.  Refresh the page to see the active tracking codes.
+
+---
+
+Get help with your SEO from a
+        professional.
+    [ Hire an Expert ](https://www.wix.com/arena/dynamic-brief/welcome-page?entry=SEOWizard&serviceType=6&innerType=1&origin=seo_support_articles)
+
+---
+Source: https://support.wix.com/en/article/viewing-the-tracking-codes-in-your-pages-source-code

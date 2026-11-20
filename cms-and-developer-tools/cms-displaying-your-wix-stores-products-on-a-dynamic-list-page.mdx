@@ -1,0 +1,192 @@
+---
+title: "CMS: Displaying Your Wix Stores Products on a Dynamic List Page"
+---
+
+Use the [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) to get creative with the display of your Wix Stores products by showcasing them in a fully-customizable repeater on a [dynamic list page](https://support.wix.com/en/article/cms-about-dynamic-pages). Choose only the page elements you need (e.g. text, buttons, images) and connect them to the relevant fields used by your products (e.g. name, price, quantity in stock).
+
+> **Before you begin:**
+>
+> - [Create your own products in Wix Stores](https://support.wix.com/en/article/wix-stores-creating-a-physical-product).
+> - Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - [Enable Wix app collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) so you can use Wix Stores with the CMS.
+
+---
+
+### Step 1 | Add a dynamic list page for your products
+
+Go to Wix App Collections in your Editor's CMS and create a dynamic list page from the Stores collection. This page includes a repeater that is already partially connected to your Stores products.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  on the left of your editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to **Stores**, hover over **Products** and click the **More Actions **icon .
+5. Click **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS**  at the top of your editor.
+3. Click **Wix App Collections **on the left.
+4. Scroll down to **Stores**, hover over **Products** and click the **More Actions** icon .
+5. Click **Add dynamic page**.
+6. Click **List page**.
+7. Click **Add to Site**.
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **CMS **** **on the left side of the editor.
+3. Click **Wix App Collections**.
+4. Scroll down to **Stores**, hover over **Products** and click the **More Actions** icon .
+5. Select **Add dynamic page**.
+
+1. Click **List page**.
+2. Click **Add to Site**.
+
+> **Tip:**
+>
+> You can display your products in a Pro Gallery or table (Wix Editor only) instead of a repeater. To do so, remove the repeater and add a gallery or table. Then follow the rest of the steps in this article to connect your gallery or repeater to the CMS.
+
+---
+
+### Step 2 | Connect your repeater to the CMS
+
+Connect the repeater to a dataset that binds to your Wix Stores products collection. Then connect each repeater element to the dynamic values of your collection that change depending on the product shown. Make sure to link an image or button in your repeater to the Wix Stores Product Page so customers can view additional info about products before purchasing. You can also create 'Add to cart' and 'Quick View' links.
+
+Wix EditorEditor XStudio Editor
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the Connect to CMS icon  .
+3. Click the **Choose a dataset **drop-down and select **Products**.
+4. Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete extra text elements or disconnect and replace them with static text.
+5. Click the relevant drop-downs and select the [Wix Stores dynamic collection fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/wix-e-commerce-stores/wix-stores-products-collection-fields) you want to connect or the dataset linking options for buttons and images:
+
+- **Wix Stores collection fields: **Select the relevant fields, for example:
+
+- **Name (Text): **The product name you created in Wix Stores.
+- **Formatted Discounted Price (Text): **The price formatted with the currency (e.g. $20).
+- **Main Media (Image): **The main media item (image or video) for the product.
+- **Buttons and images linking options: **Click the **Click action connects to **or **Link connects to** drop-down and select the relevant option:
+
+- **Navigate to Product Page URL: **Go to the web address of the product's page on your site.
+- **Add to cart: **Add the product to the cart.
+- **Open quick view: **Open a popup with details about the product.
+
+1. Click **Repeater connections** and repeat steps 4-5 above to connect additional elements in the repeater.
+2. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+3. Click **Preview** to test your dynamic products page.
+4. Click **Publish** if you are ready to make the changes go live.
+
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the Connect to CMS icon  .
+3. Click the **Choose a dataset **drop-down and select **Products**.
+4. Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete extra text elements or disconnect and replace them with static text.
+5. Click the relevant drop-downs and select the [Wix Stores dynamic collection fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/wix-e-commerce-stores/wix-stores-products-collection-fields) you want to connect or the dataset linking options for buttons and images:
+
+- **Wix Stores collection fields: **Select the relevant fields, for example:
+
+- **Name (Text): **The product name you created in Wix Stores.
+- **Formatted Discounted Price (Text): **The price formatted with the currency (e.g. $20).
+- **Main Media (Image): **The main media item (image or video) for the product.
+- **Buttons and images linking options: **Click the **Click action connects to **or **Link connects to** drop-down and select the relevant option:
+
+- **Navigate to Product Page URL: **Go to the web address of the product's page on your site.
+- **Add to cart: **Add the product to the cart.
+- **Open quick view: **Open a popup with details about the product.
+6. Click **Repeater connections** and repeat steps 4-5 above to connect additional elements in the repeater.
+7. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+8. Click **Preview** to test your dynamic products page.
+9. Click **Publish** if you are ready to make the changes go live.
+
+1. (Optional) Add elements to your repeater (e.g. buttons, text, images) or remove elements you do not need. You can adjust the size of the repeater so it can contain all the elements.
+2. Click the repeater element and select the Connect to CMS icon  .
+3. Click the **Choose a dataset **drop-down and select **Products**.
+4. Under **Connections**, click the repeater element you want to connect.
+
+**Note: **If you're using the default repeater that came with the dynamic page, the Image and Text elements are already connected. You can delete the extra text element or disconnect and replace it with static text.
+5. Click the relevant drop-downs and select the [Wix Stores dynamic collection fields](https://dev.wix.com/docs/develop-websites/articles/wix-apps/wix-e-commerce-stores/wix-stores-products-collection-fields) you want to connect or the dataset linking options for buttons and images:
+
+- **Wix Stores collection fields: **Select the relevant fields, for example:
+
+- **Name (Text): **The product name you created in Wix Stores.
+- **Formatted Discounted Price (Text): **The price formatted with the currency (e.g. $20).
+- **Main Media (Image): **The main media item (image or video) for the product.
+- **Buttons and images linking options: **Click the **Click action connects to **or **Link connects to** drop-down and select the relevant option:
+
+- **Product Page URL: **Go to the web address of the product's page on your site.
+- **Add to cart: **Add the product to the cart.
+- **Open quick view: **Open a popup with details about the product.
+
+1. Click **Repeater connections** and repeat steps 4-5 above to connect additional elements in the repeater.
+2. Click to adjust your repeater elements as needed.
+
+**Tip: **You can add or remove elements from your repeater at any time. Disconnect elements if you want to use static content that doesn't change according to the relevant category.
+3. Click the Preview icon  at the top right to test your dynamic products page.
+4. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 3 | (Optional) Manage the dataset settings
+
+In your dataset settings, you can choose the maximum products that can display at a time. You can also add filters to include only certain products, or add sorts to control the order in which the products display.
+
+Wix EditorEditor XStudio Editor
+1. In your editor, click the repeater, Pro Gallery or table.
+2. Click the **Connect to CMS** icon  .
+3. Click **Dataset Settings**.
+4. Edit the **Maximum items displayed **field to set the maximum number of products that can load at a time on the page. This is also the maximum products that can load per page in a connected [pagination bar](https://support.wix.com/en/article/cms-adding-and-setting-up-a-pagination-bar) or per click in a ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+5. (Optional) Click **+ Add Filter **to [only show specific products](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+6. (Optional) Click **+ Add Sort **to [choose the order in which the products appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater.
+7. Click **Preview** to test your dynamic products page.
+8. Click **Publish** if you are ready to make the changes go live.
+
+1. In your Editor, click the **Products **dataset and select **Settings**.
+2. Edit the **Maximum items displayed **field to set the maximum number of products that can load at a time on the page. This is also the maximum products that can load per click in a ["Load More" button](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater?tabs=Editor-X-10#step-5-optional-create-a-load-more-button).
+3. (Optional) Click **+ Add Filter **to [only show specific products](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+4. (Optional) Click **+ Add Sort **to [choose the order in which the products appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater.
+5. Click **Preview** to test your dynamic products page.
+6. Click **Publish** if you are ready to make the changes go live.
+
+1. Go to the connected dataset settings:
+
+1. Click the repeater element.
+2. Click the Connect to CMS icon  .
+3. Click **Dataset Settings** in the Inspector panel.
+
+1. Edit the **Maximum items displayed **field to set the maximum number of products that can load at a time on the page. This is also the maximum products that can load per page in ['Load More'](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater#step-5-optional-create-a-load-more-button) or ['Next/Previous' page](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#next-page-previous-page) buttons.
+
+**Note: **This field does not apply to tables. If [using a table to display your items](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table), limit the number of items displayed by clicking the table's **Layout** icon , then setting a custom table height and enabling pagination.
+2. (Optional) Click **+ Add Filter **to [only show specific products](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the repeater.
+3. (Optional) Click **+ Add Sort **to [choose the order in which the products appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the repeater.
+4. Click the Preview icon  at the top right to test your dynamic products page.
+5. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### Step 4 | (Optional) Let customers filter products
+
+Give shoppers a way to view only products that match filters they apply such as price, inventory, or brand. Choose from any of the following [input elements](https://support.wix.com/en/article/cms-about-user-input-elements) that allow filtering: **Radio Buttons**, **Checkboxes**, **Dropdown**, **Selection Tags**, or **Slider** (Range Sliders only).
+
+> Learn how to set up [input elements that allow visitors to filter collection content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+---
+
+### Step 5 | (Optional) Add 'Load More' or navigational buttons
+
+You can improve your page's performance by limiting the number of products that appear and adding a '[Load More](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images#load-more)' button.
+
+> **Tip:**
+>
+> Learn more about the [CMS dataset actions](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images) you can apply to buttons and images.
+
+---
+Source: https://support.wix.com/en/article/cms-displaying-your-wix-stores-products-on-a-dynamic-list-page

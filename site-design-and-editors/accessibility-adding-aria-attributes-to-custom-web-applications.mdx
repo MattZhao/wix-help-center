@@ -1,0 +1,79 @@
+---
+title: "Accessibility: Adding ARIA Attributes to Custom Web Applications"
+---
+
+ARIA attributes provide additional information about the semantics of elements to assistive technologies like screen readers. You may want to add ARIA attributes to any custom elements or applications on your site.
+
+ARIA attributes are important, as they define ways custom elements and applications can be made accessible when it is not possible to do so with the element's native HTML.
+
+> **Important:**
+>
+> This feature is intended for users who have custom applications / elements that require ARIA attributes. If you do not have these on your site, you do not need to edit the ARIA attributes.
+
+---
+
+### Adding ARIA attributes
+
+We have already hardcoded ARIA attributes for most elements on a site. However, if you have created custom applications, then you may want to add your own ARIA attributes for accessibility purposes.
+
+Studio EditorWix EditorEditor XEnable developer mode (Velo by Wix) in the Studio Editor to add attributes to elements. Velo allows you to [add coding, build databases, and more](https://dev.wix.com/docs/develop-websites/articles/getting-started/about-velo-by-wix).
+1. Select **Code**   on the left side of the editor.
+2. Select the relevant application or element, and click the **More actions** icon .
+3. Select **Accessibility**.
+4. Select **Add Attribute**.
+5. Select an attribute from the drop-down menu.
+6. Enter a label / select the level or value.
+7. Select **Add**.
+[image: The accessibility panel of an element in the Studio Editor. The cursor is clicking the Add Attribute button.]Enable dev tools in the [Accessibility Wizard](https://support.wix.com/en/article/accessibility-about-the-accessibility-wizard-7284021) to add aria attributes to your custom elements. You can then add the attribute by right-clicking the element or application.
+1. Select **Settings** in the top bar of your editor.
+2. Select **Accessibility Wizard**.
+3. Select the **More actions** icon ** **on the top bar of the Wizard.
+4. Select **Advanced accessibility settings**.
+5. Click the **Accessibility Dev Tools** toggle to enable it.
+6. Right-click the application or element you want to add the attributes to.
+7. Select **Accessibility**.
+8. Select **Add Attribute**.
+9. Select an attribute from the drop-down menu.
+10. Enter a label / select the level or value.
+11. Select **Add**.
+[image: The accessibility panel and the wizard are open. The cursor is clicking Add Attribute, and the toggle is enabled.]Important:You can turn the advanced accessibility settings off at any time, and the ARIA attributes will not be deleted.To add attributes to elements in Editor X, you need to ensure that Dev Mode is enabled on your site. After enabling dev mode, you can add the attribute by right-clicking the element or application.
+1. Select **Dev Mode** on the top of Editor X.
+2. Select **Turn On Dev Mode**.
+3. Select the relevant application or element, and click the **More actions** icon .
+4. Select **Accessibility**.
+5. Select **Add Attribute**.
+6. Select an attribute from the drop-down menu.
+7. Enter a label / select the level or value.
+8. Select **Add**.
+[image: The accessibility panel of an element in Editor X. The cursor is clicking the Add Attribute button.]
+
+#### You can add ARIA Attributes to the following elements:
+
+ElementPropertiesLightboxlabelText label, role [heading, status, alert], live, relevant, atomic, hidden, current, levelContainer Boxlabel, tabindex, role [region, group, none, status, alert], live, relevant, atomic, current, controls, hiddenStriplabel, tabindex, role [heading, status, alert], live, atomic, hidden, currentRepeaterlabel, role [heading, status, alert]Text Buttontabindex, pressed, expanded, haspopup
+
+> We are continually working on the ability to add ARIA attributes to more elements. [Get in touch](https://www.wix.com/contact/en) if you have any specific requests about ARIA attributes.
+
+---
+
+### Editing your ARIA attributes
+
+After adding attributes to custom applications, you can edit and update them whenever you like with the Accessibility icon . This icon is automatically added to elements you've connected attributes to.
+
+#### To edit the attribute:
+
+Select the element / application in your editor.  Select the **Accessibility **icon .  Hover over the relevant attribute, and select the **More Actions** icon .  Select **Edit**.  Make the relevant changes and select **Save**.
+
+---
+
+### Types of ARIA Attributes
+
+Attribute NameCategoryTokenstabindex
+0, -1role
+token: according to definition in primitivearia-level
+intaria-liveLivetoken: polite, assertivearia-multiline Descriptiontrue, falsearia-multiselectableDescriptiontrue, falsearia-pressedStatetrue, falsearia-relevantLivetoken: all, additions, removals, textaria-activedescendantRelationshipsID_REFaria-atomicLivetrue, falsearia-autocompleteDescriptiontrue, falsearia-controlsRelationshipsID_REFaria-currentStatestep, page, true, falsearia-describedbyRelationshipsID_REF (space separated items)aria-expanded
+true, falsearia-haspopupRelationshipsdialog, menu, true, falsearia-hidden
+true, falsearia-invalidStatetrue, falsearia-label
+stringaria-labelledby RelationshipsID_REF (space separated items)
+
+---
+Source: https://support.wix.com/en/article/accessibility-adding-aria-attributes-to-custom-web-applications

@@ -1,0 +1,100 @@
+---
+title: "CMS: Troubleshooting User Input Element Issues"
+---
+
+The CMS (Content Management System) allows you to create and manage dynamic content on your site. This is particularly useful for site owners who want to collect user input, such as customer feedback, registration forms, or other types of data.
+
+---
+
+### Step 1 | Check the connections of your page elements
+
+Ensure that your input elements are correctly connected to your dataset. If elements are not connected properly, data will not be stored in your collection.
+
+### Show me how
+
+1. In your editor, go to the page where your input elements are located.
+2. Click the relevant input element (e.g. text input, dropdown).
+3. Click the **Connect to CMS** icon  .
+4. Check that the element connects to the correct dataset that submits to the correct collection.
+5. Check that the element connects to the collection field it should submit to.
+
+Learn how to [check the dataset connections](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-3-connect-the-input-elements-to-your-collection) between your input elements and your collection.
+
+---
+
+### Step 2 | Check for validation error messages
+
+Validation errors can prevent data from being submitted correctly. These errors occur when the input does not meet the criteria set for the field. If you see any validation errors, adjust the input criteria in the properties panel to ensure they match the expected data format.
+
+### Show me how
+
+1. On your live site, go to the page with the input elements.
+2. Enter data into the form and try to submit it.
+3. Look for any error messages that appear.
+
+> Learn more about working with [user input validation settings](https://support.wix.com/en/article/cms-about-validation-settings-for-input-elements).
+
+---
+
+### Step 3 | Check your dataset mode
+
+Your dataset mode determines how data is handled when users interact with your input elements. Make sure the dataset mode is set correctly for your needs. If the dataset mode is not set correctly, users will not be able to submit their input.
+
+### Show me how
+
+1. In your editor, go to the page where your input elements are located.
+2. Click the relevant input element (e.g. text input, dropdown).
+3. Click the **Connect to CMS** icon  .
+4. Click **Dataset Settings**.
+5. Check that the **Dataset mode **is set to the correct mode: **Write** or **Read & Write**
+6. (If necessary) Click the **Dataset mode **drop-down and select the relevant mode: 
+
+- **Read:** Page elements on your live site can read and display content from your collection. But site visitors cannot edit, add to, or delete any content in your collection
+- **Write:** Visitors can interact with [user input elements](https://support.wix.com/en/article/cms-about-user-input-elements) and a [submit button](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection#step-4-add-a-submit-button) on your live site to add content to your collections. The Write-only mode cannot display content from a collection or allow visitors to edit data.
+- **Read & Write:** Visitors can interact with user input elements and a submit button on your live site to add to or edit content in a collection. Page elements can also display content from the collection.
+7. Publish your site to make the changes go live.
+
+> Learn more about [adjusting your dataset settings](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset#step-3-edit-the-dataset-settings).
+
+---
+
+### Step 4 | Check your collection permissions
+
+Collection permissions determine who can view, add, update, or delete collection content on your live site. Make sure your collection permissions are set to allow the relevant people to access the content.
+
+> Learn how to check and adjust your [collection permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions).
+
+---
+
+### Step 5 | Check for hidden or overlapping elements
+
+Make sure you haven't accidentally hidden any input elements that are set to ['required'](https://support.wix.com/en/article/cms-about-validation-settings-for-input-elements#required-1). This can happen both in the editor for the mobile version of sites built in the Wix Editor, and across breakpoints in the Studio Editor.
+
+> **Learn how to:**
+>
+> - [Unhide elements in the mobile editor](https://support.wix.com/en/article/wix-editor-hidden-elements-in-your-mobile-editor#unhiding-an-element) for sites built in the Wix Editor.
+> - [Unhide elements from breakpoints](https://support.wix.com/en/article/studio-editor-working-with-layers#hiding-and-unhiding-elements) for sites built in the Studio Editor. Learn more about [designing across breakpoints in the Studio Editor](https://support.wix.com/en/article/studio-editor-designing-across-breakpoints).
+
+Also, make sure your custom form does not have any elements overlapping it, as this can cause issues filling out and submitting the inputs.
+
+> **Learn how to:**
+>
+> - [Use the Layers panel in the Wix Editor](https://support.wix.com/en/article/wix-editor-using-the-layers-panel) to check for overlapping elements.
+> - [Use the Layers panel in the Studio Editor](https://support.wix.com/en/article/studio-editor-working-with-layers#reordering-layers) to reorder elements.
+
+---
+
+### Step 6 | (If using the sandbox) Sync your sandbox and live collections
+
+If you are using optional sandbox collections, ensure that your content is synced. Differences between these collections can cause issues with user input. Keeping these environments synced helps avoid discrepancies and ensures smooth operation.
+
+> Learn more about [syncing content between the sandbox and live collections](https://support.wix.com/en/article/cms-accessing-and-syncing-your-sandbox-and-live-collections).
+
+---
+
+#### Still need help?
+
+If the problem persists, [contact us](https://www.wix.com/contact), and we will be happy to help.
+
+---
+Source: https://support.wix.com/en/article/cms-troubleshooting-user-input-elements-issues

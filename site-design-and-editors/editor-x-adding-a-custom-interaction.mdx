@@ -1,0 +1,124 @@
+---
+title: "Editor X: Adding a Custom Interaction"
+---
+
+Add [Interactions](https://support.wix.com/en/article/editor-x-about-click-and-hover-interactions) to create an animated experience as visitors click or hover over elements. The interaction can animate the same element that triggered it, or any other element on the page.
+
+With custom interactions, you have full creative freedom to design your animation from scratch. You can also control the animation's timing to make it truly effective.
+
+---
+
+### Step 1 | Add a trigger (click or hover)
+
+To get started, select the element that triggers the interaction. This is the element that your visitors hover over or click before seeing the animation. Then, go to the Interactions tab in the Inspector panel to add your new interaction.
+
+> **Tip:**
+>
+> You can add multiple interactions to an element so it triggers different animations on hover or click.
+
+#### To add a trigger:
+
+Select the element that should trigger the interaction.  Click the Inspector icon  at the top of Editor X.  (In the Inspector) Click the Interactions tab .  Click **+ Add** under **Hover** / **Click**.
+
+---
+
+### Step 2 | Set up your interaction
+
+You can now choose which element gets animated, the animation that should appear and the exact action that happens on hover or click (e.g., apply the animation, toggle it on / off, etc.)
+
+#### To set up your interaction:
+
+Select an option from the **On Hover** / **On Click** drop-down:
+
+- **Start Animation: **Clicking / Hovering over the element triggers the chosen animation.
+- **Toggle On/Off: **Similar to a toggle, clicking the element triggers the animation and a second click removes it.
+- **Reset Animation: **Clicking / Hovering over the element removes any animation that was previously applied.
+    Select an option from the **Animated element** drop-down:
+
+- **Make the element trigger its own animation: **Click the element's name (the word **(self)** appears next to it).
+- **Animate a different element on the page:** Select an element from the drop-down, or click **Choose on Canvas **to select it on the page.
+
+**Tip:** Hold the **Cmd** / **Ctrl** key to select a child element.
+    Click the **Custom **tab.   Click **Create Custom Animation**.
+
+---
+
+### Step 3 | Customize the animation
+
+Now it's time to build your animation from scratch. Add all kinds of layout and design transforms to change your element's size (Scale), position (Translate), angle (Rotate), fill color and more.
+
+You can also design your element's [initial state](https://support.wix.com/en/article/editor-x-about-click-and-hover-interactions#designing-an-elements-initial-state) to complement the animation you built. This is how the element looks when it loads, before visitors interact with it. To tie it all together, set the animation's duration and ease.
+
+#### To customize the animation:
+
+Choose how you want to customize your animation:
+
+### Adjust the element's design
+
+Adjust the relevant settings in the Inspector panel to create your custom animation:
+- **Opacity: **Change the opacity of the element by entering a value lower than 100%.
+- **Rotate:** Make the element rotate in a certain direction by entering an angle in the text box.
+- **Scale:** Make your element shrink or grow. You can enter the same value in both X (width) and Y (height) so that your element resizes in its original proportion.
+- **Skew: **Make your element turn sideways. Enter a value for the width (X) and the height (Y) of the element.
+- **Translate: **Move an element right/left (X) or up/down (Y) by adjusting the X and Y values.
+- **Fill Color & Opacity: **Choose a different color and opacity for the element's background.
+- **Corners: **Make the element's corners sharper or rounder.** **
+- **Border: **Add a border to make the element stand out.
+- **Shadow: **Add shadow behind your element for a 3D effect.
+
+**Note: **The available settings vary based on the element you choose to animate.
+
+### Design the element's initial state
+
+1. Click the **Designing** drop-down on the floating bar.
+2. Select **Initial state**.
+3. Adjust the relevant settings in the Inspector panel.
+4. When ready, click **Done**.
+
+**Tip: **When setting the element's opacity to 0% in the initial state, it appears with a checkered overlay on the canvas. This is to indicate that the element is initially transparent.[image: A button set to appear on hover, appearing with a checkered overlay on the canvas in Editor X]You can turn this indication off at any time. Click **View** on the top bar, then click **Transparent Elements**.
+
+### Set the animation's duration and ease
+
+Set the duration and ease in the **Timing** panel:
+- **Start and End: **Set the duration of your animation (in seconds) using these fields. The Start field also controls the delay of this animation.
+- **Easing:** Choose how the animation eases in and out.
+
+**Closed the Timing panel?**You can always re-open it by clicking **Timing** on the floating bar.
+
+2.   (Optional) Click  **Play **on the floating bar to preview your animation.
+
+> **What's next?**
+>
+> [Review and manage your Interactions list](https://support.wix.com/en/article/editor-x-managing-your-interactions) for each element.
+
+---
+
+### FAQs
+
+Click below to learn more about creating interactions.
+
+### How does it look when an element triggers its own animation?
+
+In the example below, hovering over the title animates it. The title skews and changes its color.
+[image: GIF showing a text element triggering its own animation, when hovering over it changes color]
+
+### How does an interaction between different elements look?
+
+In the example below, hovering over the text box animates the image right next to it. 
+[image: GIF showing an interaction between elements. Hovering over the text triggers the image next to it]
+
+### Can one element trigger multiple other elements?
+
+Yes, but not in a single interaction. 
+You need to create a separate interaction for each element you want to animate, even if they should all be triggered by the same element.  
+In the example below, we created 3 different hover interactions for the same text box. When visitors hover over this text box, it animates an image, a button and another text box – all at the same time. 
+[image: Screenshot of the Interactions list of a text box, hovering over the text box triggers animations in 3 other elements]
+
+### Can a single element have multiple animations?
+
+When making an element trigger its own animation (choosing **self**), it can have one hover interaction and one click interaction.  
+Using a custom animation, you can apply multiple transforms to the same element, so they all appear in a single interaction. 
+In the example below, we created a custom hover interaction for the title. When hovering over the title, it skews and changes its color at the same time.
+
+---
+Source: https://support.wix.com/en/article/editor-x-adding-click-and-hover-interactions-beta

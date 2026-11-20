@@ -1,0 +1,12 @@
+---
+title: "SSO: Troubleshooting and Error Codes for IT Admin"
+---
+
+View the following list of error codes that the end user may report to you if they experience an error using Single Sign-On (SSO). This list includes a description of the root cause of each error.
+
+SSO authentication allows the use of a single ID and password to quickly and securely log in to any of several related, yet independent, online platforms. Learn more [about SSO settings](https://support.wix.com/en/article/sso-setting-up-single-sign-on-sso-login-for-your-organization).
+
+Error Code:Description:8020Failed to acquire ID token from code.8021A user is trying to log in to an account using SSO with their employee email, but they already have an account associated with this email.8022The user is trying to log in with SSO to an account that has no Open ID authentication method configured in authentication settings.8023The user is trying to log in with SSO using a federated authentication ID, which does not exist in the account authentication settings.8024SSO user doesn't exist. In SSO for clients, users (clients) must already exist as SSO users when they attempt to log in with SSO. We identify users by their external user id (their ID in IdP) and the SSO ID. This error is returned when such a user doesn't exist.8025The user of the SSO account (such as VP where JIT provisioning is set to false) doesn't exist.8026An existing user is trying to log in to an account they don't belong to.8027SSO IdP authorization request has failed.
+
+---
+Source: https://support.wix.com/en/article/sso-troubleshooting-and-error-codes-for-it-admin

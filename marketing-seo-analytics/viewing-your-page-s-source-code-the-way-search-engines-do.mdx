@@ -1,0 +1,54 @@
+---
+title: "Viewing Your Page's Source Code the Way Search Engines Do"
+---
+
+Wix sites use Server Side Rendering (SSR) to convert the HTML code of your pages into the version that your visitors see in their browser.
+
+SSR can also help make it easier for search engines to retrieve all of the content on your pages when they [crawl and index them](https://developers.google.com/search/docs/fundamentals/how-search-works#introducing-the-three-stages-of-google-search). This includes useful SEO content such as [meta tags](https://support.wix.com/en/article/adding-seo-title-tags-and-meta-descriptions-to-your-pages) that are in your page's source code, but are not visible on the rendered page.
+
+You can view your page's source code the way search engines view it by changing the user agent in your browser's settings. The user agent helps identify which browser you're using. When you select a web crawler bot such as [Googlebot](https://developers.google.com/search/docs/crawling-indexing/googlebot) as your user agent, you can view the exact content that the bot crawls.
+
+**In this article, learn more about:**
+
+[Viewing your page's source code in Google Chrome](https://support.wix.com/en/article/viewing-your-pages-source-code-the-way-search-engines-do#viewing-your-pages-source-code-in-google-chrome)  [Viewing your page's source code in Safari](https://support.wix.com/en/article/viewing-your-pages-source-code-the-way-search-engines-do#viewing-your-pages-source-code-in-safari)
+
+---
+
+### Viewing your page's source code in Google Chrome
+
+You can use Google Chrome's developer tools to view your page's source code the way search engines do.
+
+#### To view using Google Chrome:
+
+Open the relevant page of your site in Google Chrome.  Open the page's source code view:
+
+- **Windows:** Right-click the page and select **View page source **(or **View source**). Alternatively, you can press **Ctrl + U **on your keyboard.
+- **Mac: **Press **Cmd** + **Option** +** U** on your keyboard.
+    Open the developer tools:
+
+- **Windows:** Press the** F12 **key on your keyboard.
+- **Mac:** Press **Cmd** + **Option** + **I **on your keyboard.
+    Click the Customize and Control DevTools icon  at the top right.   Hover over **More tools **and select **Network conditions**.
+
+Deselect **Use browser default** under **User Agent**.   Select **Googlebot** from the drop-down menu.
+
+Refresh the page.
+
+---
+
+### Viewing your page's source code in Safari
+
+You can use the Develop tab in Safari to view your page's code the way search engines do.
+
+#### To view using Safari:
+
+Click **Safari** in the top menu.  Select **Settings**.  Select **Advanced**.  Select the **Show features for web developers **checkbox.
+
+> Once you select the checkbox, **Develop** appears in the top menu.
+>
+> [image: A screenshot of a top menu with Develop selected.]
+
+Open the relevant page of your site in Safari.  Click **Develop** in the top menu.   Hover over **User Agent**.  Select **Other **at the bottom.  Replace the text in the field with the following: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Safari/537.36  Click **OK **to confirm.
+
+---
+Source: https://support.wix.com/en/article/viewing-your-pages-source-code-the-way-search-engines-do

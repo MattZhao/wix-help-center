@@ -1,0 +1,131 @@
+---
+title: "Email Marketing: Authenticating Your Custom Email Domain"
+---
+
+> **Before you begin:**
+>
+> This article refers to domains purchased outside of Wix (e.g. GoDaddy.com). If you purchased a Wix domain, the authentication process starts automatically. However, if the process did not happen automatically follow the [troubleshooting steps below](https://support.wix.com/en/article/email-marketing-authenticating-your-custom-email-domain#troubleshooting-the-authentication-process-of-wix-managed-domains).
+
+It's recommended to first authenticate a custom domain if you have an email address associated with it (e.g. contact@customdomain.com). Emails sent from authenticated domains are less likely to be marked as spam because email providers such as Google and Outlook view them as legitimate.
+
+If your domain isn't authenticated, Wix automatically adds an authenticated Wix domain (e.g. ascendbywix.com) like in the image below. This helps with email deliverability. To remove the Wix signature, manually authenticate your domain by following the below steps.
+
+---
+
+### Step 1 | Get the DNS records provided by Wix
+
+The first step to manually authenticate your custom domain is locating the DNS records provided by Wix. You can find these either from your Email Marketing dashboard or when creating an automation using 'send an email' as a follow up action. Before viewing the records you must first confirm your email address with a confirmation code.
+
+#### To get your DNS records:
+
+[Go to Email Marketing](https://www.wix.com/my-account/site-selector/?buttonText=Email%20Marketing%20Dashboard&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/shoutout/) in your site's dashboard.  Under **Sender Details** at the right, click **Add Details**.
+
+**Note: **If you've previously entered an email address, click **Edit Details** instead.  Enter a **From name** in the field. Recipients see this name as the email sender.  Enter a **Reply-to email**. Use the email address that is connected to your custom domain.  Click **Save**.
+
+Confirm your email address by entering a confirmation code. The code is sent to the address you just added. Paste the code into the field and click **Confirm**.  Once your email is confirmed you will see 'Not authenticated' under **Domain status**. Click **Authenticate this domain**.
+
+A list of CNAME records opens. This is the information you need to copy and paste into your external domain provider settings. Keep this information available as you move to the next step.
+
+> **Tip:**
+>
+> You can also find the DNS records by clicking **Edit** under **Customize sender details** when setting up an email automation. [Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/triggers/) in your site's dashboard to get started.
+>
+> [image: A screenshot of editing the sender details from the Automations dashboard.]
+
+---
+
+### Step 2 | Sign in to your external domain provider and go to your DNS settings
+
+> **Note:**
+>
+> Depending on the domain provider, domain authentication process might be slightly different from what is described in this article. There might also be some other specific steps you need to take in your domain provider account that are not described in this article. In case your domain is still not authenticated, please contact your domain provider.
+
+Once you have the DNS records provided by Wix, go to your external domain provider (e.g. GoDaddy.com) and sign in to your account.
+
+Locate the DNS settings of your account. Once you find the DNS records, you are ready to copy and paste the Wix provided records from Step 1 into the relevant fields. The below image is an example of the DNS Records settings from GoDaddy.com.
+
+---
+
+### Step 3 | Copy and paste the Wix records into your domain provider settings
+
+Now that you have both your Wix records and the DNS settings of your domain provider open, copy the CNAME record from Wix and paste it into the corresponding fields of your domain provider settings.
+
+> **Important:**
+>
+> You must add the CNAME **Host **and **Points to** values into the DNS settings exactly as they appear in the Wix records.
+
+Once you've copied all the records exactly as they appear, click the confirm message in your domain provider DNS settings.
+
+---
+
+### Step 4 | Wait for the records to propagate
+
+Once you've copied the DNS records over to your domain provider it can take a few hours for the records to propagate and the authentication to be completed. If you don't see it, allow up to 24 hours for the authentication to be completed.
+
+You can always check the status of the domain in your [Email Marketing dashboard](https://www.wix.com/my-account/site-selector/?buttonText=Email%20Marketing%20Dashboard&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/shoutout/) under **Sender Details**. Refresh the page to see **Domain status**.
+
+---
+
+### Troubleshooting the authentication process of Wix managed domains
+
+If you have purchased or connected a domain to Wix, the authentication process starts automatically. Please refer to the following scenarios for further details:
+
+Purchased a Wix domain:
+
+- If the process doesn't start automatically, follow the steps below.
+    Connected a domain via nameserver:
+
+- If sender details were created using this domain before the domain itself was connected to Wix, then you will need to manually authenticate the domain. Follow the steps below.
+
+### Step 1 | Open and copy your DNS records
+
+1. [Go to Email Marketing](https://www.wix.com/my-account/site-selector/?buttonText=Email%20Marketing%20Dashboard&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/shoutout/) in your site's dashboard.
+2. Click **Manage Senders** under **Sender details** on the right.
+3. Click **View DNS records**.
+
+[image: A screenshot of manage senders with the option to view DNS records.]
+4. Click **Copy** next to the first CNAME under the HOST column. 
+
+[image: A screenshot of DNS records]
+
+### Step 2 | Add the copied CNAME(s) to your DNS records
+
+1. [Go to Domains](https://manage.wix.com/wix/api/mpContainerStaticController#/domains) in your Wix account.
+1. Click the** Domain Actions** icon  next to the relevant domain.
+2. Click **Manage DNS records**. 
+
+[image: A screenshot of settings panel to manage DNS records]
+3. Scroll to the record type you'd like to add (e.g. CNAME, TXT) and click **+ Add Record**.
+4. Enter the DNS record in the relevant fields. 
+
+**Tip:** If you're instructed to create a DNS record with the **@** sign in the **Host Name** field, leave the **Host Name** field blank instead.
+
+[image: A screenshot of where to enter the DNS record]
+5. Click **Save**.
+6. Click **Save Changes** in the pop-up message.
+
+> **Important:**
+>
+> You can only edit one DNS record at a time. Save your changes before adding another record. Repeat this process until you have copied all provided DNS records.
+
+---
+
+### FAQs
+
+We are here to help with all your questions. Click a question below to learn more.
+
+### Why do I need to authenticate my custom domain?
+
+If you are sending emails from a domain that isn't authenticated, email providers may consider these emails as suspicious. This can cause them to be more likely marked as spam and land in spam folders.
+Receiving mail servers look to verify incoming emails by looking at the sending reputation associated with the sending domain and sending IP address. You [increase your deliverability chances](https://support.wix.com/en/article/improving-the-deliverability-of-your-campaign) and [improve sender reputation](https://support.wix.com/en/article/improving-your-email-sender-reputation) by authenticating your domain.
+
+### What is a CNAME record?
+
+A CNAME is a type of DNS record that allows Wix to authenticate an email domain. When you add records provided by Wix into your domain host settings, it helps with domain authentication. Once the records are propagated, email providers recognize your emails sent using Wix as genuine and trustworthy.
+
+### Will authenticating my custom domain using the steps above mean that my DMARC record will also be set up?
+
+Yes, with the CNAME 5 record, your DMARC record for your custom domain will automatically be set up.
+
+---
+Source: https://support.wix.com/en/article/email-marketing-authenticating-your-custom-email-domain

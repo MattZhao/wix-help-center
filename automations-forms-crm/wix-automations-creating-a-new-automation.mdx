@@ -1,0 +1,212 @@
+---
+title: "Wix Automations: Creating a New Automation"
+---
+
+> This article refers to the previous automation builder. If you're not seeing this version, read our article about the [new version of the automation builder](https://support.wix.com/en/article/wix-automations-creating-an-automation-with-the-new-builder).
+
+Create a new automation based on the way you'd like to grow or manage your business. Choose to create one from scratch or make edits to a suggested automation. When you begin to create an automation, you'll see suggested automations specific to your business type.
+
+> **Example:**
+>
+> Joan has a monthly newsletter. She creates a newsletter subscription form to grow her mailing list. She wants to thank each subscriber as they sign up, but manually sending these emails would be impossible. Instead, she sets up an automation that automatically sends a 'thank you' message every time a new person subscribes.
+
+---
+
+### Step 1 | Add a new automation
+
+Any automations you create appear in Automations in your site's dashboard. Make sure to choose a name that's memorable and can be understood by all of your site collaborators.
+
+#### To add a new automation:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.  Click **+ New Automation** at the top right.  Choose how you want to start creating your automation: 
+
+- **From Scratch: **Click** Start from Scratch **to begin from a blank automation template.
+- **Suggested automation: **Use the categories or search bar to find the suggested automation you want to edit. Then click **Set Up** next to the automation.
+
+Click the title to give your automation a name.
+
+---
+
+### Step 2 | Choose a trigger
+
+The trigger is the action or event that initiates the automatic response. This may be something that a visitor does on your site (for example, purchasing a product), or something you do (for example, creating an invoice).
+
+#### To choose a trigger:
+
+Click the app you'd like to base your trigger on in the **Trigger** section.
+
+Select your chosen trigger from the available options.
+
+**Note:** These options will differ depending on the app you selected in step 1.
+
+Click the **Limit frequency to** drop-down to set trigger frequency:
+
+- **Don't limit (trigger every time):** Your action will take place every time it is triggered by a visitor.
+- **Once per contact:** Your action will take place only once per contact.
+- **Once per contact every 24hrs:** Your action will take place only once per contact in any 24hr period.
+
+---
+
+### Step 3 | (Optional) Add a delay
+
+Choose when this action should occur. You may want to perform the action immediately after the trigger occurs or set a delay to send it after a certain amount of time has passed. For example, if your trigger is "Customer abandons a cart" and your action is "Send an email", you would probably want this to be sent after a certain amount of time has passed.
+
+#### To add a delay to your automation:
+
+Click **+ Add Delay**.  Click the up and down arrows to set the number and click the drop-down to choose between days, hours and minutes.
+
+> **Note:**
+>
+> If you don't add a delay, the action is performed as soon as the trigger occurs.
+
+---
+
+### Step 4 | (Optional) Add a condition
+
+After choosing a trigger, you have the option to add a condition. Conditions allow you to set and manage complex automation flows.
+
+#### To add a condition:
+
+Click **+ Add Condition**.  Click the **Select criteria** drop-down and choose the criteria you want to use to decide whether this automation continues each time it's triggered.  Click the drop-down that appears next to your criteria drop-down to select your operator (e.g. "is", "is not").  Click the drop-down or text box that appears next to your operator drop-down to complete your condition. The logical statement you've created will determine whether the automation continues.  (Optional) Click **+ Add Criteria** to add any further criteria.
+
+> **Tip:**
+>
+> Learn more about [condition operators](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions).
+
+---
+
+### Step 5 | Choose an action
+
+After choosing a trigger, decide how you want your site to react to that trigger. For example, if your trigger was 'Visitor submits a form on your site', you might want to send that visitor an automatic thank you email. Wix Automations offers several actions, each of which can be customized to suit your needs.
+
+#### To choose an action:
+
+Click your chosen action in the **Action** section.
+
+**Note:** The actions available will differ based on your trigger choice.
+
+Set up the action using the available options. Click the relevant action below to learn how:
+
+### Send an email
+
+1. Click **Edit** in the **Sender details** section to edit your sender details:
+
+- **From name**: This is the name that appears in the recipient's inbox.
+- **Reply-to email**: This is the address that replies are sent to.
+2. Scroll down to the **Create an email** section and choose what you want to do:
+
+- Click **Edit **to update the default template generated by this automation.
+- Click the **More Actions** drop-down and select **Switch template** to use an email template from a different automation or email marketing campaign.
+
+**Tips:**
+- Learn more about [customizing automated emails](https://support.wix.com/en/article/wix-automations-customizing-automated-emails), including editing sender details, designing email templates and using dynamic values to give your emails a personal touch.
+- If you want to send emails to yourself and your team, deselect the **Include trigger contact **checkbox and select all contacts or roles who you want to receive the email.
+- Make sure to create email automations that don't overlap with other emails. Many apps already send emails to your contacts for specific events (e.g. making purchases in Wix Stores).
+
+### Send a chat message
+
+1. Enter the chat message you'd like to send in the **Message** field.
+2. Click the **Send this message only when I'm online to chat** toggle to specify when these messages are sent:
+
+- **Enabled:** This chat message will only be sent when your [chat status](https://support.wix.com/en/article/schedule-your-chat-hours) is online.
+- **Disabled:** This chat message will be sent whether your [chat status](https://support.wix.com/en/article/schedule-your-chat-hours) is online or offline.
+
+**Notes:**
+- You must have installed [Wix Chat](https://support.wix.com/en/article/wix-chat-an-overview) to set up this action.
+- By default, chat messages are sent immediately after trigger. It is not possible to change the timing.
+
+### Add a coupon
+
+1. Select whether to send a unique coupon each time in the **Set Coupon** section.
+2. Click the **Select or create a coupon template** drop-down to choose the coupon you want to use or create a new one.
+
+Adding a coupon does not automatically send that coupon to visitors. You need to attach the coupon to an app and add it as a dynamic value to send. [Learn more about adding coupons](https://support.wix.com/en/article/wix-automations-sending-a-discount-coupon-by-email).
+
+### Send an SMS
+
+If you are subscribed to a Wix Business Phone Number plan, you can send SMS messages to contacts who have provided cell phone numbers. [Learn more about sending automated SMS messages](https://support.wix.com/en/article/business-phone-number-sending-automated-sms-messages).
+
+### Create a task
+
+Add a task for yourself or your team members and set a due date for it.
+
+1. Enter your task in the **Add a task for you or your team** field.
+2. Click the **Assign to you or your team** drop-down to choose to have the task sent to you or a member of your team, or left unassigned.
+3. Click the **Set a due date** toggle to choose whether to set a due date:
+
+- **Enabled:** Select a value in the **Number of days to complete task** field.
+- **Disabled:** Your task will not have a due date.
+
+[Learn more about tasks and reminders.](https://support.wix.com/en/article/about-tasks-reminders)
+
+### Move card in a workflow
+
+A workflow is a list that displays all of the steps of a project in columns so you can easily keep track of every phase. Create or move a card in a workflow automatically with Automations.
+
+[Learn more about workflows](https://support.wix.com/en/article/workflows-getting-started).
+
+1. Click the **In This Workflow** drop-down to select the workflow you'd like to move a card in.
+2. Click the **To This Step** drop-down to select the step you'd like to move the card to.
+
+### Assign a badge
+
+Badges allow you to label your contacts so they can be easily differentiated (for example, a badge could mark a certain milestone being met). [Learn more about badges](https://support.wix.com/en/article/about-member-badges).
+Click **x** beside the badge(s) you don't want to assign, until you can only see the badge(s) you do want this automation to assign.**Note:** Click **+ Add Badge** to create your first badge if you don't see any listed.
+
+### Give loyalty points
+
+Reward your visitors for their loyalty by assigning loyalty points. [Learn more about the Wix Loyalty Program](https://support.wix.com/en/article/wix-loyalty-program-an-overview).
+
+1. Enter a description of this way of earning points in the **Tell customers how they can earn points** field.
+
+**Note:** This description should reflect the trigger you've chosen for this automation (for example, if your trigger is a visitor submitting a form, this will be the way they earn points).
+2. Enter the number of points awarded in the **Customer earns** field.
+**Note:** You can also [add ways to earn loyalty points](https://support.wix.com/en/article/wix-loyalty-program-managing-your-loyalty-program#updating-how-customers-earn-loyalty-points) within the Loyalty Program area of your site's dashboard.
+
+### Update Google Sheets
+
+Send site data, such as form submissions or store orders, directly to a Google spreadsheet. Learn more about [using automations to send data to Google Sheets](https://support.wix.com/en/article/wix-automations-sending-data-to-google-sheets).
+
+### Connect to Zapier
+
+Connect your automations to more than 1,000 apps like Google Docs, Trello, Slack and more. To use this feature, you'll need to [enable Velo](https://support.wix.com/en/article/enabling-velo) and [sign up to Zapier](https://zapier.com/). Learn more about [connecting your automations with a third-party app using Zapier](https://support.wix.com/en/article/wix-automations-connecting-your-automations-with-a-third-party-app-using-zapier).
+
+### Send via webhook
+
+Send data to a third-party app or your own server using a webhook. Learn more about [automatically sending data using a webhook](https://support.wix.com/en/article/wix-automations-sending-data-via-webhook).
+
+### Add a label
+
+Adding labels to your contacts helps you to [filter your contact list](https://support.wix.com/en/article/wix-contacts-managing-your-contact-list) and categorize your mailing lists. Learn more about [labels](https://support.wix.com/en/article/creating-contact-labels).
+Click **+ Add Label** to select the label(s) you'd like to add.
+
+### Send a push notification
+
+Send a push notification that appears on a customer's device screen ("pushed" by their mobile app). Enter the notification's title and message, and choose whether it takes customers to your app's home screen or a specific product or service.
+Notes:
+- This action is only available with a [Branded App Premium plan](https://support.wix.com/en/article/branded-app-purchasing-a-branded-app-plan) and when your app is live in stores.
+- We are currently in the process of releasing this functionality, so this action is not available for all triggers yet. If you select a trigger and see the **Send a push notification** action, it is available for that trigger.
+
+### Invite to a group
+
+Send an email to contacts to invite them to join your group.
+Select an existing group you want to invite contacts to, or [create a new group](https://support.wix.com/en/article/wix-groups-creating-a-new-group).
+
+> **Want to create a follow-up action?**
+>
+> Add a chain of [follow-up actions](https://support.wix.com/en/article/wix-automations-creating-a-multi-action-automation) from the initial action.
+
+---
+
+### Step 6 | Activate the automation
+
+Click **Activate** to save and activate the automation. It now appears on your [Automations page](https://support.wix.com/en/article/wix-automations-managing-your-automations#viewing-all-of-your-automations) where you can edit, deactivate or delete according to your needs.
+
+---
+
+> **Want to learn more?**
+>
+> Check out courses in Wix Learn to learn more about [using automations to manage customer relationships](https://www.wix.com/learn/courses/digital-marketing/promote-and-grow-your-business-with-wix#manage-your-customer-relationships) and setting up [automated emails triggered by a shopper's behavior](https://www.wix.com/learn/courses/ecommerce/drive-traffic-to-your-online-store#activate-email-automations).
+
+---
+Source: https://support.wix.com/en/article/wix-automations-creating-a-new-automation

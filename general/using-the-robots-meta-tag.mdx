@@ -1,0 +1,162 @@
+---
+title: "Using the Robots Meta Tag"
+---
+
+> **Important:**
+>
+> - Using the robots meta tag is an advanced topic. Using it incorrectly can cause issues with your site appearing in search results. Wix Customer Care cannot help you with adding or updating the robots meta tag on your site.
+> - We recommend reading [Google's guidelines for using the robots meta tag](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) before you make changes to your site.
+
+The robots meta tag is a piece of HTML code that lets you use instructions (known as directives) to tell search engines how to interact with your site's pages.
+
+You can use the robots meta tag on an individual page on your site, or use [your site's SEO Settings](https://support.wix.com/en/article/customizing-your-seo-settings-1420929) to customize the robots meta tags for multiple pages of the same type at once.
+
+**In this article, learn more about:**
+
+[Robots meta tag directives](https://support.wix.com/en/article/using-the-robots-meta-tag#robots-meta-tag-directives)  [Differences between the robots.txt file and the robots meta tag](https://support.wix.com/en/article/using-the-robots-meta-tag#differences-between-the-robotstxt-file-and-the-robots-meta-tag)  [Using the robots meta tag on your site's pages](https://support.wix.com/en/article/using-the-robots-meta-tag#using-robots-meta-tags-on-your-sites-pages)  [Using the robots meta tag in SEO Settings](https://support.wix.com/en/article/using-the-robots-meta-tag#using-robots-meta-tags-in-seo-settings)
+
+---
+
+### Robots meta tag directives
+
+The Robots meta tag directives tell search engines what information to present about a page in search results. You can use the directives to get more control over the way that search engines index a page.
+
+For example, you can use the "nosnippet" directive to tell search engines not to include a text snippet or video preview for the page in search results.
+
+You can choose from the following directives:
+
+DirectiveInstruction for search enginesnoindexDo not list this page in search results.nofollowDo not follow links on this page.nosnippetDo not show a text snippet or video preview for this page in search results.noarchiveDo not show a cached link for this page in search results.noimageindexDo not index images on this page.max-snippetEnter the maximum number of characters that search engines will use in a text snippet for this page in search results. 
+There are two special cases:
+- **0: **No snippet is shown
+- **-1:** This tells search engines there is no snippet length limit. Search engines will choose the most effective snippet length.
+max-image-previewSet the maximum size of an image preview for this page in a search result.
+- **None:** No image preview is shown
+- **Standard:** Shows a default image preview
+- **Large: **Shows a larger image preview up to the width of the visible area of the page
+max-video-previewSet a maximum number of seconds as a video snippet for videos on this page in a search result. 
+There are two special cases:
+- **0: **This tells search engines to use a static image only
+- **-1: **This tells search engines there is no video preview length limit
+
+---
+
+### Differences between the robots.txt file and the robots meta tag
+
+The [robots.txt file for your site](https://support.wix.com/en/article/editing-your-sites-robotstxt-file) tells search engines which pages to crawl or skip for your entire site. The robots.txt file is separate from your site's pages.
+
+In contrast, the robots meta tag is part of the HTML code of each page and includes specific instructions on how to crawl that page.
+
+For example, you can use robots.txt to ask search engines to skip a certain page when crawling your site. However, search engines may still index the page if they get to it from an external source such as a link to your page on another site.
+
+Using the robots meta tag on that page means that the instruction to skip it is part of that page's code and is read by search engines no matter how they reach the page.
+
+---
+
+### Using robots meta tags on your site's pages
+
+You can customize the robots meta tags for a page on your site in the **Advanced SEO **tab of your page's [SEO panel](https://support.wix.com/en/article/customizing-your-pages-seo-settings-in-the-seo-panel).
+
+#### Learn how to customize robots meta tags for:
+
+### Your site's pages in the Wix Editor
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu ** on the left side of the editor.
+3. Click the **More Actions** icon  next to the relevant page.
+4. Click **SEO basics**.
+5. Click the **Advanced SEO **tab.
+6. Click **Robots Meta Tag**.
+7. Select the directives that you want to use.
+8. Publish your site.
+
+### Your site's pages in the Studio Editor
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Click the **More Actions** icon  next to the relevant page.
+4. Click **SEO Basics**.
+5. Click the **Advanced SEO **tab.
+6. Click **Robots Meta Tag**.
+7. Select the directives that you want to use.
+8. Publish your site.
+
+### Wix Stores product pages
+
+1. Go to [Products](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Store%20Products&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fstore%2Fproducts%3FreferralInfo%3Dsidebar) in your site's dashboard.
+2. Click the product you want to customize.
+3. Click **Edit SEO Settings** on the right.
+4. Click the **Advanced **tab.
+5. Click** Robots Meta Tag**.
+6. Select the directives that you want to use.
+7. Click **Save**.
+
+### Wix Stores category pages
+
+1. Go to [Categories](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Categories&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/store/categories/list) in your site's dashboard.
+2. Select the category that you want to customize.
+3. Click **Edit SEO Settings** on the right.
+4. Click the **Advanced **tab.
+5. Click** Robots Meta Tag**.
+6. Select the directives that you want to use.
+7. Click **Save**.
+
+### Wix Blog posts
+
+1. Go to [your Blog](https://manage.wix.com/my-account/site-selector/?buttonText=Manage%20Blog&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fblog%2Fpublished) in your site's dashboard.
+2. Select the blog post you want to edit.
+3. Click **SEO **in the left sidebar.
+4. Click **Advanced**.
+5. Click **Robots meta tag**.
+6. Select the directives that you want to use.
+7. Click **Publish**.
+
+### Wix Bookings services
+
+Note: SEO settings are not available for Booking pages that [use iframes](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget).
+
+1. Go to [Booking Services](https://manage.wix.com/my-account/site-selector/?buttonText=Manage%20Booking%20Services&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fbookings%2Fscheduler%2Fowner%2Fofferings%2F) in your site's dashboard.
+2. Select the service you want to edit.
+3. Click **Edit SEO Settings**.
+4. Click **Advanced**.
+5. Click **Robots meta tag**.
+6. Select the directives that you want to use.
+7. Click **Save**.
+
+### Online Programs
+
+1. Go to [Online Programs](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Online%20Programs&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/challenges/list) in your site's dashboard.
+2. Click the Show More icon  next to the relevant program on the **Published **tab or the **Drafts **tab.
+3. Select **Edit SEO Settings**.
+4. Click **Advanced**.
+5. Click **Robots meta tag**.
+6. Select the directives that you want to use.
+7. Click **Save**.
+
+### Wix Events
+
+1. Go to [Events](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Events&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/events/) in your site's dashboard.
+2. Click the Show More icon  next to the relevant event.
+3. Select **Edit SEO Settings**.
+4. Click **Advanced**.
+5. Click **Robots meta tag**.
+6. Select the directives that you want to use.
+7. Click **Save**.
+
+> **Important:**
+>
+> Search engines will see the changes that you make to the page's robots meta tag the next time that they crawl your site. If you want to try to speed up the process, you can [submit your page's URL to search engines](https://support.wix.com/en/article/submitting-your-sitemap-and-urls-directly-to-search-engines#submitting-individual-urls-to-search-engines).
+
+---
+
+### Using robots meta tags in SEO Settings
+
+You can also customize robots meta tags for multiple pages with a single template using your site's SEO Settings.
+
+#### To use robots meta tags in SEO Settings:
+
+[Go to your SEO Dashboard](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/seo-home?referralInfo=KB-f3388913-140f-47a9-b2ba-4bf86b60e04e&title=Select%20a%20Site&buttonText=Go+to+SEO).  Select **Go to SEO Settings **under **Tools and settings**.  Select the page type that you want to edit.
+
+Click **Edit **next to **Robots meta tag**.  Select the directives that you want to use.  Click **Save**.
+
+---
+Source: https://support.wix.com/en/article/using-the-robots-meta-tag

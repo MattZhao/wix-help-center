@@ -1,0 +1,226 @@
+---
+title: "CMS: Displaying Collection Content in a Table"
+---
+
+Display your CMS (Content Management System) collection content in a table on your site.
+
+---
+
+### Step 1 | Create a collection
+
+Create a [multiple item collection](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection) that you will use to store the content that appears in your table. You can manually add the fields and items or import them from a CSV file.
+
+#### To create a collection:
+
+[Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS **** **in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿.  Click **Create Collection**.   Enter a name for your collection.   Leave **Multiple items (Default) **selected and click **Create**.   Add fields to your collection manually or by importing a CSV file:
+
+- **Add fields manually: **Click **+ Add Field** to begin [adding fields to your collection manually](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection).
+- **Import a CSV file: **Click **Import CSV file **to [upload a CSV file to your collection](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection).
+    Set [permissions](https://support.wix.com/en/article/cms-changing-your-collection-permissions) for the collection: 
+
+1. Click **More Actions **and select **Permissions & privacy**.
+2. Choose which permissions to use for the collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which collection permission you select.
+
+### Show content
+
+Allow the collection content to be viewable on the live site by site visitors. 
+1. Click **Show content**.
+2. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can view the collection content on the live site.
+- **Members only: **Only site members can view the collection content on the live site.
+3. Click **Save**.
+
+### Collect content
+
+Allow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+
+### Custom
+
+Set custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+---
+
+### Step 2 | Add a table to your page
+
+Choose from several pre-designed tables to add in your editor. You will connect and fully customize the table later.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **List**.
+4. Click **Tables**.
+5. Click and drag the table you want to use onto the page.
+[image: A screenshot of adding a table in the Wix Editor.]
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Add Elements ** on the left side of the editor.
+3. Click **Layout Tools**.
+4. Click **Tables**.
+5. Drag a table onto the page.
+[image: A screenshot of adding a table in the Studio Editor.]
+
+---
+
+### Step 3 | Connect the table to your CMS collection
+
+Supported field types from your collection automatically appear in the table once you connect the table to a dataset that binds to your collection. You can then add links to columns, such as links to [dynamic item pages](https://support.wix.com/en/article/cms-setting-up-a-dynamic-item-page), so visitors can navigate to the links by clicking items in the columns.
+
+Wix EditorStudio Editor
+1. Click the table element on your page.
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, select** ****Add a Dataset**, then choose the collection you want to connect, give it a name and click **Create**.
+
+1. Click the relevant drop-downs under **Connections** to choose which collection fields connect to each column.
+2. (Optional) Link the column items to their dynamic item pages or to other locations:
+
+1. Click the relevant **[Field Name] column links to** drop-down.
+2. Select the dynamic item page listed as **[Collection Name] (Item)** or choose another link option.
+3. Repeat this step for each column item you want to link.
+
+1. (Optional) Add another column to the table: 
+
+1. Click **Add column** at the bottom of the Connect Table panel on the right.
+2. Click the **Choose column **drop-down and select the collection field you want to connect.
+3. Click **Add Column**.
+
+1. Click the table element on your page.
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, select **Add a Dataset**, then choose the collection you want to connect.
+Note:If the columns do not automatically connect to your collection fields after choosing a dataset, click the **Choose a dataset** drop-down and select **Not connected**. Then click the drop-down again and reselect the dataset you want to connect.
+1. Click the relevant drop-downs under **Connections** to choose which collection fields connect to each column.
+2. (Optional) Link the column items to their dynamic item pages or to other locations:
+
+1. Click the relevant **[Field Name] column links to** drop-down.
+2. Select the dynamic item page listed as **[Collection Name] (Item)** or choose another link option.
+3. Repeat this step for each column item you want to link.
+[image: A screenshot of linking a column to a dynamic item page in the Studio Editor.]
+1. (Optional) Add another column to the table: 
+
+1. Click **Add column** at the bottom of the Inspector panel on the right.
+2. Click the **Choose column **drop-down and select the collection field you want to connect.
+3. Click **Add Column**.
+
+---
+
+### Step 4 | Customize your table
+
+Now you can fine tune the table to get it looking just the way you like. Reorder, rename, or remove columns, then choose from several options in the Settings, Layout, and Design panels. You may then want to drag the edges of your table to adjust its size and position.
+
+Wix EditorStudio Editor
+1. Click the table element on your page.
+2. Click **Manage Table **and choose want you want to do:
+
+- **Reorder: **Click the **Reorder** icon  next to the relevant column and drag it up or down into place.
+- **Change column name: **Hover over the relevant column, click the **More Actions** icon , and select **Edit label**. Enter the new name and click **Done**.
+- **Delete column: **Hover over the relevant column, click the **More Actions** icon , and select **Delete**.
+- **Manage Connections: **Click **Manage Connections** to change any of the CMS connections. Then click the relevant drop-downs on the right to choose which collection fields connect to each column and set links for the items.
+
+1. Click the **Settings** icon  and choose from the following options: 
+
+- **Clicking selects: **Choose what gets selected in the table when visitors click a cell: **Nothing**, **Rows**, or **Cells**.
+- **Links open in: **If you've linked items, choose whether they open in a new window or in the current window.
+- **Date format: **If you connected a Date field type, choose a format in which the dates display.
+2. Click the **Layout** icon  to choose the table height, header display options, row and column sizing, content alignment, and pagination.
+3. Click the **Design** icon  to select a preset design, then click **Customize Design** to fine-tune the look of your table.
+4. Click the **Stretch** icon  if you want to make the table fit the width of your site.
+5. Click and drag the edges of the table to resize it.
+Note: To change a collection field name, [turn on Dev Mode](https://dev.wix.com/docs/develop-websites/articles/getting-started/resources/getting-started-with-velo-by-wix) in your editor. Then go to your collection and edit the relevant field to edit its field name. 
+1. Click the table element on your page.
+2. Click **Manage Table **and choose want you want to do:
+
+- **Reorder: **Click the **Reorder** icon  next to the relevant column and drag it up or down into place.
+- **Change column name: **Hover over the relevant column, click the **More Actions** icon , and select **Edit label**. Enter the new name and click **Done**.
+- **Delete column: **Hover over the relevant column, click the **More Actions** icon , and select **Delete**.
+- **Manage Connections: **Click **Manage Connections** to change any of the CMS connections. Then click the relevant drop-downs under **Connections** in the Inspector panel to edit the connections and links.
+
+1. Click the **Settings** icon  and choose from the following options: 
+
+- **Clicking selects: **Choose what gets selected in the table when visitors click a cell: **Nothing**, **Rows**, or **Cells**.
+- **Links open in: **If you linked items, choose whether they open in a new window or in the current window.
+- **Date format: **If you connected a Date field type, choose a format in which the dates display.
+2. Click the **Layout** icon  to choose the table height, header display options, row and column sizing, content alignment, and pagination.
+3. Click the **Design** tab  in the Inspector panel to customize the appearance of the element.
+4. Click the table element on your page, then click the **Stretch** icon  if you want to make the table fit the width of your site.
+5. Click and drag the edges of the table to resize it.
+
+---
+
+### Step 5 | Manage the dataset settings
+
+Set the dataset mode, add filters that restrict certain items from appearing, and add sorts to control the order in which the items display in your table. Your table displays all the collection items it can read from the dataset, so the **Maximum items displayed** field does not apply to tables.
+
+Wix EditorStudio Editor
+1. In the panel on the right of your Editor, click **Dataset Settings**.
+2. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the table.
+- **Read & Write: **Allow the dataset to display your collection content in the table and allow visitors to [add or edit collection content with input elements](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+Note: The **Maximum items displayed** field does not apply to tables. You can limit the number of items displayed by clicking the **Layout** icon  , then setting a custom table height and enabling pagination. 
+1. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the table.
+2. (Optional) Click **+ Add Sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the table.
+
+1. Go to the dataset settings: 
+
+1. Click the table element on your page and select the **Connect to CMS **icon  .
+2. Click **Dataset Settings** in the Inspector panel on the right.
+2. Click the **Dataset mode** drop-down and select and option: 
+
+- **Read: **Allow the dataset to display your collection content in the table.
+- **Read & Write: **Allow the dataset to display your collection content in the table and allow visitors with relevant permissions to [add or edit collection content using input elements](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+Note: The **Maximum items displayed** field does not apply to tables. You can limit the number of items displayed by clicking the **Layout** icon  , then setting a custom table height and enabling pagination. 
+1. (Optional) Click **+ Add Filter **to [only show specific items](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) in the table.
+2. (Optional) Click **+ Add new sort **to [choose the order in which collection items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the table.
+[image: A screenshot of the dataset settings in the Studio Editor.]
+
+---
+
+### FAQs
+
+Click below for answers to common questions about displaying CMS content in tables.
+
+### How can visitors filter the info displayed in a table?
+
+You can add input elements, such as dropdowns or checkboxes, and set them to filter content when you connect them to the same dataset as your table. Learn how to [add input elements visitors can use to filter content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+### Can I connect a 'Load More' button to a table?
+
+No. Your table automatically loads all the items retrieved by the dataset. You can limit the number of items displayed by clicking the **Layout** icon  and setting a custom table height and enabling pagination.
+
+### What are the supported field types that can connect to tables?
+
+Currently, you cannot connect the following collection field types to tables:
+- Address ([click here to vote for connecting this field type](https://support.wix.com/en/article/cms-request-connecting-an-address-field-to-a-table))
+- Array
+- Media Gallery
+- Multi-Document
+- Reference
+- Rich Content
+- Tags
+- Time
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table

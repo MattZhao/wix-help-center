@@ -1,0 +1,154 @@
+---
+title: "Site Performance: Understanding PageSpeed Insights"
+---
+
+Google PageSpeed Insights is a tool that tests your site page's performance for both desktop and mobile. This tool uses the Chrome User Experience (CrUX) report to analyze real visitor performance and Google Lighthouse to give your page a performance score.
+
+> **Want to access PageSpeed Insights?**
+>
+> Click [here](https://developers.google.com/speed/pagespeed/insights/) to enter your page's URL and view your performance report.
+
+**In this article, learn more about:**
+
+---
+
+### Understanding your PageSpeed Insights score
+
+When reviewing your PageSpeed Insights score, you can view different types of data depending on your site and needs. Your site's pages have separate **Mobile** and **Desktop** reports because the experience of your visitors may differ based on the device they use to view the site.
+
+**Diagnose Performance Issues - Performance score: **This section** **uses **Lab data** to estimate the experience of your potential visitors. Google simulates a low-end mobile device with a slow internet connection to estimate the score.
+
+---
+
+### About the Core Web Vitals Assessment
+
+The Core Web Vitals Assessment enables you to view the average metrics for the past 28-day period. Any modifications to your site will gradually influence the metrics each day until the full impact can be measured within 28 days.
+
+#### Google's Core Web Vitals Assessment includes the following metrics:
+
+**Largest Contentful Paint (LCP):** An indication of a site's loading time - more specifically, how long it takes for the largest content element in the site's viewport to load.  **Interaction to Next Paint (INP): **An assessment of your site's responsiveness to all click, tap, and keyboard interactions that occur throughout each visit on every page. The final INP value is the longest interaction observed.   **Cumulative Layout Shift (CLS):** A measurement of unexpected movements of elements that change the layout of the page.
+
+### View other notable metrics
+
+In addition to the Core Web Vitals (CWV) Assessment metrics, there are two other notable metrics: 
+- First Contentful Paint (FCP)
+- Time to First Byte (TTFB)
+Although these metrics may offer insights into areas for potential improvement, they are not part of your CCWV Assessment and do not impact your site's standing with Google.
+
+---
+
+### Results of the Core Web Vitals Assessment
+
+The results of your Core Web Vitals Assessment, gathered from the latest 28-day collection period, can vary based on the devices used and network connection.
+
+#### Click below to learn about each possible result:
+
+### No assessment
+
+If the page analyzed by Google PageSpeed Insights hasn’t received enough traffic, rather than the assessment, you’ll see “No Data”. 
+This report analyzes real-world data, from publicly discoverable pages that are sufficiently popular, to provide a representative and anonymous view of the page’s performance.
+**Note:** Google has not disclosed the exact, minimum number of visits required for real visitor data (CrUX). 
+**Tip: **The [Wix Site Speed dashboard](https://support.wix.com/en/article/understanding-your-site-speed-dashboard) has a lower threshold for page views, which allows you to see real user insights quicker than Google PSI. The dashboard is based on Wix Analytics data, so you are not limited to visits that occur only on Chrome browsers.
+
+### Passed assessment
+
+For a web page to pass the Core Web Vitals Assessment, it must receive a ‘Good’ score for all three Core Web Vital metrics: 
+- **Largest Contentful Paint (LCP):** Elements must appear on the page **within 2.5 seconds **of when the page first began loading.
+- **Interaction to Next Paint (INP): **The longest recorded response time must be** within 200 milliseconds **of the interaction.
+- **Cumulative Layout Shift (CLS): **Maintain visual stability by keeping CLS **below 0.1**.
+
+### Failed assessment
+
+Your Core Web Vitals Assessment will display as 'Failed' unless you receive a 'Good' score for all three metrics: LCP, INP, and CLS. If your URL does not pass the assessment, it means one or more metrics need improvement. 
+
+We recommend reviewing our specific suggestions on how to [improve each Core Web Vital metric](https://support.wix.com/en/article/site-performance-about-core-web-vitals) included in the assessment. 
+If changes are made and the score does not improve within the next 30 days, [contact us](https://www.wix.com/contact) for assistance.
+
+### Missing metrics
+
+Some pages may have a Core Web Vitals Assessment, but the INP metric is unavailable and grayed out. This is often because the pages haven't received enough traffic to meet Google's threshold for inclusion in the assessment. However, other potential reasons include:
+- The visitor loaded the page but never clicked, tapped, or pressed a key on their keyboard.
+- The visitor loaded the page, but interacted with it using gestures that did not trigger INP. For example, scrolling or hovering over elements does not trigger INP.
+
+It’s less likely for LCP or CLS to be excluded as the metric is tracked once the page loads, and does not require an additional interaction to trigger the metric, unlike INP.
+
+### This URL vs. Origin
+
+If the analyzed URL hasn't received sufficient traffic, but your entire site has, instead of displaying "No Data," you'll see a Core Web Vitals Assessment under the **Origin** tab. 
+Origin combines the traffic for **all pages on your site** to aggregate the real visitor data.
+The **This URL **tab remains grayed out until the URL receives enough traffic for a page-specific Core Web Vitals Assessment.
+
+---
+
+### SEO and Core Web Vitals Assessment
+
+Core Web Vitals are an important indication of your site's performance, and one of the many measurements used to determine your site's SEO ranking.
+
+While the desktop version of the same page gets a full SEO boost for each metric: LCP, INP and CLS.
+
+Your Core Web Vitals Assessment will show as ‘Failed’ unless you receive a ‘Good’ score for** **all three Core Web Vital metrics. This does not mean the page hasn’t received a boost, as each metric contributes a boost independently.
+
+---
+
+### Lab data and the performance score
+
+To generate your performance score, Google uses Lighthouse, which is an open-source, automated tool for improving the quality of your web pages. Every time a page is analyzed in PageSpeed Insights, Google estimates the score based on simulated environments:
+
+> **Important:**
+>
+> If your page has sufficient traffic, we recommend focusing your efforts on the Core Web Vitals Assessment metrics. Real user data always offers a better understanding of your site visitors' experience during loading and navigation.
+
+#### Your performance score is calculated using the following metrics:
+
+First Contentful Paint (FCP)  Total Blocking Time (TBT)  Speed Index (SI)  Largest Contentful Paint (LCP)  Cumulative Layout Shift (CLS)
+
+> Learn more about [Lighthouse performance scoring from Google](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring/).
+
+---
+
+### Mobile and desktop variations
+
+Google Lighthouse, the tool that calculates the performance score, simulates mobile loading with the conditions of a mid-tier device (Moto G4) on a slow network (4G). For desktop, it simulates an emulated-desktop computer with a wired connection.
+
+PageSpeed also runs in a Google datacenter that can vary based on network conditions. You can find out where the test was done by checking the location in the Lighthouse Report's environment block.
+
+---
+
+### Understanding Google's suggestions
+
+In addition to presenting your Core Web Vital metrics and a Performance Score, the report also offers recommendations for improving your site's performance. These insights are divided into two sections:
+
+---
+
+### FAQs
+
+Click below for answers to common questions about PageSpeed Insights reports.
+
+### What’s the difference between Google PageSpeed Insights, Chrome User Experience (CrUX) and Google Lighthouse?
+
+To summarize the differences between these tools:
+- **Google PageSpeed Insights:** Reports the page-level, or origin-level, performance over the past 28 days. It includes insights from both the Chrome User Experience (CrUX) report and Google Lighthouse audits.
+- **Chrome User Experience (CrUX):** Uses **real visitor data** to calculate your site’s Core Web Vitals Assessment. This is the program which tracks all user-centric Core Web Vital metrics.
+- **Google Lighthouse:** Uses **lab data **to calculate your performance score. This tool helps you understand areas of improvement by analyzing performance, SEO, accessibility, and best practices.
+
+### Why does my site’s performance score change with every test?
+
+Scores often fluctuate between tests, even if they are performed one after the other. This can be caused by a number of factors, including local networks and CPU load. These metric variabilities have different levels of impact (low, medium, and high), and the Insights report may not have sufficient time to mitigate them. 
+Variations in scores are generally minimal, and are normal. Scores will also change over time as you update the site.
+
+### Why haven't my site's metrics improved after I made changes?
+
+After making changes to your site, we recommend waiting at least 3 weeks to see meaningful metric improvements. Although, the full effect will not be seen until the collection period has passed and all your page views are on the updated site. 
+**Collection periods: **
+- **Wix Site Speed dashboard: **30 days
+- **Google PageSpeed Insights:** 28 days
+
+If you’re following our [performance best practices](https://support.wix.com/en/article/site-performance-best-practices), but your metrics aren’t improving, please [contact us](https://www.wix.com/contact) for assistance.
+
+### How could my site's performance have gotten worse since INP replaced FID?
+
+Since INP replaced FID, the experience your visitors have while interacting with your site has not changed. The only difference is which metric Google uses to determine your site’s performance. 
+With the INP metric’s increased visibility, Wix is striving to optimize your site's performance and develop new ways to improve loading time.
+
+---
+Source: https://support.wix.com/en/article/site-performance-understanding-pagespeed-insights

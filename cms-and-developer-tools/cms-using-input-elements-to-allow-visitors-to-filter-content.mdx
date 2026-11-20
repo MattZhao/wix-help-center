@@ -1,0 +1,242 @@
+---
+title: "CMS: Using Input Elements to Allow Visitors to Filter Content"
+---
+
+Use input elements such as Dropdowns or Radio Buttons to provide a way for site visitors to filter the content that appears in repeaters, galleries, and tables. This article walks you through connecting input elements to a [dataset](https://support.wix.com/en/article/cms-about-datasets) that connects your CMS (Content Management System) collection to live site content.
+
+> **Before you begin:**
+>
+> - Add the [CMS (Content Management System)](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+> - Connect a [repeater](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater), [gallery](https://support.wix.com/en/article/cms-displaying-collection-content-in-a-pro-gallery), or [table](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-in-a-table) to your CMS collection.
+
+---
+
+### Step 1 | Add input elements set to filter content
+
+Go to the page in your editor where you want visitors to filter the content that appears in a repeater, gallery, or table. Then add the input elements that you want visitors to use to filter the content. If you add multiple input elements, you can set each to filter a different collection field.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page that includes the repeater, gallery, or table you want visitors to filter.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Input**.
+5. Under **Selection**, click the type of input element you want visitors to use to filter content. Choose from the following elements that allow filtering: **Radio Buttons**, **Checkboxes**, **Dropdown**, **Selection Tags**, or **Slider** (Range Sliders only)
+6. Click and drag the relevant input element onto the page.
+[image: A screenshot of adding the dropdown element in the Editor.]
+1. (Optional) Repeat steps 3-6 above to add more input elements that your visitors will use to filter the content.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page that includes the repeater or gallery that you want visitors to filter.
+3. Click **Add Elements ** on the left side of the Editor.
+4. Click **Input**.
+5. Under **Selections**, click the type of input element you want visitors to use to filter content. Choose from the following elements that allow filtering: **Dropdowns**, **Radio Buttons**, **Checkboxes**, **Multi-checkboxes**, or **Selection Tags**
+6. Click and drag the relevant input element onto the page.
+[image: A screenshot of the input elements in the Studio Editor visitors can use to filter content.]
+1. (Optional) Repeat steps 3-6 above to add more input elements that your visitors will use to filter the content.
+
+---
+
+### Step 2 | Connect your input element(s) to the CMS
+
+Connect each input element to the same dataset that connects to your repeater, gallery, or table. Then choose which collection field each input element will filter. The input elements will display each unique value from the connected collection field. When a visitor makes a selection in the input, the repeater, gallery, or table displays only items that match the selected field.
+
+> **Adding filters and sorts to the dataset affects the input elements too:**
+>
+> Your input elements connect to a dataset that retrieves content from its connected collection fields. If you [add filters to the dataset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content) to exclude items from appearing, the excluded items and their field contents are not passed to the input elements. This means your input elements will only display unique field values from items that are included by the dataset. The dataset's sort conditions also affect the order in which the field selections appear in the input elements.
+
+Wix EditorStudio Editor
+1. In your editor, click the input element you just added.
+2. Click the **Connect to CMS** icon  .
+3. Click **Filter content**.
+[image: A screenshot of selecting the Filter content option when connecting an input element to the CMS.]
+1. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater, gallery, or table that you want visitors to filter.
+2. Click the **Filter content by** drop-down and choose which collection field visitors will use to filter the content that displays.
+3. (Optional) Add a condition that affects how the filter works:
+
+1. Click **Advanced Filtering. **
+2. Click the **Condition **drop-down and choose an operator that controls how the filter is applied (e.g. **Is not**, **Does not equal**, **Does not include**).
+
+**Note: **The conditions vary depending on the input element type and the connected field type. See the Advanced filtering conditions for each input element section below for details.
+[image: A screenshot of the CMS connection options for a Dropdown input element set to filter content.]
+1. Repeat these steps for each input element you want visitors to use to filter content.
+2. Click **Preview** to test using your inputs element(s) as filters.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. In your editor, click the input element you just added.
+2. Click the **Connect to CMS** icon .
+3. Click **Filter content**.
+4. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater or gallery that you want visitors to filter.
+5. Click the **Filter content by** drop-down and choose which collection field visitors will use to filter the content that displays.
+6. (Optional) Add a condition that affects how the filter works:
+
+1. Click **Advanced Filtering. **
+2. Click the **Condition **drop-down and choose an operator that controls how the filter is applied (e.g. **Is not**, **Does not equal**, **Does not include**).
+
+**Note: **The conditions vary depending on the input element type and the connected field type. See the Advanced filtering conditions for each input element section below for details.
+[image: A screenshot showing the CMS connection options for a Radio Button set to filter content.]
+1. Repeat these steps for each input element you want visitors to use to filter the content.
+2. Click the **Preview** icon  at the top right to test using your inputs element(s) as filters.
+3. Click **Publish** if you are ready to make the changes go live.
+
+#### Advanced filtering conditions
+
+Click below to view the advanced filtering conditions available for each input element:
+
+### Dropdown and Radio Buttons
+
+For your Dropdown or Radio Buttons input elements, choose from the following filtering conditions that vary based on the connected field type:
+- **Text fields only:**
+
+- **Is:** Show items that have a text field that matches the selection exactly.
+- **Is not:** Exclude items that have a text field that matches the selection exactly.
+- **Number fields only: **
+
+- **Equals:** Show items that have a number field that matches the selection exactly.
+- **Does not equal:** Exclude items that have a number field that matches the selection exactly.
+- **Greater than or equal to:** Show items that have a number field that is greater than or equal to the selection.
+- **Less than or equal to:** Show items that have a number field that is less than or equal to the selection.
+- **Tags fields only: **
+
+- **Includes:** Show items that have a Tags field that matches the selection exactly.
+- **Does not include:** Exclude items that have a Tags field that matches the selection exactly.
+
+### Selection Tags
+
+For your Selection Tags input elements, choose from the following filtering conditions that vary based on the connected field type:
+- **Text fields only:**
+
+- **Is any of:** Show items that have a field that matches any of the tags that a visitor selects.
+- **Is not any of:** Exclude items that have a field that does not match any of the tags that a visitor selects.
+- **Number fields only:**
+
+- **Equals any of:** Show items that have a number field that matches any of the tags that a visitor selects.
+- **Does not equal any of:** Exclude items that have a number field that matches any of the tags that a visitor selects.
+- **Tags fields only:**
+
+- **Includes any:** Show items that have a Tags field that matches any of the tags that a visitor selects.
+- **Excludes any:** Exclude items that have a Tags field that matches any of the tags that a visitor selects.
+- **Includes all: **Show items that have all of the Tags field values that a visitor selects.
+
+### Multi Checkboxes
+
+For your Multi Checkboxes input elements, choose from the following filtering conditions that vary based on the connected field type:
+- **Text fields only:**
+
+- **Is any of: **Show items that have a field that matches any of the visitor's selections.
+- **Is not any of:** Exclude items that have a field that matches any of the visitor's selections.
+- **Number fields only:**
+
+- **Equals any of:** Show items that have a number field that matches any of the visitor's selections.
+- **Does not equal any of:** Exclude items that have a number field that matches any of the visitor's selections.
+- **Tags fields only:**
+
+- **Includes any:** Show items that have a Tags field that matches any of the visitor's selections.
+- **Excludes any:** Exclude items that have a Tags field that matches any of the visitor's selections.
+- **Includes all: **Show items that have all of the Tags field values that the visitor selects.
+
+### Checkbox
+
+For your Checkboxes input elements, choose from the following filtering conditions:
+- **Selected: **Show items that have a Boolean field value that matches the visitor's selection.
+- **Is not selected: **Show items that do not have a Boolean field value that matches the visitor's selection.
+
+### Range Slider
+
+For your Range Slider input elements, choose from the following filtering conditions:
+- **Between: **Show items that have a Boolean field value that is within the range of the visitor's selection.
+- **Outside of: **Show items that have a Boolean field value that is outside of the range of the visitor's selection.
+
+---
+
+### (Optional) Step 3 | Add a button to apply the filters
+
+If you only want the filters your visitors select to be applied after clicking a separate button, you can create an 'apply filters' button. When visitors click this button, all the input element filters they selected are applied. Without it, the filters are applied as soon as visitors select them from each input element.
+
+Wix EditorStudio Editor
+1. Click **Add Elements ** on the left side of the Editor.
+2. Click **Button**.
+3. Click the button you want to use for applying the filters and drag it onto the page. You can use any of the following button types: **Themed Buttons**, **Text & Icon Buttons**, **Icon Buttons**,** **or **Image Buttons**.
+
+**Tip: **Alternatively, you can add an image and use it as your 'apply filters' button.
+4. Click **Change Text **and enter the text you want to display on the button (e.g. "Apply Filters").
+5. Click the **Connect to CMS** icon  .
+6. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater, gallery, or table.
+7. Click the **Click action connects to** drop-down and select **Apply filters**.
+
+1. Click the button and select the Design icon  to customize the appearance of your 'apply filters' button.
+2. Click **Preview** to test your 'apply filters' button.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. Click **Add Elements ** on the left side of the Editor.
+2. Click **Button**, then drag the button to where you want it to appear. 
+
+**Tip: **Alternatively, you can add an image and use it as your 'apply filters' button.
+3. Click **Change Text **and enter the text you want to display on the button (e.g. "Apply Filters").
+4. Click the **Connect to CMS** icon  .
+5. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater or gallery.
+6. Click the **Click action connects to** drop-down and select **Filter input values**.
+[image: A screenshot of choosing]
+1. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your 'apply filters' button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+2. Click the **Preview** icon  at the top right to test your 'apply filters' button.
+3. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### (Optional) Step 4 | Add a reset button
+
+You can create a reset button that visitors click to reset all the input element filters they've selected. This provides an easy way for visitors to start over and filter the content without having to refresh the page.
+
+Wix EditorStudio Editor
+1. Click **Add Elements ** on the left side of the Editor.
+2. Click **Button**.
+3. Click and drag the button you want to use as your reset button onto the page. You can use any of the following button types: **Themed Buttons**, **Text & Icon Buttons**, **Icon Buttons**,** **or **Image Buttons**.
+
+**Tip: **Alternatively, you can add an image and use it as your reset button.
+4. Click **Change Text **and enter the text you want to display on the button (e.g. "Reset Filters").
+5. Click the **Connect to CMS** icon  .
+6. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater, gallery, or table.
+7. Click the **Click action connects to** drop-down and select **Reset input values**.
+[image: A screenshot of selecting the]
+1. Click the button and select the **Design** icon  to customize the appearance of your reset button.
+2. Click **Preview** to test your reset button.
+3. Click **Publish** if you are ready to make the changes go live.
+
+1. Click **Add Elements ** on the left side of the Editor.
+2. Click **Button**, then drag the button to where you want it to appear. 
+
+**Tip: **Alternatively, you can add an image and use it as your reset button.
+3. Click **Change Text **and enter the text you want to display on the button (e.g. "Reset Filters").
+4. Click the **Connect to CMS** icon  .
+5. Click the **Choose a dataset** drop-down and select the same dataset that connects to the repeater or gallery.
+6. Click the **Click action connects to** drop-down and select **Reset input values**.
+[image: A screenshot of selecting the]
+1. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your reset button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+2. Click the **Preview** icon  at the top right to test your reset button.
+3. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click below for answers to the most common questions about using input elements to filter content.
+
+### What dataset mode and collection permissions should I set?
+
+If you've modified the dataset mode or the collection permissions, and your input elements are not filtering as expected, check the following: 
+
+- **Dataset mode: **The dataset that connects your repeater, gallery, or table, and your input elements and buttons should be in the **Read **or** Read & Write** mode. Go to the dataset settings to edit the dataset mode.
+- **Collection permissions: **Go to your collection permissions & privacy settings to control who can view content. We recommend the **Show content **setting with **Everyone** selected under the **Who can view this content?** drop-down. This allows any site visitor to see the collection content in your repeater, gallery or table.
+
+Learn more about [dataset modes and collection permissions](https://support.wix.com/en/article/cms-working-with-the-dataset-mode-and-collection-permissions).
+
+### Can I allow visitors to filter Wix app collection content?
+
+Yes. Wix app collections are added to your site when you add apps such as Wix Stores or Wix Bookings. After [enabling Wix app collections in your CMS advanced settings](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections), you can connect these collections to repeaters, galleries and tables. Then follow the steps in this article to connect input elements so visitors can filter the content.
+
+### Can site visitors use input elements to submit content to my collection?
+
+Yes. Rather than using input elements to filter content, you can set them to collect content. Your visitors' submissions get saved directly to the CMS collection of your choice. 
+View a step-by-step tutorial for [allowing visitors to use input elements to submit content](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements

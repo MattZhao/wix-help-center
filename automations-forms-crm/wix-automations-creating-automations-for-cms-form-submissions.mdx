@@ -1,0 +1,108 @@
+---
+title: "Wix Automations: Creating Automations for CMS Form Submissions"
+---
+
+Use [Wix Automations](https://support.wix.com/en/article/wix-automations-getting-started) to ensure that all submissions you receive from custom [CMS (Content Management System)](https://support.wix.com/en/article/cms-content-management-system-an-overview) forms are handled appropriately. This automation works with any CMS forms created with [input elements](https://support.wix.com/en/article/cms-about-user-input-elements). Choose from a variety of actions such as running Velo code, sending data via webhooks, or connecting third-party apps such as Google Sheets and Zapier. You can also automate more basic actions like sending or receiving emails, creating or updating contacts, and more.
+
+> **Before you begin:**
+>
+> - Make sure to [add the CMS to your site](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started), if you haven't already.
+> - Make sure to [create a custom form with input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) that submit to a CMS collection.
+
+---
+
+### Creating a CMS custom form automation
+
+When setting up your automation, choose the CMS trigger and whichever action you want to occur when you receive a submission from your custom form.
+
+#### To create an automation for CMS custom form submissions:
+
+[Go to Automations](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Automations&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/\{\{metaSiteId\}\}/triggers/) in your site's dashboard.  Click **+ New Automation**.  Click **+ Start from Scratch**.  Click the title to give your automation a name.  In the **Trigger** section, click **CMS**.  Select an option under **Select which CMS form triggers this automation**:
+
+- **Any:** Any form that uses [input elements](https://support.wix.com/en/article/cms-about-user-input-elements) and the CMS triggers the automation.
+- **Specific:** Specific forms that use input elements and the CMS trigger the automation. Click** Select**, then select the custom form(s) you want to use and click **OK**.
+
+**Note: **Your custom forms are listed with the name of the page they appear on first, followed by the collection that stores the submissions.
+    Click the **Limit frequency to** drop-down to set the trigger frequency:
+
+- **Don't limit (trigger every time):** Your action will take place every time it is triggered by a visitor.
+- **Once per contact:** Your action will take place only once per contact.
+- **Once per contact every 24hrs:** Your action will take place only once per contact in any 24hr period.
+
+(Optional) Click **+ Add Delay **to add a delay between the trigger and when the action occurs. Then choose how many days, hours or minutes to delay the timing by.   (Optional) Add a condition that must happen in order for the automation to continue:
+
+1. Click **+ Add Condition**.
+2. Click the **Select criteria** drop-down and choose the collection field to use in the condition.
+3. Click the next drop-down and choose an [operator](https://support.wix.com/en/article/wix-automations-best-practices-for-creating-conditions) (e.g. equals, contains, is true).
+4. Click the drop-down or text box that appears next to your operator drop-down to complete your condition. The logical statement you've created will determine whether the automation continues.
+5. (Optional) Click **+ Add Criteria** to add any further criteria.
+
+Select the action that will take place after the trigger (e.g. send an email, get an email, create a contact). Learn more about [the actions you can choose](https://support.wix.com/en/article/wix-automations-creating-a-new-automation#step-5-choose-an-action).
+
+**Note: **If you want to use the automation to send an email to the person who submitted a form, update an existing contact, or create a new contact, select the **Create a contact **action. See the [FAQ section below](https://support.wix.com/en/article/wix-automations-creating-automations-for-cms-form-submissions#faqs) for more information.  Set up the action using the available options, which vary depending on the action type.   (Optional) Click **+ Add an Action** to add a [follow-up action](https://support.wix.com/en/article/wix-automations-creating-a-multi-action-automation).
+
+**Note: **It is not possible to add a follow-up action that creates or updates one of your contacts. Use the **Create a contact** as your automation's 1st action if you want to create or update contacts.   Click **Activate** to save and activate the automation.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about using automations with custom CMS forms.
+
+### How do I use the automation to send an email to the person who submitted the form?
+
+To send an email to the person who triggered the automation by submitting your form, you must first use the **Create a contact **action. This allows you to match the email address collected from your form with the email address you have stored in your [Contacts list](https://support.wix.com/en/article/about-your-contact-list). Then you can create an additional action and choose the **Send an email **action to have the automation send an email to the person who submitted your form. 
+**To create an automation that sends an email to the form submitter: **
+1. After selecting **CMS** as your trigger, select the **Create a contact **action.
+2. Click **Match Data**.
+3. Select **+ Add Field** and choose the **Email **field.
+4. Click the drop-down under **Automation data **and select the **Email** field that collects the form submitter's email address.
+5. Repeat these steps for each field you want the automation to update with data submitted by your custom form.
+6. Click **OK**.
+7. Select an option under **If a similar contact already exists **to choose what happens if you already have a contact with the same email or phone number: 
+
+- **Update the existing contact: **Override the existing contact's contact info.
+- **Create a duplicate contact: **Create a new duplicate contact with the matched custom form data.
+- **Do nothing: **Do not override existing contact info or create a new contact from the matched custom form data.
+8. Click **+ Add an Action **at the bottom, then select the **Send an email** action.
+9. Customize the email that will be sent in the **Create an email **drop-down.
+10. Click the **Set email type **drop-down to choose the type of email that is sent.
+11. Click **Set recipients **and make sure **Include trigger contact **is checked. This ensures that the recipient who triggered the automation receives the email. You can click **Change **to select an alternative email address where this automated email will be sent.
+12. Click **Activate **when you are done setting up the automation.
+
+### How do I use the automation to update a contact or create a new contact?
+
+The **Create a contact **action allows you to use the submissions from your custom form to update contact details for an existing or new contact. You can map any of the fields from your CMS collection to the following Contacts fields: First name, Last name, Email, or Phone number.
+You can also decide what happens if a contact with the same email address or phone number already exists in your [Contacts list](https://support.wix.com/en/article/about-your-contact-list). Choose to either update the existing contact, create a new one, or do nothing. 
+**To use the 'Create a contact' action: **
+1. After selecting **CMS** as your trigger, select the **Create a contact **action.
+2. Click **Match Data **and choose which fields from your collection to save to your new or existing contact: 
+
+1. Click **+ Add Field **and select the Contacts field you would like to map to a CMS collection field that your custom form submits to. Choose from **First name**, **Last name**, **Email**, or **Phone number**.
+2. Click the drop-down under **Automation data** and choose the CMS collection field you would like to map to your selected Contacts field.
+3. Repeat these steps for each Contacts field you want the automation to update using data submitted by your custom form.
+4. Click **OK**.
+3. Select an option under **If a similar contact already exists **to choose what happens if you already have a contact with the same email or phone number: 
+
+- **Update the existing contact: **Override the existing contact's contact info.
+- **Create a duplicate contact: **Create a new duplicate contact with the matched custom form data.
+- **Do nothing: **Do not override existing contact info or create a new contact from the matched custom form data.
+4. Click **Activate **when you are done setting up the automation.
+
+### How do I understand which automations are available to me?
+
+The automations you can create depend on which apps (e.g. Wix Blog, Wix Restaurants) you have added to your site.
+Automation trigger options are specific to the app you've selected, and automation action options are specific to the trigger you've selected. Select an app to view your trigger options, then select your trigger to view your action options.
+Popular automations include:
+- Sending a "thank you", "welcome" or "next steps" email when a visitor submits a form. Learn more about sending [automated emails to contacts after form submissions](https://support.wix.com/en/article/wix-automations-sending-automated-emails-to-contacts-after-form-submissions)
+- Sending a discount coupon or reminder email when a customer has abandoned their shopping cart. Learn more about [automatically sending discount coupons](https://support.wix.com/en/article/wix-automations-sending-a-discount-coupon-by-email)
+- Sending an email when an invoice is overdue. Learn more about [Wix Invoices automations](https://support.wix.com/en/article/wix-invoices-creating-automations)
+- Awarding loyalty points when a restaurant order is received. Learn more about [Wix Restaurants automations](https://support.wix.com/en/article/wix-restaurants-automatically-responding-to-incoming-orders)
+- Sending a chat message when a form is submitted, or automatically replying to incoming chat messages. Learn more about [Wix Chat automations](https://support.wix.com/en/article/wix-chat-creating-automations)
+
+### Can I connect my automations to apps that I use outside of my Wix site?
+
+Yes, you can [use Zapier](https://support.wix.com/en/article/wix-automations-connecting-your-automations-with-a-third-party-app-using-zapier) to connect your Wix automations to external apps such as Slack, Trello and Google Docs.
+
+---
+Source: https://support.wix.com/en/article/wix-automations-creating-automations-for-cms-form-submissions

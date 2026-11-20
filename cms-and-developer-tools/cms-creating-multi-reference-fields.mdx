@@ -1,0 +1,42 @@
+---
+title: "CMS: Creating Multi-Reference Fields"
+---
+
+> Before continuing, we recommend learning [about reference fields](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections).
+
+A reference field creates a connection between an item in a collection to an item in a different collection.
+
+Multi-Reference fields are special kinds of reference fields, that support a many-to-many relationship between items. They have 2 important differences from regular reference fields:
+
+They allow an item to be associated with more than 1 item in the referenced collection.   They create a two-way connection between the collections. This means that when you create a multiple-reference field in collection A that points to collection B, a corresponding multiple-reference field is automatically created in collection B that points to collection A.
+
+**In this article:**
+
+[See an example of multi-reference fields](https://support.wix.com/en/article/cms-creating-multi-reference-fields#multi-reference-fields-example)  [Learn how to create a multi-reference field](https://support.wix.com/en/article/cms-creating-multi-reference-fields#creating-a-multi-reference-field)
+
+---
+
+### Multi-reference fields example
+
+Let's use an example of a movie database to see how this works. We'll start with two collections, one for movie titles and one for actors. Now we want to connect them so that we can list the actors from each movie and also the movies for each actor. To do this, we'll create a multiple-reference field. We can do this in either collection, because as soon as we do, a corresponding multiple-reference field will be created in the other collection. Then we start filling in the fields. Again, we can work in either collection, because the information is automatically reflected in the other collection.
+
+The image below illustrates how this could look. (Click the image to view an enlarged version.)
+
+The image shows our Actors collection and our Movies collection, with their corresponding multi-reference fields. The first thing to note is that the fields store references to more than one item. In the Actors collection, the Chris Pratt item has four movies listed. In the Movies collection, the Guardians of the Galaxy item has 4 main actors listed. 
+
+The second thing to note is how the information is mirrored in both collections. In the Actors collection, the Chris Pratt, Vin Diesel, Dave Bautista, and Zoe Saldana items all reference the movie, Guardians of the Galaxy. In the Movies collection, the Guardians of the Galaxy item displays those same 4 actors. 
+
+This mirroring of information happens automatically. When you make changes to the information in one of the fields, the corresponding field in the other collection is also updated. You fill in multi-reference fields just like regular reference fields.
+
+---
+
+### Creating a multi-reference field
+
+You create multi-reference fields from your CMS collections. After creation, a corresponding multi-reference field is created in the referenced collection.
+
+#### To create a multi-reference field:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Content%20Manager&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click the relevant collection.  Click **Manage Fields**.  Click **+ Add Field**.  Click the **Field Type** drop-down menu and select **Multi-Reference**.  Enter a **Field Name**.   Click the **Referenced Collection** drop-down and select which collection you want to reference.  Click **Save**.
+
+---
+Source: https://support.wix.com/en/article/cms-creating-multi-reference-fields

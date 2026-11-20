@@ -1,0 +1,70 @@
+---
+title: "CMS: Creating Custom Member Profile Pages"
+---
+
+Visit the [Velo Documentation Center](http://wix.to/HMAoAjw) to onboard and continue learning.
+
+This article explains how to create a [custom private member page](https://support.wix.com/en/article/site-members-about-private-and-public-member-pages) so your members can view the content they have added to your site. This article assumes you have already added a [Member Area](https://support.wix.com/en/article/site-members-about-the-members-area) to your site. We’ll use an example of a recipes site to explain how things work.
+
+---
+
+### Step 1: Create a form for members to add their own content
+
+In order for your members to be able to add content to your site, you first need to create a form for them to fill in. If you have never created a form before, see [this tutorial](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection), which walks you through the steps of form creation, including how to set up your database collection and your dataset to receive input from your members.  
+
+Here’s a small sample form to allow members to add their recipes to your site. To keep it simple, it only has two fields: title and type, and two buttons: an upload button for uploading an image file, and an "Add Recipe" button that submits the content to the collection. You can, of course, add any fields you want.
+
+Because your members have logged in to your site, when they upload their recipes, their unique ID is listed in the item’s “Owner” [system field](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#system-fields) for each item. This means you can then create a member page that shows the items uploaded by all members. You can also create a member page that shows only those items uploaded by the currently logged-in member.
+
+---
+
+### Step 2: Add and customize a private member page
+
+Now that you have provided a way for your members to add their content to your site, the next step is to customize a private member page so each member can see the items they themselves have uploaded.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages & Menu ** on the left side of the editor.
+3. Click **Members Area**.
+4. Click **+ Add Member Pages** at the bottom.
+5. Click **+ Add Page **under **Private Page**.
+[image: Screenshot of adding a Private Member Page.]
+1. [Add a dataset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset) to the page and connect it to the collection that stores the content your members submitted.
+2. [Add a filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset) for the **Owner (Text) **field with the **Condition **se to "is" and the **Status **to "logged in".
+3. [Add elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that can display collection content  (e.g. repeaters, text, images).
+4. [Connect the elements to the dataset](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset).
+
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Click **Pages**  on the left side of the editor.
+3. Click **+ Add New Page** at the bottom.
+4. Click **Add **under **Custom Member Page**.
+[image: Screenshot of adding a custom Member Page.]
+1. (Optional) Customize the page's name and permissions:
+
+- **Rename the page: **Double-click the page and enter the new name.
+
+**Tip: **This automatically changes the page's name in the Login Bar menu.
+- **Limit the page to specific roles or pricing plans: **
+
+1. Hover over the page and click the **More Actions** icon .
+2. Click **Settings**.
+3. Click the **Permissions** tab.
+4. Select the relevant option under **Which members can access this page?**.
+2. [Add a dataset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset) to the page and connect it to the collection that stores the content your members submitted.
+3. [Add a filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset) for the **Owner (Text) **field with the **Condition **se to "is" and the **Status **to "logged in".
+4. [Add elements](https://support.wix.com/en/article/cms-formerly-content-manager-elements-and-the-collection-fields-they-can-connect-to) that can display collection content  (e.g. repeaters, text, images).
+5. [Connect the elements to the dataset](https://support.wix.com/en/article/cms-connecting-elements-to-a-collection-using-a-dataset).
+
+View an example of a custom member profile page in the image below. The page includes a Member Profile card, a Member's Menu, a [repeater](https://support.wix.com/en/article/cms-displaying-dynamic-content-in-a-repeater) with an image and text in each container, and [Previous/Next page buttons](https://support.wix.com/en/article/cms-formerly-content-manager-displaying-collection-content-on-your-page#step-5-optional-create-load-more-or-navigational-buttons). When your members view their private page, they can see the items they have added in the elements that connect to the CMS.
+
+> **Note:**
+>
+> When you preview the page, you are the logged-in user, so you will see the content you yourself have uploaded. If you have not yet uploaded any items to the collection, your page will not show any content when you preview it.
+
+> **Learn more about:**
+>
+> - [Adding and managing private Member Pages](https://support.wix.com/en/article/site-members-adding-and-managing-private-member-pages).
+> - [Using the Members Area in the Studio Editor](https://support.wix.com/en/article/studio-editor-using-the-members-area).
+
+---
+Source: https://support.wix.com/en/article/cms-creating-custom-member-profile-pages

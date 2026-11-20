@@ -1,0 +1,68 @@
+---
+title: "CMS: Planning Your Collection Structures"
+---
+
+This article highlights some things you might want to consider before [adding CMS (Content Management System) collections](https://support.wix.com/en/article/cms-formerly-content-manager-creating-a-collection).
+
+The most important thing to keep in mind is that it's generally not a good idea to duplicate information. It wastes time and space, and it also increases the likelihood of errors and inconsistencies in your information. The best way to avoid duplicating your data is to divide your information into different collections based on their subject matter and permission levels.
+
+> **Important:**
+>
+> For a deeper understanding of how collection permissions play a part in the security of your site, read [this overview](https://support.wix.com/en/article/cms-collection-permissions-overview).
+
+---
+
+### Planning your collection structures
+
+It is worth spending some time thinking about what you want to do and planning out your database collections before you start creating them.
+
+---
+
+### Naming your collections and fields
+
+Name your collections and fields with care. It is important that their names be clear to you when you are connecting elements to them (or writing code for them if you're using Velo by Wix). Collection and field names appear in the Editor when you are connecting elements to data, so it's important that they be clear.
+
+Keep in mind that you cannot rename collections after you've created them.
+
+**Velo by Wix Users: **Remember that while you can change the name of a field, you can't rename its field ID. The field ID is what you'll use when writing code, so make sure it's easy to identify.
+
+---
+
+### Creating unique dynamic URLs
+
+If you are going to be creating dynamic item pages for the data in a collection, make sure you have at least one field whose values uniquely identify each item. This makes sure that each page can have a [unique URL](https://support.wix.com/en/article/cms-creating-unique-dynamic-page-urls).
+
+For example, let's say you want to create a dynamic item page that showcases information about each recipe in your collection. If you have several different recipes for chocolate cake in your recipe collection and you call them all "chocolate cake," their dynamic pages will all have the exact same URL (for example, mysite/recipes/chocolate-cake). This means that you will not be able to control which chocolate cake recipe is displayed on your dynamic page.
+
+The same applies if you plan on creating [reference fields](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections) that point to a given collection. Make sure that the [Primary field](https://support.wix.com/en/article/cms-formerly-content-manager-about-your-collection-fields#primary-fields) in your collection has unique values so that you can select the correct item in your reference fields.
+
+---
+
+### Importing data from a spreadsheet
+
+If you already have your data in a spreadsheet application such as Excel, you can easily save it to a CSV file and then [import](https://support.wix.com/en/article/cms-formerly-content-manager-importing-content-into-a-collection) it into your collection. Similarly, if you need to make global changes to your data, you can [export](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) it to a CSV file, work on it in your spreadsheet application, and then import it back into your collection.
+
+---
+
+### Adding a field for sorting your items
+
+If you want to display your items in a specific order but do not have a field that allows you to sort them by that order, you can add a number field so that you can sort the items. For example, if you want your recipes to be in a specific order other than alphabetical, a number column can help you maintain this order.
+
+---
+
+### Using reference fields
+
+[Reference fields](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections) create a connection between collections that is defined in the collection itself. Each reference field points to a specific collection and displays a value that comes from that collection.
+
+---
+
+### Considerations for storing user input
+
+If you want to have a form for your users to fill out, you will need to create a collection for storing the information they supply. Best practice is to have each form connect only to one collection, and then connect each [user input element](https://support.wix.com/en/article/cms-about-user-input-elements) to a field in that collection.
+
+Spend some time thinking about the types of information you want your users to give you, and then design your form and database collection accordingly. If you want to have a dropdown list, consider where you want to store the values in the list. If you want your users to have the option to sign up for your newsletter, you'll need a Boolean field that you can connect to a checkbox.
+
+Also, make sure you give collections that will store user input the appropriate [permissions](https://support.wix.com/en/article/cms-collection-permissions-overview), so that your users can save their information.
+
+---
+Source: https://support.wix.com/en/article/cms-planning-your-database-model

@@ -1,0 +1,63 @@
+---
+title: "CMS Request: Limiting the Selection Tags Input Element to One Selection Only"
+---
+
+Currently, it is not possible to set the [Selection Tags input element](https://support.wix.com/en/article/cms-adding-and-setting-up-selection-tags) to only accept one selection from the list of choices. In this element, visitors can select multiple options from the available choices.
+
+---
+
+### Workaround
+
+Using Velo, you can limit the Selection Tags input element to only allow visitors to choose one selection at a time.
+
+Wix EditorEditor XStudio Editor
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page with the connected Selection Tags element.
+3. Enable Velo Dev Mode: 
+
+1. Click **Dev Mode** at the top of the Editor.
+2. Click **Turn on Dev Mode**.
+4. Replace the gray text with the code below, after the first line: **$w.onReady(function () \{ **
+`$w('#selectionTags1').onChange((event) => \{
+       const indeces = $w('#selectionTags1').selectedIndices;
+       const singleIndex = indeces.slice(-1);
+       $w('#selectionTags1').selectedIndices = singleIndex
+   \})`
+1. (If needed) Replace **selectionTags1** with the ID of your Selection Tags element. Click the relevant Selection Tags element to find its ID in the [Properties and Events panel](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/properties-events-panel/working-with-the-properties-events-panel).
+
+**Note: **Do not remove the hashtag (**#**) or apostrophes (**'**) in the code.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page with the connected Selection Tags element.
+3. Enable Velo Dev Mode: 
+
+1. Click **Dev Mode** at the top of the Editor.
+2. Click **Turn on Dev Mode**.
+4. Replace the gray text with the code below, after the first line: **$w.onReady(function () \{ **
+`$w('#selectionTags1').onChange((event) => \{
+       const indeces = $w('#selectionTags1').selectedIndices;
+       const singleIndex = indeces.slice(-1);
+       $w('#selectionTags1').selectedIndices = singleIndex
+   \})`
+1. (If needed) Replace **selectionTags1** with the ID of your Selection Tags element. Click the relevant Selection Tags element to find its ID in the [Properties and Events panel](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/properties-events-panel/working-with-the-properties-events-panel).
+
+**Note: **Do not remove the hashtag (**#**) or apostrophes (**'**) in the code.
+
+1. [Go to your Editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page with the connected Selection Tags element.
+3. Click the Code icon  on the left.
+4. Click **Start** **Coding**.
+5. Replace the gray text with the code below, after the first line: **$w.onReady(function () \{ **
+`$w('#selectionTags1').onChange((event) => \{
+       const indeces = $w('#selectionTags1').selectedIndices;
+       const singleIndex = indeces.slice(-1);
+       $w('#selectionTags1').selectedIndices = singleIndex
+   \})`
+1. (If needed) Replace **selectionTags1** with the ID of your Selection Tags element. Click the relevant Selection Tags element to find its ID in the [Properties and Events panel](https://dev.wix.com/docs/develop-websites/articles/workspace-tools/velo-workspace/properties-events-panel/working-with-the-properties-events-panel).
+
+**Note: **Do not remove the hashtag (**#**) or apostrophes (**'**) in the code.
+
+We are always working to update and improve our products, and your feedback is greatly appreciated.
+
+---
+Source: https://support.wix.com/en/article/cms-request-limiting-the-selection-tags-input-element-to-one-selection-only

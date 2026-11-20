@@ -1,0 +1,42 @@
+---
+title: "SSL Certificate Not Showing on Devices Running Older Windows or Mac Operating Systems"
+---
+
+Your SSL Certificate may not be working if you're running Windows 7, or earlier, or MacOS El Capitan (10.12.1), or earlier.
+
+This a result of older operating systems (OS) not recognizing a modern SSL Certificate. It does not mean there is an issue with your site's SSL Certificate. [Learn more](https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/)
+
+In order to resolve the issue, we recommend updating your device to the most recent OS available.
+
+If you have a windows device and you are unable to update the OS to a newer version, then you can follow the steps below to enable the certificate on your device.
+
+### Show me how to enable the SSL certificate on older Windows OS
+
+1. Click **Win + r, **and type **certmgr.msc**
+2. Click **OK.**
+3. Go to Trusted Root Certification Authorities > Certificates
+
+1. Right click on **DST ROOT CA X3 **certificate.
+2. Click **Delete**.
+4. Go to Intermediate Certification Authorities > Certificates
+
+1. Right click on **R3** Certificate.
+2. Click **Delete**.
+5. Go to Third-party root Certification Authorities > Certificates
+
+1. Right click on **DST ROOT CA X3 **certificate**.**
+2. Click **Delete**.
+6. Install new SSL Certificate:
+
+1. Download this [certificate installation link](https://letsencrypt.org/certs/isrgrootx1.der).
+2. Double click the download to open it.
+3. Click **Local Machine.**
+4. Click **Next**.
+5. Click **Install Certificate**.
+6. Click **Place all Certificates in the Following Store.**
+7. Choose Trusted Root Certification Authorities folder
+8. Click **OK**.
+7. Restart your PC.
+
+---
+Source: https://support.wix.com/en/article/ssl-certificate-not-showing-on-devices-running-older-windows-or-mac-operating-systems

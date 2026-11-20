@@ -1,0 +1,58 @@
+---
+title: "Troubleshooting: Meta Pixel Issues"
+---
+
+The Meta Pixel tracks events on your site, such as views per product, purchases and lead form submissions, to help you optimize the effectiveness of your advertising. [Learn more](https://support.wix.com/en/article/facebook-ads-with-wix-and-facebook-pixel-capi)
+
+Once you've added your Meta Pixel to your Wix site, you should start seeing data in your Facebook Business Manager. If you do not see any data, or the data is incorrect, your pixel may not be set up correctly. Follow the troubleshooting steps below to make sure everything is correct.
+
+### Use the Meta Pixel Helper extension
+
+Meta has an in-house extension which lets you check your Meta Pixel. This tool should help you identify and troubleshoot the most common Meta Pixel issues. [Learn more](https://developers.facebook.com/docs/facebook-pixel/support/pixel-helper/#troubleshooting)
+
+### Check that your domain is connected properly
+
+To add a Meta Pixel, you must have a domain connected to your site. If your domain is not connected properly, your Meta Pixel will not work. Check out the [Wix Domain Assistant](https://support.wix.com/en/article/wix-domain-assistant-3777632) to resolve any domain issues you may have.
+
+### Check that you added your Meta Pixel correctly
+
+Make sure you connected your site to your Meta Pixel in [Marketing Integrations](https://www.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fmarketing-integration%3FreferralInfo%3Dmarketing_integrations_article_link&title=Marketing%20Integrations&buttonText=Add%20Integrations) in your site's dashboard. You should see **Connected** in the top right corner.
+
+If you're not sure how connect it, you can [follow the steps in this article](https://support.wix.com/en/article/connecting-a-facebook-pixel-and-the-conversions-api-to-your-wix-site-7351813).
+**Note:** There is no need to embed the Meta Pixel code directly into your site. Doing so using the [HTML element](https://support.wix.com/en/article/wix-editor-embedding-a-site-or-a-widget) will not allow the Meta Pixel to work correctly.
+
+### Check that you don't have an ad blocker on your browser
+
+An ad blocker may prevent your Meta Pixel from functioning correctly. Follow the instructions below to disable ad blocking on Wix if you're using AdBlock or Ad-Blocker. Otherwise, follow your ad blocker's instructions to turn it off or pause it temporarily.
+**AdBlock**
+1. Click the AdBlock button in your browser.
+2. Click **Don't run on pages on this site** (Chrome) or **Don't run on pages on this domain** (other browsers).
+3. Click **Exclude**.
+4. Refresh the page to see your ad preview.
+**Ad-Blocker**
+1. Click the Ad-Blocker button in your browser.
+2. Click **Enabled on this site** to disable the option.
+3. Refresh the page to see your ad preview.
+
+### Check that the Meta Pixel ID was added to your PRIMARY domain
+
+If you have more than one domain connected to your site, the Meta Pixel ID must be added to your primary domain. You can check that it was added to the right domain on the Tracking & Analytics tab in your site's dashboard.
+
+1. [Go to Custom Code](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Fdashboard%2F%7BmetaSiteId%7D%2Fmanage-website%2Fembeds%2F&title=Select+a+Site&primaryButtonText=Manage+Custom+Code) in your site's dashboard.
+2. Click the **Show More **icon  next to **Meta Pixel** and select **Edit**.
+3. Check that the correct domain is selected under **Select Domain**. If not, click the drop-down, select the correct domain and click **Apply**.
+
+### Check that you haven't added your Meta Pixel ID in more than one place
+
+It's possible that you may have added your Meta Pixel ID to the [Google Tag Manager](https://support.wix.com/en/article/adding-google-tag-manager-to-your-wix-site) in addition to [connecting it in Marketing Integrations](https://support.wix.com/en/article/connecting-a-facebook-pixel-and-the-conversions-api-to-your-wix-site-7351813). If you did, remove the pixel ID from either one of these locations to make it work correctly.
+**Note:** If you're using Facebook Ads with Wix, they may have added a second pixel to your site for you. This does not interfere with your other Meta Pixel.
+
+---
+
+> **Important:**
+>
+> - By using this service, you are engaging directly with a third-party service provider. We recommend reviewing the service provider's Privacy Policy and Terms of Use prior to your use of such third-party service. You acknowledge that we are not liable for any loss or damage resulting from your use of such third-party service, including any liability arising from any personal data exchanged between you and such third-party.
+> - If your site uses a cookie banner, your Meta Pixel will only gather data after a visitor provides consent and approves using the relevant cookies. [Learn More](https://support.wix.com/en/article/displaying-a-cookie-banner-on-your-site)
+
+---
+Source: https://support.wix.com/en/article/troubleshooting-facebook-pixel-issues

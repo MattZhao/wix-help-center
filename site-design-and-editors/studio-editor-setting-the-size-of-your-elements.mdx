@@ -1,0 +1,201 @@
+---
+title: "Studio Editor: Setting the Size of Your Elements"
+---
+
+As you're designing a site, you want to make sure it looks great on every screen size. In the Studio Editor, you set the sizing in px* and the responsive behavior takes care of the rest.
+
+Most elements come with a default behavior (e.g. scale proportionally) that controls the way it gets resized on other screens. You can always change the default behavior to one that better meets your needs.
+
+> px* is a fluid size unit, relative to the page's [editing size](https://support.wix.com/en/article/studio-editor-setting-your-editing-size).
+
+**In this article, learn how sizing works in the Studio Editor:**
+
+[Resizing an element](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#resizing-an-element)  [Resizing media elements](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#resizing-media-elements)  [Setting the size in px*](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#setting-the-size-in-px)  [Choosing the element's responsive behavior](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#choosing-an-elements-responsive-behavior)  [Using advanced size measurements](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#using-advanced-size-measurements)  [Setting the sizing preference](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#setting-the-sizing-preference)  [Frequently asked questions (FAQs)](https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements#faqs)
+
+> **Tip:**
+>
+> You can set the element's size and responsive behavior per [breakpoint](https://support.wix.com/en/article/studio-editor-designing-across-breakpoints).
+
+---
+
+### Resizing an element
+
+Select an element on the canvas and drag the side handles to make it smaller or bigger. This sets the way the element looks on the current breakpoint.
+
+In the Inspector panel, you can check the element's exact width and height in pixels. If needed, you can enter your own width / height values.
+
+> **Let the Inspector calculate for you:**
+>
+> For your convenience, you can use addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) when typing size values. For example, make an element 3 times wider by adding *3 next to the current width.
+
+> **Experiencing issues with resizing?**
+>
+> Check out [this troubleshooting video](https://www.youtube.com/watch?v=F9JG6d6MgkI) to learn how to resolve issues with sections and containers that won't resize.
+
+---
+
+### Resizing media elements
+
+When resizing a media element, like an image or a video, you can lock the aspect ratio so the width and height always stay proportional to each other.
+
+### Which media elements include this option?
+
+- Image
+- Lottie Animation
+- Shape
+- Vector Art
+- Video Players
+- VideoBox
+- Transparent Video
+
+This means that when you change the width, the height automatically adjusts (and vice versa) to maintain the original shape of the element.
+
+#### To lock the aspect ratio:
+
+Select the relevant media element.  Click the **Open Inspector** arrow  at the top right.
+
+Click the **Lock aspect ratio** icon  under **Size**.
+
+Resize the element by either:
+
+- Entering the width / height value in the Inspector (the other value adjusts automatically).
+- Dragging the handles around the element on the canvas.
+
+> **Note:**
+>
+> This option is not available in the advanced sizing mode.
+
+---
+
+### Setting the size in px*
+
+px***** is a fluid unit of measure in the Studio Editor. It lets you edit sizing using a familiar measurement (pixels), while the actual measurement behind the scenes is responsive.
+
+In other words, you design in pixels that represent the size on the canvas, and the element stays responsive. The specific values and size units depend on the responsive behavior you choose. Hover over **px*** to see the calculation, and the responsive size unit that is being used.
+
+In the example below, the container's width on the current canvas is 1000 px*. The actual unit is percentage so the width is relative to every screen (79.1%).
+
+> **What's the difference between px* and px?**
+>
+> Both let you edit in pixels, however:
+> - px* means the size you see is relevant to the breakpoint you're currently working on.
+> - px means the size is fixed across breakpoints.
+
+---
+
+### Choosing an element's responsive behavior
+
+When you add an element to the page, it already comes with a built-in responsive behavior. This means you don't have to worry about how the element looks on different screens - the responsive behavior ensures that it gets resized.
+
+However, you may want to switch the responsive behavior, if you see one that is more suitable for your design.
+
+### What's the difference between the available behaviors?
+
+Each responsive behavior has a specific, automatic logic to the way the element gets resized on different screens. 
+The available behaviors were tailored per element, the most common ones are:
+- **Scale proportionally: **The element's proportions (width and height) keep the same aspect ratio on all screens.
+- **Relative width: **The element's width changes automatically, in relation to its parent element.
+- **Fixed:** The element always stays the same size, it does not resize on any screen.
+- **Stretch: **The element stretches to fit its parent container on every breakpoint.
+- **Hug: **There are no gaps between the element and its bounding box. The size of the bounding box on each breakpoint depends on the content inside.
+
+**Note: **This is also the default behavior for a horizontal stack.
+
+**Section behaviors:**
+- **Fixed height: **The section always stays the same height, regardless of screen size.
+- **Fit to screen: **This makes the section take up the entire height of the viewport (100 vh). If needed, you can adjust the vh so it takes up less space.
+
+**Text behaviors:**
+- **Wrap: **The font size stays the same on all breakpoints, but the text wraps to fit its bounding box on smaller screens. This adds more rows to show the text.
+- **Hug: **This leaves no gaps between the text and its bounding box.** **It also means that the amount of rows in your text always stays the same, regardless of screen size.
+
+> **Note:**
+>
+> The responsive behavior you select affects the size units in use. For example, selecting the Fixed responsive behavior changes the measurement from px* to px.
+
+#### To choose a different responsive behavior:
+
+Select the relevant breakpoint.  Select the element.   Click the **Open Inspector** icon  at the top right of the editor.
+
+Select an option from the **Responsive behavior** drop-down.
+
+> **Dealing with unwanted gaps on the live site?**
+>
+> Check out [this troubleshooting video](https://www.youtube.com/watch?v=v55nO7cf8p4) to learn how the responsive behavior can affect, and resolve, this issue.
+
+---
+
+### Using advanced size measurements
+
+Advanced sizing allows deeper customization of the element's size per breakpoint. Instead of working with px* and choosing a responsive behavior, this mode lets you see the measurements we're using behind the scenes (e.g. px, %, vh) and adjust them to your needs.
+
+### What are the available measurements?
+
+You can choose the one(s) you prefer using:
+- **Pixels (px): **If you want your element to stay exactly the same on every screen size, you can simply set its height and width in px values.
+- **Percentage (%): **The width / height value of the element depends on its parent's dimensions. This ensures the element resizes in proportion to its parent. 
+
+- For example, you can dock a text element (child) to a container (parent) and set its width to 50%. This way, your text always takes up 50% of the container's width regardless of the screen size.
+- **Viewport width and height (vw and vh): **These measurements represent the width and height of a given viewport (browser). 
+
+- For example, 1vw in width = 1% of the browser's width.
+- **Max Content (max-c):** You can use this measurement to set an element's width, and make it depend on the size of its child elements – no matter how big the content is or how many words it contains. The parent element fits itself to the content.
+- **Calculation: **Using basic mathematical principals, you can write a "formula" that determines an element's width or height. You can even combine different measurements in this calculation (e.g., vh and px).
+
+- For example, you can make a header and a section take up the entire viewport height (100vh). If the header height is set to 100px, the calculation for the section height would be: (100vh - 100px). This subtracts the header height from the viewport.
+
+**Auto width and height**For some elements, the width or height is already set to **Auto**. This means the element's content determines the width / height, allowing you to add or remove content without worrying about resizing.
+
+> Enabling advanced sizing applies to the specific element you select, on all breakpoints. The advanced sizing mode stays enabled for that element, for easy access, but you can disable it at any time.
+
+#### To access and edit advanced sizing:
+
+Select the relevant breakpoint in the editor.  Select the element.   Click the **Open Inspector** arrow  at the top right.
+
+Click the **More Actions** icon  next to **Size**.  Enable the **Advanced Size** toggle.  Edit the sizing as needed: Width, height, and min and max values.
+
+**Tip:** Switch to a different unit (e.g. from px to %) by clicking it in the Inspector. This opens a list of the available measurements for the element.
+
+> **Setting the section height:**
+>
+> We don't recommend setting the height in pixels, as this might cause elements to not display as intended. For example, they might overflow or appear cropped.
+
+---
+
+### Setting the sizing preference
+
+Choose your sizing preference for the site you're designing. If you like working with advanced CSS measurements, you can enable advanced sizing across the Editor. Alternatively, if you prefer choosing the sizing mode per element, you can keep it that way.
+
+#### To set the sizing preference for a site:
+
+Click the **Wix Studio** icon  at the top left.  Hover over **View**.  Hover over **Sizing Preference**.  Choose your preference:
+
+- **Always Show Advanced: **The sizing in the Inspector is always set to advanced.
+
+**Note:** This mode disables the option to switch specific elements back from advanced sizing.
+- **Set per Element: **You set the sizing preference for every element.
+
+---
+
+### FAQs
+
+Click a question below to learn more about sizing.
+
+### I set a section to scale proportionally but the elements don't scale. Why?
+
+Make sure to set the elements' responsive behavior as well. For example, if you set a section to Scale Proportionally but a child element is set to Fixed, that element will stay fixed across breakpoints.
+**Note: **We're investigating an issue wherein some buttons and menus don't show the Scale Proportionally behavior in the Inspector. If you're experiencing this issue, you can [follow it here](https://support.wix.com/en/article/wix-studio-some-buttons-and-menus-do-not-scale-proportionally) and get an email when it's fixed.
+
+### When should I use advanced sizing?
+
+Advanced sizing gives you full control of the element's size on each breakpoint. 
+Usually, there's no need to switch to advanced – the element's responsive behavior already ensures it looks the way you want on every screen. 
+However, if you have a specific size unit you want to work with (e.g. vh, vw, max-c), whether it's fluid or fixed, you should switch to advanced sizing.
+
+### Are all responsive behaviors available for elements related to Wix apps?
+
+Elements and widgets related to Wix apps (e.g. Wix Stores, Wix Blog) only offer certain responsive behaviors – those that would work best for each element. 
+For example, the available responsive behaviors for the Category Page element are 'Stretch', 'Fixed' and 'Relative Width'.
+
+---
+Source: https://support.wix.com/en/article/studio-editor-setting-the-size-of-your-elements

@@ -1,0 +1,86 @@
+---
+title: "CMS: Connecting a Button to a Dataset"
+---
+
+Connect a button element to a dataset to define what happens when the button is clicked. For example, you could link a button to the "Submit" click action, a dynamic item page, or a document stored in your collection. You can also connect the button label to a collection field to show dynamic text on your button.
+
+> The list of available dataset actions varies depending on the [dataset mode](https://support.wix.com/en/article/cms-working-with-the-dataset-mode-and-collection-permissions) and whether you connect to a regular dataset or a dynamic page dataset. Learn more about all the [available dataset click actions](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images).
+
+---
+
+### Connecting a button to a dataset
+
+Once you connect a button to a dataset, you can see all the available connection types in the **Click action connects to** drop-down. The dataset is what binds elements on your page to your CMS collection content.
+
+Wix EditorStudio Editor
+1. In your Editor, click the button you want to connect to the CMS.
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click** Add a Dataset**, then choose the collection you want to connect, give the dataset a name and click **Create**.
+4. Click the **Click action connects to** drop-down and select the relevant option:
+
+- **Dataset Actions: **Choose the [action you want the dataset to perform](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images) when the button is clicked.
+- **Dynamic Pages: **Choose the [dynamic page](https://support.wix.com/en/article/cms-about-dynamic-pages) you want to link to. Then choose how the link opens: **In the current window** or **As a new window**.
+- **Fields: **Choose the collection field you want to connect to. You can connect to the following field types: **Audio**, **Document**,** Image**,** URL**, or **Video**. Learn more [about the field types and their content limitations](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+
+**Tip: **Select **Add new field** to [add a new field in your collection](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) and link to it.
+[image: Screenshot of connecting a button to a dynamic item page.]
+1. (Optional) Display dynamic text in the button that changes based to the collection item it links to. Click the **Label connects to** drop-down and select the relevant collection field.
+
+**Tip: **Alternatively, you can use static text that doesn't change by going to the button settings.
+[image: Screenshot of connecting the button label to a collection field.]
+1. Click **Preview** to test your connections.
+2. Click **Publish** if you are ready to make the changes go live.
+
+1. In your Editor, click the button you want to connect to the CMS.
+2. Click the **Connect to CMS** icon  .
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, click** Add a Dataset**, then choose the collection you want to connect, give the dataset a name and click **Create**.
+4. Click the **Click action connects to** drop-down and select the relevant option:
+
+- **Dataset Actions: **Choose the [action you want the dataset to perform](https://support.wix.com/en/article/cms-about-dataset-click-actions-for-buttons-and-images) when the button is clicked.
+- **Dynamic Pages: **Choose the [dynamic page](https://support.wix.com/en/article/cms-about-dynamic-pages) you want to link to. Then choose how the link opens: **In the current window** or **As a new window**.
+- **Fields: **Choose the collection field you want to connect to. You can connect to the following field types: **Audio**, **Document**,** Image**,** URL**, or **Video**. Learn more [about the field types and their content limitations](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+
+**Tip: **Select **Add new field** to [add a new field in your collection](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) and link to it.
+[image: Screenshot of connecting a button to the dynamic item page.]
+1. (Optional) Display dynamic text in the button that changes based to the collection item it links to. Click the **Label connects to** drop-down and select the relevant collection field.
+
+**Tip: **Alternatively, you can use static text that doesn't change by clicking **Change Text**.
+2. Click the** Preview** icon  at the top right to test your connections.
+3. Click **Publish** if you are ready to make the changes go live.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about linking buttons in the CMS.
+
+### Can I create a dynamic link that visitors click to send emails?
+
+Yes. You can create dynamic links that open the visitor's mail client so they can send an email to the relevant address.
+**To create dynamic links that open the visitor's mail client: **
+1. [Create a URL field type](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) in your collection for storing the email addresses.
+2. Add the email addresses to the field with **mailto: **at the beginning of each address (e.g. **mailto:support@email.com**).
+3. Link a button or image to a dataset that connects to this URL field. When visitors click the link, their email client opens with the relevant address in the 'To:' field.
+
+### Can I display dynamic text on my button?
+
+Yes, you can display dynamic text on your button. After connecting a button to the dataset, click the** Label connects to** drop-down and select the relevant collection field. The button label will change based on the collection item it links to.
+
+### What types of content limitations should I be aware of when connecting to different field types?
+
+Each field type (Audio, Document, Image, URL, Video) has specific content limitations. Ensure your content meets these limitations to avoid any issues with the button's functionality. 
+You can link buttons to the following dynamic collection fields in the dataset: 
+- **Audio: **Open single audio files using file types such as MP3, WAV, FLAC, and more.
+- **Document: **Open single document files such as PDFs, CSVs, and more.
+- **Image: **Open image files such as JPG, PNG, and GIF file types.
+- **URL: **Open web addresses for each item. You can add the following characters to the beginning of the URLs to modify how they open:
+
+- **mailto: **Opens the visitor's mail client set to send an email to the relevant address (e.g. **mailto:sales@email.com**)
+- **sms: **Opens the visitor's application used to send SMS (text) messages (e.g. **sms:9254135555**).
+- **tel: **Opens the visitor's application used to call a telephone number (e.g. **tel:9254135555**).
+- **Video: **Open single video files using file types such as AVI, MPEG, MOV and more.
+
+Learn more about [supported field types and their limitations](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+
+---
+Source: https://support.wix.com/en/article/cms-connecting-a-button-to-a-dataset

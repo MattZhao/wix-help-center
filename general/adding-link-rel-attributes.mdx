@@ -1,0 +1,180 @@
+---
+title: "Adding Link Rel Attributes"
+---
+
+> **Important:**
+>
+> - Using link rel attributes is an advanced topic. Using them incorrectly can cause issues with your site appearing in search results. Wix Customer Care cannot help you with adding or updating the link rel attributes on your site.
+> - We recommend reading [Google's guidelines on link rel attributes](https://developers.google.com/search/docs/advanced/guidelines/qualify-outbound-links) before you make changes to your site.
+
+You can add link rel attributes to URLs in your site's content to define the relationship between your site's pages and external pages that you link to.
+
+For example, if you have a blog post on your site has a link to the website of one of your sponsors, you can add the "sponsored" link rel attribute to the link to define the paid relationship between your page and the external page.
+
+**In this article, learn more about:**
+
+[How link rel attributes work](https://support.wix.com/en/article/adding-link-rel-attributes#how-link-rel-attributes-work)  [Types of link rel attribute](https://support.wix.com/en/article/adding-link-rel-attributes#types-of-link-rel-attribute)  [Adding link rel attributes to your links](https://support.wix.com/en/article/adding-link-rel-attributes#adding-link-rel-attributes-to-your-links)
+
+---
+
+### How link rel attributes work
+
+When you add a link to a page on your site, HTML code describing the link is added to the code of the page. For example, imagine you add a link on one of your pages to the website of one of your sponsors. Let's say the link's URL is "https://mystunningwebsite.com" and you add it to this text on your page: "Check out our sponsor's website for more exciting deals".
+
+In the code of your page, the following code gets added for the new link:
+
+Link rel attributes are additional pieces of code that you can add to links to give search engines and browsers more information. You can use them to define the relationship between the referring page and the external page. For example, if you add the "sponsored" attribute to your link, it looks like this in your page's code:
+
+Link rel attributes can be important for your site's SEO. Search engines and browsers also use link rel attributes to help decide how to display a page. For example, Google may mistake sponsored links on your site as [bought links to try to manipulate your search ranking](https://developers.google.com/search/docs/advanced/guidelines/link-schemes). Adding the "sponsored" link rel attribute defines the relationship and reduces the chance of your ranking being penalized.
+
+---
+
+### Types of link rel attribute
+
+The table below explains the link rel attributes that you can use on your site's content.
+
+TypeExplanationnofollowUsed to tell search engines not to crawl the linked URL for associate it with your site. This tells search engines that you are not responsible for the linked content and that the external page is not related to your site.sponsoredUsed to mark paid links such as advertisements or paid placements. This lets search engines know that you've been paid to add this link to your page and reduces the chance that you'll be penalized for trying to manipulate search engine rankings. ugcIdentifies user-generated content (ugc) on your site. For example, you can use this to identify links to blog comments or forum posts. This is important if you want to identify user-generated content on your site as potentially lower quality or less credible compared to content that you created yourself. noreferrerPrevents any referral information from your site being passed on to website you're linking to. It also hides referral information from web traffic analysis tools such as Google Analytics.noopenerPrevents a potential security vulnerability where a malicious website could gain access to your website when an external link opens in a new tab. Noopener stops this from happening by blocking window.opener javascript functions.
+
+---
+
+### Adding link rel attributes to your links
+
+You can add link rel attributes to your links in Wix Blog posts, Wix Forum posts, Wix Groups info, Online Program steps, Wix FAQ app answers, and CMS rich content fields.
+
+> **Note:**
+>
+> The link rel attributes that you can use depend on the product. For example, links in Wix Blog posts can only use the "nofollow" and "sponsored" attributes.
+
+#### Learn how to add link rel attributes to:
+
+### Wix Editor page elements
+
+1. Click the element that you want to add a link to.
+2. Click the **Link** icon .
+3. Add a **Page** link or a **Web address **link. [Learn more about types of links](https://support.wix.com/en/article/wix-editor-adding-a-link-to-an-element#types-of-links)
+4. Click **Advanced SEO Settings**.
+5. Select the link rel attributes you want from the **What rel values should it have?** drop-down.
+
+[image: Selecting the link rel attributes that you want to add]
+6. Click **Done**.
+7. Publish your site.
+
+### Studio Editor page elements
+
+1. Click the element that you want to add a link to.
+2. Click the **Link** icon .
+3. Add a **Page** link or a **Web address** link. [Learn more about types of links](https://support.wix.com/en/article/wix-editor-adding-a-link-to-an-element#types-of-links)
+4. Click **Advanced SEO Settings**.
+5. Select the link rel attributes you want from the **What rel values should it have?** drop-down.[image: Selecting the link rel attributes that you want to add]
+6. Click **Done**.
+7. Publish your site.
+
+### Wix Blog post links
+
+1. [Go to Blog](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20My%20Blog&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/blog) in your site's dashboard.
+2. Select the post that you want to edit.
+3. Select the text that you want to add a link to.
+4. Click the **Link** icon  in the top bar.
+5. Enter the URL you want to link to in the field.
+6. Select whether or not you want the link to open in a new tab.
+7. Select the checkboxes beside the link rel attributes that you want to add to the link:
+
+- **Tell Google to ignore this link: **Adds a "nofollow" attribute to your link.
+- **Mark as a sponsored link: **Adds a "sponsored" attribute to your link.
+8. Click **Save**.
+9. Click **Publish**.
+
+### Wix Forum post links
+
+1. [Go to Forum](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Wix%20Forum&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/forum/) in your site's dashboard.
+2. Click the **More Actions** icon  next to the post you want to edit.
+3. Select **Edit Post**.
+4. Select the text that you want to add a link to.
+5. Click the **Link** icon .
+6. Enter the URL you want to link to in the field.
+7. Select whether or not you want the link to open in a new tab.
+8. Select the **Tell Google to ignore this link **checkbox** **to add a "nofollow" attribute to your link.
+9. Click **Save**.
+10. Click **Publish**.
+
+### Wix Groups info links
+
+1. [Go to Groups](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20Groups&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Fsocial-groups-dashboard/?referralInfo=KB_Article) in your site's dashboard.
+2. Select the group that you want to edit.
+3. Scroll down to **About Group (Optional)**.
+4. Select the text that you want to add a link to.
+5. Click the **Link** icon .
+6. Select whether or not you want the link to open in a new tab.
+7. Select the checkbox beside **Tell Google to ignore this link **to add a "nofollow" attribute to your link.
+8. Click **Save**.
+
+### Online Programs step links
+
+1. [Go to Online Programs](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Online%20Programs&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/challenges/list) in your site's dashboard.
+2. Select the program that you want to edit.
+3. Click **Edit** next to the step that you want to edit under **Content**.
+4. Select the text that you want to add a link to.
+5. Click the **Link** icon .
+6. Enter the URL you want to link to in the field.
+7. Select whether or not you want the link to open in a new tab.
+8. Select the **Tell Google to ignore this link **checkbox** **to add a "nofollow" attribute to your link.
+9. Click **Save**.
+10. Click **Save**.
+
+### Wix FAQ App answer links
+
+1. [Go to FAQs](https://manage.wix.com/my-account/site-selector/?siteType=HtmlWeb&actionUrl=https:%2F%2Fwww.wix.com%2Fdashboard%2F%7B%7BmetaSiteId%7D%7D%2Ffaq-page-bm%3F&title=Select%20a%20Site&buttonText=Go+to+FAQs) in your site's dashboard.
+
+**Note: **You can also edit your FAQ answers [in your site's editor](https://support.wix.com/en/article/managing-your-questions-in-the-wix-faq-app#editing-an-existing-question).
+2. Click the **Edit** icon  next to the answer that you want to edit.
+3. Select the text that you want to add a link to.
+4. Click the **Link** icon .
+5. Enter the URL you want to link to in the field.
+6. Select whether or not you want the link to open in a new tab.
+7. Select the **Tell Google to ignore this link **checkbox** **to add a "nofollow" attribute to your link.
+8. Click **Save**.
+9. Click **Save**.
+
+### CMS rich content field links
+
+1. [Go to CMS](https://www.wix.com/my-account/site-selector/?buttonText=Go%20to%20CMS&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard. Alternatively, you can click **CMS ** in [your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26)﻿, then click **Your Collections**.** **
+2. Click the relevant collection.
+3. Click the rich content field that you want to add the link to.
+4. Click the **Link** icon .
+5. Enter the URL you want to link to in the field.
+6. Select whether or not you want the link to open in a new tab.
+7. Select the checkbox next to each linking option you want to apply to the link: 
+
+- **Link opens in a new tab: **The link opens in a new tab in your browser.
+- **noreferrer (recommended): **The linked website will not receive info on the referring site (your site).
+- **nofollow: **Let search engines know that you don't recommend giving credit to the linked page for SEO purposes.
+- **sponsored: **Used to mark paid links (ads or placements) to inform search engines of compensation and reduce penalty risks for ranking manipulation.
+8. Click **Save**.
+9. Click the **Exit Full Screen** icon .
+
+### Buttons and images linked to URL fields and dynamic pages in CMS datasets
+
+With the CMS (Content Management System), you can connect buttons and images to dynamic URL collection fields and dynamic pages through a [dataset](https://support.wix.com/en/article/cms-what-is-a-dataset) that connects to your collection. After linking a button or image to the relevant URL field or dynamic page in the dataset, you can set rel attributes for the links. 
+**To add link rel attributes for links to dynamic page URLs or URL fields:**
+1. Click the button or image that you want to connect to a CMS URL field or dynamic page.
+2. Click the **Connect to CMS **icon  on the element.
+3. Click the **Choose a dataset** drop-down and select an existing dataset that connects to your collection. Alternatively, select** Add a Dataset**, then choose the collection you want to connect, give the dataset a name and click **Create**.
+4. Click the relevant drop-down(s) in the panel on the right to connect the element to a URL field or dynamic page URL. The options vary depending on the type of element: 
+
+- **Button: **Click the **Click action connects to **drop-down and select the URL field or dynamic page you want to link the button to. Connect the **Label connects to **drop-down to a field if you want to display the field contents in the button.
+- **Image: **Click the **Link connects to **drop-down and select the URL field or dynamic page you want to link the image to. Click the additional drop-downs under **Connections **to connect the image source, alt text and tooltip.
+5. Under **Link options**, select the relevant options: 
+
+- **How does it open?: **Choose how you want the link to open: **In the current window** or **As a new window**
+- **Rel values (SEO): **Select the type of link rel attribute you want to use:
+
+- **noopener (recommended): **Block access to the source page.
+- **noreferrer (recommended): **Hide info about link source.
+- **nofollow:** Tell search engines to ignore.
+- **sponsored: **Mark the link as sponsored.
+6. Publish your site when you're ready for the changes to go live.
+
+**Note: **You can also connect text elements to a URL field in the dataset and set rel link attributes. This displays the actual URL as clickable text. It is not possible to hyperlink different text (e.g. "Learn more") to the URL field. You can [vote for this feature here](https://support.wix.com/en/article/cms-request-creating-dynamic-text-hyperlinks). Learn how to [hyperlink text to dynamic pages](https://support.wix.com/en/article/cms-linking-to-dynamic-pages#hyperlinking-text-to-dynamic-pages).
+
+---
+Source: https://support.wix.com/en/article/adding-link-rel-attributes

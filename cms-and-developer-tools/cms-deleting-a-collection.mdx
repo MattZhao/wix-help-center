@@ -1,0 +1,62 @@
+---
+title: "CMS: Deleting a Collection"
+---
+
+Remove unnecessary CMS (Content Management System) collections by deleting them. We recommend making sure the collection is not connected to any pages or elements on your site before deleting it.
+
+**In this article, learn more about: **
+
+---
+
+### Deleting a collection in the CMS
+
+You can delete collections that you no longer need at any time. If the collection you are deleting is connected to any page or site elements, they will become disconnected when you delete.
+
+> **Before deleting a collection:**
+>
+> - Make sure the collection is not connected to your site pages or elements.
+> - You can [create a manual backup of your collections](https://support.wix.com/en/article/cms-formerly-content-manager-backing-up-your-collections#manually-backing-up-your-collections), in case you need to restore them later.
+> - You can also [export your collection to a CSV file](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) if you want to save the data outside of Wix.
+
+#### To delete a collection:
+
+Go to [CMS](https://www.wix.com/my-account/site-selector/?buttonText=Open%20Content%20Manager&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/%7B%7BmetaSiteId%7D%7D/database/) in your site's dashboard.  Click the **More Actions **icon  on the relevant collection.   Click **Delete Collection**.
+
+Click **Yes, delete collection **to confirm you want to delete the collection.  Click **Delete**.
+
+---
+
+### Consequences of deleting connected collections
+
+Review the table below to find out what happens when you delete a collection that was connected to your site pages or elements.
+
+If the collection was connected to a:This happens in your Editor:This happens in your published site:Dynamic datasetAll of the connections are removed. The dynamic dataset panel is blank.A 500 error page displays.Regular datasetAll of the connections are removed. The dataset settings panel displays the removed collection's name with a warning sign.The page displays elements with their default content (e.g. default text in text elements).Page elementThe connected page elements are disconnected. The connected page elements are disconnected. The static value of the element displays. User Input elements remain functional but display an error upon submitting.Table, Gallery or RepeaterThe connected element is disconnected. Repeaters and galleries disappear completely from the page. Tables display empty.Used in a dataset filter (by reference field or by dataset)The dataset filter is removed because no items match the filter settings. N/A
+
+Connected to the labels and values in a dropdown elementThe labels and values listed in the Manage Dropdown List panel appear instead of collection items. If none are listed, the dropdown list does not open when clicked.Same as in the Editor.Used in a reference field in another collectionThe reference is broken, and all items in the CMS display an error.Any elements connected to fields in the referenced collection no longer display content.Connected to a page element as a reference fieldThe page elements are disconnected. The Connect panel displays the removed collection's name with a warning sign or prompts you to create a collection if you have none.The static value of the element is displayed. User Input elements remain functional but display an error upon submitting.
+
+---
+
+### FAQs
+
+View the most frequent questions and answers about deleting collections below.
+
+### What should I check before deleting a collection?
+
+Before deleting a collection, we recommend checking the following: 
+- **Are there dynamic pages connected to the collection?** If so, convert them to regular pages or delete the pages unless you plan to connect a different collection. Visitors to your live site will encounter a 500 error when attempting to view dynamic pages associated with the deleted collection.
+- **Are any datasets connected to this collection? **Make sure to remove any connected dataset filters that are in use. This includes datasets set to filter by reference field or by dataset. If your filter settings are unmatched, the dataset will be empty.
+- **Is this collection referenced in another collection? **If the collection is referenced elsewhere, make sure to remove the reference by either updating it to a different collection, modifying the field type, or deleting the reference field. If you do not do this there will be broken references in the items.
+
+By checking these factors, you can ensure a smooth deletion process and prevent any problems or disruptions on your site.
+
+### How do GDPR and other laws affect my data?
+
+Restoring a backup does not affect the [Personally Identifiable Information (PII)](https://support.wix.com/en/article/about-personally-identifiable-information-pii) status of a field. If necessary, you can change PII manually in your collections.
+Wix deletes and restores collections in compliance with [GDPR regulations](https://support.wix.com/en/article/preparing-your-wix-site-for-the-gdpr#about-data-storage-and-data-transfers282).
+
+### Can I delete Wix App collections?
+
+You cannot delete [Wix App collections](https://support.wix.com/en/article/cms-formerly-content-manager-working-with-wix-app-collections) from your CMS because the data is stored in the apps themselves. Go to the relevant Wix App (e.g. Wix Stores, Wix Bookings) to remove content that appears in a collection.
+
+---
+Source: https://support.wix.com/en/article/cms-formerly-content-manager-deleting-a-collection

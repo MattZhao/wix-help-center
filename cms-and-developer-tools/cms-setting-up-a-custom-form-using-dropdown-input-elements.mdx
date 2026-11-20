@@ -1,0 +1,327 @@
+---
+title: "CMS: Setting Up a Custom Form Using Dropdown Input Elements"
+---
+
+Create custom forms that allow visitors to use dropdown inputs to submit their selections directly to your CMS collections. This article walks you through the process of adding a dropdown input element and a submit button. You will connect both elements to a dataset that allows visitor submissions to be saved in your CMS collection.
+
+> **Before you begin:**
+>
+> Make sure to [add the CMS](https://support.wix.com/en/article/cms-formerly-content-manager-getting-started) to your site if you haven't already.
+
+---
+
+### Step 1 | Add the dropdown element
+
+Go to the page in your editor where you want to create a custom form, then add the dropdown element.
+
+Wix EditorStudio Editor
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page in which you want to add input elements.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Input**.
+5. Click **Dropdown**.
+6. Click and drag the dropdown you want to use onto the page.
+[image: A screenshot of adding the dropdown element in the Editor.]
+1. [Go to your editor](https://manage.wix.com/account/site-selector/?actionUrl=https%3A%2F%2Fwww.wix.com%2Feditor%2F%7BmetaSiteId%7D%3FeditorSessionId%3D%7Besi%7D%26).
+2. Go to the page in which you want to add the dropdown element.
+3. Click **Add Elements ** on the left side of the editor.
+4. Click **Input**.
+5. Click **Dropdowns**.
+6. Click and drag the dropdown you want to use onto the page.
+[image: A screenshot of adding the dropdown element in the Studio Editor.]
+
+---
+
+### Step 2 | Connect to the CMS
+
+Connect your dropdown to a dataset that connects to a CMS collection where you will store the submissions.
+
+Wix EditorStudio Editor
+1. In your editor, click the dropdown element you just added.
+2. Click the **Connect to CMS **icon  .
+3. Connect to a dataset that binds to the collection where you will store the submissions: 
+
+- **If you do not have a dataset on the page: **
+
+1. Click **+ Add a Dataset **on the right. Then choose the collection to connect, enter the dataset name and click **Create**.
+2. Click **Collect content**.
+- **If you already have a dataset on the page:**
+
+1. Click **Collect content**.
+2. Click the **Choose a dataset** drop-down and select the relevant dataset. Alternatively, click **Add a Dataset **to create a new one, then choose the collection to connect, enter the dataset name and click **Create**.
+4. Click the **Value connects to** drop-down and select **Add new field**. 
+
+1. Enter a **Field Name **for the new collection field.
+2. Select the **Field Type** from the drop-down. The field type determines [what kind of data you can store in the field](https://support.wix.com/en/article/cms-formerly-content-manager-supported-content-in-collection-field-types).
+3. Click **Add**.
+
+1. Click the **Connect list items** toggle to choose where to manage the element's choices:
+
+- **Enabled: **Use a field from another CMS collection for the choices. Connect the relevant dataset and choose the fields to use from the **Labels and values connect to **drop-down.
+- **Disabled: **Click **Manage Choices** to create the choices for the element separate from the CMS.
+
+1. In your editor, click the dropdown element you just added.
+2. Click the **Connect to CMS **icon  .
+3. Add a dataset by clicking an option from the Inspector panel on the right:
+
+**Note: **The options vary, based on your total collections and datasets on the page. 
+
+- **Add a Dataset: **Choose the collection in which you will store the submissions, give the dataset a name and click **Create**. Then select **Collect content**.
+- **Collect content: **Select this option then click the **Choose a dataset** drop-down and select the dataset you want to connect or select **Add a Dataset **to connect a new one.
+- **Create Collection: **Enter a name for the collection in which you will store the submissions and click **Create**. Add the field you will store the submissions in. Click the **X **at the top right to close the panel, then follow the **Add a Dataset** step above.
+4. Click the **Value connects to** drop-down and select the collection field in which the submissions will be saved.
+
+**Tip: **Select **Add new field** to [add a new collection field](https://support.wix.com/en/article/cms-formerly-content-manager-adding-a-field-to-a-collection) for storing the submissions.
+5. Click the **Connect list items** toggle to choose where to manage the dropdown element's choices:
+
+- **Enabled: **Use a field from another CMS collection for the choices: 
+
+1. Click the **Choose a dataset** drop-down under **List Connections** and choose a different dataset or select **Add a Dataset** to create a new one.
+2. Click the **Labels and values connect to** drop-down and choose the field to use as choices.
+- **Disabled: **Click **Manage Choices** to create the choices for the element separate from the CMS.
+[image: A screenshot of the list connections options when connecting a dropdown element to the CMS.]
+
+---
+
+### Step 3 | Set the dataset modes
+
+Since datasets control the connection between your collections and page elements, make sure each dataset is in the correct mode. For the dataset connected to your submissions collection, set the mode to **Write**. This allows the dropdown selections to "write", or add to your collection upon submission.
+
+Wix EditorStudio Editor
+1. In the panel on the right, click **Dataset Settings **under the first **Choose a dataset** drop-down. This dataset connects to the collection you will store the submissions in.
+
+1. Click the **Dataset mode** drop-down and select **Write**.
+
+1. (If you connected list items to the CMS) Set the mode for the dataset connected to the list items:
+
+1. Click **Back to Dropdown element **at the top of the panel.
+2. Click **Dataset Settings **under the dataset selected in the **List Connections** section.
+3. Click the **Dataset mode** drop-down and select **Read **or **Read & Write**.
+4. (Optional) Click **+ Add Filter** if you want to [create a filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) to exclude certain items from appearing in the list of choices.
+5. (Optional) Click **+ Add new sort **if you want to [choose the order in which the items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the list of choices.
+
+1. In the CMS connections tab of the Inspector panel, click **Dataset Settings **under the 1st **Choose a dataset** drop-down. This dataset connects to the collection you will store the submissions in.
+[image: A screenshot of selecting the dataset settings from the CMS panel.]
+1. Click the **Dataset mode** drop-down and select **Write**.
+2. (If you connected list items to the CMS) Set the mode for the dataset connected to the list items:
+
+1. Click **Back to Dropdown element **at the top of the panel.
+2. Click **Dataset Settings **under **List Connections**.
+3. Click the **Dataset mode** drop-down and select **Read **or **Read & Write**.
+4. (Optional) Click **+ Add Filter** if you want to [create a filter](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-filters-to-your-dataset-to-exclude-items-from-your-page) to exclude certain items from appearing in the list of choices.
+5. (Optional) Click **+ Add new sort **if you want to [choose the order in which the items appear](https://support.wix.com/en/article/cms-formerly-content-manager-adding-filters-and-sorts-to-datasets-to-control-live-site-content#adding-sort-conditions-to-your-dataset-to-sort-the-items-on-your-page) in the list of choices.
+[image: A screenshot of the dataset settings for a dataset connected to a dropdown input element.]
+
+---
+
+### Step 4 | Set the collection permissions
+
+Set the [permissions](https://support.wix.com/en/article/cms-collection-permissions-overview) for the collection where you will store the submissions. You can choose the preset **Collect content **setting that allows visitors to add content then specify who can add it. Or you could choose **Custom **permissions to control who can add, edit, view, and delete the collection items.
+
+Wix EditorStudio Editor
+1. Click **CMS**  on the left of the editor.
+2. Click **Your Collections**.
+3. Hover over the collection set to collect the submissions and click the **More Actions** icon .
+4. Click **Permissions & privacy**.
+[image: A screenshot of selecting the permissions and privacy settings for a CMS collection.]
+1. Choose the type of permissions you want to use for your collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which [collection permission](https://support.wix.com/en/article/cms-collection-permissions-overview) you select.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+1. Click **CMS **** **on the left side of your editor.
+2. Click **Your Collections**.
+3. Hover over the collection set to collect the submissions and click the **More Actions** icon .
+4. Click **Permissions & privacy**.
+
+1. Choose the type of permissions you want to use for your collection:
+
+**Note: **Site owners and collaborators are always treated as admins when logged in to the live site. This means they can always view, add, update, and delete collection content from the live site. This rule applies no matter which [collection permission](https://support.wix.com/en/article/cms-collection-permissions-overview) you select.
+Collect contentAllow visitors to add content to the collection with [input elements](https://support.wix.com/en/article/cms-creating-a-custom-form-with-input-elements-that-submit-to-your-collection) or API.  
+**Note: **This permission does not allow visitors to update existing content in the collection. Use the **Custom **permissions if you want to allow visitors to update existing content. See [this FAQ section](https://support.wix.com/en/article/cms-changing-your-collection-permissions#faqs) for more information. 
+
+1. Click **Collect content**.
+2. Click the **Who can ****add content**** to this collection? **drop-down and choose an option: 
+
+- **Everyone: **Any site visitor can add content to the collection from the live site.
+- **Members only: **Only site members can add content to the collection from the live site.
+3. Click the **Who can view this content? **drop-down and choose an option: 
+
+- **Admin: **Site owners and collaborators can view the collection content from the live site.
+- **Members only: **Only site members can view the collection content from the live site.
+- **Everyone: **Any site visitor can view the collection content from the live site.
+4. Click **Save**.
+CustomSet custom permissions to control who can view, add, update, and delete content. You can choose different permissions for item creators, site members, and everyone else. 
+
+1. Click **Custom**.
+2. Click the relevant checkboxes next to each role to choose whether visitors with the role can view, add, update, or delete collection content from the live site:
+
+- **Admin: **Site owners and collaborators always have view, add, update, and delete permissions from the live site. You cannot change the permissions associated with this admin role.
+- **Item's creator: **This role's permissions only apply to the specific items that a member creates themselves. For example, the item's creator can only view, add, update, or delete collection items they created.
+- **Members only: **This role applies to members of your site only. Selecting a permission for this role also selects the permission for the "Item's creator" role.
+- **Everyone: **This role applies to everyone who can access your live site. Selecting a permission for this role also selects the permission for the "Members only" and "Item's creator" role.
+3. Click **Save**.
+
+---
+
+### Step 5 | Create a submit button
+
+You need to create a way for visitors to submit their choices after selecting them from the dropdown element. Add a button or image and connect it to the same dataset that connects to your submissions collection. Then set the click action for the button or image to **Submit**. This allows the dropdown selection to 'write', or create a new item in the submissions collection upon clicking the submit button.
+
+Wix EditorStudio Editor
+1. Click **Add Elements ** on the left side of the editor.
+2. Click **Button**.
+3. Click and drag the button you want to use as your submit button onto the page. You can use any of the following button types: **Themed Buttons**, **Text & Icon Buttons**, **Icon Buttons**,** **or **Image Buttons**.
+
+**Tip: **Alternatively, you can add an image and use it as your submit button.
+
+1. Click **Change Text & Icon **and enter the text you want to display on the button (e.g. "Submit").
+2. Click the **Connect to CMS **icon  .
+3. Click the **Choose a dataset** drop-down and select the dataset connected to your submissions collection.
+4. Click the **Click action connects to** drop-down and select **Submit**.
+5. (Optional) Add success and failure messages that appear when submissions are submitted successfully or unsuccessfully:
+
+1. Click **+ Add success message** then click **+ Add failure message**.
+2. Click and drag both messages to the place where you want them to appear. They can overlap because the messages do not display at the same time.
+3. Click **Edit Text **on each message to edit the messages.
+6. Select the button and click the **Connect to CMS** icon . Then click the **When successful, navigate to **drop-down, and select an option:
+
+- **Stay on this page: **The visitor stays on the same page after submitting the form.
+- **A link:** The visitor is redirected to another page after submitting the form. Click **Choose **under **Choose a link **and set up the link.
+
+1. Click the button and select the **Design** icon  to [customize the appearance of your submit button](https://support.wix.com/en/article/wix-editor-customizing-the-design-of-your-buttons).
+
+1. Click **Add Elements ** on the left side of your editor.
+2. Click **Button**, then drag the button to where you want it to appear. 
+
+**Tip: **Alternatively, you can add an image and use it as your submit button.
+3. Click **Change Text **and enter the text you want to display on the button (e.g. "Submit").
+4. Click the **Connect to CMS** icon  .
+5. Click the **Choose a dataset** drop-down and select the dataset connected to your submissions collection.
+6. Click the **Click action connects to** drop-down and select **Submit**.
+7. (Optional) Add success and failure messages that appear when submissions are submitted successfully or unsuccessfully:
+
+1. Click **+ Add success message** then click **+ Add failure message**.
+2. Click and drag both messages to the place where you want them to appear. They can overlap because the messages do not display at the same time.
+3. Click **Edit Text **on each message to edit the messages.
+8. Select the button and click the **Connect to CMS** icon . Then click the **When successful, navigate to **drop-down, and select an option:
+
+- **Stay on this page: **The visitor stays on the same page after submitting the form.
+- **A link:** The visitor is redirected to another page after submitting the form. Click **Choose** under **Choose a link** and set up the link.
+[image: A screenshot of the Connect Button settings for a Submit button.]
+1. Click the button and select the **Design** tab  from the Inspector panel to [customize the appearance of your submit button](https://support.wix.com/en/article/studio-editor-adding-and-customizing-buttons#customizing-basic-buttons).
+
+---
+
+### Step 6 | Customize the dropdown element
+
+Set the title, placeholder text and other options from the dropdown settings. Customize the element's look and feel from the Design panel and adjust alignment, spacing and padding from the Layout panel.
+
+Wix EditorStudio Editor
+1. In your editor, click the dropdown element.
+2. Click **Settings** and edit the following:
+
+- **Field title:** Enter a title that will appear at the top of the dropdown element.
+- **Show initial text:** Choose the initial text visitors see before they click the dropdown element:
+
+- **None: **Visitors see a blank box before they click the dropdown element.
+- **Placeholder text:** Use your own text on the dropdown element (e.g. "Choose your color"). Enter the text in the **Placeholder text** field.
+- **Item from dropdown:** Show an item from the dropdown list. If you connected the list to the CMS, the item that appears is the first dropdown choice visitors can select. If you did not connect the list items to the CMS, click the **Select an item from your list** to choose which item appears.
+- **Autocomplete:** Click the toggle to determine what happens when visitors type to search in the dropdown:
+
+- **Enabled: **Only choices that match the typed text appear in the dropdown.
+- **Disabled: **All choices appear in the dropdown.
+- **Dropdown list type:** Choose an option:
+
+- **Custom: **Customize the dropdown element in the Design panel. On mobile, the list type is always set to Browser.
+- **Browser: **Use the browser's default theme on the dropdown element.
+- **This field is:** Select the **Required **checkbox to require that visitors select an item from this dropdown list before their submission can be submitted.
+
+1. Click the **Layout** icon  to adjust the text alignment and the element's padding and spacing.
+2. Click the **Design** icon  to choose a preset design, then select **Customize Design **to further adjust the appearance of the dropdown element.
+3. (Optional) Click the **Animation **icon  to [add an animation](https://support.wix.com/en/article/wix-editor-adding-and-customizing-an-animation) to the dropdown element.
+
+1. In your editor, click the dropdown element.
+2. Click **Settings** and edit the following:
+
+- **Field title:** Enter a title that will appear at the top of the dropdown element.
+- **Show initial text:** Choose the initial text visitors see before they click the dropdown element:
+
+- **None: **Visitors see a blank box before they click the dropdown element.
+- **Placeholder text:** Use your own text on the dropdown element (e.g. "Choose your color"). Enter the text in the **Placeholder text** field.
+- **Item from dropdown:** Show an item from the dropdown list. If you connected the list to the CMS, the item that appears is the first dropdown choice visitors can select. If you did not connect the list items to the CMS, click the **Select an item from your list** to choose which item appears.
+- **Autocomplete:** Click the toggle to determine what happens when visitors type to search in the dropdown:
+
+- **Enabled: **Only choices that match the typed text appear in the dropdown.
+- **Disabled: **All choices appear in the dropdown.
+- **Dropdown list type:** Choose an option:
+
+- **Custom: **Customize the dropdown element in the Design panel. On mobile, the list type is always set to Browser.
+- **Browser: **Use the browser's default theme on the dropdown element.
+- **This field is:** Select the **Required **checkbox to require that visitors select an item from this dropdown list before their submission can be submitted.
+[image: A screenshot of the dropdown settings in the Studio Editor.]
+1. Click the **Layout** icon  to adjust the text alignment and the element's padding and spacing.
+2. Click the **Design** tab  in the Inspector panel to customize the appearance of the dropdown element.
+
+> **Ready to go live?**
+>
+> Click **Preview** at the top right of your editor to test out your new custom dropdown form. When everything looks great and works perfectly, click **Publish** to make the changes go live. 
+> If you've enabled Sandbox, [sync your Sandbox collection to the live collection](https://support.wix.com/en/article/cms-about-sandbox-and-live-collections-and-syncing) to make the database changes go live.
+
+---
+
+### FAQs
+
+Click a question below for answers to the most common questions about connecting dropdown elements to the CMS.
+
+### Can I export the submissions that get saved to my collection?
+
+Yes. You can [export any CMS collection as a CSV file](https://support.wix.com/en/article/cms-formerly-content-manager-exporting-content-from-your-collection) to use the data outside of the Wix CMS (e.g. in Microsoft Excel or Google Sheets).
+
+### Can site visitors use input elements to filter the content that appears on my site?
+
+Yes. You can connect input elements to repeaters, galleries, tables, and other dynamic elements to allow visitors to filter what they see on the page. 
+View a step-by-step tutorial for [allowing visitors to filter content with input elements](https://support.wix.com/en/article/cms-formerly-content-manager-setting-up-filters-for-site-visitors-using-input-elements).
+
+### What is the dataset mode, and how does it affect visitor interactions?
+
+The dataset mode determines what actions can be done between the connected elements and your collection. There are 3 dataset modes: 
+- **Read:** Elements on your page can read and display content from your collection. Site visitors cannot modify the content in your collection.
+- **Write:** Elements on your page cannot display content from the collection. Visitors can interact with user input elements and a submit button to add content to your collection. However, visitors cannot edit the content in your collection.
+- **Read & Write:** Elements on your page can read and display content from your collection. Visitors can interact with user input elements and a submit button to add or edit content in your collection.
+
+### What is a dataset?
+
+Datasets are the vital link between the elements on your page and the content in your CMS collection. You can use datasets to create a two-way connection, allowing you to display collection content, capture user inputs, or both. 
+Datasets allow you to control which parts of your page elements connect to which fields in your collection. Each dataset connects to a collection and each element connected to the dataset connects to a field in the collection. This unlocks a new way of managing which content appears and where.
+Learn more about [adding and setting up a dataset](https://support.wix.com/en/article/cms-formerly-content-manager-adding-and-setting-up-a-dataset).
+
+### Where do the list of items come from if I connect my dropdown element to a reference field?
+
+If you connect your dropdown element list items to a reference field, the list of items come from the primary field of the referenced collection. Learn more about [using reference fields to display content from multiple collections](https://support.wix.com/en/article/cms-using-reference-fields-to-display-content-from-multiple-collections).
+
+---
+Source: https://support.wix.com/en/article/cms-setting-up-a-custom-form-using-dropdown-input-elements

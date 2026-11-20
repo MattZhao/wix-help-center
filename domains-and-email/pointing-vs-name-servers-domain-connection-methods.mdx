@@ -1,0 +1,85 @@
+---
+title: "Pointing vs. Name Servers Domain Connection Methods"
+---
+
+There are two ways you can connect a domain purchased outside of Wix (i.e. from another domain host). Depending on where you want to store your DNS (Domain Name Systems) records, choose the method that suits you:
+
+> **Tip:**
+>
+> You can [transfer your domain to Wix](https://support.wix.com/en/article/transferring-a-domain-purchased-elsewhere-to-wix) to manage the billing, contact info, and DNS records with Wix. After transferring to Wix, your domain's DNS records are automatically hosted by Wix. Learn more about the difference between [transferring vs. connecting your domain](https://support.wix.com/en/article/transferring-vs-connecting-your-domain-to-wix).
+
+---
+
+### Using the name servers connection method
+
+[Connect your domain to Wix using name servers](https://support.wix.com/en/article/connecting-a-domain-to-the-wix-name-servers) to host your DNS records directly with Wix. This method allows you to manage all your DNS settings conveniently within your Wix account. We recommend this approach for seamless integration and easy management.
+
+Click below to learn more about connecting your domain to Wix by name servers:
+
+### Business emails
+
+For custom domain business emails (e.g., sales@mydomain.com), ensure your domain's DNS includes your email provider's required records (e.g., MX, A, CNAME, TXT records).
+When you connect via name servers, make sure your email provider's required DNS records are added in your Wix account. Wix automatically imports your domain's existing MX records when connecting via name servers. However, some email providers require additional records (e.g., CNAME or TXT). In such cases, [manually add these DNS records in your Wix account](https://support.wix.com/en/article/managing-dns-records-in-your-wix-account). **Note: **Microsoft Office 365 business emails (available via GoDaddy and other hosts) require several custom DNS records. If your Office 365 business emails are already functioning, connect by pointing to avoid re-adding the DNS records in your Wix account.
+
+### Existing DNS records
+
+If you have existing DNS records you'd like to continue using, you'll need to add them in Wix when you connect via name servers. [Subdomains](https://support.wix.com/en/article/subdomains-overview) and verification records are examples of services that need DNS records to work.
+
+### Wix features requiring a name servers connection
+
+You must connect your domain via name servers to use the following features:
+- [Sending email campaigns from your own custom email domain with Email Marketing](https://support.wix.com/en/article/using-a-custom-email-domain-for-wix-email-marketing).
+- [Creating subdomains for each language version of your site with Wix Multilingual](https://support.wix.com/en/article/wix-multilingual-about-multilingual-subdomains).
+- [Connecting a subdomain to an album with Wix Photo Albums](https://support.wix.com/en/article/wix-photo-albums-changing-the-album-url).
+
+> **Note:**
+>
+> Domains purchased from Wix or transferred to Wix are automatically connected by name servers.
+
+---
+
+### Using the pointing connection method
+
+In the pointing method, your domain is connected to your Wix site, but your domain's DNS records stay with your domain's host. This means you must contact the domain host if you're experiencing any issues with your DNS records.
+
+Click below to learn more about connecting your domain to Wix by pointing:
+
+### What should I consider when using the pointing method?
+
+We do not recommend pointing because we're unable to assist you in another DNS host's account. However, if your domain has complicated DNS records that you prefer not to reconfigure, pointing may be your best option. [Learn how to connect your domain via pointing](https://support.wix.com/en/article/connecting-a-domain-to-wix-using-the-pointing-method).
+
+### Business emails
+
+When connecting via pointing, you don't change any of the DNS records that affect your domain's business emails. Consider pointing if you want to avoid having to add your email provider's DNS records in your Wix account.
+
+### Other DNS services
+
+When connecting via pointing, you're only changing the DNS records used to display your website. Other services that depend on DNS such as email, subdomains, and verification records remain unchanged. 
+Consider pointing if you have many DNS dependent services you'd prefer to not have to reconfigure.
+
+> **Keep in mind:**
+>
+> - When connected via pointing, Wix is unable to help you manage your DNS records as they are hosted elsewhere. You'll need to contact your DNS host if you need assistance with your records.
+> - When connected via pointing, be sure to update your **both your CNAME and A record** with your domain host. If you do not update both records, your site will not appear secure and your visitors may see a 'Not secure' warning message.
+
+---
+
+### FAQs
+
+Click below for answers to common questions about the different connection methods.
+
+### How long does it take for my domain to fully connect (propagate)?
+
+It can take up to 48 hours for the domain connection to complete.
+
+### What's the main difference between name servers and pointing?
+
+The key difference is in who manages your DNS.
+By connecting via name servers, you manage your DNS records directly from your Wix account. By connecting via pointing, you continue to manage your DNS records through your domain host.
+
+### Can Wix help with domain issues if it's connected via pointing?
+
+No. We do not recommend pointing because we're unable to assist you in another DNS host's account.
+
+---
+Source: https://support.wix.com/en/article/pointing-vs-name-servers-domain-connection-methods
